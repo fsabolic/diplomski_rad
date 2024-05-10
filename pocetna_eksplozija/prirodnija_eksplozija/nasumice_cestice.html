@@ -19,7 +19,7 @@
       function pokreni() {
         var platno = document.getElementById("canvas");
         if (!platno) alert("Greška - nema platna!");
-        let gks = new GlobalniKoordinatniSustav(platno, 0, 2000, 0, 2000);
+        let gks = new GlobalniKoordinatniSustav(platno, 0, 10, 0, 10);
         main(platno);
       }
       window.onload = pokreni;
