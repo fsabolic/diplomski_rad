@@ -56,7 +56,7 @@ class GlobalniKoordinatniSustav {
 
   piksel(x, y, boja) {
     this.g.fillStyle = boja;
-    this.g.fillRect(this.sx * x + this.px, this.sy * y + this.py, 3, 3);
+    this.g.fillRect(this.sx * x + this.px, this.sy * y + this.py, 2, 2);
   }
   tekst(str, x, y) {
     this.g.font = "16px Arial";
