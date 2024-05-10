@@ -19,7 +19,9 @@ class GlobalniKoordinatniSustav {
     return [(x - this.px) / this.sx, (y - this.py) / this.sy];
   }
   ocisti() {
-    this.g.clearRect(0, 0, this.h, this.w);
+    let max = this.h;
+    if (this.w > this.h) max = this.w;
+    this.g.clearRect(0, 0, max, max);
   } // ocisti
 
   postaviNa(x, y) {

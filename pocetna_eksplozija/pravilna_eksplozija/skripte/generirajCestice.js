@@ -17,9 +17,9 @@ function generirajNasumicnuCesticu() {
         Math.abs(Math.floor(Math.random() * 1000) % 9) + 0.5 + Math.random()
       ),
       new Vektor2D(
-        ((Math.floor(Math.random() * 1000) % 15) + 1 + Math.random()) *
+        ((Math.floor(Math.random() * 1000) % 10) + 1 + Math.random()) *
           (Math.random() < 0.5 ? -1 : 1),
-        ((Math.floor(Math.random() * 1000) % 15) + 1 + Math.random()) *
+        ((Math.floor(Math.random() * 1000) % 10) + 1 + Math.random()) *
           (Math.random() < 0.5 ? -1 : 1)
       )
     ),

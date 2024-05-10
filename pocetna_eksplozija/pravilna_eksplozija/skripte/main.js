@@ -1,12 +1,5 @@
 let paused = false;
-function start() {
-  console.log("start");
-  paused = false;
-}
-function pause() {
-  console.log("pause");
-  paused = true;
-}
+let brzina = 1;
 
 function main(platno) {
   var cestice = [];
@@ -21,11 +14,11 @@ function main(platno) {
   let fizika = new Fizika(9.81);
   let otpor = new Otpor(0.47);
 
-  let brojCestica = 19000;
+  let brojCestica = 20;
   cestice = generirajNasumicneCestice(brojCestica);
 
   let brIteracija = 1;
-  let dt = 1.0 / 60.0 / brIteracija;
+  let dt = 1.0 / 60 / brIteracija;
   let iframe = 0;
   let starttime = Date.now() / 1000;
 
@@ -38,7 +31,7 @@ function main(platno) {
       for (let i = 0; i < brIteracija; i++) {
         for (let i = 0; i < brCestica; i++) {
           cestice[i].materijalnaTocka.pomakni(
-            dt,
+            dt / skaliraj(brzina),
             fizika
               .F(cestice[i].materijalnaTocka)
               .zbroji(otpor.F(cestice[i].materijalnaTocka))
@@ -61,4 +54,18 @@ function main(platno) {
     }
     requestAnimationFrame(iscrtaj);
   }
+  function skaliraj(brzina) {
+    return ((brzina - 1) / (1000 - 1)) * (30 - 1) + 1;
+  }
+}
+
+function start() {
+  paused = false;
+}
+function stop() {
+  paused = true;
+}
+
+function azurirajBrzinuSimulacije(value) {
+  brzina = value;
 }
