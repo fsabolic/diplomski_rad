@@ -6,15 +6,15 @@ function main(platno) {
   platno.addEventListener(
     "click",
     (event) => {
-      cesticeKlik(event, gks, cestice, 100);
+      cesticeKlik(event, gks, cestice, 1000);
     },
     false
   );
   let gks = new GlobalniKoordinatniSustav(platno, 0, 10, 0, 10);
-  let fizika = new Fizika(9.81);
-  let otpor = new Otpor(0.47);
+  let fizika = new Fizika(0);
+  let otpor = new Otpor(0);
 
-  let brojCestica = 20;
+  let brojCestica = 0;
   cestice = generirajNasumicneCestice(brojCestica);
 
   let brIteracija = 1;
@@ -22,7 +22,7 @@ function main(platno) {
   let iframe = 0;
   let starttime = Date.now() / 1000;
 
-  var prviFrame = true;
+  var prviFrame = false;
   iscrtaj();
 
   function iscrtaj() {
