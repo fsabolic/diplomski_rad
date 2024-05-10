@@ -6,7 +6,7 @@ function cesticeKlik(event, gks, cestice, brojCestica = 20) {
 
   for (let i = 0; i < brojCestica; i++) {
     let tocka = nasumnicnaNormalnaDistribucija(1);
-    let multi = 4.5;
+    let multi = 3;
     let cestica = new Cestica(
       0.1,
       new MaterijalnaTocka(
