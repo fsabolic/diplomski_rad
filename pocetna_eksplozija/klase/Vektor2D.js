@@ -13,6 +13,20 @@ class Vektor2D {
     return new Vektor2D(this.x + v2.x, this.y + v2.y);
   }
 
+  oduzmi(v2) {
+    return new Vektor2D(this.x - v2.x, this.y - v2.y);
+  }
+
+  pomnoziSkalarom(s) {
+    return new Vektor2D(this.x * s, this.y * s);
+  }
+
+  udaljenost(v2) {
+    let x = (this.x - v2.x) ** 2;
+    let y = (this.y - v2.y) ** 2;
+
+    return Math.sqrt(x + y);
+  }
   rotirajOkoPocetka(kut) {
     kut = kut * (Math.PI / 180);
 
