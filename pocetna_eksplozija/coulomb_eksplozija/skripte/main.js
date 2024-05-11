@@ -12,10 +12,10 @@ function main(platno) {
   );
   let gks = new GlobalniKoordinatniSustav(platno, 0, 10, 0, 10);
   let fizika = new Fizika(9.81);
-  let otpor = new Otpor(0);
+  let otpor = new Otpor(0.47);
 
   let cp = new CoulombovPotencijal(
-    -100,
+    50,
     new Vektor2D((gks.xmin + gks.xmax) / 2, (gks.ymin + gks.ymax) / 2),
     1
   );
