@@ -4,7 +4,7 @@ function cesticeKlik(event, gks, cestice, brojCestica = 20) {
   let y = event.clientY - canvasPosition.offsetTop;
   let transformirano = gks.transformirajPiksele(x, y);
 
-  let pocetniVektor = new Vektor2D(10, 10);
+  let pocetniVektor = new Vektor2D(4, 4);
   for (let i = 0; i < brojCestica; i++) {
     let cestica = new Cestica(
       0.1,
