@@ -26,3 +26,35 @@ function generirajNasumicnuCesticu() {
     "#" + Math.floor(Math.random() * 16777215).toString(16)
   );
 }
+
+function generirajStacionarneCestice(
+  brojCestica,
+  xmin = 0,
+  xmax = 10,
+  ymin = 0,
+  ymax = 10
+) {
+  let cestice = [];
+  for (let i = 0; i < brojCestica; i++) {
+    let cestica = generirajStacionarnuCesticu(xmin, xmax, ymin, ymax);
+    cestice.push(cestica);
+  }
+  return cestice;
+}
+
+function generirajStacionarnuCesticu(xmin = 0, xmax = 10, ymin = 0, ymax = 10) {
+  return new Cestica(
+    0.1,
+    new MaterijalnaTocka(
+      Math.abs(Math.floor(Math.random() * 1000) % 10) + 1,
+      new Vektor2D(
+        Math.abs(Math.floor(Math.random() * 1000) % xmax) +
+          xmin +
+          +Math.random(),
+        Math.abs(Math.floor(Math.random() * 1000) % ymax) + ymin + Math.random()
+      ),
+      new Vektor2D(0, 0)
+    ),
+    "#" + Math.floor(Math.random() * 16777215).toString(16)
+  );
+}
