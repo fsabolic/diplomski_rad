@@ -12,7 +12,7 @@ function main(platno) {
   );
   let gks = new GlobalniKoordinatniSustav(platno, 0, 10, 0, 10);
   let fizika = new Fizika(0);
-  let otpor = new Otpor(0);
+  let otpor = new Otpor(0.47);
 
   let brojCestica = 0;
   cestice = generirajNasumicneCestice(brojCestica);

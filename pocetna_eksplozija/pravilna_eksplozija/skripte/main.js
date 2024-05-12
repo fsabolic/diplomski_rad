@@ -6,7 +6,7 @@ function main(platno) {
   platno.addEventListener(
     "click",
     (event) => {
-      cesticeKlik(event, gks, cestice, 100);
+      cesticeKlik(event, gks, cestice, 1000);
     },
     false
   );
