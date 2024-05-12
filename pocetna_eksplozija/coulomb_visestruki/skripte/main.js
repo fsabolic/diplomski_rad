@@ -1,0 +1,75 @@
+let paused = false;
+let brzina = 1;
+
+function main(platno) {
+  var cestice = [];
+  platno.addEventListener(
+    "click",
+    (event) => {
+      for (let i = 0; i < 25; i++) {
+        setTimeout(() => {
+          cesticeKlik(event, gks, cestice, 40, Math.log(i) + 0.5);
+        }, 85 / i); // Adjust the delay as needed
+      }
+    },
+    false
+  );
+
+  let gks = new GlobalniKoordinatniSustav(platno, 0, 10, 0, 10);
+  let fizika = new Fizika(0);
+  let otpor = new Otpor(0.47);
+  let brojCestica = 0;
+  cestice = generirajStacionarneCestice(brojCestica, 0, 9.5, 0, 1);
+
+  let brIteracija = 10;
+  let dt = 1.0 / 60 / brIteracija;
+  let iframe = 0;
+  let starttime = Date.now() / 1000;
+
+  var prviFrame = false;
+  iscrtaj();
+
+  function iscrtaj() {
+    if (!paused) {
+      let brCestica = cestice.length;
+      for (let i = 0; i < brIteracija; i++) {
+        for (let i = 0; i < brCestica; i++) {
+          cestice[i].materijalnaTocka.pomakni(
+            dt / skaliraj(brzina),
+            fizika
+              .F(cestice[i].materijalnaTocka)
+              .zbroji(otpor.F(cestice[i].materijalnaTocka))
+          );
+          cestice[i].zarobi(gks);
+        }
+      }
+
+      gks.ocisti();
+      for (let i = 0; i < brCestica; i++) {
+        cestice[i].iscrtaj(gks);
+      }
+      let framerate = (iframe++ / (Date.now() / 1000 - starttime)).toFixed(6);
+      gks.tekst("FPS: " + framerate, 0.5, 9.5);
+
+      if (prviFrame) {
+        prviFrame = false;
+        paused = true;
+      }
+    }
+    requestAnimationFrame(iscrtaj);
+  }
+  function skaliraj(brzina) {
+    return ((brzina - 1) / (1000 - 1)) * (30 - 1) + 1;
+  }
+}
+
+function start() {
+  paused = false;
+}
+function stop() {
+  paused = true;
+}
+
+function azurirajBrzinuSimulacije(value) {
+  brzina = value;
+}
