@@ -1,8 +1,9 @@
 class CoulombovPotencijal {
-  constructor(k, rVektor, naboj = 1) {
+  constructor(k, rVektor, naboj = 1, potencijalUdaljenosti = 2) {
     this.k = k;
     this.r = rVektor;
     this.naboj = naboj;
+    this.potencijalUdaljenosti = potencijalUdaljenosti;
   }
 
   F(materijalnaTocka) {
@@ -12,7 +13,7 @@ class CoulombovPotencijal {
 
     return rRez
       .pomnoziSkalarom(this.naboj * this.k)
-      .pomnoziSkalarom(1 / udaljenost ** 2);
+      .pomnoziSkalarom(1 / udaljenost ** this.potencijalUdaljenosti);
   }
 
   iscrtaj(gks) {
