@@ -21,7 +21,7 @@ function cesticeKlik(event, gks, cestice, brojCestica = 20) {
           tocka[0][0] / 50 + transformirano[0],
           tocka[1][0] / 50 + transformirano[1]
         ),
-        new Vektor2D(tocka[0][0] * multi, tocka[1][0] * multi)
+        new Vektor2D(0, 0)
       ),
       "red"
     );
@@ -30,26 +30,17 @@ function cesticeKlik(event, gks, cestice, brojCestica = 20) {
     let originalnaDuljina = vektorSmjera.duljina();
 
     if (originalnaDuljina < 0.5) {
-      let novaDuljina = originalnaDuljina + 0.01;
-      let novaPozicijaCesticeX =
-        pocetniVektor.x +
-        (cestica.materijalnaTocka.r.x - pocetniVektor.x) *
-          (novaDuljina / originalnaDuljina);
-      let novaPozicijaCesticeY =
-        pocetniVektor.y +
-        (cestica.materijalnaTocka.r.y - pocetniVektor.y) *
-          (novaDuljina / originalnaDuljina);
-      cestica.materijalnaTocka.r = new Vektor2D(
-        novaPozicijaCesticeX,
-        novaPozicijaCesticeY
+      cestica.materijalnaTocka.r = pocetniVektor.udaljiVektor(
+        cestica.materijalnaTocka.r,
+        1,
+        0.007
       );
-      cestica.boja = "red";
     }
 
     kreiraneCestice.push(cestica);
   }
 
-  let potencijal = new CoulombovPotencijal(500, pocetniVektor, -1, 0.6);
+  let potencijal = new CoulombovPotencijal(25, pocetniVektor, -1, 2);
   let brCestica = kreiraneCestice.length;
   for (let i = 0; i < brCestica; i++) {
     kreiraneCestice[i].materijalnaTocka.pomakni(
