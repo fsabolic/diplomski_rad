@@ -33,7 +33,7 @@ function cesticeKlik(event, gks, cestice, brojCestica = 20) {
       cestica.materijalnaTocka.r = pocetniVektor.udaljiVektor(
         cestica.materijalnaTocka.r,
         1,
-        0.007
+        0.006
       );
     }
 
