@@ -1,8 +1,12 @@
 function cesticeKlik(event, gks, cestice, brojCestica = 20) {
   let canvasPosition = document.getElementById("canvas");
+  let canvasGranica = window.getComputedStyle(canvas);
   let x = event.clientX - canvasPosition.offsetLeft;
   let y = event.clientY - canvasPosition.offsetTop;
-  let transformirano = gks.transformirajPiksele(x, y);
+  let transformirano = gks.transformirajPiksele(
+    x - parseFloat(canvasGranica.borderLeftWidth),
+    y - parseFloat(canvasGranica.borderRightWidth)
+  );
 
   for (let i = 0; i < brojCestica; i++) {
     let tocka = nasumnicnaNormalnaDistribucija(1);
