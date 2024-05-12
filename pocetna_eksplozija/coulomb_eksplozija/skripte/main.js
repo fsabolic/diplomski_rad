@@ -6,21 +6,15 @@ function main(platno) {
   platno.addEventListener(
     "click",
     (event) => {
-      cesticeKlik(event, gks, cestice, 100);
+      cesticeKlik(event, gks, cestice, 1000);
     },
     false
   );
   let gks = new GlobalniKoordinatniSustav(platno, 0, 10, 0, 10);
-  let fizika = new Fizika(9.81);
+  let fizika = new Fizika(0);
   let otpor = new Otpor(0.47);
-
-  let cp = new CoulombovPotencijal(
-    50,
-    new Vektor2D((gks.xmin + gks.xmax) / 2, (gks.ymin + gks.ymax) / 2),
-    1
-  );
   let brojCestica = 0;
-  cestice = generirajNasumicneCestice(brojCestica);
+  cestice = generirajStacionarneCestice(brojCestica, 0, 9.5, 0, 1);
 
   let brIteracija = 10;
   let dt = 1.0 / 60 / brIteracija;
@@ -40,7 +34,6 @@ function main(platno) {
             fizika
               .F(cestice[i].materijalnaTocka)
               .zbroji(otpor.F(cestice[i].materijalnaTocka))
-              .zbroji(cp.F(cestice[i].materijalnaTocka))
           );
           cestice[i].zarobi(gks);
         }
@@ -50,7 +43,6 @@ function main(platno) {
       for (let i = 0; i < brCestica; i++) {
         cestice[i].iscrtaj(gks);
       }
-      cp.iscrtaj(gks);
       let framerate = (iframe++ / (Date.now() / 1000 - starttime)).toFixed(6);
       gks.tekst("FPS: " + framerate, 0.5, 9.5);
 
