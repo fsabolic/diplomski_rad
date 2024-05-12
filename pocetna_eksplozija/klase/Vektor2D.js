@@ -51,4 +51,15 @@ class Vektor2D {
   duljina() {
     return Math.sqrt(this.x ** 2 + this.y ** 2);
   }
+
+  udaljiVektor(v2, umnozak = 1, zbroj = 0) {
+    let vektorSmjera = v2.oduzmi(this);
+    let originalnaDuljina = vektorSmjera.duljina();
+    let novaDuljina = originalnaDuljina * umnozak + zbroj;
+    let novaPozicijaCesticeX =
+      this.x + (v2.x - this.x) * (novaDuljina / originalnaDuljina);
+    let novaPozicijaCesticeY =
+      this.y + (v2.y - this.y) * (novaDuljina / originalnaDuljina);
+    return new Vektor2D(novaPozicijaCesticeX, novaPozicijaCesticeY);
+  }
 } // class Vektor
