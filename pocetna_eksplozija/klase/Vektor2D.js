@@ -49,6 +49,6 @@ class Vektor2D {
   }
 
   duljina() {
-    return Math.sqrt((this.x ^ 2) + (this.y ^ 2));
+    return Math.sqrt(this.x ** 2 + this.y ** 2);
   }
 } // class Vektor
