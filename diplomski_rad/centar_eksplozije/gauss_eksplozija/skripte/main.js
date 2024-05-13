@@ -14,9 +14,6 @@ function main(platno) {
   let fizika = new Fizika(0);
   let otpor = new Otpor(0.47);
 
-  let brojCestica = 0;
-  cestice = generirajNasumicneCestice(brojCestica);
-
   let brIteracija = 1;
   let dt = 1.0 / 60 / brIteracija;
   let iframe = 0;

@@ -13,8 +13,6 @@ function main(platno) {
   let gks = new GlobalniKoordinatniSustav(platno, 0, 10, 0, 10);
   let fizika = new Fizika(0);
   let otpor = new Otpor(0.47);
-  let brojCestica = 0;
-  cestice = generirajStacionarneCestice(brojCestica, 0, 9.5, 0, 1);
 
   let brIteracija = 10;
   let dt = 1.0 / 60 / brIteracija;
