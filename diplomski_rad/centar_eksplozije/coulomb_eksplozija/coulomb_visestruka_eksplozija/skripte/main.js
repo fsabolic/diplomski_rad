@@ -6,9 +6,18 @@ function main(platno) {
   platno.addEventListener(
     "click",
     (event) => {
-      for (let i = 0; i < 25; i++) {
+      let ukupnoCestica = 1000;
+      let iteracijeCestica = 25;
+      let cesticePoIteraciji = ukupnoCestica / iteracijeCestica;
+      for (let i = 0; i < iteracijeCestica; i++) {
         setTimeout(() => {
-          cesticeKlik(event, gks, cestice, 40, Math.log(i) + 0.5);
+          cesticeKlik(
+            event,
+            gks,
+            cestice,
+            cesticePoIteraciji,
+            Math.log(i) + 0.5
+          );
         }, 85 / i); // Adjust the delay as needed
       }
     },
