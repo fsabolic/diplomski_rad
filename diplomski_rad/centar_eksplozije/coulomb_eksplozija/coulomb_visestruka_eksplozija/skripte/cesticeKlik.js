@@ -5,14 +5,7 @@ function cesticeKlik(
   brojCestica = 20,
   koeficijentSmanjenja = 1
 ) {
-  let canvasPosition = document.getElementById("canvas");
-  let canvasGranica = window.getComputedStyle(canvas);
-  let x = event.clientX - canvasPosition.offsetLeft;
-  let y = event.clientY - canvasPosition.offsetTop;
-  let transformirano = gks.transformirajPiksele(
-    x - parseFloat(canvasGranica.borderLeftWidth),
-    y - parseFloat(canvasGranica.borderRightWidth)
-  );
+  let transformirano = odrediKoordinateKlika(event, gks);
 
   let kreiraneCestice = [];
   let pocetniVektor = new Vektor2D(transformirano[0], transformirano[1]);
@@ -32,21 +25,27 @@ function cesticeKlik(
       "red"
     );
 
-    let vektorSmjera = cestica.materijalnaTocka.r.oduzmi(pocetniVektor);
-    let originalnaDuljina = vektorSmjera.duljina();
-
-    let polumjer = 0.006 * koeficijentSmanjenja;
-    if (originalnaDuljina < polumjer) {
-      cestica.materijalnaTocka.r = pocetniVektor.udaljiVektor(
-        cestica.materijalnaTocka.r,
-        1,
-        polumjer
-      );
-    }
+    odbaciCesticeUSredini(cestica, pocetniVektor, koeficijentSmanjenja);
 
     kreiraneCestice.push(cestica);
   }
 
+  djelujPotencijalomNaCestice(
+    koeficijentSmanjenja,
+    pocetniVektor,
+    kreiraneCestice,
+    gks
+  );
+
+  cestice.push(...kreiraneCestice);
+}
+
+function djelujPotencijalomNaCestice(
+  koeficijentSmanjenja,
+  pocetniVektor,
+  kreiraneCestice,
+  gks
+) {
   let potencijal = new CoulombovPotencijal(
     10 * koeficijentSmanjenja,
     pocetniVektor,
@@ -61,6 +60,30 @@ function cesticeKlik(
     );
     kreiraneCestice[i].zarobi(gks);
   }
+}
 
-  cestice.push(...kreiraneCestice);
+function odbaciCesticeUSredini(cestica, pocetniVektor, koeficijentSmanjenja) {
+  let vektorSmjera = cestica.materijalnaTocka.r.oduzmi(pocetniVektor);
+  let originalnaDuljina = vektorSmjera.duljina();
+
+  let polumjer = 0.006 * koeficijentSmanjenja;
+  if (originalnaDuljina < polumjer) {
+    cestica.materijalnaTocka.r = pocetniVektor.udaljiVektor(
+      cestica.materijalnaTocka.r,
+      1,
+      polumjer
+    );
+  }
+}
+
+function odrediKoordinateKlika(event, gks) {
+  let canvasPosition = document.getElementById("canvas");
+  let canvasGranica = window.getComputedStyle(canvas);
+  let x = event.clientX - canvasPosition.offsetLeft;
+  let y = event.clientY - canvasPosition.offsetTop;
+  let transformirano = gks.transformirajPiksele(
+    x - parseFloat(canvasGranica.borderLeftWidth),
+    y - parseFloat(canvasGranica.borderRightWidth)
+  );
+  return transformirano;
 }
