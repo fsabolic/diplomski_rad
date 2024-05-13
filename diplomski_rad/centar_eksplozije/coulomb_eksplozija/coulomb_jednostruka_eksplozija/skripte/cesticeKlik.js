@@ -29,11 +29,12 @@ function cesticeKlik(event, gks, cestice, brojCestica = 20) {
     let vektorSmjera = cestica.materijalnaTocka.r.oduzmi(pocetniVektor);
     let originalnaDuljina = vektorSmjera.duljina();
 
-    if (originalnaDuljina < 0.5) {
+    let polumjer = 0.006;
+    if (originalnaDuljina < polumjer) {
       cestica.materijalnaTocka.r = pocetniVektor.udaljiVektor(
         cestica.materijalnaTocka.r,
         1,
-        0.006
+        polumjer
       );
     }
 
