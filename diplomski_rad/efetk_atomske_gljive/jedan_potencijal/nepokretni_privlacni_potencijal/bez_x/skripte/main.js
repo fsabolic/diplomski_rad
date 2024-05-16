@@ -23,7 +23,7 @@ function main(platno) {
     gks.xmin / 2 + gks.xmax / 2,
     0 + gks.ymin / 2 + gks.ymax / 2
   );
-  let potencijal = new YDPotencijal(800, pozicijaPotencijala, 1, 4);
+  let potencijal = new YDPotencijal(700, pozicijaPotencijala, 1, 4);
 
   let tocke = generirajStacionarneCestice(
     3500,
