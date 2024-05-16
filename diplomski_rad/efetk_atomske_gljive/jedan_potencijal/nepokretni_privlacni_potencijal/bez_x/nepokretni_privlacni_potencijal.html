@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="hr">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Gljiva 1. - Nepokretni privlačni potencijal</title>
+    <link rel="stylesheet" href="../../../../css/global.css" />
+    <script src="../../../../klase/MaterijalnaTocka.js"></script>
+    <script src="../../../../klase/Vektor2D.js"></script>
+    <script src="../../../../klase/Fizika.js"></script>
+    <script src="../../../../klase/Cestica.js"></script>
+    <script src="../../../../klase/Otpor.js"></script>
+    <script src="../../../../klase/GlobalniKoordinatniSustav.js"></script>
+    <script src="../../../../klase/YDPotencijal.js"></script>
+    <script src="skripte/generirajCestice.js"></script>
+    <script src="skripte/gaussDistribucija.js"></script>
+    <script src="skripte/cesticeKlik.js"></script>
+    <script src="skripte/main.js"></script>
+    <script>
+      var lopte = [];
+      function pokreni() {
+        var platno = document.getElementById("canvas");
+        if (!platno) alert("Greška - nema platna!");
+
+        var slider = document.getElementById("sliderSpeed");
+        slider.onchange();
+
+        main(platno);
+      }
+      window.onload = pokreni;
+    </script>
+  </head>
+
+  <body>
+    <div class="page-container">
+      <div style="flex-direction: row">
+        <canvas
+          id="canvas"
+          width="600"
+          height="600"
+          style="border: 5px solid black"
+        >
+          Vaš preglednik ne podržava HTML5 canvas.
+        </canvas>
+      </div>
+      <div class="page-console">
+        <div class="console-buttons">
+          <button type="button" onclick="start()" id="start">Pokreni</button>
+          <button type="button" onclick="stop()" id="stop">Pauziraj</button>
+        </div>
+        <div class="console-speed-slider">
+          <p>Sim. brzina</p>
+          <input
+            type="range"
+            min="1"
+            max="1000"
+            value="1"
+            class="slider"
+            id="sliderSpeed"
+            onchange="azurirajBrzinuSimulacije(this.value)"
+          />
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
