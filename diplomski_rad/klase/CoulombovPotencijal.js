@@ -24,6 +24,6 @@ class CoulombovPotencijal {
   }
 
   iscrtaj(gks) {
-    gks.puniKrug(this.r.x, this.r.y, 0.3, "blue");
+    gks.puniKrug(this.r.x, this.r.y, 0.1, "blue");
   }
 }
