@@ -3,6 +3,7 @@ let brzina = 1;
 
 function main(platno) {
   var cestice = [];
+  /*
   platno.addEventListener(
     "click",
     (event) => {
@@ -10,6 +11,7 @@ function main(platno) {
     },
     false
   );
+  */
   let gks = new GlobalniKoordinatniSustav(platno, 0, 10, 0, 10);
   let fizika = new Fizika(9.81);
   let otpor = new Otpor(0);
@@ -21,19 +23,19 @@ function main(platno) {
 
   let pozicijaPotencijala = new Vektor2D(
     gks.xmin / 2 + gks.xmax / 2,
-    0 + gks.ymin / 2 + gks.ymax / 2
+    -3.92 + gks.ymin / 2 + gks.ymax / 2
   );
-  let potencijal = new CoulombovPotencijal(800, pozicijaPotencijala, 1, 4);
+  let potencijal = new CoulombovPotencijal(11, pozicijaPotencijala, 1, 2);
 
   let tocke = generirajStacionarneCestice(
-    3500,
+    5500,
     gks.xmin,
     gks.xmax,
     gks.xmin,
     1
   );
 
-  let debljinaSloja = 2;
+  let debljinaSloja = 1;
   for (let i = 0; i < tocke.length; i++) {
     tocke[i].materijalnaTocka.r.y =
       debljinaSloja * tocke[i].materijalnaTocka.r.y;
@@ -57,12 +59,13 @@ function main(platno) {
             fizika
               .F(cestice[i].materijalnaTocka)
               .zbroji(otpor.F(cestice[i].materijalnaTocka))
-              .zbroji(potencijal.F(cestice[i].materijalnaTocka, 0.5))
+              .zbroji(potencijal.F(cestice[i].materijalnaTocka, 0.0))
           );
           cestice[i].zarobi(gks);
         }
-      }
 
+        potencijal.r.y += 0.01;
+      }
       gks.ocisti();
       for (let i = 0; i < brCestica; i++) {
         cestice[i].iscrtaj(gks);
