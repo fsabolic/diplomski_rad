@@ -1,6 +1,3 @@
-let paused = false;
-let brzina = 1;
-
 function main(platno) {
   var cestice = [];
   platno.addEventListener(
@@ -19,7 +16,6 @@ function main(platno) {
   let iframe = 0;
   let starttime = Date.now() / 1000;
 
-  var prviFrame = false;
   iscrtaj();
 
   function iscrtaj() {
@@ -51,18 +47,4 @@ function main(platno) {
     }
     requestAnimationFrame(iscrtaj);
   }
-  function skaliraj(brzina) {
-    return ((brzina - 1) / (1000 - 1)) * (30 - 1) + 1;
-  }
-}
-
-function start() {
-  paused = false;
-}
-function stop() {
-  paused = true;
-}
-
-function azurirajBrzinuSimulacije(value) {
-  brzina = value;
 }
