@@ -87,3 +87,14 @@ function odrediKoordinateKlika(event, gks) {
   );
   return transformirano;
 }
+
+function provjeriHtmlBrojCestica(brojCestica) {
+  let htmlBrCestica = document.getElementById(
+    "particle-number-setter-value"
+  ).value;
+
+  if (!(isNaN(htmlBrCestica) || htmlBrCestica < 1 || htmlBrCestica > 10000)) {
+    brojCestica = htmlBrCestica;
+  }
+  return brojCestica;
+}

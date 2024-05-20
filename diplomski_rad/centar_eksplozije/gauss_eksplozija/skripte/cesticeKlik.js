@@ -1,4 +1,5 @@
 function cesticeKlik(event, gks, cestice, brojCestica = 20) {
+  brojCestica = provjeriHtmlBrojCestica(brojCestica);
   let canvasPosition = document.getElementById("canvas");
   let canvasGranica = window.getComputedStyle(canvas);
   let x = event.clientX - canvasPosition.offsetLeft;
@@ -22,4 +23,15 @@ function cesticeKlik(event, gks, cestice, brojCestica = 20) {
     );
     cestice.push(cestica);
   }
+}
+
+function provjeriHtmlBrojCestica(brojCestica) {
+  let htmlBrCestica = document.getElementById(
+    "particle-number-setter-value"
+  ).value;
+
+  if (!(isNaN(htmlBrCestica) || htmlBrCestica < 1 || htmlBrCestica > 10000)) {
+    brojCestica = htmlBrCestica;
+  }
+  return brojCestica;
 }

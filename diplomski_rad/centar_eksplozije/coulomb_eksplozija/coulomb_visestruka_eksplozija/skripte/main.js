@@ -6,6 +6,7 @@ function main(platno) {
     (event) => {
       let ukupnoCestica = 1000;
       let iteracijeCestica = 25;
+      ukupnoCestica = provjeriHtmlBrojCestica(ukupnoCestica);
       let cesticePoIteraciji = ukupnoCestica / iteracijeCestica;
       for (let i = 0; i < iteracijeCestica; i++) {
         setTimeout(() => {
