@@ -1,24 +1,22 @@
 # Vizualizacija eksplozija korištenjem čestičnog modela
-Ovaj projekt predstavlja diplomski rad za završetak diplomskog studija "Informatičko i programsko inženjerstvo" na Fakultetu organizacije i informatike. Cilj diplomskog rada je što točnije vizualizirati eksplozije čestica koristeći razne tehnike i parametre na čestičnom modelu. Sam projekt se sastoji od nekoliko različitih implementacija kojima se pokušava što točnije prikazati kretanje čestica nakon eksplozije.
+
+Ovaj projekt predstavlja diplomski rad za završetak diplomskog studija "Informatičko i programsko inženjerstvo" na Fakultetu organizacije i informatike. Cilj diplomskog rada je što vjernije vizualizirati eksplozije čestica koristeći razne tehnike i parametre na čestičnom modelu. Sam projekt se sastoji od nekoliko različitih implementacija kojima se pokušava što točnije prikazati kretanje čestica nakon eksplozije.
+
 ### Struktura projekta
+
 **diplomski_rad**  
 &nbsp;&nbsp;&nbsp;&nbsp;├── **centar_eksplozije**  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├── **coulomb_eksplozija**  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;&nbsp;├── **coulomb_jednostruka_eksplozija**  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;&nbsp;└── *skripte*  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;&nbsp;└── _skripte_  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;&nbsp;└── **coulomb_visestruka_eksplozija**  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└── *skripte*  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└── _skripte_  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├── **gauss_eksplozija**  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└── *skripte*  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└── _skripte_  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└── **pravilna_eksplozija**  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└── *skripte*  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└── _skripte_  
 &nbsp;&nbsp;&nbsp;&nbsp;├── **css**  
-&nbsp;&nbsp;&nbsp;&nbsp;└── **klase** 
-
-
-
-
-
+&nbsp;&nbsp;&nbsp;&nbsp;└── **klase**
 
 **Opisi foldera:**
 
