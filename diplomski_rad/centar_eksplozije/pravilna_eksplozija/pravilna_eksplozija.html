@@ -15,7 +15,6 @@
     <script src="skripte/cesticeKlik.js"></script>
     <script src="skripte/main.js"></script>
     <script>
-      var lopte = [];
       function pokreni() {
         var platno = document.getElementById("canvas");
         if (!platno) alert("Greška - nema platna!");
@@ -57,6 +56,10 @@
             id="sliderSpeed"
             onchange="azurirajBrzinuSimulacije(this.value)"
           />
+        </div>
+        <div class="particle-counter">
+          <p id="particle-counter-text">Broj čestica:</p>
+          <p id="particle-counter-value">0</p>
         </div>
       </div>
     </div>

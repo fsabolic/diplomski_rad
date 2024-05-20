@@ -73,3 +73,25 @@ button:hover {
 #stop:hover {
   background-color: brown;
 }
+
+.particle-counter {
+  display: flex;
+  flex-direction: row;
+  font-size: 12px;
+  align-self: self-start;
+}
+
+#particle-counter-text {
+  font-weight: bold;
+  margin-right: 10px;
+  padding: 10px;
+  padding-left: 0;
+}
+
+#particle-counter-value {
+  border: 1px solid grey;
+  background-color: beige;
+  padding: 8px 20px 8px 20px;
+  width: 50px;
+  text-align: center;
+}

@@ -1,5 +1,5 @@
 function main(platno) {
-  var cestice = [];
+  var cestice = postaviBrojac();
   platno.addEventListener(
     "click",
     (event) => {
