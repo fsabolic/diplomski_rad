@@ -1,8 +1,6 @@
-let paused = false;
-let brzina = 1;
-
 function main(platno) {
-  var cestice = [];
+  let brojacCestica = document.getElementById("particle-counter-value");
+  var cestice = postaviBrojac(brojacCestica);
   platno.addEventListener(
     "click",
     (event) => {
@@ -14,7 +12,7 @@ function main(platno) {
   let fizika = new Fizika(0);
   let otpor = new Otpor(0.47);
 
-  let brIteracija = 10;
+  let brIteracija = 1;
   let dt = 1.0 / 60 / brIteracija;
   let iframe = 0;
   let starttime = Date.now() / 1000;
@@ -51,18 +49,4 @@ function main(platno) {
     }
     requestAnimationFrame(iscrtaj);
   }
-  function skaliraj(brzina) {
-    return ((brzina - 1) / (1000 - 1)) * (30 - 1) + 1;
-  }
-}
-
-function start() {
-  paused = false;
-}
-function stop() {
-  paused = true;
-}
-
-function azurirajBrzinuSimulacije(value) {
-  brzina = value;
 }

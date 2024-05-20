@@ -1,5 +1,6 @@
 function main(platno) {
-  var cestice = postaviBrojac();
+  let brojacCestica = document.getElementById("particle-counter-value");
+  var cestice = postaviBrojac(brojacCestica);
   platno.addEventListener(
     "click",
     (event) => {
