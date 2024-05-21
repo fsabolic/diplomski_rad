@@ -18,6 +18,7 @@ function main(platno) {
   let starttime = Date.now() / 1000;
 
   var prviFrame = false;
+  spremiPocetnoStanje(cestice);
   iscrtaj();
 
   function iscrtaj() {

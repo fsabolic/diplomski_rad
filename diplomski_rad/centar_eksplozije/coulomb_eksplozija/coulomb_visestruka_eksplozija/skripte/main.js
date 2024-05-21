@@ -31,8 +31,8 @@ function main(platno) {
   let dt = 1.0 / 60 / brIteracija;
   let iframe = 0;
   let starttime = Date.now() / 1000;
-
   var prviFrame = false;
+  spremiPocetnoStanje(cestice);
   iscrtaj();
 
   function iscrtaj() {

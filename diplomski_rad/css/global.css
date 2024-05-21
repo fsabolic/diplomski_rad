@@ -16,7 +16,9 @@ body {
   padding: 15px;
   border-radius: 14px;
   border: 2px solid gray;
-  justify-content: safe;
+  width: 370px;
+  min-width: 370px;
+  max-width: 370px;
 }
 
 canvas {
@@ -32,16 +34,50 @@ button {
   border-radius: 14px;
   font-size: 14px;
   font-weight: bold;
+  width: 120px;
+  margin: 5px;
 }
 
 .console-buttons {
   padding: 20px;
+  width: 72%;
 }
 
 button:hover {
   background-color: #424242;
 }
 
+#start {
+  background-color: darkgreen;
+}
+
+#start:hover {
+  background-color: seagreen;
+}
+
+#stop {
+  background-color: #bb550d;
+}
+
+#stop:hover {
+  background-color: #dc4d01;
+}
+
+#reset {
+  background-color: midnightblue;
+}
+
+#reset:hover {
+  background-color: royalblue;
+}
+
+#reload {
+  background-color: darkred;
+}
+
+#reload:hover {
+  background-color: brown;
+}
 .console-speed-slider {
   display: flex;
   flex-direction: row;
@@ -59,27 +95,10 @@ button:hover {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-#start {
-  background-color: darkgreen;
-}
-
-#start:hover {
-  background-color: seagreen;
-}
-
-#stop {
-  background-color: darkred;
-}
-
-#stop:hover {
-  background-color: brown;
-}
-
 .particle-counter {
   display: flex;
   flex-direction: row;
   font-size: 12px;
-  align-self: self-start;
 }
 
 #particle-counter-text {

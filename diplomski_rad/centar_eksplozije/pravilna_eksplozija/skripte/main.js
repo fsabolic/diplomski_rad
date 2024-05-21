@@ -17,6 +17,7 @@ function main(platno) {
   let iframe = 0;
   let starttime = Date.now() / 1000;
 
+  spremiPocetnoStanjeCestica(cestice);
   iscrtaj();
 
   function iscrtaj() {
