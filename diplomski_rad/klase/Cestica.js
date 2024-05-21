@@ -5,19 +5,20 @@ class Cestica {
     this.promjer = promjer;
   } // constructor
 
-  zarobi(gks) {
-    if (
-      this.materijalnaTocka.r.x < gks.xmin + this.promjer ||
-      this.materijalnaTocka.r.x > gks.xmax - this.promjer
-    ) {
+  zarobi(gks, top = true, right = true, bottom = true, left = true) {
+    if (this.materijalnaTocka.r.x < gks.xmin + this.promjer && left) {
       this.materijalnaTocka.v.x = -this.materijalnaTocka.v.x;
     }
-    if (
-      this.materijalnaTocka.r.y < gks.ymin + this.promjer ||
-      this.materijalnaTocka.r.y > gks.ymax - this.promjer
-    )
+    if (this.materijalnaTocka.r.x > gks.xmax - this.promjer && right) {
+      this.materijalnaTocka.v.x = -this.materijalnaTocka.v.x;
+    }
+    if (this.materijalnaTocka.r.y < gks.ymin + this.promjer && bottom) {
       this.materijalnaTocka.v.y = -this.materijalnaTocka.v.y;
-    if (this.materijalnaTocka.r.y < gks.ymin + this.promjer) {
+    }
+    if (this.materijalnaTocka.r.y > gks.ymax - this.promjer && top) {
+      this.materijalnaTocka.v.y = -this.materijalnaTocka.v.y;
+    }
+    if (this.materijalnaTocka.r.y < gks.ymin + this.promjer && bottom) {
       this.materijalnaTocka.r.y = this.promjer;
     }
   } // zarobi

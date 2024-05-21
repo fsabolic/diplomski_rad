@@ -6,6 +6,11 @@ let pocetnoStanjeCestica = null;
 let cesticeSave = null;
 let pocetnoStanjePotencijala = null;
 let potencijalSave = null;
+let topGranica = true;
+let leftGranica = true;
+let bottomGranica = true;
+let rightGranica = true;
+
 function start() {
   paused = false;
 }
@@ -86,5 +91,29 @@ function reset() {
       potencijalSave[key] = pocetnoStanjePotencijala[key];
     }
     pocetnoStanjePotencijala = deepClone(potencijalSave);
+  }
+}
+
+function granicaClick(event) {
+  let odabranaGranica = event.target;
+  if (odabranaGranica.className == "border-item") {
+    odabranaGranica.className = "border-item-selected";
+  } else {
+    odabranaGranica.className = "border-item";
+  }
+
+  switch (odabranaGranica.id) {
+    case "top":
+      topGranica = !topGranica;
+      break;
+    case "right":
+      rightGranica = !rightGranica;
+      break;
+    case "bottom":
+      bottomGranica = !bottomGranica;
+      break;
+    case "left":
+      leftGranica = !leftGranica;
+      break;
   }
 }
