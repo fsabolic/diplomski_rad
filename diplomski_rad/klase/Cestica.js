@@ -23,6 +23,6 @@ class Cestica {
   } // zarobi
 
   iscrtaj(gks) {
-    gks.piksel(this.materijalnaTocka.r.x, this.materijalnaTocka.r.y, this.boja);
+    gks.piksel(this.materijalnaTocka.r.x, this.materijalnaTocka.r.y, "yellow");
   } // iscrtaj
 } // class Loptica

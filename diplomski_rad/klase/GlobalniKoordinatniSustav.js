@@ -56,11 +56,11 @@ class GlobalniKoordinatniSustav {
 
   piksel(x, y, boja) {
     this.g.fillStyle = boja;
-    this.g.fillRect(this.sx * x + this.px, this.sy * y + this.py, 2, 2);
+    this.g.fillRect(this.sx * x + this.px, this.sy * y + this.py, 1, 1);
   }
   tekst(str, x, y) {
     this.g.font = "16px Arial";
-    this.g.fillStyle = "black";
+    this.g.fillStyle = "white";
     this.g.fillText(str, this.sx * x + this.px, this.sy * y + this.py);
   } // tekst
 } // class GKS
