@@ -12,7 +12,7 @@
     <script src="../../../../klase/GlobalniKoordinatniSustav.js"></script>
     <script src="../../../../klase/YDPotencijal.js"></script>
     <script src="../../../../klase/CoulombovPotencijal.js"></script>
-    <script src="../../../../skripte/konzola.js"></script>
+    <script src="../../../../klase/Konzola.js"></script>
     <script src="skripte/generirajCestice.js"></script>
     <script src="skripte/gaussDistribucija.js"></script>
     <script src="skripte/cesticeKlik.js"></script>
@@ -46,10 +46,18 @@
       </div>
       <div class="page-console">
         <div class="console-buttons">
-          <button type="button" onclick="start()" id="start">Pokreni</button>
-          <button type="button" onclick="stop()" id="stop">Pauziraj</button>
-          <button type="button" onclick="reset()" id="reset">Reset</button>
-          <button type="button" onclick="reload()" id="reload">Reload</button>
+          <button type="button" onclick="Konzola.start()" id="start">
+            Pokreni
+          </button>
+          <button type="button" onclick="Konzola.stop()" id="stop">
+            Pauziraj
+          </button>
+          <button type="button" onclick="Konzola.reset()" id="reset">
+            Reset
+          </button>
+          <button type="button" onclick="Konzola.reload()" id="reload">
+            Reload
+          </button>
         </div>
         <div class="console-speed-slider">
           <p>Sim. brzina</p>
@@ -60,12 +68,45 @@
             value="1000"
             class="slider"
             id="sliderSpeed"
-            onchange="azurirajBrzinuSimulacije(this.value)"
+            onchange="Konzola.azurirajBrzinuSimulacije(this.value)"
           />
         </div>
         <div class="particle-counter">
           <p id="particle-counter-text">Ukupno čestica:</p>
           <p id="particle-counter-value">0</p>
+        </div>
+        <div class="particle-number-setter">
+          <input
+            id="particle-number-setter-value"
+            type="text"
+            placeholder="Broj čestica eksplozije"
+            value=""
+          />
+        </div>
+        <div class="borders-container">
+          <p>Granice odbijanja:</p>
+          <div class="borders">
+            <div
+              id="top"
+              class="border-item"
+              onclick="Konzola.granicaClick(event)"
+            ></div>
+            <div
+              id="left"
+              class="border-item"
+              onclick="Konzola.granicaClick(event)"
+            ></div>
+            <div
+              id="right"
+              class="border-item"
+              onclick="Konzola.granicaClick(event)"
+            ></div>
+            <div
+              id="bottom"
+              class="border-item"
+              onclick="Konzola.granicaClick(event)"
+            ></div>
+          </div>
         </div>
       </div>
     </div>

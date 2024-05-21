@@ -1,6 +1,6 @@
 function main(platno) {
   let brojacCestica = document.getElementById("particle-counter-value");
-  var cestice = postaviBrojac(brojacCestica);
+  var cestice = Konzola.postaviBrojac(brojacCestica);
   platno.addEventListener(
     "click",
     (event) => {
@@ -17,21 +17,28 @@ function main(platno) {
   let iframe = 0;
   let starttime = Date.now() / 1000;
 
-  spremiPocetnoStanjeCestica(cestice);
+  var prviFrame = false;
+  Konzola.spremiPocetnoStanjeCestica(cestice);
   iscrtaj();
 
   function iscrtaj() {
-    if (!paused) {
+    if (!Konzola.paused) {
       let brCestica = cestice.length;
       for (let i = 0; i < brIteracija; i++) {
         for (let i = 0; i < brCestica; i++) {
           cestice[i].materijalnaTocka.pomakni(
-            dt / skaliraj(brzina),
+            dt / Konzola.skaliraj(Konzola.brzina),
             fizika
               .F(cestice[i].materijalnaTocka)
               .zbroji(otpor.F(cestice[i].materijalnaTocka))
           );
-          cestice[i].zarobi(gks);
+          cestice[i].zarobi(
+            gks,
+            Konzola.topGranica,
+            Konzola.rightGranica,
+            Konzola.bottomGranica,
+            Konzola.leftGranica
+          );
         }
       }
 
@@ -44,7 +51,7 @@ function main(platno) {
 
       if (prviFrame) {
         prviFrame = false;
-        paused = true;
+        Konzola.paused = true;
       }
     }
     requestAnimationFrame(iscrtaj);
