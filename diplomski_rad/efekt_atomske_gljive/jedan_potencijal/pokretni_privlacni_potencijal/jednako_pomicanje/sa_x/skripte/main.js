@@ -1,7 +1,7 @@
 function main(platno) {
   let brojacCestica = document.getElementById("particle-counter-value");
   var cestice = Konzola.postaviBrojac(brojacCestica);
-  /*
+
   platno.addEventListener(
     "click",
     (event) => {
@@ -9,7 +9,7 @@ function main(platno) {
     },
     false
   );
-  */
+
   let gks = new GlobalniKoordinatniSustav(platno, 0, 10, 0, 10);
   let fizika = new Fizika(9.81);
   let otpor = new Otpor(0);
