@@ -11,6 +11,9 @@ class Konzola {
   static leftGranica = true;
   static bottomGranica = true;
   static rightGranica = true;
+  static gravitacija = new Fizika(9.81);
+  static otpor = new Otpor(0.47);
+
   static start() {
     Konzola.paused = false;
   }
@@ -118,5 +121,39 @@ class Konzola {
         Konzola.leftGranica = !Konzola.leftGranica;
         break;
     }
+  }
+
+  static promjenaGravitacije(event) {
+    let vrijednostGravitacije = event.target.value;
+    if (
+      vrijednostGravitacije < 0 ||
+      vrijednostGravitacije > 100000 ||
+      isNaN(vrijednostGravitacije) ||
+      !vrijednostGravitacije
+    ) {
+      vrijednostGravitacije = 9.81;
+    }
+    Konzola.gravitacija = new Fizika(Number.parseFloat(vrijednostGravitacije));
+  }
+
+  static postaviGravitaciju(gravitacija) {
+    Konzola.gravitacija = gravitacija;
+  }
+
+  static promjenaOtpora(event) {
+    let vrijednostOtpora = event.target.value;
+    if (
+      vrijednostOtpora < 0 ||
+      vrijednostOtpora > 100000 ||
+      isNaN(vrijednostOtpora) ||
+      !vrijednostOtpora
+    ) {
+      vrijednostOtpora = 0.47;
+    }
+    Konzola.otpor = new Otpor(Number.parseFloat(vrijednostOtpora));
+  }
+
+  static postaviOtpor(otpor) {
+    Konzola.otpor = otpor;
   }
 }

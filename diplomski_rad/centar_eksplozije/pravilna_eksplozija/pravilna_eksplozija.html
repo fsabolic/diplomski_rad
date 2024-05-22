@@ -29,82 +29,94 @@
   </head>
 
   <body>
-    <div class="page-container">
-      <div style="flex-direction: row">
-        <canvas
-          id="canvas"
-          width="600"
-          height="600"
-          style="border: 5px solid black"
-        >
-          Vaš preglednik ne podržava HTML5 canvas.
-        </canvas>
-      </div>
-      <div class="page-console">
-        <div class="console-buttons">
-          <button type="button" onclick="Konzola.start()" id="start">
-            Pokreni
-          </button>
-          <button type="button" onclick="Konzola.stop()" id="stop">
-            Pauziraj
-          </button>
-          <button type="button" onclick="Konzola.reset()" id="reset">
-            Reset
-          </button>
-          <button type="button" onclick="Konzola.reload()" id="reload">
-            Reload
-          </button>
+    <body>
+      <div class="page-container">
+        <div class="canvas-container">
+          <canvas id="canvas" width="600" height="600">
+            Vaš preglednik ne podržava HTML5 canvas.
+          </canvas>
         </div>
-        <div class="console-speed-slider">
-          <p>Sim. brzina</p>
-          <input
-            type="range"
-            min="1"
-            max="1000"
-            value="1000"
-            class="slider"
-            id="sliderSpeed"
-            onchange="Konzola.azurirajBrzinuSimulacije(this.value)"
-          />
-        </div>
-        <div class="particle-counter">
-          <p id="particle-counter-text">Ukupno čestica:</p>
-          <p id="particle-counter-value">0</p>
-        </div>
-        <div class="particle-number-setter">
-          <input
-            id="particle-number-setter-value"
-            type="text"
-            placeholder="Broj čestica eksplozije"
-            value=""
-          />
-        </div>
-        <div class="borders-container">
-          <p>Granice odbijanja:</p>
-          <div class="borders">
-            <div
-              id="top"
-              class="border-item"
-              onclick="Konzola.granicaClick(event)"
-            ></div>
-            <div
-              id="left"
-              class="border-item"
-              onclick="Konzola.granicaClick(event)"
-            ></div>
-            <div
-              id="right"
-              class="border-item"
-              onclick="Konzola.granicaClick(event)"
-            ></div>
-            <div
-              id="bottom"
-              class="border-item"
-              onclick="Konzola.granicaClick(event)"
-            ></div>
+        <div class="page-console">
+          <div class="console-speed-slider">
+            <p>Sim. brzina</p>
+            <input
+              type="range"
+              min="1"
+              max="1000"
+              value="1000"
+              class="slider"
+              id="sliderSpeed"
+              onchange="Konzola.azurirajBrzinuSimulacije(this.value)"
+            />
+          </div>
+          <div class="console-buttons">
+            <button type="button" onclick="Konzola.start()" id="start">
+              Pokreni
+            </button>
+            <button type="button" onclick="Konzola.stop()" id="stop">
+              Pauziraj
+            </button>
+            <button type="button" onclick="Konzola.reset()" id="reset">
+              Reset
+            </button>
+            <button type="button" onclick="Konzola.reload()" id="reload">
+              Reload
+            </button>
+          </div>
+          <div class="setters">
+            <div class="particle-counter">
+              <p id="particle-counter-text">Ukupno čestica:</p>
+              <p id="particle-counter-value">0</p>
+            </div>
+            <div class="particle-number-setter">
+              <p id="particle-number-setter-text">Br. eksplozije:</p>
+              <input id="particle-number-setter-value" type="text" value="" />
+            </div>
+            <div class="gravity-setter">
+              <p id="gravity-setter-text">Gravitacija:</p>
+              <input
+                id="gravity-setter-value"
+                type="text"
+                value=""
+                onfocusout="Konzola.promjenaGravitacije(event)"
+              />
+            </div>
+            <div class="resistance-setter">
+              <p id="resistance-setter-text">Otpor:</p>
+              <input
+                id="resistance-setter-value"
+                type="text"
+                value=""
+                onfocusout="Konzola.promjenaOtpora(event)"
+              />
+            </div>
+          </div>
+          <div class="borders-container">
+            <p>Granice odbijanja:</p>
+            <div class="borders">
+              <div
+                id="top"
+                class="border-item"
+                onclick="Konzola.granicaClick(event)"
+              ></div>
+              <div
+                id="left"
+                class="border-item"
+                onclick="Konzola.granicaClick(event)"
+              ></div>
+              <div
+                id="right"
+                class="border-item"
+                onclick="Konzola.granicaClick(event)"
+              ></div>
+              <div
+                id="bottom"
+                class="border-item"
+                onclick="Konzola.granicaClick(event)"
+              ></div>
+            </div>
           </div>
         </div>
       </div>
-    </div>
   </body>
 </html>

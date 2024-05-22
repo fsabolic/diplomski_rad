@@ -9,8 +9,8 @@ function main(platno) {
     false
   );
   let gks = new GlobalniKoordinatniSustav(platno, 0, 10, 0, 10);
-  let fizika = new Fizika(0);
-  let otpor = new Otpor(0.47);
+  Konzola.postaviGravitaciju(new Fizika(0));
+  Konzola.postaviOtpor(new Otpor(0.47));
 
   let brIteracija = 1;
   let dt = 1.0 / 60 / brIteracija;
@@ -28,9 +28,9 @@ function main(platno) {
         for (let i = 0; i < brCestica; i++) {
           cestice[i].materijalnaTocka.pomakni(
             dt / Konzola.skaliraj(Konzola.brzina),
-            fizika
+            Konzola.gravitacija
               .F(cestice[i].materijalnaTocka)
-              .zbroji(otpor.F(cestice[i].materijalnaTocka))
+              .zbroji(Konzola.otpor.F(cestice[i].materijalnaTocka))
           );
           cestice[i].zarobi(
             gks,

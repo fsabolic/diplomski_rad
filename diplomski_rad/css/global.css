@@ -1,5 +1,6 @@
 body {
-  background-color: whitesmoke;
+  background-color: #283845;
+  font-family: "Courier New", Courier, monospace;
 }
 
 .page-container {
@@ -8,33 +9,33 @@ body {
 }
 
 .page-console {
-  margin-left: 20px;
-  background-color: burlywood;
+  margin-left: 12px;
+  background-color: #1b2631;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 15px;
-  border-radius: 14px;
-  border: 2px solid gray;
-  width: 285px;
-  min-width: 285px;
-  max-width: 285px;
+  padding: 10px;
+  border-radius: 5px;
+  width: 295px;
+  min-width: 295px;
+  max-width: 295px;
+  color: #ffafc5;
+  box-shadow: 3px 3px 3px rgba(29, 24, 24, 0.15);
 }
 
 canvas {
-  border-radius: 8px;
+  border-radius: 2px;
   background-color: black;
-  border: 5px solid rebeccapurple !important;
+  border: 5px solid #1b2631 !important;
 }
 button {
   background-color: black;
   text-align: center;
-  color: white;
+  color: whitesmoke;
   padding: 10px 25px;
   border: 0;
-  border-radius: 14px;
-  font-size: 13px;
-  font-weight: bold;
+  border-radius: 5px;
+  font-size: 14px;
   width: 100px;
   margin: 5px;
 }
@@ -45,48 +46,49 @@ button {
 }
 
 button:hover {
-  background-color: #424242;
+  background-color: #363636;
 }
 
 #start {
-  background-color: darkgreen;
+  background-color: #448e44;
 }
 
 #start:hover {
-  background-color: seagreen;
+  background-color: #3c7b3c;
 }
 
 #stop {
-  background-color: #bb550d;
+  background-color: #d42d20;
 }
 
 #stop:hover {
-  background-color: #dc4d01;
+  background-color: #b32419;
 }
 
 #reset {
-  background-color: midnightblue;
+  background-color: #374ead;
 }
 
 #reset:hover {
-  background-color: royalblue;
+  background-color: #293d8a;
 }
 
 #reload {
-  background-color: darkred;
+  background-color: #1669c9;
 }
 
 #reload:hover {
-  background-color: brown;
+  background-color: #1057aa;
 }
+
 .console-speed-slider {
   display: flex;
   flex-direction: row;
+  width: 285px;
 }
 
 .console-speed-slider p {
-  font-weight: bold;
-  font-size: 12px;
+  font-size: 14px;
   margin-right: 10px;
 }
 
@@ -99,11 +101,12 @@ button:hover {
 .particle-counter {
   display: flex;
   flex-direction: row;
-  font-size: 12px;
+  font-size: 14px;
+  width: 250px;
+  height: 53px;
 }
 
 #particle-counter-text {
-  font-weight: bold;
   margin-right: 10px;
   padding: 10px;
   padding-left: 0;
@@ -115,19 +118,27 @@ button:hover {
   padding: 8px 20px 8px 20px;
   width: 50px;
   text-align: center;
+  color: #283845;
+  height: 15px;
 }
 
 .particle-number-setter {
   display: flex;
-  padding: 10px;
-  min-width: 100%;
-  justify-content: center;
+  align-items: center;
+  width: 250px;
+  font-size: 14px;
+}
+
+#particle-number-setter-text {
+  font-size: 14px;
+  margin-right: 20px;
 }
 
 #particle-number-setter-value {
   border: 1px solid grey;
   background-color: beige;
-  min-width: 50%;
+  width: 50px;
+  height: 15px;
   text-align: center;
   padding: 8px 20px 8px 20px;
 }
@@ -136,23 +147,81 @@ button:hover {
   border: 1px solid thistle;
 }
 
+.gravity-setter {
+  display: flex;
+  align-items: center;
+  width: 250px;
+  font-size: 14px;
+}
+
+#gravity-setter-text {
+  font-size: 14px;
+  margin-right: 45px;
+}
+
+#gravity-setter-value {
+  border: 1px solid grey;
+  background-color: beige;
+  width: 50px;
+  height: 15px;
+  text-align: center;
+  padding: 8px 20px 8px 20px;
+}
+#gravity-setter-value:focus {
+  outline: none !important;
+  border: 1px solid thistle;
+}
+
+.resistance-setter {
+  display: flex;
+  align-items: center;
+  width: 250px;
+  font-size: 14px;
+}
+
+#resistance-setter-text {
+  font-size: 14px;
+  margin-right: 95px;
+}
+
+#resistance-setter-value {
+  border: 1px solid grey;
+  background-color: beige;
+  width: 50px;
+  height: 15px;
+  text-align: center;
+  padding: 8px 20px 8px 20px;
+}
+#resistance-setter-value:focus {
+  outline: none !important;
+  border: 1px solid thistle;
+}
+
+.setters {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 .borders-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  font-size: 12px;
+  font-size: 14px;
   text-align: center;
-  font-weight: bold;
-  border: 2px solid grey;
-  padding: 10px;
-  border-radius: 10px;
+  border-radius: 5px;
   margin: 10px;
   margin-top: 30px;
+  width: 250px;
+  box-shadow: 3px 3px 3px rgba(29, 24, 24, 0.3);
+  background-color: #1f2f3f;
+  padding-bottom: 10px;
 }
 
 .borders {
   padding: 20px;
+  margin-top: 10px;
 }
 
 .borders:nth-child() {
@@ -161,82 +230,82 @@ button:hover {
 
 .border-item {
   margin: 5px;
-  background-color: #222;
+  background-color: #aaa;
   border: 1px solid transparent;
-  width: 40px;
+  width: 80px;
   height: 7px;
   position: relative;
-  border-radius: 8px;
 }
 
 .border-item-selected {
   margin: 5px;
-  width: 40px;
+  width: 80px;
   height: 7px;
   position: relative;
-  border-radius: 8px;
   background-color: transparent;
-  border: 1px solid orangered;
+  border: 1px solid #aaa;
 }
 
 .border-item:hover {
   background-color: transparent;
-  border: 1px solid grey;
+  border: 1px solid #ffafc5;
 }
 .border-item-selected:hover {
-  background-color: grey;
-  border: 1px solid grey;
+  background-color: #ffafc5;
+  border: 1px solid #ffafc5;
 }
 /*top*/
 .borders .border-item:nth-child(1) {
   transform: rotate(180deg);
-  top: -10px;
+  top: -30px;
   left: 1px;
 }
 
 /*right*/
 .borders .border-item:nth-child(3) {
   transform: rotate(90deg);
-  left: 26px;
-  bottom: 14px;
+  left: 46px;
+  bottom: 13px;
 }
 
 /*bottom*/
 .borders .border-item:nth-child(4) {
   transform: rotate(360deg);
   left: 1px;
-  bottom: 3px;
+  bottom: -19px;
 }
 
 /*left*/
 .borders .border-item:nth-child(2) {
   transform: rotate(270deg);
-  right: 24px;
+  right: 45px;
+  top: 1px;
 }
 
 /*top*/
 .borders .border-item-selected:nth-child(1) {
   transform: rotate(180deg);
-  top: -10px;
+  top: -30px;
   left: 1px;
 }
 
 /*right*/
 .borders .border-item-selected:nth-child(3) {
   transform: rotate(90deg);
-  left: 26px;
-  bottom: 14px;
+  left: 46px;
+  bottom: 13px;
 }
 
 /*bottom*/
 .borders .border-item-selected:nth-child(4) {
   transform: rotate(360deg);
   left: 1px;
-  bottom: 3px;
+  bottom: -19px;
 }
 
 /*left*/
 .borders .border-item-selected:nth-child(2) {
   transform: rotate(270deg);
-  right: 24px;
+  right: 45px;
+  top: 1px;
 }

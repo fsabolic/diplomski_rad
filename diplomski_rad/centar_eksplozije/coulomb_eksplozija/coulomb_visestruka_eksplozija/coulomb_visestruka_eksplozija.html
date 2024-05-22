@@ -33,17 +33,24 @@
 
   <body>
     <div class="page-container">
-      <div style="flex-direction: row">
-        <canvas
-          id="canvas"
-          width="600"
-          height="600"
-          style="border: 5px solid black"
-        >
+      <div class="canvas-container">
+        <canvas id="canvas" width="600" height="600">
           Vaš preglednik ne podržava HTML5 canvas.
         </canvas>
       </div>
       <div class="page-console">
+        <div class="console-speed-slider">
+          <p>Sim. brzina</p>
+          <input
+            type="range"
+            min="1"
+            max="1000"
+            value="1000"
+            class="slider"
+            id="sliderSpeed"
+            onchange="Konzola.azurirajBrzinuSimulacije(this.value)"
+          />
+        </div>
         <div class="console-buttons">
           <button type="button" onclick="Konzola.start()" id="start">
             Pokreni
@@ -58,29 +65,33 @@
             Reload
           </button>
         </div>
-        <div class="console-speed-slider">
-          <p>Sim. brzina</p>
-          <input
-            type="range"
-            min="1"
-            max="1000"
-            value="1000"
-            class="slider"
-            id="sliderSpeed"
-            onchange="Konzola.azurirajBrzinuSimulacije(this.value)"
-          />
-        </div>
-        <div class="particle-counter">
-          <p id="particle-counter-text">Ukupno čestica:</p>
-          <p id="particle-counter-value">0</p>
-        </div>
-        <div class="particle-number-setter">
-          <input
-            id="particle-number-setter-value"
-            type="text"
-            placeholder="Broj čestica eksplozije"
-            value=""
-          />
+        <div class="setters">
+          <div class="particle-counter">
+            <p id="particle-counter-text">Ukupno čestica:</p>
+            <p id="particle-counter-value">0</p>
+          </div>
+          <div class="particle-number-setter">
+            <p id="particle-number-setter-text">Br. eksplozije:</p>
+            <input id="particle-number-setter-value" type="text" value="" />
+          </div>
+          <div class="gravity-setter">
+            <p id="gravity-setter-text">Gravitacija:</p>
+            <input
+              id="gravity-setter-value"
+              type="text"
+              value=""
+              onfocusout="Konzola.promjenaGravitacije(event)"
+            />
+          </div>
+          <div class="resistance-setter">
+            <p id="resistance-setter-text">Otpor:</p>
+            <input
+              id="resistance-setter-value"
+              type="text"
+              value=""
+              onfocusout="Konzola.promjenaOtpora(event)"
+            />
+          </div>
         </div>
         <div class="borders-container">
           <p>Granice odbijanja:</p>
@@ -109,5 +120,4 @@
         </div>
       </div>
     </div>
-  </body>
 </html>
