@@ -322,3 +322,51 @@ button:hover {
   border-bottom-left-radius: 0.2cm;
   border-bottom-right-radius: 0.2cm;
 }
+
+.links-container {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  background-color: #1b2631;
+  color: #ffafc5;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 5px;
+  box-shadow: 3px 3px 3px rgba(29, 24, 24, 0.15);
+}
+
+.link-segments {
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
+  align-items: center;
+}
+
+.link-segments p {
+  font-weight: bolder;
+  color: #ffafc5; /* Text color */
+  text-align: center;
+  border: 2px solid #aaa; /* Border color */
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #444; /* Darker background color */
+  font-size: large;
+  width: 100%;
+}
+
+.link-segment {
+  display: flex;
+  flex-direction: column;
+}
+
+.link-button {
+  width: 100%;
+  color: #ffafc5;
+  background-color: #283845;
+}
+.link-button:hover {
+  background-color: palevioletred;
+  color: #1b2631;
+}
