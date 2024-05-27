@@ -243,12 +243,12 @@ button:hover {
   height: 7px;
   position: relative;
   background-color: transparent;
-  border: 1px solid #aaa;
+  border: 1px dashed #aaa;
 }
 
 .border-item-selected:hover {
   background-color: transparent;
-  border: 1px solid #ffafc5;
+  border: 1px dashed #ffafc5;
 }
 .border-item:hover {
   background-color: #ffafc5;
