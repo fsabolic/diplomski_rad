@@ -11,8 +11,11 @@ function main(platno) {
   );
 
   let gks = new GlobalniKoordinatniSustav(platno, 0, 10, 0, 10);
-  let fizika = new Fizika(9.81);
-  let otpor = new Otpor(0);
+
+  let gravInput = document.getElementById("gravity-setter-value").value;
+  let otporInput = document.getElementById("resistance-setter-value").value;
+  Konzola.postaviGravitaciju(new Fizika(gravInput));
+  Konzola.postaviOtpor(new Otpor(otporInput));
 
   //OK EKSPLOZIJE
   //vektor   koef    potencijal debljina
@@ -56,9 +59,9 @@ function main(platno) {
         for (let i = 0; i < brCestica; i++) {
           cestice[i].materijalnaTocka.pomakni(
             dt / Konzola.skaliraj(Konzola.brzina),
-            fizika
+            Konzola.gravitacija
               .F(cestice[i].materijalnaTocka)
-              .zbroji(otpor.F(cestice[i].materijalnaTocka))
+              .zbroji(Konzola.otpor.F(cestice[i].materijalnaTocka))
               .zbroji(potencijal.F(cestice[i].materijalnaTocka, 0.0))
           );
           cestice[i].zarobi(

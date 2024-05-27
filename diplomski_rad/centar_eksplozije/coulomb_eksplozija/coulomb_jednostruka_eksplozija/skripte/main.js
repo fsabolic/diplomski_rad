@@ -9,8 +9,11 @@ function main(platno) {
     false
   );
   let gks = new GlobalniKoordinatniSustav(platno, 0, 10, 0, 10);
-  Konzola.postaviGravitaciju(new Fizika(0));
-  Konzola.postaviOtpor(new Otpor(0.47));
+
+  let gravInput = document.getElementById("gravity-setter-value").value;
+  let otporInput = document.getElementById("resistance-setter-value").value;
+  Konzola.postaviGravitaciju(new Fizika(gravInput));
+  Konzola.postaviOtpor(new Otpor(otporInput));
 
   let brIteracija = 1;
   let dt = 1.0 / 60 / brIteracija;
