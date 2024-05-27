@@ -246,33 +246,37 @@ button:hover {
   border: 1px solid #aaa;
 }
 
-.border-item:hover {
+.border-item-selected:hover {
   background-color: transparent;
   border: 1px solid #ffafc5;
 }
-.border-item-selected:hover {
+.border-item:hover {
   background-color: #ffafc5;
   border: 1px solid #ffafc5;
 }
 /*top*/
 .borders .border-item:nth-child(1) {
-  transform: rotate(180deg);
   top: -30px;
   left: 1px;
+  border-bottom-left-radius: 0.2cm;
+  border-bottom-right-radius: 0.2cm;
 }
-
 /*right*/
 .borders .border-item:nth-child(3) {
   transform: rotate(90deg);
   left: 46px;
   bottom: 13px;
+  border-bottom-left-radius: 0.2cm;
+  border-bottom-right-radius: 0.2cm;
 }
 
 /*bottom*/
 .borders .border-item:nth-child(4) {
-  transform: rotate(360deg);
+  transform: rotate(180deg);
   left: 1px;
   bottom: -19px;
+  border-bottom-left-radius: 0.2cm;
+  border-bottom-right-radius: 0.2cm;
 }
 
 /*left*/
@@ -280,13 +284,16 @@ button:hover {
   transform: rotate(270deg);
   right: 45px;
   top: 1px;
+  border-bottom-left-radius: 0.2cm;
+  border-bottom-right-radius: 0.2cm;
 }
 
 /*top*/
 .borders .border-item-selected:nth-child(1) {
-  transform: rotate(180deg);
   top: -30px;
   left: 1px;
+  border-bottom-left-radius: 0.2cm;
+  border-bottom-right-radius: 0.2cm;
 }
 
 /*right*/
@@ -294,13 +301,17 @@ button:hover {
   transform: rotate(90deg);
   left: 46px;
   bottom: 13px;
+  border-bottom-left-radius: 0.2cm;
+  border-bottom-right-radius: 0.2cm;
 }
 
 /*bottom*/
 .borders .border-item-selected:nth-child(4) {
-  transform: rotate(360deg);
+  transform: rotate(180deg);
   left: 1px;
   bottom: -19px;
+  border-bottom-left-radius: 0.2cm;
+  border-bottom-right-radius: 0.2cm;
 }
 
 /*left*/
@@ -308,4 +319,6 @@ button:hover {
   transform: rotate(270deg);
   right: 45px;
   top: 1px;
+  border-bottom-left-radius: 0.2cm;
+  border-bottom-right-radius: 0.2cm;
 }
