@@ -23,6 +23,23 @@ class CoulombovPotencijal {
     return rRez.pomnoziSkalarom(mnozitelj);
   }
 
+  korigiraniF(materijalnaTocka, minUdaljenost) {
+    let rRez = this.r.oduzmi(materijalnaTocka.r);
+
+    let udaljenost = this.r.udaljenost(materijalnaTocka.r);
+
+    let pamti = structuredClone(materijalnaTocka);
+    if (minUdaljenost > udaljenost) {
+      udaljenost = minUdaljenost;
+      //rRez = this.r.oduzmi(materijalnaTocka.r);
+      //udaljenost = this.r.udaljenost(materijalnaTocka.r);
+    }
+
+    let mnozitelj =
+      (this.naboj * this.k) / udaljenost ** this.potencijalUdaljenosti;
+    return rRez.pomnoziSkalarom(mnozitelj);
+  }
+
   iscrtaj(gks) {
     gks.puniKrug(this.r.x, this.r.y, 0.1, "blue");
   }

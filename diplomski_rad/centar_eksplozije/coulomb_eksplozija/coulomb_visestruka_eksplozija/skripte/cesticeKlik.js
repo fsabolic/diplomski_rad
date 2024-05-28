@@ -6,7 +6,7 @@ function cesticeKlik(
   koeficijentSmanjenja = 1
 ) {
   let transformirano = odrediKoordinateKlika(event, gks);
-
+  let polumjer = 0.06;
   let kreiraneCestice = [];
   let pocetniVektor = new Vektor2D(transformirano[0], transformirano[1]);
   for (let i = 0; i < brojCestica; i++) {
@@ -25,7 +25,7 @@ function cesticeKlik(
       "red"
     );
 
-    odbaciCesticeUSredini(cestica, pocetniVektor, koeficijentSmanjenja);
+    //odbaciCesticeUSredini(cestica, pocetniVektor, koeficijentSmanjenja);
 
     kreiraneCestice.push(cestica);
   }
@@ -34,7 +34,8 @@ function cesticeKlik(
     koeficijentSmanjenja,
     pocetniVektor,
     kreiraneCestice,
-    gks
+    gks,
+    polumjer
   );
 
   cestice.push(...kreiraneCestice);
@@ -44,10 +45,11 @@ function djelujPotencijalomNaCestice(
   koeficijentSmanjenja,
   pocetniVektor,
   kreiraneCestice,
-  gks
+  gks,
+  polumjer
 ) {
   let potencijal = new CoulombovPotencijal(
-    10 * koeficijentSmanjenja,
+    30 * koeficijentSmanjenja,
     pocetniVektor,
     -1,
     2
@@ -56,7 +58,7 @@ function djelujPotencijalomNaCestice(
   for (let i = 0; i < brCestica; i++) {
     kreiraneCestice[i].materijalnaTocka.pomakni(
       0.01,
-      potencijal.F(kreiraneCestice[i].materijalnaTocka)
+      potencijal.korigiraniF(kreiraneCestice[i].materijalnaTocka, polumjer)
     );
     kreiraneCestice[i].zarobi(gks);
   }
