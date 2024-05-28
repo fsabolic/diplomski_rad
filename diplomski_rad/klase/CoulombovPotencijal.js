@@ -41,6 +41,8 @@ class CoulombovPotencijal {
   }
 
   iscrtaj(gks) {
-    gks.puniKrug(this.r.x, this.r.y, 0.1, "blue");
+    let color = "blue";
+    if (this.naboj < 0) color = "red";
+    if (this.k != 0) gks.puniKrug(this.r.x, this.r.y, 0.1, color);
   }
 }
