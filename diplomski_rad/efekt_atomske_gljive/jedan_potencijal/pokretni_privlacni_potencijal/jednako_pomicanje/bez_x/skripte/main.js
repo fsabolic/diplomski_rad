@@ -11,7 +11,7 @@ function main(platno) {
   );
 
   let gks = new GlobalniKoordinatniSustav(platno, 0, 10, 0, 10);
-
+  Konzola.postaviGranice();
   let gravInput = document.getElementById("gravity-setter-value").value;
   let otporInput = document.getElementById("resistance-setter-value").value;
   Konzola.postaviGravitaciju(new Fizika(gravInput));

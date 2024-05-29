@@ -99,6 +99,30 @@ class Konzola {
     }
   }
 
+  static postaviGranice() {
+    let postavljeneGranice = document.getElementsByClassName("border-item");
+    let nepostavljeneGranice = document.getElementsByClassName(
+      "border-item-selected"
+    );
+    let granice = [...postavljeneGranice, ...nepostavljeneGranice];
+    for (let i = 0; i < granice.length; i++) {
+      let postaviGranicu = granice[i].classList.contains("border-item");
+      switch (granice[i].id) {
+        case "top":
+          Konzola.topGranica = postaviGranicu;
+          break;
+        case "right":
+          Konzola.rightGranica = postaviGranicu;
+          break;
+        case "bottom":
+          Konzola.bottomGranica = postaviGranicu;
+          break;
+        case "left":
+          Konzola.leftGranica = postaviGranicu;
+          break;
+      }
+    }
+  }
   static granicaClick(event) {
     let odabranaGranica = event.target;
     if (odabranaGranica.className == "border-item") {
