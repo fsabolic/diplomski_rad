@@ -23,11 +23,13 @@ class CoulombovPotencijal {
     return rRez.pomnoziSkalarom(mnozitelj);
   }
 
-  korigiraniF(materijalnaTocka, minUdaljenost) {
+  korigiraniF(materijalnaTocka, minUdaljenost, maxUdaljenost = -1) {
     let rRez = this.r.oduzmi(materijalnaTocka.r);
 
     let udaljenost = this.r.udaljenost(materijalnaTocka.r);
-
+    if (maxUdaljenost > -1 && maxUdaljenost > udaljenost) {
+      this.k = 0;
+    }
     let pamti = structuredClone(materijalnaTocka);
     if (minUdaljenost > udaljenost) {
       udaljenost = minUdaljenost;

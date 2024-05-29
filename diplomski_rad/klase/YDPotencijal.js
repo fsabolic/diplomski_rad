@@ -20,8 +20,28 @@ class YDPotencijal {
       (this.naboj * this.k) / udaljenost ** this.potencijalUdaljenosti;
     return rRez.pomnoziSkalarom(mnozitelj);
   }
+  korigiraniF(materijalnaTocka, minUdaljenost, maxUdaljenost = -1) {
+    let rRez = this.r.oduzmi(materijalnaTocka.r);
+    rRez.x = 0;
 
+    let udaljenost = this.r.udaljenost(materijalnaTocka.r);
+    let pamti = structuredClone(materijalnaTocka);
+    if (maxUdaljenost > -1 && maxUdaljenost > udaljenost) {
+      this.k = 0;
+    }
+    if (minUdaljenost > udaljenost) {
+      udaljenost = minUdaljenost;
+      //rRez = this.r.oduzmi(materijalnaTocka.r);
+      //udaljenost = this.r.udaljenost(materijalnaTocka.r);
+    }
+
+    let mnozitelj =
+      (this.naboj * this.k) / udaljenost ** this.potencijalUdaljenosti;
+    return rRez.pomnoziSkalarom(mnozitelj);
+  }
   iscrtaj(gks) {
-    gks.puniKrug(this.r.x, this.r.y, 0.1, "blue");
+    let color = "blue";
+    if (this.naboj < 0) color = "red";
+    if (this.k != 0) gks.puniKrug(this.r.x, this.r.y, 0.1, color);
   }
 }

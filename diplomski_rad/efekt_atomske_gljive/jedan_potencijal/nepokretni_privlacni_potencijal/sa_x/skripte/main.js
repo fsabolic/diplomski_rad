@@ -60,7 +60,10 @@ function main(platno) {
             Konzola.gravitacija
               .F(cestice[i].materijalnaTocka)
               .zbroji(Konzola.otpor.F(cestice[i].materijalnaTocka))
-              .zbroji(potencijal.F(cestice[i].materijalnaTocka, 0.5))
+              .zbroji(
+                potencijal.korigiraniF(cestice[i].materijalnaTocka, 0.5, 0.1)
+                //potencijal.F(cestice[i].materijalnaTocka, 0.5)
+              )
           );
           cestice[i].zarobi(
             gks,
