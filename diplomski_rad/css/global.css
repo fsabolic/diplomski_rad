@@ -101,6 +101,7 @@ button:hover {
 .particle-counter {
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
   font-size: 14px;
   width: 250px;
   height: 53px;
@@ -122,19 +123,18 @@ button:hover {
   height: 15px;
 }
 
-.particle-number-setter {
+.number-input {
   display: flex;
-  align-items: center;
+  justify-content: space-between;
   width: 250px;
   font-size: 14px;
 }
 
-#particle-number-setter-text {
+.number-input-setter-text {
   font-size: 14px;
-  margin-right: 20px;
 }
 
-#particle-number-setter-value {
+.number-input-setter-value {
   border: 1px solid grey;
   background-color: beige;
   width: 50px;
@@ -142,57 +142,7 @@ button:hover {
   text-align: center;
   padding: 8px 20px 8px 20px;
 }
-#particle-number-setter-value:focus {
-  outline: none !important;
-  border: 1px solid thistle;
-}
-
-.gravity-setter {
-  display: flex;
-  align-items: center;
-  width: 250px;
-  font-size: 14px;
-}
-
-#gravity-setter-text {
-  font-size: 14px;
-  margin-right: 45px;
-}
-
-#gravity-setter-value {
-  border: 1px solid grey;
-  background-color: beige;
-  width: 50px;
-  height: 15px;
-  text-align: center;
-  padding: 8px 20px 8px 20px;
-}
-#gravity-setter-value:focus {
-  outline: none !important;
-  border: 1px solid thistle;
-}
-
-.resistance-setter {
-  display: flex;
-  align-items: center;
-  width: 250px;
-  font-size: 14px;
-}
-
-#resistance-setter-text {
-  font-size: 14px;
-  margin-right: 95px;
-}
-
-#resistance-setter-value {
-  border: 1px solid grey;
-  background-color: beige;
-  width: 50px;
-  height: 15px;
-  text-align: center;
-  padding: 8px 20px 8px 20px;
-}
-#resistance-setter-value:focus {
+.number-input-setter-value:focus {
   outline: none !important;
   border: 1px solid thistle;
 }
@@ -369,4 +319,52 @@ button:hover {
 .link-button:hover {
   background-color: palevioletred;
   color: #1b2631;
+}
+
+.shroom-console {
+  position: absolute;
+  bottom: 30px;
+  left: 0;
+  background-color: #1b2631;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  border-radius: 5px;
+  color: #ffafc5;
+  box-shadow: 3px 3px 3px rgba(29, 24, 24, 0.15);
+  margin: 0 auto;
+  width: 900px;
+  margin-left: 8px;
+}
+.shroom-console-head {
+  font-size: 12px;
+}
+
+.shroom-console-body {
+  font-size: 14px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 5px;
+  margin-top: 15px;
+  box-shadow: 3px 3px 3px rgba(29, 24, 24, 0.3);
+  background-color: #1f2f3f;
+  padding: 15px;
+}
+
+.potential-position-setter {
+  display: flex;
+  flex-direction: column;
+}
+.potential-list {
+  width: 200px;
+}
+
+.potential-selector {
+  width: 200px;
+  height: 200px;
+  border: 1px solid grey;
+  background-color: beige;
+  text-align: center;
 }
