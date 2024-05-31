@@ -58,8 +58,8 @@ class GlobalniKoordinatniSustav {
     this.g.fillStyle = boja;
     this.g.fillRect(this.sx * x + this.px, this.sy * y + this.py, 1, 1);
   }
-  tekst(str, x, y) {
-    this.g.font = "16px Arial";
+  tekst(str, x, y, font = "16px Arial") {
+    this.g.font = font;
     this.g.fillStyle = "white";
     this.g.fillText(str, this.sx * x + this.px, this.sy * y + this.py);
   } // tekst

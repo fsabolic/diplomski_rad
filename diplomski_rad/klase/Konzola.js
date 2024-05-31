@@ -14,6 +14,10 @@ class Konzola {
   static gravitacija = new Fizika(9.81);
   static otpor = new Otpor(0.47);
 
+  static xminCestica = 0;
+  static xmaxCestica = 10;
+  static yminCestica = 0;
+  static ymaxCestica = 10;
   static start() {
     Konzola.paused = false;
   }
@@ -46,9 +50,15 @@ class Konzola {
     return cesticeProxy;
   }
 
-  static spremiPocetnoStanjePotencijala(potencijal) {
-    Konzola.potencijalSave = potencijal;
-    Konzola.pocetnoStanjePotencijala = Konzola.deepClone(potencijal);
+  static spremiPocetnoStanjePotencijala(potencijali) {
+    if (!Array.isArray(potencijali)) {
+      potencijali = [potencijali];
+    }
+    Konzola.potencijalSave = potencijali;
+    Konzola.pocetnoStanjePotencijala = potencijali.map((p) => {
+      let deepCopy = Konzola.deepClone(p);
+      return deepCopy;
+    });
   }
   static spremiPocetnoStanjeCestica(cestice) {
     Konzola.cesticeSave = cestice;
@@ -83,20 +93,20 @@ class Konzola {
     while (Konzola.cesticeSave.length > 0) {
       Konzola.cesticeSave.pop();
     }
+    while (Konzola.potencijalSave.length > 0) {
+      Konzola.potencijalSave.pop();
+    }
 
     Konzola.pocetnoStanjeCestica.map((cestica) => {
       let deepCopy = Konzola.deepClone(cestica);
       Konzola.cesticeSave.push(deepCopy);
     });
+    Konzola.pocetnoStanjePotencijala.map((p) => {
+      let deepCopy = Konzola.deepClone(p);
+      Konzola.potencijalSave.push(deepCopy);
+    });
 
-    if (Konzola.pocetnoStanjePotencijala != null) {
-      for (let key in Konzola.pocetnoStanjePotencijala) {
-        Konzola.potencijalSave[key] = Konzola.pocetnoStanjePotencijala[key];
-      }
-      Konzola.pocetnoStanjePotencijala = Konzola.deepClone(
-        Konzola.potencijalSave
-      );
-    }
+    this.postaviHTMLPotencijal(1);
   }
 
   static postaviGranice() {
@@ -179,5 +189,158 @@ class Konzola {
 
   static postaviOtpor(otpor) {
     Konzola.otpor = otpor;
+  }
+
+  static postaviPotencijale() {
+    let selection = document.getElementById("selector");
+
+    for (let i = 0; i < this.potencijalSave.length; i++) {
+      let option = document.createElement("option");
+      option.className = "potential-selector-option";
+      option.value = this.potencijalSave[i].id;
+      option.textContent =
+        this.potencijalSave[i].id +
+        " [" +
+        this.potencijalSave[i].constructor.name +
+        "]";
+      selection.appendChild(option);
+      if (i == 0) {
+        Konzola.postaviHTMLPotencijal(1);
+      }
+    }
+    selection.selectedIndex = 0;
+    selection.addEventListener("change", (event) => {
+      let potencijalId = event.explicitOriginalTarget.value;
+      Konzola.postaviHTMLPotencijal(potencijalId);
+    });
+  }
+
+  static postaviHTMLPotencijal(potencijalId) {
+    let odabraniPotencijal = this.potencijalSave.find(
+      (element) => potencijalId == element.id
+    );
+
+    let atributiPotencijala =
+      document.getElementsByClassName("potential-settings")[0];
+    for (let j = 0; j < atributiPotencijala.children.length; j++) {
+      let child = atributiPotencijala.children[j];
+      switch (child.id) {
+        case "charge-setter":
+          child.querySelector("#charge-setter-value").value =
+            odabraniPotencijal.naboj;
+          break;
+        case "coefficient-setter":
+          child.querySelector("#coefficient-setter-value").value =
+            odabraniPotencijal.k;
+          break;
+        case "distance-coefficient-setter":
+          child.querySelector("#distance-coefficient-setter-value").value =
+            odabraniPotencijal.potencijalUdaljenosti;
+          break;
+        case "potential-position-setter":
+          child.querySelector("#potential-x-position-setter-value").value =
+            odabraniPotencijal.r.x;
+          child.querySelector("#potential-y-position-setter-value").value =
+            odabraniPotencijal.r.y;
+          break;
+      }
+    }
+  }
+
+  static promjenaNaboja(event) {
+    let selector = document.getElementById("selector");
+    let trenutniPotencijal = this.potencijalSave.find(
+      (element) => selector.options[selector.selectedIndex].value == element.id
+    );
+
+    trenutniPotencijal.naboj = event.target.value;
+  }
+
+  static promjenaKoeficijenta(event) {
+    let selector = document.getElementById("selector");
+    let trenutniPotencijal = this.potencijalSave.find(
+      (element) => selector.options[selector.selectedIndex].value == element.id
+    );
+
+    trenutniPotencijal.k = event.target.value;
+  }
+
+  static promjenaKoeficijentaUdaljenosti(event) {
+    let selector = document.getElementById("selector");
+    let trenutniPotencijal = this.potencijalSave.find(
+      (element) => selector.options[selector.selectedIndex].value == element.id
+    );
+
+    trenutniPotencijal.potencijalUdaljenosti = event.target.value;
+  }
+
+  static promjenaPozicijePotencijalaX(event) {
+    let selector = document.getElementById("selector");
+    let trenutniPotencijal = this.potencijalSave.find(
+      (element) => selector.options[selector.selectedIndex].value == element.id
+    );
+
+    trenutniPotencijal.r.x = event.target.value;
+  }
+  static promjenaPozicijePotencijalaY(event) {
+    let selector = document.getElementById("selector");
+    let trenutniPotencijal = this.potencijalSave.find(
+      (element) => selector.options[selector.selectedIndex].value == element.id
+    );
+
+    trenutniPotencija;
+    l.r.y = event.target.value;
+  }
+  static promjenaCesticaSloja(event) {
+    let trenutniBrojCestica = this.cesticeSave.length;
+    let zeljeniBrojCesticaUSloju = event.target.value;
+    let razlikaBrojaCestica = zeljeniBrojCesticaUSloju - trenutniBrojCestica;
+    if (razlikaBrojaCestica > 0) {
+      let generiraneCestice = generirajStacionarneCestice(
+        razlikaBrojaCestica,
+        this.xminCestica,
+        this.xmaxCestica,
+        this.yminCestica,
+        this.ymaxCestica
+      );
+
+      this.cesticeSave.push(...generiraneCestice);
+    }
+    console.log(event.target.value);
+  }
+
+  static postaviSlojCestica(
+    brojCesticaSloja,
+    xminCestica,
+    xmaxCestica,
+    yminCestica,
+    ymaxCestica
+  ) {
+    this.xminCestica = xminCestica;
+    this.xmaxCestica = xmaxCestica;
+    this.yminCestica = yminCestica;
+    this.ymaxCestica = ymaxCestica;
+    let generiraneCestice = generirajStacionarneCestice(
+      brojCesticaSloja,
+      xminCestica,
+      xmaxCestica,
+      yminCestica,
+      ymaxCestica
+    );
+
+    return generiraneCestice;
+  }
+
+  static promjenaXMinSloja(event) {
+    this.xminCestica = event.target.value;
+  }
+  static promjenaXMaxSloja(event) {
+    this.xmaxCestica = event.target.value;
+  }
+  static promjenaYMinSloja(event) {
+    this.yminCestica = event.target.value;
+  }
+  static promjenaYMaxSloja(event) {
+    this.ymaxCestica = event.target.value;
   }
 }

@@ -24,30 +24,52 @@ function main(platno) {
     gks.xmin / 2 + gks.xmax / 2,
     0 + gks.ymin / 2 + gks.ymax / 2
   );
-  let potencijal = new CoulombovPotencijal(800, pozicijaPotencijala, 1, 4);
+  let potencijali = [
+    new CoulombovPotencijal(800, pozicijaPotencijala, 1, 4),
+    new CoulombovPotencijal(
+      700,
+      new Vektor2D(
+        gks.xmin / 2 + gks.xmax / 2,
+        3 + gks.ymin / 2 + gks.ymax / 2
+      ),
+      -1,
+      4
+    ),
+  ];
 
-  let tocke = generirajStacionarneCestice(
-    3500,
-    gks.xmin,
-    gks.xmax,
-    gks.xmin,
-    1
+  let brojCesticaSloja = Number.parseInt(
+    document.getElementById("particle-layer-number-setter-value").value
+  );
+  let xminCestica = Number.parseFloat(
+    document.getElementById("particle-layer-xmin-setter-value").value
+  );
+  let xmaxCestica = Number.parseFloat(
+    document.getElementById("particle-layer-xmax-setter-value").value
+  );
+  let yminCestica = Number.parseFloat(
+    document.getElementById("particle-layer-ymin-setter-value").value
+  );
+  let ymaxCestica = Number.parseFloat(
+    document.getElementById("particle-layer-ymax-setter-value").value
   );
 
-  let debljinaSloja = 2;
-  for (let i = 0; i < tocke.length; i++) {
-    tocke[i].materijalnaTocka.r.y =
-      debljinaSloja * tocke[i].materijalnaTocka.r.y;
-    cestice.push(tocke[i]);
-  }
+  let tocke = Konzola.postaviSlojCestica(
+    brojCesticaSloja,
+    xminCestica,
+    xmaxCestica,
+    yminCestica,
+    ymaxCestica
+  );
+  for (let i = 0; i < tocke.length; i++) cestice.push(tocke[i]);
   let brIteracija = 1;
   let dt = 1.0 / 60 / brIteracija;
   let iframe = 0;
   let starttime = Date.now() / 1000;
 
   var prviFrame = true;
-  Konzola.spremiPocetnoStanjePotencijala(potencijal);
+  Konzola.spremiPocetnoStanjePotencijala(potencijali);
   Konzola.spremiPocetnoStanjeCestica(cestice);
+  Konzola.postaviPotencijale();
   iscrtaj();
 
   function iscrtaj() {
@@ -61,7 +83,19 @@ function main(platno) {
               .F(cestice[i].materijalnaTocka)
               .zbroji(Konzola.otpor.F(cestice[i].materijalnaTocka))
               .zbroji(
-                potencijal.korigiraniF(cestice[i].materijalnaTocka, 0.5, 0.1)
+                potencijali[0].korigiraniF(
+                  cestice[i].materijalnaTocka,
+                  0.5,
+                  0.2
+                )
+                //potencijal.F(cestice[i].materijalnaTocka, 0.5)
+              )
+              .zbroji(
+                potencijali[1].korigiraniF(
+                  cestice[i].materijalnaTocka,
+                  0.5,
+                  0.2
+                )
                 //potencijal.F(cestice[i].materijalnaTocka, 0.5)
               )
           );
@@ -79,7 +113,9 @@ function main(platno) {
       for (let i = 0; i < brCestica; i++) {
         cestice[i].iscrtaj(gks);
       }
-      potencijal.iscrtaj(gks);
+      for (let i = 0; i < Konzola.potencijalSave.length; i++) {
+        potencijali[i].iscrtaj(gks);
+      }
       let framerate = (iframe++ / (Date.now() / 1000 - starttime)).toFixed(6);
       gks.tekst("FPS: " + framerate, 0.5, 9.5);
 

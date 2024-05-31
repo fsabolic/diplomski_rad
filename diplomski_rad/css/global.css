@@ -1,13 +1,19 @@
 body {
   background-color: #283845;
   font-family: "Courier New", Courier, monospace;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .page-container {
   display: flex;
+  flex-direction: column;
+}
+.canvas-console-container {
+  display: flex;
   flex-direction: row;
 }
-
 .page-console {
   margin-left: 12px;
   background-color: #1b2631;
@@ -21,6 +27,7 @@ body {
   max-width: 295px;
   color: #ffafc5;
   box-shadow: 3px 3px 3px rgba(29, 24, 24, 0.15);
+  height: 590px;
 }
 
 canvas {
@@ -98,36 +105,12 @@ button:hover {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.particle-counter {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  font-size: 14px;
-  width: 250px;
-  height: 53px;
-}
-
-#particle-counter-text {
-  margin-right: 10px;
-  padding: 10px;
-  padding-left: 0;
-}
-
-#particle-counter-value {
-  border: 1px solid grey;
-  background-color: beige;
-  padding: 8px 20px 8px 20px;
-  width: 50px;
-  text-align: center;
-  color: #283845;
-  height: 15px;
-}
-
 .number-input {
   display: flex;
   justify-content: space-between;
   width: 250px;
   font-size: 14px;
+  align-items: center;
 }
 
 .number-input-setter-text {
@@ -135,16 +118,18 @@ button:hover {
 }
 
 .number-input-setter-value {
-  border: 1px solid grey;
-  background-color: beige;
+  color: #ffafc5;
+  border: 1px solid rgb(73, 94, 116);
+  background-color: #283845;
   width: 50px;
-  height: 15px;
+  height: 10px;
   text-align: center;
   padding: 8px 20px 8px 20px;
+  border-radius: 5px;
 }
 .number-input-setter-value:focus {
   outline: none !important;
-  border: 1px solid thistle;
+  border: 1px solid rgb(104, 138, 182);
 }
 
 .setters {
@@ -322,9 +307,6 @@ button:hover {
 }
 
 .shroom-console {
-  position: absolute;
-  bottom: 30px;
-  left: 0;
   background-color: #1b2631;
   display: flex;
   flex-direction: column;
@@ -332,9 +314,8 @@ button:hover {
   border-radius: 5px;
   color: #ffafc5;
   box-shadow: 3px 3px 3px rgba(29, 24, 24, 0.15);
-  margin: 0 auto;
-  width: 900px;
-  margin-left: 8px;
+  width: 897px;
+  margin-top: 7px;
 }
 .shroom-console-head {
   font-size: 12px;
@@ -346,25 +327,41 @@ button:hover {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  border-radius: 5px;
   margin-top: 15px;
-  box-shadow: 3px 3px 3px rgba(29, 24, 24, 0.3);
-  background-color: #1f2f3f;
-  padding: 15px;
 }
 
+.potential-section {
+  background-color: #1f2f3f;
+  box-shadow: 3px 3px 3px rgba(29, 24, 24, 0.3);
+  border-radius: 5px;
+  padding: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 62%;
+  align-items: center;
+}
 .potential-position-setter {
   display: flex;
   flex-direction: column;
 }
+
 .potential-list {
   width: 200px;
 }
 
 .potential-selector {
   width: 200px;
-  height: 200px;
+  height: 150px;
   border: 1px solid grey;
-  background-color: beige;
   text-align: center;
+  border: 1px solid rgb(73, 94, 116);
+  background-color: #283845;
+  text-align: center;
+  border-radius: 5px;
+}
+
+.potential-selector-option {
+  background-color: #283845;
+  color: #ffafc5;
 }

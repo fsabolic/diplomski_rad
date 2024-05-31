@@ -33,210 +33,244 @@
 
   <body>
     <div class="page-container">
-      <div class="canvas-container">
-        <canvas id="canvas" width="600" height="600">
-          Vaš preglednik ne podržava HTML5 canvas.
-        </canvas>
-      </div>
-      <div class="page-console">
-        <div class="console-speed-slider">
-          <p>Sim. brzina</p>
-          <input
-            type="range"
-            min="1"
-            max="1000"
-            value="1000"
-            class="slider"
-            id="sliderSpeed"
-            onchange="Konzola.azurirajBrzinuSimulacije(this.value)"
-          />
+      <div class="canvas-console-container">
+        <div class="canvas-container">
+          <canvas id="canvas" width="600" height="600">
+            Vaš preglednik ne podržava HTML5 canvas.
+          </canvas>
         </div>
-        <div class="console-buttons">
-          <button type="button" onclick="Konzola.start()" id="start">
-            Pokreni
-          </button>
-          <button type="button" onclick="Konzola.stop()" id="stop">
-            Pauziraj
-          </button>
-          <button type="button" onclick="Konzola.reset()" id="reset">
-            Reset
-          </button>
-          <button type="button" onclick="Konzola.reload()" id="reload">
-            Reload
-          </button>
-        </div>
-        <div class="setters">
-          <div class="particle-counter number-input">
-            <p class="number-input-setter-text" id="particle-counter-text">
-              Ukupno čestica:
-            </p>
-            <p id="particle-counter-value">0</p>
-          </div>
-          <div class="particle-number-setter number-input">
-            <p
-              class="number-input-setter-text"
-              id="particle-number-setter-text"
-            >
-              Br. eksplozije:
-            </p>
+        <div class="page-console">
+          <div class="console-speed-slider">
+            <p>Sim. brzina</p>
             <input
-              class="number-input-setter-value"
-              id="particle-number-setter-value"
-              type="text"
+              type="range"
+              min="1"
+              max="1000"
               value="1000"
+              class="slider"
+              id="sliderSpeed"
+              onchange="Konzola.azurirajBrzinuSimulacije(this.value)"
             />
           </div>
-          <div class="gravity-setter number-input">
-            <p class="number-input-setter-text" id="gravity-setter-text">
-              Gravitacija:
-            </p>
-            <input
-              class="number-input-setter-value"
-              id="gravity-setter-value"
-              type="text"
-              value="9.81"
-              onfocusout="Konzola.promjenaGravitacije(event)"
-            />
+          <div class="console-buttons">
+            <button type="button" onclick="Konzola.start()" id="start">
+              Pokreni
+            </button>
+            <button type="button" onclick="Konzola.stop()" id="stop">
+              Pauziraj
+            </button>
+            <button type="button" onclick="Konzola.reset()" id="reset">
+              Reset
+            </button>
+            <button type="button" onclick="Konzola.reload()" id="reload">
+              Reload
+            </button>
           </div>
-          <div class="resistance-setter number-input">
-            <p class="number-input-setter-text" id="resistance-setter-text">
-              Otpor:
-            </p>
-            <input
-              class="number-input-setter-value"
-              id="resistance-setter-value"
-              type="text"
-              value="0.47"
-              onfocusout="Konzola.promjenaOtpora(event)"
-            />
+          <div class="setters">
+            <div class="particle-counter number-input">
+              <p class="number-input-setter-text" id="particle-counter-text">
+                Ukupno čestica:
+              </p>
+              <p class="number-input-setter-value" id="particle-counter-value">
+                0
+              </p>
+            </div>
+            <div class="particle-number-setter number-input">
+              <p
+                class="number-input-setter-text"
+                id="particle-number-setter-text"
+              >
+                Br. eksplozije:
+              </p>
+              <input
+                class="number-input-setter-value"
+                id="particle-number-setter-value"
+                type="text"
+                value="1000"
+              />
+            </div>
+            <div class="gravity-setter number-input">
+              <p class="number-input-setter-text" id="gravity-setter-text">
+                Gravitacija:
+              </p>
+              <input
+                class="number-input-setter-value"
+                id="gravity-setter-value"
+                type="text"
+                value="9.81"
+                onfocusout="Konzola.promjenaGravitacije(event)"
+              />
+            </div>
+            <div class="resistance-setter number-input">
+              <p class="number-input-setter-text" id="resistance-setter-text">
+                Otpor:
+              </p>
+              <input
+                class="number-input-setter-value"
+                id="resistance-setter-value"
+                type="text"
+                value="0.47"
+                onfocusout="Konzola.promjenaOtpora(event)"
+              />
+            </div>
           </div>
-        </div>
-        <div class="borders-container">
-          <p>Granice odbijanja:</p>
-          <div class="borders">
-            <div
-              id="top"
-              class="border-item-selected"
-              onclick="Konzola.granicaClick(event)"
-            ></div>
-            <div
-              id="left"
-              class="border-item"
-              onclick="Konzola.granicaClick(event)"
-            ></div>
-            <div
-              id="right"
-              class="border-item"
-              onclick="Konzola.granicaClick(event)"
-            ></div>
-            <div
-              id="bottom"
-              class="border-item"
-              onclick="Konzola.granicaClick(event)"
-            ></div>
+          <div class="borders-container">
+            <p>Granice odbijanja:</p>
+            <div class="borders">
+              <div
+                id="top"
+                class="border-item-selected"
+                onclick="Konzola.granicaClick(event)"
+              ></div>
+              <div
+                id="left"
+                class="border-item"
+                onclick="Konzola.granicaClick(event)"
+              ></div>
+              <div
+                id="right"
+                class="border-item"
+                onclick="Konzola.granicaClick(event)"
+              ></div>
+              <div
+                id="bottom"
+                class="border-item"
+                onclick="Konzola.granicaClick(event)"
+              ></div>
+            </div>
           </div>
         </div>
       </div>
+
       <div class="shroom-console">
-        <div class="shroom-console-head">
+        <div class="shroom-console-head" stlye="flex-direction:row">
+          <p>Preciznost simulacije:</p>
           <input
             checked
             type="radio"
-            id="da"
+            id="radio-1"
             name="potential_setter"
-            value="da"
+            value="1"
             onclick="Konzola.postaviKlik(this.value)"
           />
-          <label for="da">Eksplozija</label>
+          <label for="radio-1">1</label>
           <input
             type="radio"
-            id="ne"
+            id="radio-10"
             name="potential_setter"
-            value="ne"
+            value="10"
             onclick="Konzola.postaviKlik(this.value)"
           />
-          <label for="ne">Potencijal</label>
+          <label for="radio-10">10</label>
+          <input
+            type="radio"
+            id="radio-100"
+            name="potential_setter"
+            value="100"
+            onclick="Konzola.postaviKlik(this.value)"
+          />
+          <label for="radio-100">100</label>
+          <input
+            type="radio"
+            id="radio-1000"
+            name="potential_setter"
+            value="1000"
+            onclick="Konzola.postaviKlik(this.value)"
+          />
+          <label for="radio-1000">1000</label>
         </div>
         <div class="shroom-console-body">
-          <div class="potential-list">
-            <select
-              class="potential-selector"
-              id="selector"
-              name="potential_selector"
-              size="4"
-            >
-              <option value="vrijednost">Tekst</option>
-            </select>
-          </div>
+          <div class="potential-section">
+            <div class="potential-list">
+              <select
+                class="potential-selector"
+                id="selector"
+                name="potential_selector"
+                size="4"
+              ></select>
+            </div>
 
-          <div class="potential-settings">
-            <div class="charge-setter number-input">
-              <p class="number-input-setter-text" id="charge-setter-text">
-                Naboj:
-              </p>
-              <input
-                class="number-input-setter-value"
-                id="charge-setter-value"
-                type="text"
-                value="0.47"
-                onfocusout="Konzola.promjenaNaboja(event)"
-              />
-            </div>
-            <div class="coefficient-setter number-input">
-              <p class="number-input-setter-text" id="coefficient-setter-text">
-                Koeficijent:
-              </p>
-              <input
-                class="number-input-setter-value"
-                id="coefficient-setter-value"
-                type="text"
-                value="0.47"
-                onfocusout="Konzola.promjenaKoeficijenta(event)"
-              />
-            </div>
-            <div class="distance-coefficient-setter number-input">
-              <p
-                class="number-input-setter-text"
-                id="distance-coefficient-setter-text"
+            <div class="potential-settings">
+              <div id="charge-setter" class="charge-setter number-input">
+                <p class="number-input-setter-text" id="charge-setter-text">
+                  Naboj:
+                </p>
+                <input
+                  class="number-input-setter-value"
+                  id="charge-setter-value"
+                  type="text"
+                  value=""
+                  onfocusout="Konzola.promjenaNaboja(event)"
+                />
+              </div>
+              <div
+                id="coefficient-setter"
+                class="coefficient-setter number-input"
               >
-                Koef. udaljenosti:
-              </p>
-              <input
-                class="number-input-setter-value"
-                id="distance-coefficient-setter-value"
-                type="text"
-                value="0.47"
-                onfocusout="Konzola.promjenaKoeficijentaUdaljenosti(event)"
-              />
-            </div>
-            <div class="potential-position-setter">
-              <div class="number-input">
                 <p
                   class="number-input-setter-text"
-                  id="potential-x-position-setter-text"
+                  id="coefficient-setter-text"
                 >
-                  x:
+                  Koeficijent:
                 </p>
                 <input
                   class="number-input-setter-value"
-                  id="potential-x-position-setter-value"
+                  id="coefficient-setter-value"
                   type="text"
-                  value="0.47"
-                  onfocusout="Konzola.promjenaPozicijePotencijalaX(event)"
+                  value=""
+                  onfocusout="Konzola.promjenaKoeficijenta(event)"
                 />
+              </div>
+              <div
+                id="distance-coefficient-setter"
+                class="distance-coefficient-setter number-input"
+              >
                 <p
                   class="number-input-setter-text"
-                  id="potential-y-position-setter-text"
+                  id="distance-coefficient-setter-text"
                 >
-                  y:
+                  Koef. udaljenosti:
                 </p>
                 <input
                   class="number-input-setter-value"
-                  id="potential-y-position-setter-value"
+                  id="distance-coefficient-setter-value"
                   type="text"
-                  value="0.47"
-                  onfocusout="Konzola.promjenaPozicijePotencijalaY(event)"
+                  value=""
+                  onfocusout="Konzola.promjenaKoeficijentaUdaljenosti(event)"
                 />
+              </div>
+              <div
+                id="potential-position-setter"
+                class="potential-position-setter"
+              >
+                <div class="number-input">
+                  <p
+                    class="number-input-setter-text"
+                    id="potential-x-position-setter-text"
+                  >
+                    x:
+                  </p>
+                  <input
+                    class="number-input-setter-value"
+                    id="potential-x-position-setter-value"
+                    type="text"
+                    value=""
+                    onfocusout="Konzola.promjenaPozicijePotencijalaX(event)"
+                  />
+                  <p
+                    class="number-input-setter-text"
+                    id="potential-y-position-setter-text"
+                  >
+                    y:
+                  </p>
+                  <input
+                    class="number-input-setter-value"
+                    id="potential-y-position-setter-value"
+                    type="text"
+                    value=""
+                    onfocusout="Konzola.promjenaPozicijePotencijalaY(event)"
+                  />
+                </div>
               </div>
             </div>
           </div>
@@ -252,7 +286,7 @@
                 class="number-input-setter-value"
                 id="particle-layer-number-setter-value"
                 type="text"
-                value="0.47"
+                value="3500"
                 onfocusout="Konzola.promjenaCesticaSloja(event)"
               />
             </div>
@@ -267,7 +301,7 @@
                 class="number-input-setter-value"
                 id="particle-layer-xmin-setter-value"
                 type="text"
-                value="0.47"
+                value="0"
                 onfocusout="Konzola.promjenaXMinSloja(event)"
               />
             </div>
@@ -282,7 +316,7 @@
                 class="number-input-setter-value"
                 id="particle-layer-xmax-setter-value"
                 type="text"
-                value="0.47"
+                value="10"
                 onfocusout="Konzola.promjenaXMaxSloja(event)"
               />
             </div>
@@ -297,7 +331,7 @@
                 class="number-input-setter-value"
                 id="particle-layer-ymin-setter-value"
                 type="text"
-                value="0.47"
+                value="0"
                 onfocusout="Konzola.promjenaYMinSloja(event)"
               />
             </div>
@@ -312,7 +346,7 @@
                 class="number-input-setter-value"
                 id="particle-layer-ymax-setter-value"
                 type="text"
-                value="0.47"
+                value="2"
                 onfocusout="Konzola.promjenaYMaxSloja(event)"
               />
             </div>
