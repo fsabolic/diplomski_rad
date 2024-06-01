@@ -319,8 +319,17 @@ button:hover {
 }
 .shroom-console-head {
   font-size: 12px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.shroom-console-head p {
+  margin-right: 10px;
 }
 
+.shroom-console-head input {
+  margin-right: 10px;
+}
 .shroom-console-body {
   font-size: 14px;
   display: flex;

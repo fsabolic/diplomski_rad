@@ -61,8 +61,8 @@ function main(platno) {
     ymaxCestica
   );
   for (let i = 0; i < tocke.length; i++) cestice.push(tocke[i]);
-  let brIteracija = 1;
-  let dt = 1.0 / 60 / brIteracija;
+  Konzola.postaviPreciznostSimulacije(1);
+  let dt = 1.0 / 60;
   let iframe = 0;
   let starttime = Date.now() / 1000;
 
@@ -75,10 +75,12 @@ function main(platno) {
   function iscrtaj() {
     if (!Konzola.paused) {
       let brCestica = cestice.length;
-      for (let i = 0; i < brIteracija; i++) {
+      for (let i = 0; i < Konzola.preciznostSimulacije; i++) {
         for (let i = 0; i < brCestica; i++) {
           cestice[i].materijalnaTocka.pomakni(
-            dt / Konzola.skaliraj(Konzola.brzina),
+            dt /
+              Konzola.preciznostSimulacije /
+              Konzola.skaliraj(Konzola.brzina),
             Konzola.gravitacija
               .F(cestice[i].materijalnaTocka)
               .zbroji(Konzola.otpor.F(cestice[i].materijalnaTocka))

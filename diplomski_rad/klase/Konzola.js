@@ -14,10 +14,13 @@ class Konzola {
   static gravitacija = new Fizika(9.81);
   static otpor = new Otpor(0.47);
 
+  static brojCesticaSloja = 3500;
   static xminCestica = 0;
   static xmaxCestica = 10;
   static yminCestica = 0;
   static ymaxCestica = 10;
+
+  static preciznostSimulacije = 1;
   static start() {
     Konzola.paused = false;
   }
@@ -86,7 +89,7 @@ class Konzola {
     return kopija;
   }
   static reload() {
-    location.reload();
+    location.reload(true);
   }
 
   static reset() {
@@ -97,16 +100,20 @@ class Konzola {
       Konzola.potencijalSave.pop();
     }
 
-    Konzola.pocetnoStanjeCestica.map((cestica) => {
-      let deepCopy = Konzola.deepClone(cestica);
-      Konzola.cesticeSave.push(deepCopy);
-    });
+    Konzola.cesticeSave.push(
+      ...this.postaviSlojCestica(
+        this.brojCesticaSloja,
+        this.xminCestica,
+        this.xmaxCestica,
+        this.yminCestica,
+        this.ymaxCestica
+      )
+    );
+
     Konzola.pocetnoStanjePotencijala.map((p) => {
       let deepCopy = Konzola.deepClone(p);
       Konzola.potencijalSave.push(deepCopy);
     });
-
-    this.postaviHTMLPotencijal(1);
   }
 
   static postaviGranice() {
@@ -253,6 +260,11 @@ class Konzola {
       (element) => selector.options[selector.selectedIndex].value == element.id
     );
 
+    let trenutniPocetniPotencijal = this.pocetnoStanjePotencijala.find(
+      (element) => selector.options[selector.selectedIndex].value == element.id
+    );
+
+    trenutniPocetniPotencijal.naboj = event.target.value;
     trenutniPotencijal.naboj = event.target.value;
   }
 
@@ -261,7 +273,11 @@ class Konzola {
     let trenutniPotencijal = this.potencijalSave.find(
       (element) => selector.options[selector.selectedIndex].value == element.id
     );
+    let trenutniPocetniPotencijal = this.pocetnoStanjePotencijala.find(
+      (element) => selector.options[selector.selectedIndex].value == element.id
+    );
 
+    trenutniPocetniPotencijal.k = event.target.value;
     trenutniPotencijal.k = event.target.value;
   }
 
@@ -270,7 +286,11 @@ class Konzola {
     let trenutniPotencijal = this.potencijalSave.find(
       (element) => selector.options[selector.selectedIndex].value == element.id
     );
+    let trenutniPocetniPotencijal = this.pocetnoStanjePotencijala.find(
+      (element) => selector.options[selector.selectedIndex].value == element.id
+    );
 
+    trenutniPocetniPotencijal.potencijalUdaljenosti = event.target.value;
     trenutniPotencijal.potencijalUdaljenosti = event.target.value;
   }
 
@@ -279,7 +299,11 @@ class Konzola {
     let trenutniPotencijal = this.potencijalSave.find(
       (element) => selector.options[selector.selectedIndex].value == element.id
     );
+    let trenutniPocetniPotencijal = this.pocetnoStanjePotencijala.find(
+      (element) => selector.options[selector.selectedIndex].value == element.id
+    );
 
+    trenutniPocetniPotencijal.r.x = event.target.value;
     trenutniPotencijal.r.x = event.target.value;
   }
   static promjenaPozicijePotencijalaY(event) {
@@ -287,26 +311,12 @@ class Konzola {
     let trenutniPotencijal = this.potencijalSave.find(
       (element) => selector.options[selector.selectedIndex].value == element.id
     );
+    let trenutniPocetniPotencijal = this.pocetnoStanjePotencijala.find(
+      (element) => selector.options[selector.selectedIndex].value == element.id
+    );
 
-    trenutniPotencija;
-    l.r.y = event.target.value;
-  }
-  static promjenaCesticaSloja(event) {
-    let trenutniBrojCestica = this.cesticeSave.length;
-    let zeljeniBrojCesticaUSloju = event.target.value;
-    let razlikaBrojaCestica = zeljeniBrojCesticaUSloju - trenutniBrojCestica;
-    if (razlikaBrojaCestica > 0) {
-      let generiraneCestice = generirajStacionarneCestice(
-        razlikaBrojaCestica,
-        this.xminCestica,
-        this.xmaxCestica,
-        this.yminCestica,
-        this.ymaxCestica
-      );
-
-      this.cesticeSave.push(...generiraneCestice);
-    }
-    console.log(event.target.value);
+    trenutniPocetniPotencijal.r.y = event.target.value;
+    trenutniPotencijal.r.y = event.target.value;
   }
 
   static postaviSlojCestica(
@@ -316,6 +326,7 @@ class Konzola {
     yminCestica,
     ymaxCestica
   ) {
+    this.brojCesticaSloja = brojCesticaSloja;
     this.xminCestica = xminCestica;
     this.xmaxCestica = xmaxCestica;
     this.yminCestica = yminCestica;
@@ -330,17 +341,23 @@ class Konzola {
 
     return generiraneCestice;
   }
-
+  static promjenaCesticaSloja(event) {
+    this.brojCesticaSloja = Number.parseInt(event.target.value);
+  }
   static promjenaXMinSloja(event) {
-    this.xminCestica = event.target.value;
+    this.xminCestica = Number.parseFloat(event.target.value);
   }
   static promjenaXMaxSloja(event) {
-    this.xmaxCestica = event.target.value;
+    this.xmaxCestica = Number.parseFloat(event.target.value);
   }
   static promjenaYMinSloja(event) {
-    this.yminCestica = event.target.value;
+    this.yminCestica = Number.parseFloat(event.target.value);
   }
   static promjenaYMaxSloja(event) {
-    this.ymaxCestica = event.target.value;
+    this.ymaxCestica = Number.parseFloat(event.target.value);
+  }
+
+  static postaviPreciznostSimulacije(value) {
+    this.preciznostSimulacije = Number.parseInt(value);
   }
 }
