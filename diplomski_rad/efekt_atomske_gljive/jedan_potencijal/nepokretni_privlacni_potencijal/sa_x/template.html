@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head id="">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Program 1</title>
+    <script src="/diplomski_rad/skripte/pokretanje.js"></script>
+    <script>
+      function pokreni() {
+        let defaultVrijednosti = {
+          brEksplozije: 1000,
+          gravitacija: 9.81,
+          otpor: 0.47,
+          granice: { left: true, top: false, right: top, bottom: true },
+          preciznost: 1,
+          velicinaSloja: 3500,
+          xminSloja: 0,
+          xmaxSloja: 10,
+          yminSloja: 0,
+          ymaxSloja: 2,
+        };
+
+        let parametri = new Parametri()
+          .setKlikEksplozija(cesticeKlik)
+          .setGksXmin(0)
+          .setGksXmax(10)
+          .setGksYmin(0)
+          .setGksYmax(10)
+          .setListaPotencijala([
+            new CoulombovPotencijal(800, new Vektor2D(5, 5), 1, 4),
+            new CoulombovPotencijal(700, new Vektor2D(5, 8), -1, 4),
+          ])
+          .setPreciznostSimulacije(1)
+          .setPrviFrame(true);
+        main(defaultVrijednosti, parametri);
+      }
+    </script>
+  </head>
+  <body>
+    <div id="template-container"></div>
+  </body>
+</html>
