@@ -1,14 +1,10 @@
 function main(defaultVrijednosti, parametri) {
-  let listaPotencijala = parametri.listaPotencijala;
-  let prviFrame = parametri.prviFrame;
-
   Konzola.initKonzola(defaultVrijednosti, parametri);
   let potencijali = Konzola.potencijalSave;
   let cestice = Konzola.cesticeSave;
   let dt = 1.0 / 60;
   let iframe = 0;
   let starttime = Date.now() / 1000;
-  var prviFramePauziran = prviFrame;
 
   iscrtaj();
 
@@ -20,8 +16,7 @@ function main(defaultVrijednosti, parametri) {
           let vremenskiPomak =
             dt /
             Konzola.preciznostSimulacije /
-            Konzola.skaliraj(Konzola.brzina);
-
+            Konzola.skalirajBrzinuSlidera(Konzola.brzina);
           let rezultantnaSilaPotencijala = potencijali.reduce((zbroj, p) => {
             return zbroj.zbroji(
               p.korigiraniF(cestice[i].materijalnaTocka, 0.5, 0.2)
@@ -54,8 +49,8 @@ function main(defaultVrijednosti, parametri) {
       let framerate = (iframe++ / (Date.now() / 1000 - starttime)).toFixed(6);
       Konzola.gks.tekst("FPS: " + framerate, 0.5, 9.5);
 
-      if (prviFramePauziran) {
-        prviFramePauziran = false;
+      if (Konzola.prviFrame) {
+        Konzola.prviFrame = false;
         Konzola.paused = true;
       }
     }

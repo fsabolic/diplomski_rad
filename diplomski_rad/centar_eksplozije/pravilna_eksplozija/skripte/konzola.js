@@ -4,19 +4,19 @@ let prviFrame = false;
 
 let brojacCestica = 0;
 
-function start() {
+function pokreniButtonClickEventHandler() {
   paused = false;
   console.log(cestice);
 }
-function stop() {
+function pauzirajButtonClickEventHandler() {
   paused = true;
 }
 
-function azurirajBrzinuSimulacije(value) {
+function brzinaSimulacijeSliderEventHandler(value) {
   brzina = value;
 }
 
-function skaliraj(brzina) {
+function skalirajBrzinuSlidera(brzina) {
   brzina = Math.abs(brzina - 1001);
   return ((brzina - 1) / (1000 - 1)) * (30 - 1) + 1;
 }

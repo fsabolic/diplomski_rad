@@ -49,20 +49,36 @@
               value="1000"
               class="slider"
               id="sliderSpeed"
-              onchange="Konzola.azurirajBrzinuSimulacije(this.value)"
+              onchange="Konzola.brzinaSimulacijeSliderEventHandler(this.value)"
             />
           </div>
           <div class="console-buttons">
-            <button type="button" onclick="Konzola.start()" id="start">
+            <button
+              type="button"
+              onclick="Konzola.pokreniButtonClickEventHandler()"
+              id="start"
+            >
               Pokreni
             </button>
-            <button type="button" onclick="Konzola.stop()" id="stop">
+            <button
+              type="button"
+              onclick="Konzola.pauzirajButtonClickEventHandler()"
+              id="stop"
+            >
               Pauziraj
             </button>
-            <button type="button" onclick="Konzola.reset()" id="reset">
+            <button
+              type="button"
+              onclick="Konzola.resetButtonClickEventHandler()"
+              id="reset"
+            >
               Reset
             </button>
-            <button type="button" onclick="Konzola.reload()" id="reload">
+            <button
+              type="button"
+              onclick="Konzola.reloadButtonClickEventHandler()"
+              id="reload"
+            >
               Reload
             </button>
           </div>
@@ -98,7 +114,7 @@
                 id="gravity-setter-value"
                 type="text"
                 value="9.81"
-                onfocusout="Konzola.promjenaGravitacije(event)"
+                onfocusout="Konzola.gravitacijaInputFocusoutEventHandler(event)"
               />
             </div>
             <div class="resistance-setter number-input">
@@ -110,7 +126,7 @@
                 id="resistance-setter-value"
                 type="text"
                 value="0.47"
-                onfocusout="Konzola.promjenaOtpora(event)"
+                onfocusout="Konzola.otporInputFocusoutEventHandler(event)"
               />
             </div>
           </div>
@@ -120,22 +136,22 @@
               <div
                 id="top"
                 class="border-item-selected"
-                onclick="Konzola.granicaClick(event)"
+                onclick="Konzola.granicaClickEventHandler(event)"
               ></div>
               <div
                 id="left"
                 class="border-item"
-                onclick="Konzola.granicaClick(event)"
+                onclick="Konzola.granicaClickEventHandler(event)"
               ></div>
               <div
                 id="right"
                 class="border-item"
-                onclick="Konzola.granicaClick(event)"
+                onclick="Konzola.granicaClickEventHandler(event)"
               ></div>
               <div
                 id="bottom"
                 class="border-item"
-                onclick="Konzola.granicaClick(event)"
+                onclick="Konzola.granicaClickEventHandler(event)"
               ></div>
             </div>
           </div>
@@ -200,7 +216,7 @@
                   id="charge-setter-value"
                   type="text"
                   value=""
-                  onfocusout="Konzola.promjenaNaboja(event)"
+                  onfocusout="Konzola.nabojInputFocusoutEventHandler(event)"
                 />
               </div>
               <div
@@ -218,7 +234,7 @@
                   id="coefficient-setter-value"
                   type="text"
                   value=""
-                  onfocusout="Konzola.promjenaKoeficijenta(event)"
+                  onfocusout="Konzola.koeficijentInputFocusoutEventHandler(event)"
                 />
               </div>
               <div
@@ -236,7 +252,7 @@
                   id="distance-coefficient-setter-value"
                   type="text"
                   value=""
-                  onfocusout="Konzola.promjenaKoeficijentaUdaljenosti(event)"
+                  onfocusout="Konzola.koeficijentUdaljenostiInputFocusoutEventHandler(event)"
                 />
               </div>
               <div
@@ -255,7 +271,7 @@
                     id="potential-x-position-setter-value"
                     type="text"
                     value=""
-                    onfocusout="Konzola.promjenaPozicijePotencijalaX(event)"
+                    onfocusout="Konzola.xKoordinataInputFocusoutEventHandler(event)"
                   />
                   <p
                     class="number-input-setter-text"
@@ -268,7 +284,7 @@
                     id="potential-y-position-setter-value"
                     type="text"
                     value=""
-                    onfocusout="Konzola.promjenaPozicijePotencijalaY(event)"
+                    onfocusout="Konzola.yKoordinataInputFocusoutEventHandler(event)"
                   />
                 </div>
               </div>
@@ -287,7 +303,7 @@
                 id="particle-layer-number-setter-value"
                 type="text"
                 value="3500"
-                onfocusout="Konzola.promjenaCesticaSloja(event)"
+                onfocusout="Konzola.slojCesticaInputFocusoutEventHandler(event)"
               />
             </div>
             <div class="particle-layer-xmin-setter number-input">
@@ -302,7 +318,7 @@
                 id="particle-layer-xmin-setter-value"
                 type="text"
                 value="0"
-                onfocusout="Konzola.promjenaXMinSloja(event)"
+                onfocusout="Konzola.xMinSlojaInputFocusoutEventHandler(event)"
               />
             </div>
             <div class="particle-layer-xmin-setter number-input">
@@ -317,7 +333,7 @@
                 id="particle-layer-xmax-setter-value"
                 type="text"
                 value="10"
-                onfocusout="Konzola.promjenaXMaxSloja(event)"
+                onfocusout="Konzola.xMaxSlojaInputFocusoutEventHandler(event)"
               />
             </div>
             <div class="particle-layer-ymin-setter number-input">
@@ -332,7 +348,7 @@
                 id="particle-layer-ymin-setter-value"
                 type="text"
                 value="0"
-                onfocusout="Konzola.promjenaYMinSloja(event)"
+                onfocusout="Konzola.yMinSlojaInputFocusoutEventHandler(event)"
               />
             </div>
             <div class="particle-layer-ymax-setter number-input">
@@ -347,7 +363,7 @@
                 id="particle-layer-ymax-setter-value"
                 type="text"
                 value="2"
-                onfocusout="Konzola.promjenaYMaxSloja(event)"
+                onfocusout="Konzola.yMaxSlojaInputFocusoutEventHandler(event)"
               />
             </div>
           </div>

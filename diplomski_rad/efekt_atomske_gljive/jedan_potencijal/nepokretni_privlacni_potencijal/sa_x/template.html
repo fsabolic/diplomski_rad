@@ -7,12 +7,22 @@
     <script src="/diplomski_rad/skripte/pokretanje.js"></script>
     <script>
       function pokreni() {
-        let defaultVrijednosti = {
+        let p = {
+          klikEksplozija: coulombEksplozija,
+          gksXmin: 0,
+          gksXmax: 10,
+          gksYmin: 0,
+          gksYmax: 10,
+          listaPotencijala: [
+            new CoulombovPotencijal(800, new Vektor2D(5, 5), 1, 4),
+            new CoulombovPotencijal(700, new Vektor2D(5, 8), -1, 4),
+          ],
+          preciznostSimulacije: 1,
+          prviFrame: true,
           brEksplozije: 1000,
           gravitacija: 9.81,
           otpor: 0.47,
           granice: { left: true, top: false, right: top, bottom: true },
-          preciznost: 1,
           velicinaSloja: 3500,
           xminSloja: 0,
           xmaxSloja: 10,
@@ -20,19 +30,9 @@
           ymaxSloja: 2,
         };
 
-        let parametri = new Parametri()
-          .setKlikEksplozija(cesticeKlik)
-          .setGksXmin(0)
-          .setGksXmax(10)
-          .setGksYmin(0)
-          .setGksYmax(10)
-          .setListaPotencijala([
-            new CoulombovPotencijal(800, new Vektor2D(5, 5), 1, 4),
-            new CoulombovPotencijal(700, new Vektor2D(5, 8), -1, 4),
-          ])
-          .setPreciznostSimulacije(1)
-          .setPrviFrame(true);
-        main(defaultVrijednosti, parametri);
+        let parametri = new Parametri();
+        parametri.postaviParametre(p);
+        main(parametri);
       }
     </script>
   </head>

@@ -46,20 +46,36 @@
               value="1000"
               class="slider"
               id="sliderSpeed"
-              onchange="Konzola.azurirajBrzinuSimulacije(this.value)"
+              onchange="Konzola.brzinaSimulacijeSliderEventHandler(this.value)"
             />
           </div>
           <div class="console-buttons">
-            <button type="button" onclick="Konzola.start()" id="start">
+            <button
+              type="button"
+              onclick="Konzola.pokreniButtonClickEventHandler()"
+              id="start"
+            >
               Pokreni
             </button>
-            <button type="button" onclick="Konzola.stop()" id="stop">
+            <button
+              type="button"
+              onclick="Konzola.pauzirajButtonClickEventHandler()"
+              id="stop"
+            >
               Pauziraj
             </button>
-            <button type="button" onclick="Konzola.reset()" id="reset">
+            <button
+              type="button"
+              onclick="Konzola.resetButtonClickEventHandler()"
+              id="reset"
+            >
               Reset
             </button>
-            <button type="button" onclick="Konzola.reload()" id="reload">
+            <button
+              type="button"
+              onclick="Konzola.reloadButtonClickEventHandler()"
+              id="reload"
+            >
               Reload
             </button>
           </div>
@@ -82,7 +98,7 @@
                 id="gravity-setter-value"
                 type="text"
                 value="0"
-                onfocusout="Konzola.promjenaGravitacije(event)"
+                onfocusout="Konzola.gravitacijaInputFocusoutEventHandler(event)"
               />
             </div>
             <div class="resistance-setter">
@@ -91,7 +107,7 @@
                 id="resistance-setter-value"
                 type="text"
                 value="0.47"
-                onfocusout="Konzola.promjenaOtpora(event)"
+                onfocusout="Konzola.otporInputFocusoutEventHandler(event)"
               />
             </div>
           </div>
@@ -101,22 +117,22 @@
               <div
                 id="top"
                 class="border-item"
-                onclick="Konzola.granicaClick(event)"
+                onclick="Konzola.granicaClickEventHandler(event)"
               ></div>
               <div
                 id="left"
                 class="border-item"
-                onclick="Konzola.granicaClick(event)"
+                onclick="Konzola.granicaClickEventHandler(event)"
               ></div>
               <div
                 id="right"
                 class="border-item"
-                onclick="Konzola.granicaClick(event)"
+                onclick="Konzola.granicaClickEventHandler(event)"
               ></div>
               <div
                 id="bottom"
                 class="border-item"
-                onclick="Konzola.granicaClick(event)"
+                onclick="Konzola.granicaClickEventHandler(event)"
               ></div>
             </div>
           </div>

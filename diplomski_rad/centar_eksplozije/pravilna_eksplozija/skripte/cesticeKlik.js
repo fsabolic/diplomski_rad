@@ -1,7 +1,7 @@
 function cesticeKlik(event, gks, cestice, brojCestica = 20) {
   brojCestica = provjeriHtmlBrojCestica(brojCestica);
   let canvasPosition = document.getElementById("canvas");
-  let canvasGranica = window.getComputedStyle(canvas);
+  let canvasGranica = window.getComputedStyle(canvasPosition);
   let x = event.clientX - canvasPosition.offsetLeft;
   let y = event.clientY - canvasPosition.offsetTop;
   let transformirano = gks.transformirajPiksele(

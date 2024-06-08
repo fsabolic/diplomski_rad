@@ -10,8 +10,11 @@ var listaImporta = [
   "/diplomski_rad/klase/Parametri.js",
   "skripte/generirajCestice.js",
   "skripte/gaussDistribucija.js",
-  "skripte/cesticeKlik.js",
   "/diplomski_rad/klase/MaterijalnaTocka.js",
+  "/diplomski_rad/skripte/pravilnaEksplozija.js",
+  "/diplomski_rad/skripte/gaussEksplozija.js",
+  "/diplomski_rad/skripte/coulombEksplozija.js",
+  "/diplomski_rad/skripte/visestrukiCoulombEksplozija.js",
   "/diplomski_rad/skripte/main.js",
 ];
 
@@ -41,7 +44,3 @@ document.addEventListener("DOMContentLoaded", function () {
     })
     .catch((error) => console.error("Greška pri učitavanju HTML-a:", error));
 });
-
-function daj() {
-  return "../../../../skripte/main.js";
-}

@@ -44,7 +44,7 @@ function main(platno) {
       for (let i = 0; i < brIteracija; i++) {
         for (let i = 0; i < brCestica; i++) {
           cestice[i].materijalnaTocka.pomakni(
-            dt / Konzola.skaliraj(Konzola.brzina),
+            dt / Konzola.skalirajBrzinuSlidera(Konzola.brzina),
             Konzola.gravitacija
               .F(cestice[i].materijalnaTocka)
               .zbroji(Konzola.otpor.F(cestice[i].materijalnaTocka))

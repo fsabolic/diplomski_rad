@@ -80,7 +80,7 @@ function main(platno) {
           cestice[i].materijalnaTocka.pomakni(
             dt /
               Konzola.preciznostSimulacije /
-              Konzola.skaliraj(Konzola.brzina),
+              Konzola.skalirajBrzinuSlidera(Konzola.brzina),
             Konzola.gravitacija
               .F(cestice[i].materijalnaTocka)
               .zbroji(Konzola.otpor.F(cestice[i].materijalnaTocka))
