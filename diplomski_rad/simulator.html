@@ -122,40 +122,42 @@
 
   <div class="shroom-console">
     <div class="shroom-console-head">
-      <p>Preciznost:</p>
-      <input
-        checked
-        type="radio"
-        id="radio-1"
-        name="potential_setter"
-        value="1"
-        onclick="Konzola.preciznostSimulacijeSelectEventHandler(this.value)"
-      />
-      <label for="radio-1">1</label>
-      <input
-        type="radio"
-        id="radio-10"
-        name="potential_setter"
-        value="10"
-        onclick="Konzola.preciznostSimulacijeSelectEventHandler(this.value)"
-      />
-      <label for="radio-10">10</label>
-      <input
-        type="radio"
-        id="radio-100"
-        name="potential_setter"
-        value="100"
-        onclick="Konzola.preciznostSimulacijeSelectEventHandler(this.value)"
-      />
-      <label for="radio-100">100</label>
-      <input
-        type="radio"
-        id="radio-1000"
-        name="potential_setter"
-        value="1000"
-        onclick="Konzola.preciznostSimulacijeSelectEventHandler(this.value)"
-      />
-      <label for="radio-1000">1000</label>
+      <div id="simulation-precision-radio" class="simulation-precision-radio">
+        <p>Preciznost:</p>
+        <input
+          checked
+          type="radio"
+          id="radio-1"
+          name="potential_setter"
+          value="1"
+          onclick="Konzola.preciznostSimulacijeSelectEventHandler(this.value)"
+        />
+        <label for="radio-1">1</label>
+        <input
+          type="radio"
+          id="radio-10"
+          name="potential_setter"
+          value="10"
+          onclick="Konzola.preciznostSimulacijeSelectEventHandler(this.value)"
+        />
+        <label for="radio-10">10</label>
+        <input
+          type="radio"
+          id="radio-100"
+          name="potential_setter"
+          value="100"
+          onclick="Konzola.preciznostSimulacijeSelectEventHandler(this.value)"
+        />
+        <label for="radio-100">100</label>
+        <input
+          type="radio"
+          id="radio-1000"
+          name="potential_setter"
+          value="1000"
+          onclick="Konzola.preciznostSimulacijeSelectEventHandler(this.value)"
+        />
+        <label for="radio-1000">1000</label>
+      </div>
     </div>
     <div class="shroom-console-body">
       <div class="potential-section">

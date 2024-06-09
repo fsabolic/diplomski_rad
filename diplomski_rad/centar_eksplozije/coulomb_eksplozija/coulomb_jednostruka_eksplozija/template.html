@@ -3,7 +3,7 @@
   <head id="">
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Gljiva 1.1. - Nepokretni privlačni potencijal</title>
+    <title>Eksplozija 3.1. - Coulomb jednostruka eksplozija</title>
     <script src="/diplomski_rad/skripte/pokretanje.js"></script>
     <script>
       function pokreni() {
@@ -13,21 +13,18 @@
           gksXmax: 10,
           gksYmin: 0,
           gksYmax: 10,
-          listaPotencijala: [
-            new CoulombovPotencijal(800, new Vektor2D(5, 5), 1, 4),
-            new CoulombovPotencijal(700, new Vektor2D(5, 8), -1, 4),
-          ],
+          listaPotencijala: [],
           preciznostSimulacije: 1,
-          prviFrame: true,
+          prviFrame: false,
           brEksplozije: 1000,
-          gravitacija: 9.81,
-          otpor: 0.47,
-          granice: { left: true, top: false, right: true, bottom: true },
-          velicinaSloja: 3500,
+          gravitacija: 0,
+          otpor: 0,
+          granice: { left: false, top: false, right: false, bottom: false },
+          velicinaSloja: 0,
           xminSloja: 0,
-          xmaxSloja: 10,
+          xmaxSloja: 0,
           yminSloja: 0,
-          ymaxSloja: 2,
+          ymaxSloja: 0,
         };
 
         let parametri = new Parametri();

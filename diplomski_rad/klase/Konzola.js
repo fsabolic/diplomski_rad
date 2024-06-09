@@ -9,6 +9,7 @@ class Konzola {
   static leftGranicaHTML = null;
   static bottomGranicaHTML = null;
   static rightGranicaHTML = null;
+  static preciznostHTML = null;
   static brojCesticaSlojaHTML = null;
   static xminCesticaHTML = null;
   static xmaxCesticaHTML = null;
@@ -30,7 +31,7 @@ class Konzola {
   static gravitacija = new Fizika(9.81);
   static otpor = new Otpor(0.47);
   static potencijalSave = null;
-  static brojCesticaSloja = 3500;
+  static brojCesticaSloja = 0;
   static xminCestica = 0;
   static xmaxCestica = 10;
   static yminCestica = 0;
@@ -98,6 +99,11 @@ class Konzola {
       "Donja granica"
     );
     this.rightGranicaHTML = this.vratiElementIliError("right", "Desna granica");
+    this.preciznostHTML = this.vratiElementIliError(
+      "simulation-precision-radio",
+      "Preciznost simulacije"
+    );
+
     this.brojCesticaSlojaHTML = this.vratiElementIliError(
       "particle-layer-number-setter-value",
       "Broj čestica sloja"
@@ -148,6 +154,7 @@ class Konzola {
     this.brojCesticaEksplozije = parametri.brEksplozije;
     this.gravitacija = new Fizika(parametri.gravitacija);
     this.otpor = new Otpor(parametri.otpor);
+    this.brojCesticaSloja = parametri.velicinaSloja;
     this.xminCestica = parametri.xminSloja;
     this.xmaxCestica = parametri.xmaxSloja;
     this.yminCestica = parametri.yminSloja;
@@ -224,6 +231,12 @@ class Konzola {
       "border-item" + (defaultVrijednosti.granice.bottom ? "" : "-selected");
     this.rightGranicaHTML.className =
       "border-item" + (defaultVrijednosti.granice.right ? "" : "-selected");
+    for (let i = 0; i < this.preciznostHTML.children.length; i++) {
+      if (this.preciznostHTML.children[i].value == this.preciznostSimulacije) {
+        this.preciznostHTML.children[i].checked = true;
+      }
+    }
+
     this.brojCesticaSlojaHTML.value = defaultVrijednosti.velicinaSloja;
     this.xminCesticaHTML.value = defaultVrijednosti.xminSloja;
     this.xmaxCesticaHTML.value = defaultVrijednosti.xmaxSloja;
