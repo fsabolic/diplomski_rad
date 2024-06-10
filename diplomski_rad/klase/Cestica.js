@@ -3,7 +3,7 @@ class Cestica {
     this.materijalnaTocka = materijalnaTocka;
     this.boja = boja;
     this.promjer = promjer;
-  } // constructor
+  }
 
   zarobi(gks, top = true, right = true, bottom = true, left = true) {
     if (this.materijalnaTocka.r.x < gks.xmin + this.promjer && left) {
@@ -21,9 +21,9 @@ class Cestica {
     if (this.materijalnaTocka.r.y < gks.ymin + this.promjer && bottom) {
       this.materijalnaTocka.r.y = this.promjer;
     }
-  } // zarobi
+  }
 
   iscrtaj(gks) {
     gks.piksel(this.materijalnaTocka.r.x, this.materijalnaTocka.r.y, "yellow");
-  } // iscrtaj
-} // class Loptica
+  }
+}

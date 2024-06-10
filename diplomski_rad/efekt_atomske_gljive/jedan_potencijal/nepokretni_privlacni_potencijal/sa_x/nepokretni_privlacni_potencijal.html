@@ -1,374 +1,41 @@
 <!DOCTYPE html>
-<html lang="hr">
-  <head>
+<html lang="en">
+  <head id="">
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Gljiva 1.1. - Nepokretni privlačni potencijal</title>
-    <link rel="stylesheet" href="../../../../css/global.css" />
-    <script src="../../../../klase/MaterijalnaTocka.js"></script>
-    <script src="../../../../klase/Vektor2D.js"></script>
-    <script src="../../../../klase/Fizika.js"></script>
-    <script src="../../../../klase/Cestica.js"></script>
-    <script src="../../../../klase/Otpor.js"></script>
-    <script src="../../../../klase/GlobalniKoordinatniSustav.js"></script>
-    <script src="../../../../klase/CoulombovPotencijal.js"></script>
-    <script src="../../../../klase/Konzola.js"></script>
-    <script src="skripte/generirajCestice.js"></script>
-    <script src="skripte/gaussDistribucija.js"></script>
-    <script src="skripte/cesticeKlik.js"></script>
-    <script src="skripte/main.js"></script>
+    <script src="/diplomski_rad/skripte/pokretanje.js"></script>
     <script>
-      var lopte = [];
       function pokreni() {
-        var platno = document.getElementById("canvas");
-        if (!platno) alert("Greška - nema platna!");
+        let p = {
+          klikEksplozija: coulombEksplozija,
+          gksXmin: 0,
+          gksXmax: 10,
+          gksYmin: 0,
+          gksYmax: 10,
+          listaPotencijala: [
+            new CoulombovPotencijal(800, new Vektor2D(5, 5), 1, 4),
+          ],
+          preciznostSimulacije: 1,
+          prviFrame: true,
+          brEksplozije: 1000,
+          gravitacija: 9.81,
+          otpor: 0.47,
+          granice: { left: true, top: false, right: true, bottom: true },
+          velicinaSloja: 3500,
+          xminSloja: 0,
+          xmaxSloja: 10,
+          yminSloja: 0,
+          ymaxSloja: 2,
+        };
 
-        var slider = document.getElementById("sliderSpeed");
-        slider.onchange();
-
-        main(platno);
+        let parametri = new Parametri();
+        parametri.postaviParametre(p);
+        main(parametri);
       }
-      window.onload = pokreni;
     </script>
   </head>
-
   <body>
-    <div class="page-container">
-      <div class="canvas-console-container">
-        <div class="canvas-container">
-          <canvas id="canvas" width="600" height="600">
-            Vaš preglednik ne podržava HTML5 canvas.
-          </canvas>
-        </div>
-        <div class="page-console">
-          <div class="console-speed-slider">
-            <p>Sim. brzina</p>
-            <input
-              type="range"
-              min="1"
-              max="1000"
-              value="1000"
-              class="slider"
-              id="sliderSpeed"
-              onchange="Konzola.brzinaSimulacijeSliderEventHandler(this.value)"
-            />
-          </div>
-          <div class="console-buttons">
-            <button
-              type="button"
-              onclick="Konzola.pokreniButtonClickEventHandler()"
-              id="start"
-            >
-              Pokreni
-            </button>
-            <button
-              type="button"
-              onclick="Konzola.pauzirajButtonClickEventHandler()"
-              id="stop"
-            >
-              Pauziraj
-            </button>
-            <button
-              type="button"
-              onclick="Konzola.resetButtonClickEventHandler()"
-              id="reset"
-            >
-              Reset
-            </button>
-            <button
-              type="button"
-              onclick="Konzola.reloadButtonClickEventHandler()"
-              id="reload"
-            >
-              Reload
-            </button>
-          </div>
-          <div class="setters">
-            <div class="particle-counter number-input">
-              <p class="number-input-setter-text" id="particle-counter-text">
-                Ukupno čestica:
-              </p>
-              <p class="number-input-setter-value" id="particle-counter-value">
-                0
-              </p>
-            </div>
-            <div class="particle-number-setter number-input">
-              <p
-                class="number-input-setter-text"
-                id="particle-number-setter-text"
-              >
-                Br. eksplozije:
-              </p>
-              <input
-                class="number-input-setter-value"
-                id="particle-number-setter-value"
-                type="text"
-                value="1000"
-              />
-            </div>
-            <div class="gravity-setter number-input">
-              <p class="number-input-setter-text" id="gravity-setter-text">
-                Gravitacija:
-              </p>
-              <input
-                class="number-input-setter-value"
-                id="gravity-setter-value"
-                type="text"
-                value="9.81"
-                onfocusout="Konzola.gravitacijaInputFocusoutEventHandler(event)"
-              />
-            </div>
-            <div class="resistance-setter number-input">
-              <p class="number-input-setter-text" id="resistance-setter-text">
-                Otpor:
-              </p>
-              <input
-                class="number-input-setter-value"
-                id="resistance-setter-value"
-                type="text"
-                value="0.47"
-                onfocusout="Konzola.otporInputFocusoutEventHandler(event)"
-              />
-            </div>
-          </div>
-          <div class="borders-container">
-            <p>Granice odbijanja:</p>
-            <div class="borders">
-              <div
-                id="top"
-                class="border-item-selected"
-                onclick="Konzola.granicaClickEventHandler(event)"
-              ></div>
-              <div
-                id="left"
-                class="border-item"
-                onclick="Konzola.granicaClickEventHandler(event)"
-              ></div>
-              <div
-                id="right"
-                class="border-item"
-                onclick="Konzola.granicaClickEventHandler(event)"
-              ></div>
-              <div
-                id="bottom"
-                class="border-item"
-                onclick="Konzola.granicaClickEventHandler(event)"
-              ></div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="shroom-console">
-        <div class="shroom-console-head">
-          <p>Preciznost:</p>
-          <input
-            checked
-            type="radio"
-            id="radio-1"
-            name="potential_setter"
-            value="1"
-            onclick="Konzola.postaviPreciznostSimulacije(this.value)"
-          />
-          <label for="radio-1">1</label>
-          <input
-            type="radio"
-            id="radio-10"
-            name="potential_setter"
-            value="10"
-            onclick="Konzola.postaviPreciznostSimulacije(this.value)"
-          />
-          <label for="radio-10">10</label>
-          <input
-            type="radio"
-            id="radio-100"
-            name="potential_setter"
-            value="100"
-            onclick="Konzola.postaviPreciznostSimulacije(this.value)"
-          />
-          <label for="radio-100">100</label>
-          <input
-            type="radio"
-            id="radio-1000"
-            name="potential_setter"
-            value="1000"
-            onclick="Konzola.postaviPreciznostSimulacije(this.value)"
-          />
-          <label for="radio-1000">1000</label>
-        </div>
-        <div class="shroom-console-body">
-          <div class="potential-section">
-            <div class="potential-list">
-              <select
-                class="potential-selector"
-                id="selector"
-                name="potential_selector"
-                size="4"
-              ></select>
-            </div>
-
-            <div class="potential-settings">
-              <div id="charge-setter" class="charge-setter number-input">
-                <p class="number-input-setter-text" id="charge-setter-text">
-                  Naboj:
-                </p>
-                <input
-                  class="number-input-setter-value"
-                  id="charge-setter-value"
-                  type="text"
-                  value=""
-                  onfocusout="Konzola.nabojInputFocusoutEventHandler(event)"
-                />
-              </div>
-              <div
-                id="coefficient-setter"
-                class="coefficient-setter number-input"
-              >
-                <p
-                  class="number-input-setter-text"
-                  id="coefficient-setter-text"
-                >
-                  Koeficijent:
-                </p>
-                <input
-                  class="number-input-setter-value"
-                  id="coefficient-setter-value"
-                  type="text"
-                  value=""
-                  onfocusout="Konzola.koeficijentInputFocusoutEventHandler(event)"
-                />
-              </div>
-              <div
-                id="distance-coefficient-setter"
-                class="distance-coefficient-setter number-input"
-              >
-                <p
-                  class="number-input-setter-text"
-                  id="distance-coefficient-setter-text"
-                >
-                  Koef. udaljenosti:
-                </p>
-                <input
-                  class="number-input-setter-value"
-                  id="distance-coefficient-setter-value"
-                  type="text"
-                  value=""
-                  onfocusout="Konzola.koeficijentUdaljenostiInputFocusoutEventHandler(event)"
-                />
-              </div>
-              <div
-                id="potential-position-setter"
-                class="potential-position-setter"
-              >
-                <div class="number-input">
-                  <p
-                    class="number-input-setter-text"
-                    id="potential-x-position-setter-text"
-                  >
-                    x:
-                  </p>
-                  <input
-                    class="number-input-setter-value"
-                    id="potential-x-position-setter-value"
-                    type="text"
-                    value=""
-                    onfocusout="Konzola.xKoordinataInputFocusoutEventHandler(event)"
-                  />
-                  <p
-                    class="number-input-setter-text"
-                    id="potential-y-position-setter-text"
-                  >
-                    y:
-                  </p>
-                  <input
-                    class="number-input-setter-value"
-                    id="potential-y-position-setter-value"
-                    type="text"
-                    value=""
-                    onfocusout="Konzola.yKoordinataInputFocusoutEventHandler(event)"
-                  />
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="particle-layer">
-            <div class="particle-layer-xmin-setter number-input">
-              <p
-                class="number-input-setter-text"
-                id="particle-layer-number-setter-text"
-              >
-                Sloj:
-              </p>
-              <input
-                class="number-input-setter-value"
-                id="particle-layer-number-setter-value"
-                type="text"
-                value="3500"
-                onfocusout="Konzola.slojCesticaInputFocusoutEventHandler(event)"
-              />
-            </div>
-            <div class="particle-layer-xmin-setter number-input">
-              <p
-                class="number-input-setter-text"
-                id="particle-layer-xmin-setter-text"
-              >
-                Xmin:
-              </p>
-              <input
-                class="number-input-setter-value"
-                id="particle-layer-xmin-setter-value"
-                type="text"
-                value="0"
-                onfocusout="Konzola.xMinSlojaInputFocusoutEventHandler(event)"
-              />
-            </div>
-            <div class="particle-layer-xmin-setter number-input">
-              <p
-                class="number-input-setter-text"
-                id="particle-layer-xmax-setter-text"
-              >
-                Xmax
-              </p>
-              <input
-                class="number-input-setter-value"
-                id="particle-layer-xmax-setter-value"
-                type="text"
-                value="10"
-                onfocusout="Konzola.xMaxSlojaInputFocusoutEventHandler(event)"
-              />
-            </div>
-            <div class="particle-layer-ymin-setter number-input">
-              <p
-                class="number-input-setter-text"
-                id="particle-layer-ymin-setter-text"
-              >
-                Ymin
-              </p>
-              <input
-                class="number-input-setter-value"
-                id="particle-layer-ymin-setter-value"
-                type="text"
-                value="0"
-                onfocusout="Konzola.yMinSlojaInputFocusoutEventHandler(event)"
-              />
-            </div>
-            <div class="particle-layer-ymax-setter number-input">
-              <p
-                class="number-input-setter-text"
-                id="particle-layer-ymax-setter-text"
-              >
-                Ymax
-              </p>
-              <input
-                class="number-input-setter-value"
-                id="particle-layer-ymax-setter-value"
-                type="text"
-                value="2"
-                onfocusout="Konzola.yMaxSlojaInputFocusoutEventHandler(event)"
-              />
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+    <div id="template-container"></div>
   </body>
 </html>

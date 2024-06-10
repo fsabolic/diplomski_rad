@@ -28,12 +28,12 @@ function djelujPotencijalomNaCestice(
   cesticeEksplozije,
   polumjer
 ) {
-  let potencijal = new CoulombovPotencijal(150, pocetniVektor, -1, 2);
+  let potencijal = new CoulombovPotencijal(150, pocetniVektor, -1, 2, polumjer);
   let brCestica = cesticeEksplozije.length;
   for (let i = 0; i < brCestica; i++) {
     cesticeEksplozije[i].materijalnaTocka.pomakni(
       0.01,
-      potencijal.korigiraniF(cesticeEksplozije[i].materijalnaTocka, polumjer)
+      potencijal.F(cesticeEksplozije[i].materijalnaTocka)
     );
   }
 }

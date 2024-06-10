@@ -1,147 +1,41 @@
 <!DOCTYPE html>
-<html lang="hr">
-  <head>
+<html lang="en">
+  <head id="">
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Gljiva 1.2. - Nepokretni privlačni potencijal</title>
-    <link rel="stylesheet" href="../../../../css/global.css" />
-    <script src="../../../../klase/MaterijalnaTocka.js"></script>
-    <script src="../../../../klase/Vektor2D.js"></script>
-    <script src="../../../../klase/Fizika.js"></script>
-    <script src="../../../../klase/Cestica.js"></script>
-    <script src="../../../../klase/Otpor.js"></script>
-    <script src="../../../../klase/GlobalniKoordinatniSustav.js"></script>
-    <script src="../../../../klase/YDPotencijal.js"></script>
-    <script src="../../../../klase/CoulombovPotencijal.js"></script>
-    <script src="../../../../klase/Konzola.js"></script>
-    <script src="skripte/generirajCestice.js"></script>
-    <script src="skripte/gaussDistribucija.js"></script>
-    <script src="skripte/cesticeKlik.js"></script>
-    <script src="skripte/main.js"></script>
+    <script src="/diplomski_rad/skripte/pokretanje.js"></script>
     <script>
-      var lopte = [];
       function pokreni() {
-        var platno = document.getElementById("canvas");
-        if (!platno) alert("Greška - nema platna!");
+        let p = {
+          klikEksplozija: coulombEksplozija,
+          gksXmin: 0,
+          gksXmax: 10,
+          gksYmin: 0,
+          gksYmax: 10,
+          listaPotencijala: [
+            new YDPotencijal(700, new Vektor2D(5, 5), 1, 4, 0.5, 0.1),
+          ],
+          preciznostSimulacije: 1,
+          prviFrame: true,
+          brEksplozije: 1000,
+          gravitacija: 9.81,
+          otpor: 0.47,
+          granice: { left: true, top: false, right: true, bottom: true },
+          velicinaSloja: 3500,
+          xminSloja: 0,
+          xmaxSloja: 10,
+          yminSloja: 0,
+          ymaxSloja: 2,
+        };
 
-        var slider = document.getElementById("sliderSpeed");
-        slider.onchange();
-
-        main(platno);
+        let parametri = new Parametri();
+        parametri.postaviParametre(p);
+        main(parametri);
       }
-      window.onload = pokreni;
     </script>
   </head>
-
   <body>
-    <body>
-      <div class="page-container">
-        <div class="canvas-container">
-          <canvas id="canvas" width="600" height="600">
-            Vaš preglednik ne podržava HTML5 canvas.
-          </canvas>
-        </div>
-        <div class="page-console">
-          <div class="console-speed-slider">
-            <p>Sim. brzina</p>
-            <input
-              type="range"
-              min="1"
-              max="1000"
-              value="1000"
-              class="slider"
-              id="sliderSpeed"
-              onchange="Konzola.brzinaSimulacijeSliderEventHandler(this.value)"
-            />
-          </div>
-          <div class="console-buttons">
-            <button
-              type="button"
-              onclick="Konzola.pokreniButtonClickEventHandler()"
-              id="start"
-            >
-              Pokreni
-            </button>
-            <button
-              type="button"
-              onclick="Konzola.pauzirajButtonClickEventHandler()"
-              id="stop"
-            >
-              Pauziraj
-            </button>
-            <button
-              type="button"
-              onclick="Konzola.resetButtonClickEventHandler()"
-              id="reset"
-            >
-              Reset
-            </button>
-            <button
-              type="button"
-              onclick="Konzola.reloadButtonClickEventHandler()"
-              id="reload"
-            >
-              Reload
-            </button>
-          </div>
-          <div class="setters">
-            <div class="particle-counter">
-              <p id="particle-counter-text">Ukupno čestica:</p>
-              <p id="particle-counter-value">0</p>
-            </div>
-            <div class="particle-number-setter">
-              <p id="particle-number-setter-text">Br. eksplozije:</p>
-              <input
-                id="particle-number-setter-value"
-                type="text"
-                value="1000"
-              />
-            </div>
-            <div class="gravity-setter">
-              <p id="gravity-setter-text">Gravitacija:</p>
-              <input
-                id="gravity-setter-value"
-                type="text"
-                value="9.81"
-                onfocusout="Konzola.gravitacijaInputFocusoutEventHandler(event)"
-              />
-            </div>
-            <div class="resistance-setter">
-              <p id="resistance-setter-text">Otpor:</p>
-              <input
-                id="resistance-setter-value"
-                type="text"
-                value="0.47"
-                onfocusout="Konzola.otporInputFocusoutEventHandler(event)"
-              />
-            </div>
-          </div>
-          <div class="borders-container">
-            <p>Granice odbijanja:</p>
-            <div class="borders">
-              <div
-                id="top"
-                class="border-item-selected"
-                onclick="Konzola.granicaClickEventHandler(event)"
-              ></div>
-              <div
-                id="left"
-                class="border-item"
-                onclick="Konzola.granicaClickEventHandler(event)"
-              ></div>
-              <div
-                id="right"
-                class="border-item"
-                onclick="Konzola.granicaClickEventHandler(event)"
-              ></div>
-              <div
-                id="bottom"
-                class="border-item"
-                onclick="Konzola.granicaClickEventHandler(event)"
-              ></div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </body>
+    <div id="template-container"></div>
   </body>
 </html>

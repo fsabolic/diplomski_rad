@@ -18,9 +18,7 @@ function main(defaultVrijednosti, parametri) {
             Konzola.preciznostSimulacije /
             Konzola.skalirajBrzinuSlidera(Konzola.brzina);
           let rezultantnaSilaPotencijala = potencijali.reduce((zbroj, p) => {
-            return zbroj.zbroji(
-              p.korigiraniF(cestice[i].materijalnaTocka, 0.5, 0.2)
-            );
+            return zbroj.zbroji(p.F(cestice[i].materijalnaTocka, 0.5, 0.2));
           }, new Vektor2D(0, 0));
           cestice[i].materijalnaTocka.pomakni(
             vremenskiPomak,

@@ -9,6 +9,7 @@ async function visestrukiCoulombEksplozija(
   }
 
   let cesticePoIteraciji = Math.floor(brojCesticaEksplozije * 0.06);
+  if (cesticePoIteraciji == 0) cesticePoIteraciji = 1;
   let iteracijeCestica =
     Math.floor(brojCesticaEksplozije / cesticePoIteraciji) + 1;
   let ostatak = brojCesticaEksplozije % cesticePoIteraciji;
@@ -62,13 +63,14 @@ function djelujLogPotencijalomNaCestice(
     30 * (Math.log(koeficijentSmanjenja) + 0.5),
     pocetniVektor,
     -1,
-    2
+    2,
+    polumjer
   );
   let brCestica = kreiraneCestice.length;
   for (let i = 0; i < brCestica; i++) {
     kreiraneCestice[i].materijalnaTocka.pomakni(
       0.01,
-      potencijal.korigiraniF(kreiraneCestice[i].materijalnaTocka, polumjer)
+      potencijal.F(kreiraneCestice[i].materijalnaTocka)
     );
   }
 }
