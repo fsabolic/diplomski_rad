@@ -11,7 +11,7 @@ function main(defaultVrijednosti, parametri) {
   function iscrtaj() {
     if (!Konzola.paused) {
       let brCestica = cestice.length;
-      for (let i = 0; i < Konzola.preciznostSimulacije; i++) {
+      for (let j = 0; j < Konzola.preciznostSimulacije; j++) {
         for (let i = 0; i < brCestica; i++) {
           let vremenskiPomak =
             dt /
@@ -43,6 +43,7 @@ function main(defaultVrijednosti, parametri) {
       }
       for (let i = 0; i < Konzola.potencijalSave.length; i++) {
         potencijali[i].iscrtaj(Konzola.gks);
+        potencijali[i].pomakni(0);
       }
       let framerate = (iframe++ / (Date.now() / 1000 - starttime)).toFixed(6);
       Konzola.gks.tekst("FPS: " + framerate, 0.5, 9.5);

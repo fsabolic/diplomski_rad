@@ -23,6 +23,11 @@ class CoulombovPotencijalBuilder {
     return this;
   }
 
+  setPomak(pomak) {
+    this.potencijal.pomak = pomak;
+    return this;
+  }
+
   build() {
     let krajnjiPotencijal = this.potencijal;
     this.potencijal = null;

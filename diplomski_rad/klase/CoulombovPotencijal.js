@@ -10,6 +10,9 @@ class CoulombovPotencijal {
     this.minUdaljenost = -1;
     this.maxUdaljenost = -1;
     this.xMnozitelj = 1;
+    this.pomak = (parametar) => {
+      return new Vektor2D(0, 0);
+    };
   }
 
   postaviId() {
@@ -50,6 +53,10 @@ class CoulombovPotencijal {
   djelujNaXKomponentu(sila) {
     sila.x *= this.xMnozitelj;
     return sila;
+  }
+
+  pomakni(parametar) {
+    this.r = this.r.zbroji(this.pomak(parametar));
   }
 
   iscrtaj(gks) {
