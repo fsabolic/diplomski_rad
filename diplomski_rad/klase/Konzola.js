@@ -444,6 +444,14 @@ class Konzola {
     this.preciznostSimulacije = event;
   }
 
+  static onButtonClickEventHandler() {
+    console.log("on");
+  }
+
+  static offButtonClickEventHandler() {
+    console.log("off");
+  }
+
   static nabojInputFocusoutEventHandler(event) {
     let trenutniPotencijal = this.pronadiOdabraniPotencijal(
       this.potencijalSave
@@ -451,6 +459,7 @@ class Konzola {
     let trenutniPocetniPotencijal = this.pronadiOdabraniPotencijal(
       this.pocetnoStanjePotencijala
     );
+    if (trenutniPotencijal == null || trenutniPocetniPotencijal == null) return;
     trenutniPocetniPotencijal.naboj = event.target.value;
     trenutniPotencijal.naboj = event.target.value;
   }
@@ -463,6 +472,7 @@ class Konzola {
       this.pocetnoStanjePotencijala
     );
 
+    if (trenutniPotencijal == null || trenutniPocetniPotencijal == null) return;
     trenutniPocetniPotencijal.k = event.target.value;
     trenutniPotencijal.k = event.target.value;
   }
@@ -475,6 +485,7 @@ class Konzola {
       this.pocetnoStanjePotencijala
     );
 
+    if (trenutniPotencijal == null || trenutniPocetniPotencijal == null) return;
     trenutniPocetniPotencijal.potencijalUdaljenosti = event.target.value;
     trenutniPotencijal.potencijalUdaljenosti = event.target.value;
   }
@@ -487,6 +498,7 @@ class Konzola {
       this.pocetnoStanjePotencijala
     );
 
+    if (trenutniPotencijal == null || trenutniPocetniPotencijal == null) return;
     trenutniPocetniPotencijal.r.x = event.target.value;
     trenutniPotencijal.r.x = event.target.value;
   }
@@ -498,6 +510,7 @@ class Konzola {
       this.pocetnoStanjePotencijala
     );
 
+    if (trenutniPotencijal == null || trenutniPocetniPotencijal == null) return;
     trenutniPocetniPotencijal.r.y = event.target.value;
     trenutniPotencijal.r.y = event.target.value;
   }

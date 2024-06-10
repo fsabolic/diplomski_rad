@@ -6,8 +6,38 @@
       </canvas>
     </div>
     <div class="page-console">
+      <div class="console-buttons">
+        <button
+          type="button"
+          onclick="Konzola.pokreniButtonClickEventHandler()"
+          id="start"
+        >
+          <img src="/diplomski_rad/assets/play.png" />
+        </button>
+        <button
+          type="button"
+          onclick="Konzola.pauzirajButtonClickEventHandler()"
+          id="stop"
+        >
+          <img src="/diplomski_rad/assets/pause.png" />
+        </button>
+        <button
+          type="button"
+          onclick="Konzola.resetButtonClickEventHandler()"
+          id="reset"
+        >
+          <img src="/diplomski_rad/assets/restart.png" />
+        </button>
+        <button
+          type="button"
+          onclick="Konzola.reloadButtonClickEventHandler()"
+          id="reload"
+        >
+          <img src="/diplomski_rad/assets/reload.png" />
+        </button>
+      </div>
       <div class="console-speed-slider">
-        <p>Sim. brzina</p>
+        <p>Brzina:</p>
         <input
           type="range"
           min="1"
@@ -17,36 +47,6 @@
           id="sliderSpeed"
           onchange="Konzola.brzinaSimulacijeSliderEventHandler(this.value)"
         />
-      </div>
-      <div class="console-buttons">
-        <button
-          type="button"
-          onclick="Konzola.pokreniButtonClickEventHandler()"
-          id="start"
-        >
-          Pokreni
-        </button>
-        <button
-          type="button"
-          onclick="Konzola.pauzirajButtonClickEventHandler()"
-          id="stop"
-        >
-          Pauziraj
-        </button>
-        <button
-          type="button"
-          onclick="Konzola.resetButtonClickEventHandler()"
-          id="reset"
-        >
-          Reset
-        </button>
-        <button
-          type="button"
-          onclick="Konzola.reloadButtonClickEventHandler()"
-          id="reload"
-        >
-          Reload
-        </button>
       </div>
       <div class="setters">
         <div class="particle-counter number-input">
@@ -168,6 +168,20 @@
             name="potential_selector"
             size="4"
           ></select>
+          <div id="potential-switch-buttons" class="potential-switch-buttons">
+            <button
+              id="on-button"
+              onclick="Konzola.onButtonClickEventHandler()"
+            >
+              On
+            </button>
+            <button
+              id="off-button"
+              onclick="Konzola.offButtonClickEventHandler()"
+            >
+              Off
+            </button>
+          </div>
         </div>
 
         <div class="potential-settings">
