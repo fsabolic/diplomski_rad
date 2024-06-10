@@ -1,4 +1,4 @@
-function visestrukiCoulombEksplozija(
+async function visestrukiCoulombEksplozija(
   centarX,
   centarY,
   brojCesticaEksplozije,
@@ -8,41 +8,48 @@ function visestrukiCoulombEksplozija(
     throw Error("Broj čestica u eksploziji nije dobro definiran!");
   }
 
-  let iteracijeCestica = brojCesticaEksplozije / 40;
-  let cesticePoIteraciji = brojCesticaEksplozije / iteracijeCestica;
-  for (let i = 0; i < iteracijeCestica; i++) {
-    setTimeout(() => {
-      let koeficijentSmanjenja = i;
-      let polumjer = 0.06;
-      let kreiraneCestice = [];
-      let pocetniVektor = new Vektor2D(centarX, centarY);
-      for (let j = 0; j < cesticePoIteraciji; j++) {
-        let tocka = nasumnicnaNormalnaDistribucija(1);
-        let cestica = new Cestica(
-          0.1,
-          new MaterijalnaTocka(
-            2 + Math.random(),
-            new Vektor2D(
-              tocka[0][0] / 50 + centarX,
-              tocka[1][0] / 50 + centarY
-            ),
-            new Vektor2D(0, 0)
-          ),
-          "red"
-        );
+  let cesticePoIteraciji = 40;
+  let iteracijeCestica =
+    Math.floor(brojCesticaEksplozije / cesticePoIteraciji) + 1;
+  let ostatak = brojCesticaEksplozije % cesticePoIteraciji;
+  if (ostatak == 0) iteracijeCestica -= 1;
+  for (let i = 1; i <= iteracijeCestica; i++) {
+    if (iteracijeCestica == i && ostatak != 0) {
+      cesticePoIteraciji = ostatak;
+    }
+    let koeficijentSmanjenja = i;
+    let polumjer = 0.06;
+    let kreiraneCestice = [];
+    let pocetniVektor = new Vektor2D(centarX, centarY);
 
-        kreiraneCestice.push(cestica);
-      }
-
-      djelujLogPotencijalomNaCestice(
-        koeficijentSmanjenja,
-        pocetniVektor,
-        kreiraneCestice,
-        polumjer
+    for (let j = 0; j < cesticePoIteraciji; j++) {
+      let tocka = nasumnicnaNormalnaDistribucija(1);
+      let cestica = new Cestica(
+        0.1,
+        new MaterijalnaTocka(
+          2 + Math.random(),
+          new Vektor2D(tocka[0][0] / 50 + centarX, tocka[1][0] / 50 + centarY),
+          new Vektor2D(0, 0)
+        ),
+        "red"
       );
-      cesticeSave.push(...kreiraneCestice);
-    }, 100 / i);
+      kreiraneCestice.push(cestica);
+    }
+
+    djelujLogPotencijalomNaCestice(
+      koeficijentSmanjenja,
+      pocetniVektor,
+      kreiraneCestice,
+      polumjer
+    );
+    cesticeSave.push(...kreiraneCestice);
+
+    await spavaj(100 / i);
   }
+}
+
+function spavaj(ms) {
+  return new Promise((resolve) => setTimeout(resolve, ms));
 }
 
 function djelujLogPotencijalomNaCestice(
