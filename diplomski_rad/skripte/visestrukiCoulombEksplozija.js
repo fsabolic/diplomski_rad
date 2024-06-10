@@ -8,7 +8,7 @@ async function visestrukiCoulombEksplozija(
     throw Error("Broj čestica u eksploziji nije dobro definiran!");
   }
 
-  let cesticePoIteraciji = 40;
+  let cesticePoIteraciji = Math.floor(brojCesticaEksplozije * 0.06);
   let iteracijeCestica =
     Math.floor(brojCesticaEksplozije / cesticePoIteraciji) + 1;
   let ostatak = brojCesticaEksplozije % cesticePoIteraciji;
@@ -44,7 +44,7 @@ async function visestrukiCoulombEksplozija(
     );
     cesticeSave.push(...kreiraneCestice);
 
-    await spavaj(100 / i);
+    await spavaj(10 / i);
   }
 }
 
