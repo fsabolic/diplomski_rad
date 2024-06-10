@@ -445,11 +445,27 @@ class Konzola {
   }
 
   static onButtonClickEventHandler() {
-    console.log("on");
+    let trenutniPotencijal = this.pronadiOdabraniPotencijal(
+      this.potencijalSave
+    );
+    let trenutniPocetniPotencijal = this.pronadiOdabraniPotencijal(
+      this.pocetnoStanjePotencijala
+    );
+    if (trenutniPotencijal == null || trenutniPocetniPotencijal == null) return;
+    trenutniPocetniPotencijal.ukljuci = 1;
+    trenutniPotencijal.ukljuci = 1;
   }
 
   static offButtonClickEventHandler() {
-    console.log("off");
+    let trenutniPotencijal = this.pronadiOdabraniPotencijal(
+      this.potencijalSave
+    );
+    let trenutniPocetniPotencijal = this.pronadiOdabraniPotencijal(
+      this.pocetnoStanjePotencijala
+    );
+    if (trenutniPotencijal == null || trenutniPocetniPotencijal == null) return;
+    trenutniPocetniPotencijal.ukljuci = 0;
+    trenutniPotencijal.ukljuci = 0;
   }
 
   static nabojInputFocusoutEventHandler(event) {

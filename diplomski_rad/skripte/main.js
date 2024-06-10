@@ -11,9 +11,10 @@ function main(defaultVrijednosti, parametri) {
   function iscrtaj() {
     if (!Konzola.paused) {
       let brCestica = cestice.length;
+      let vremenskiPomak = 0;
       for (let j = 0; j < Konzola.preciznostSimulacije; j++) {
         for (let i = 0; i < brCestica; i++) {
-          let vremenskiPomak =
+          vremenskiPomak =
             dt /
             Konzola.preciznostSimulacije /
             Konzola.skalirajBrzinuSlidera(Konzola.brzina);
@@ -43,7 +44,7 @@ function main(defaultVrijednosti, parametri) {
       }
       for (let i = 0; i < Konzola.potencijalSave.length; i++) {
         potencijali[i].iscrtaj(Konzola.gks);
-        potencijali[i].pomakni(0);
+        potencijali[i].pomakni(vremenskiPomak * Konzola.preciznostSimulacije);
       }
       let framerate = (iframe++ / (Date.now() / 1000 - starttime)).toFixed(6);
       Konzola.gks.tekst("FPS: " + framerate, 0.5, 9.5);

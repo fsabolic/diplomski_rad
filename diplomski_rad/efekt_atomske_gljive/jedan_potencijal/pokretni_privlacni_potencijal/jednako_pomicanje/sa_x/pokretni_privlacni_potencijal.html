@@ -16,8 +16,8 @@
           listaPotencijala: [
             new CoulombovPotencijalBuilder(11, new Vektor2D(5, 5 - 3.92), 1)
               .setPotencijalUdaljenosti(2)
-              .setPomak(() => {
-                return new Vektor2D(0, 0.12);
+              .setPomak((parametar) => {
+                return new Vektor2D(0, 7 * parametar);
               })
               .build(),
           ],

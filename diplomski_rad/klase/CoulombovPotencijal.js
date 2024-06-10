@@ -50,6 +50,7 @@ class CoulombovPotencijal {
     }
   }
 
+  //smanjuje ili povećava koliki je utjecaj na x komponentu čestice
   djelujNaXKomponentu(sila) {
     sila.x *= this.xMnozitelj;
     return sila;
