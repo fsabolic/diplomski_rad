@@ -1,28 +1,28 @@
 class CoulombovPotencijal {
   static br = 0;
-  constructor(
-    k,
-    rVektor,
-    naboj = 1,
-    potencijalUdaljenosti = 2,
-    minUdaljenost = -1,
-    maxUdaljenost = -1
-  ) {
-    CoulombovPotencijal.br += 1;
-    this.id = CoulombovPotencijal.br;
+  constructor(k, rVektor, naboj) {
+    this.postaviId();
     this.k = k;
     this.r = rVektor;
     this.naboj = naboj;
-    this.potencijalUdaljenosti = potencijalUdaljenosti;
     this.ukljuci = 1;
-    this.maxUdaljenost = maxUdaljenost;
-    this.minUdaljenost = minUdaljenost;
+    this.potencijalUdaljenosti = 2;
+    this.minUdaljenost = -1;
+    this.maxUdaljenost = -1;
+    this.xMnozitelj = 1;
+  }
+
+  postaviId() {
+    CoulombovPotencijal.br += 1;
+    this.id = CoulombovPotencijal.br;
   }
 
   F(materijalnaTocka) {
     let rRez = this.r.oduzmi(materijalnaTocka.r);
+    rRez = this.djelujNaXKomponentu(rRez);
 
     let udaljenost = this.r.udaljenost(materijalnaTocka.r);
+
     this.ugasiUkolikoJeCesticaPreblizu(udaljenost);
     udaljenost = this.smanjiDjelovanjeUkolikoJeCesticaPreblizu(udaljenost);
 
@@ -45,6 +45,11 @@ class CoulombovPotencijal {
     if (this.maxUdaljenost > -1 && this.maxUdaljenost > udaljenost) {
       this.ukljuci = 0;
     }
+  }
+
+  djelujNaXKomponentu(sila) {
+    sila.x *= this.xMnozitelj;
+    return sila;
   }
 
   iscrtaj(gks) {

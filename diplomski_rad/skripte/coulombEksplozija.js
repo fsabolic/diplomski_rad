@@ -28,7 +28,10 @@ function djelujPotencijalomNaCestice(
   cesticeEksplozije,
   polumjer
 ) {
-  let potencijal = new CoulombovPotencijal(150, pocetniVektor, -1, 2, polumjer);
+  let potencijal = new CoulombovPotencijalBuilder(150, pocetniVektor, -1)
+    .setPotencijalUdaljenosti(2)
+    .setMinUdaljenost(polumjer)
+    .build();
   let brCestica = cesticeEksplozije.length;
   for (let i = 0; i < brCestica; i++) {
     cesticeEksplozije[i].materijalnaTocka.pomakni(

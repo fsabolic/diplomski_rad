@@ -14,7 +14,11 @@
           gksYmin: 0,
           gksYmax: 10,
           listaPotencijala: [
-            new CoulombovPotencijal(800, new Vektor2D(5, 5), 1, 4),
+            new CoulombovPotencijalBuilder(800, new Vektor2D(5, 5), 1)
+              .setPotencijalUdaljenosti(4)
+              .setMinUdaljenost(0.5)
+              .setMaxUdaljenost(0.1)
+              .build(),
           ],
           preciznostSimulacije: 1,
           prviFrame: true,

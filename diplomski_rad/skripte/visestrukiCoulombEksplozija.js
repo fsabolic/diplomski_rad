@@ -59,13 +59,14 @@ function djelujLogPotencijalomNaCestice(
   kreiraneCestice,
   polumjer
 ) {
-  let potencijal = new CoulombovPotencijal(
-    30 * (Math.log(koeficijentSmanjenja) + 0.5),
+  let potencijal = new CoulombovPotencijalBuilder(
+    80 * (Math.log(koeficijentSmanjenja) + 0.5),
     pocetniVektor,
-    -1,
-    2,
-    polumjer
-  );
+    -1
+  )
+    .setPotencijalUdaljenosti(2)
+    .setMinUdaljenost(polumjer)
+    .build();
   let brCestica = kreiraneCestice.length;
   for (let i = 0; i < brCestica; i++) {
     kreiraneCestice[i].materijalnaTocka.pomakni(
