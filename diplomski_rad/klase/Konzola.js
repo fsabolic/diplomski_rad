@@ -10,6 +10,7 @@ class Konzola {
   static bottomGranicaHTML = null;
   static rightGranicaHTML = null;
   static preciznostHTML = null;
+  static vrstaKlikaHTML = null;
   static brojCesticaSlojaHTML = null;
   static xminCesticaHTML = null;
   static xmaxCesticaHTML = null;
@@ -52,28 +53,8 @@ class Konzola {
     this.postaviDefaultHtmlVrijednosti(parametri);
 
     this.postaviEksplozijuNaKlik(parametri.klikEksplozija);
-    //this.dodajPotencijal();
   }
-  /*
-  static dodajPotencijal() {
-    this.postaviNaPlatnoKlik((event) => {
-      let pozicijaPotencijala = this.gks.transformirajPiksele(
-        event.clientX,
-        event.clientY
-      );
-      let noviPotencijal = new CoulombovPotencijal(
-        800,
-        new Vektor2D(pozicijaPotencijala[0], pozicijaPotencijala[1]),
-        1,
-        4
-      );
-      this.potencijalSave.push(noviPotencijal);
-      this.potencijaliHTML.appendChild(
-        this.stvortiHtmlPotencijal(noviPotencijal)
-      );
-    });
-  }
-*/
+
   static dohvatiKljucneHtmlElemente() {
     this.platnoHTML = this.vratiElementIliError("canvas", "Platno");
     this.brojacCesticaHTML = this.vratiElementIliError(
@@ -100,8 +81,12 @@ class Konzola {
     );
     this.rightGranicaHTML = this.vratiElementIliError("right", "Desna granica");
     this.preciznostHTML = this.vratiElementIliError(
-      "simulation-precision-radio",
+      "simulation-precision-value",
       "Preciznost simulacije"
+    );
+    this.vrstaKlikaHTML = this.vratiElementIliError(
+      "click-handler-radio",
+      "Radnja na klik"
     );
 
     this.brojCesticaSlojaHTML = this.vratiElementIliError(
@@ -231,9 +216,15 @@ class Konzola {
       "border-item" + (defaultVrijednosti.granice.bottom ? "" : "-selected");
     this.rightGranicaHTML.className =
       "border-item" + (defaultVrijednosti.granice.right ? "" : "-selected");
-    for (let i = 0; i < this.preciznostHTML.children.length; i++) {
-      if (this.preciznostHTML.children[i].value == this.preciznostSimulacije) {
-        this.preciznostHTML.children[i].checked = true;
+
+    this.preciznostHTML.value = defaultVrijednosti.preciznostSimulacije;
+
+    for (let i = 0; i < this.vrstaKlikaHTML.children.length; i++) {
+      if (
+        this.vrstaKlikaHTML.children[i].value ==
+        defaultVrijednosti.klikEksplozija.name
+      ) {
+        this.vrstaKlikaHTML.children[i].checked = true;
       }
     }
 
@@ -355,7 +346,33 @@ class Konzola {
       }
     });
   }
+  static postaviPotencaijalNaKlik() {
+    this.postaviNaPlatnoKlik((event) => {
+      let pozicijaPotencijala = dohvatiPozicijuKlika(event);
+      let noviPotencijal = new CoulombovPotencijal(
+        0,
+        new Vektor2D(pozicijaPotencijala[0], pozicijaPotencijala[1]),
+        1,
+        2
+      );
+      this.potencijalSave.push(noviPotencijal);
+      this.pocetnoStanjePotencijala.push(noviPotencijal);
+      this.potencijaliHTML.appendChild(
+        this.stvortiHtmlPotencijal(noviPotencijal)
+      );
 
+      function dohvatiPozicijuKlika(event) {
+        let canvasGranica = window.getComputedStyle(Konzola.platnoHTML);
+        let centarX = event.clientX - Konzola.platnoHTML.offsetLeft;
+        let centarY = event.clientY - Konzola.platnoHTML.offsetTop;
+        let centar = Konzola.gks.transformirajPiksele(
+          centarX - parseFloat(canvasGranica.borderLeftWidth),
+          centarY - parseFloat(canvasGranica.borderRightWidth)
+        );
+        return centar;
+      }
+    });
+  }
   static postaviNaPlatnoKlik(klikEventHandler) {
     if (this.posljednjiDodaniEventListener != null)
       this.platnoHTML.removeEventListener(
@@ -369,6 +386,10 @@ class Konzola {
 
   static brzinaSimulacijeSliderEventHandler(value) {
     this.brzina = value;
+  }
+
+  static preciznostInputFocusoutEventHandler(event) {
+    this.preciznostSimulacije = event.target.value;
   }
 
   static skalirajBrzinuSlidera(brzina) {
@@ -430,6 +451,29 @@ class Konzola {
     this.otpor = new Otpor(Number.parseFloat(vrijednostOtpora));
   }
 
+  static klikMetodaSelectEventHandler(event) {
+    switch (event) {
+      case "pravilnaEksplozija":
+        this.postaviEksplozijuNaKlik(pravilnaEksplozija);
+        break;
+
+      case "gaussEksplozija":
+        this.postaviEksplozijuNaKlik(gaussEksplozija);
+        break;
+
+      case "coulombEksplozija":
+        this.postaviEksplozijuNaKlik(coulombEksplozija);
+        break;
+
+      case "visestrukiCoulombEksplozija":
+        this.postaviEksplozijuNaKlik(visestrukiCoulombEksplozija);
+        break;
+      case "dp":
+        this.postaviPotencaijalNaKlik();
+        break;
+    }
+  }
+
   static pronadiOdabraniPotencijal(listaPotencijala) {
     let indexTrenutnogPotencijala = selector.selectedIndex;
     let odabraniPotencijal = selector.options[indexTrenutnogPotencijala];
@@ -438,10 +482,6 @@ class Konzola {
     );
 
     return pronadeniPotencijal;
-  }
-
-  static preciznostSimulacijeSelectEventHandler(event) {
-    this.preciznostSimulacije = event;
   }
 
   static onButtonClickEventHandler() {

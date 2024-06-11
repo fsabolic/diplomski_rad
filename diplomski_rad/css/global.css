@@ -124,6 +124,7 @@ button:hover {
   display: flex;
   justify-content: space-between;
   width: 250px;
+  height: 45px;
   font-size: 14px;
   align-items: center;
 }
@@ -153,6 +154,7 @@ button:hover {
   justify-content: center;
   align-items: center;
 }
+
 .borders-container {
   display: flex;
   flex-direction: column;
@@ -335,20 +337,23 @@ button:hover {
   padding-left: 2px;
 }
 
-.simulation-precision-radio {
-  font-size: 12px;
+.click-handler-radio {
+  font-size: 13px;
   display: flex;
   flex-direction: row;
   align-items: center;
   height: 25px;
 }
 
-.simulation-precision-radio p {
+.click-handler-radio p {
   margin-right: 10px;
 }
 
-.simulation-precision-radio input {
-  margin-right: 10px;
+.click-handler-radio input {
+  margin-right: 5px;
+}
+.click-handler-radio label {
+  margin-right: 25px;
 }
 .shroom-console-body {
   font-size: 14px;

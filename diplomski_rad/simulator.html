@@ -49,6 +49,18 @@
         />
       </div>
       <div class="setters">
+        <div class="simulation-precision number-input">
+          <p class="number-input-setter-text" id="simulation-precision-text">
+            Preciznost:
+          </p>
+          <input
+            class="number-input-setter-value"
+            id="simulation-precision-value"
+            type="text"
+            value=""
+            onfocusout="Konzola.preciznostInputFocusoutEventHandler(event)"
+          />
+        </div>
         <div class="particle-counter number-input">
           <p class="number-input-setter-text" id="particle-counter-text">
             Ukupno čestica:
@@ -122,41 +134,56 @@
 
   <div class="shroom-console">
     <div class="shroom-console-head">
-      <div id="simulation-precision-radio" class="simulation-precision-radio">
-        <p>Preciznost:</p>
+      <div id="click-handler-radio" class="click-handler-radio">
+        <p>Klik:</p>
+        <input
+          type="radio"
+          id="radio-pe"
+          name="click_setter"
+          value="pravilnaEksplozija"
+          title="Pravilna eksplozija"
+          onclick="Konzola.klikMetodaSelectEventHandler(this.value)"
+        />
+        <label for="radio-pe" title="Pravilna eksplozija">pE</label>
+        <input
+          type="radio"
+          id="radio-ge"
+          name="click_setter"
+          value="gaussEksplozija"
+          title="Gauss eksplozija"
+          onclick="Konzola.klikMetodaSelectEventHandler(this.value)"
+        />
+        <label for="radio-ge" title="Gauss eksplozija">gE</label>
         <input
           checked
           type="radio"
-          id="radio-1"
-          name="potential_setter"
-          value="1"
-          onclick="Konzola.preciznostSimulacijeSelectEventHandler(this.value)"
+          id="radio-jce"
+          name="click_setter"
+          value="coulombEksplozija"
+          title="Jednostruki Coulomb eksplozija"
+          onclick="Konzola.klikMetodaSelectEventHandler(this.value)"
         />
-        <label for="radio-1">1</label>
+        <label for="radio-jce" title="Jednostruki Coulomb eksplozija"
+          >jcE</label
+        >
         <input
           type="radio"
-          id="radio-10"
-          name="potential_setter"
-          value="10"
-          onclick="Konzola.preciznostSimulacijeSelectEventHandler(this.value)"
+          id="radio-vce"
+          name="click_setter"
+          value="visestrukiCoulombEksplozija"
+          title="Višestruki Coulomb eksplozija"
+          onclick="Konzola.klikMetodaSelectEventHandler(this.value)"
         />
-        <label for="radio-10">10</label>
+        <label for="radio-vce" title="Višestruki Coulomb eksplozija">vcE</label>
         <input
           type="radio"
-          id="radio-100"
-          name="potential_setter"
-          value="100"
-          onclick="Konzola.preciznostSimulacijeSelectEventHandler(this.value)"
+          id="radio-dp"
+          name="click_setter"
+          value="dp"
+          title="Dodavanje potencijala"
+          onclick="Konzola.klikMetodaSelectEventHandler(this.value)"
         />
-        <label for="radio-100">100</label>
-        <input
-          type="radio"
-          id="radio-1000"
-          name="potential_setter"
-          value="1000"
-          onclick="Konzola.preciznostSimulacijeSelectEventHandler(this.value)"
-        />
-        <label for="radio-1000">1000</label>
+        <label for="radio-dp" title="Dodavanje potencijala">dP</label>
       </div>
     </div>
     <div class="shroom-console-body">
@@ -217,7 +244,7 @@
               class="number-input-setter-text"
               id="distance-coefficient-setter-text"
             >
-              Koef. udaljenosti:
+              Koef. ud.:
             </p>
             <input
               class="number-input-setter-value"
