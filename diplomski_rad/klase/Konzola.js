@@ -281,11 +281,25 @@ class Konzola {
           child.querySelector("#distance-coefficient-setter-value").value =
             odabraniPotencijal.potencijalUdaljenosti;
           break;
-        case "potential-position-setter":
-          child.querySelector("#potential-x-position-setter-value").value =
-            odabraniPotencijal.r.x;
+        case "max-distance-setter":
+          child.querySelector("#max-distance-setter-value").value =
+            odabraniPotencijal.maxUdaljenost;
+          break;
+        case "min-distance-setter":
+          child.querySelector("#min-distance-setter-value").value =
+            odabraniPotencijal.minUdaljenost;
+          break;
+        case "x-influence-setter":
+          child.querySelector("#x-influence-setter-value").value =
+            odabraniPotencijal.xMnozitelj;
+          break;
+        case "potential-y-position-setter":
           child.querySelector("#potential-y-position-setter-value").value =
             odabraniPotencijal.r.y;
+          break;
+        case "potential-x-position-setter":
+          child.querySelector("#potential-x-position-setter-value").value =
+            odabraniPotencijal.r.x;
           break;
       }
     }
@@ -509,6 +523,7 @@ class Konzola {
   }
 
   static nabojInputFocusoutEventHandler(event) {
+    let vrijednost = Number.parseInt(event.target.value);
     let trenutniPotencijal = this.pronadiOdabraniPotencijal(
       this.potencijalSave
     );
@@ -516,11 +531,12 @@ class Konzola {
       this.pocetnoStanjePotencijala
     );
     if (trenutniPotencijal == null || trenutniPocetniPotencijal == null) return;
-    trenutniPocetniPotencijal.naboj = event.target.value;
-    trenutniPotencijal.naboj = event.target.value;
+    trenutniPocetniPotencijal.naboj = vrijednost;
+    trenutniPotencijal.naboj = vrijednost;
   }
 
   static koeficijentInputFocusoutEventHandler(event) {
+    let vrijednost = Number.parseFloat(event.target.value);
     let trenutniPotencijal = this.pronadiOdabraniPotencijal(
       this.potencijalSave
     );
@@ -529,11 +545,12 @@ class Konzola {
     );
 
     if (trenutniPotencijal == null || trenutniPocetniPotencijal == null) return;
-    trenutniPocetniPotencijal.k = event.target.value;
-    trenutniPotencijal.k = event.target.value;
+    trenutniPocetniPotencijal.k = vrijednost;
+    trenutniPotencijal.k = vrijednost;
   }
 
   static koeficijentUdaljenostiInputFocusoutEventHandler(event) {
+    let vrijednost = Number.parseFloat(event.target.value);
     let trenutniPotencijal = this.pronadiOdabraniPotencijal(
       this.potencijalSave
     );
@@ -542,11 +559,54 @@ class Konzola {
     );
 
     if (trenutniPotencijal == null || trenutniPocetniPotencijal == null) return;
-    trenutniPocetniPotencijal.potencijalUdaljenosti = event.target.value;
-    trenutniPotencijal.potencijalUdaljenosti = event.target.value;
+    trenutniPocetniPotencijal.potencijalUdaljenosti = vrijednost;
+    trenutniPotencijal.potencijalUdaljenosti = vrijednost;
+  }
+
+  static maxUdaljenostInputFocusoutEventHandler(event) {
+    let vrijednost = Number.parseFloat(event.target.value);
+    let trenutniPotencijal = this.pronadiOdabraniPotencijal(
+      this.potencijalSave
+    );
+    let trenutniPocetniPotencijal = this.pronadiOdabraniPotencijal(
+      this.pocetnoStanjePotencijala
+    );
+
+    if (trenutniPotencijal == null || trenutniPocetniPotencijal == null) return;
+    trenutniPocetniPotencijal.maxUdaljenost = vrijednost;
+    trenutniPotencijal.maxUdaljenost = vrijednost;
+  }
+
+  static minUdaljenostInputFocusoutEventHandler(event) {
+    let vrijednost = Number.parseFloat(event.target.value);
+    let trenutniPotencijal = this.pronadiOdabraniPotencijal(
+      this.potencijalSave
+    );
+    let trenutniPocetniPotencijal = this.pronadiOdabraniPotencijal(
+      this.pocetnoStanjePotencijala
+    );
+
+    if (trenutniPotencijal == null || trenutniPocetniPotencijal == null) return;
+    trenutniPocetniPotencijal.minUdaljenost = vrijednost;
+    trenutniPotencijal.minUdaljenost = vrijednost;
+  }
+
+  static utjecajXInputFocusoutEventHandler(event) {
+    let vrijednost = Number.parseFloat(event.target.value);
+    let trenutniPotencijal = this.pronadiOdabraniPotencijal(
+      this.potencijalSave
+    );
+    let trenutniPocetniPotencijal = this.pronadiOdabraniPotencijal(
+      this.pocetnoStanjePotencijala
+    );
+
+    if (trenutniPotencijal == null || trenutniPocetniPotencijal == null) return;
+    trenutniPocetniPotencijal.xMnozitelj = vrijednost;
+    trenutniPotencijal.xMnozitelj = vrijednost;
   }
 
   static xKoordinataInputFocusoutEventHandler(event) {
+    let vrijednost = Number.parseFloat(event.target.value);
     let trenutniPotencijal = this.pronadiOdabraniPotencijal(
       this.potencijalSave
     );
@@ -555,10 +615,11 @@ class Konzola {
     );
 
     if (trenutniPotencijal == null || trenutniPocetniPotencijal == null) return;
-    trenutniPocetniPotencijal.r.x = event.target.value;
-    trenutniPotencijal.r.x = event.target.value;
+    trenutniPocetniPotencijal.r.x = vrijednost;
+    trenutniPotencijal.r.x = vrijednost;
   }
   static yKoordinataInputFocusoutEventHandler(event) {
+    let vrijednost = Number.parseFloat(event.target.value);
     let trenutniPotencijal = this.pronadiOdabraniPotencijal(
       this.potencijalSave
     );
@@ -567,8 +628,8 @@ class Konzola {
     );
 
     if (trenutniPotencijal == null || trenutniPocetniPotencijal == null) return;
-    trenutniPocetniPotencijal.r.y = event.target.value;
-    trenutniPotencijal.r.y = event.target.value;
+    trenutniPocetniPotencijal.r.y = vrijednost;
+    trenutniPotencijal.r.y = vrijednost;
   }
 
   static slojCesticaInputFocusoutEventHandler(event) {

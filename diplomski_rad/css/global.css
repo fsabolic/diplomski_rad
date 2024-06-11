@@ -313,6 +313,10 @@ button:hover {
   flex-direction: column;
 }
 
+.page-link {
+  text-decoration: none;
+}
+
 .link-button {
   width: 100%;
   color: #ffafc5;
@@ -372,7 +376,7 @@ button:hover {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  width: 62%;
+  width: 72%;
   align-items: center;
 }
 .potential-position-setter {
@@ -410,6 +414,27 @@ button:hover {
   width: 200px;
 }
 
+.potential-settings {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 0 20px 0 50px;
+  margin-left: 10px;
+}
+
+.potential-settings > * {
+  width: 44%;
+  box-sizing: border-box;
+}
+
+.potential-settings > div > input {
+  width: 37px;
+  font-size: 12.5px;
+}
+
+.potential-settings > div > * {
+  font-size: 12.5px;
+}
 #on-button {
   height: 30px;
   font-size: 12px;
@@ -440,4 +465,13 @@ button:hover {
 
 #off-button:hover {
   background-color: rgba(73, 0, 6, 0.767);
+}
+
+.particle-layer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.particle-layer .number-input {
+  width: 185px;
 }

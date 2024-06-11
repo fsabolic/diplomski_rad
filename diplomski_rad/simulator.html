@@ -226,7 +226,7 @@
           </div>
           <div id="coefficient-setter" class="coefficient-setter number-input">
             <p class="number-input-setter-text" id="coefficient-setter-text">
-              Koeficijent:
+              Koef.:
             </p>
             <input
               class="number-input-setter-value"
@@ -254,35 +254,78 @@
               onfocusout="Konzola.koeficijentUdaljenostiInputFocusoutEventHandler(event)"
             />
           </div>
-          <div id="potential-position-setter" class="potential-position-setter">
-            <div class="number-input">
-              <p
-                class="number-input-setter-text"
-                id="potential-x-position-setter-text"
-              >
-                x:
-              </p>
-              <input
-                class="number-input-setter-value"
-                id="potential-x-position-setter-value"
-                type="text"
-                value=""
-                onfocusout="Konzola.xKoordinataInputFocusoutEventHandler(event)"
-              />
-              <p
-                class="number-input-setter-text"
-                id="potential-y-position-setter-text"
-              >
-                y:
-              </p>
-              <input
-                class="number-input-setter-value"
-                id="potential-y-position-setter-value"
-                type="text"
-                value=""
-                onfocusout="Konzola.yKoordinataInputFocusoutEventHandler(event)"
-              />
-            </div>
+          <div id="max-distance-setter" class="coefficient-setter number-input">
+            <p class="number-input-setter-text" id="max-distance-setter-text">
+              Max. ud.:
+            </p>
+            <input
+              class="number-input-setter-value"
+              id="max-distance-setter-value"
+              type="text"
+              value=""
+              onfocusout="Konzola.maxUdaljenostInputFocusoutEventHandler(event)"
+            />
+          </div>
+          <div id="min-distance-setter" class="coefficient-setter number-input">
+            <p class="number-input-setter-text" id="min-distance-setter-text">
+              Min. ud.:
+            </p>
+            <input
+              class="number-input-setter-value"
+              id="min-distance-setter-value"
+              type="text"
+              value=""
+              onfocusout="Konzola.minUdaljenostInputFocusoutEventHandler(event)"
+            />
+          </div>
+          <div id="x-influence-setter" class="coefficient-setter number-input">
+            <p class="number-input-setter-text" id="x-influence-setter-text">
+              Utjecaj x:
+            </p>
+            <input
+              class="number-input-setter-value"
+              id="x-influence-setter-value"
+              type="text"
+              value=""
+              onfocusout="Konzola.utjecajXInputFocusoutEventHandler(event)"
+            />
+          </div>
+
+          <div
+            id="potential-x-position-setter"
+            class="potential-x-position-setter number-input"
+          >
+            <p
+              class="number-input-setter-text"
+              id="potential-x-position-setter-text"
+            >
+              x:
+            </p>
+            <input
+              class="number-input-setter-value"
+              id="potential-x-position-setter-value"
+              type="text"
+              value=""
+              onfocusout="Konzola.xKoordinataInputFocusoutEventHandler(event)"
+            />
+          </div>
+          <div
+            id="potential-y-position-setter"
+            class="potential-y-position-setter number-input"
+          >
+            <p
+              class="number-input-setter-text"
+              id="potential-y-position-setter-text"
+            >
+              y:
+            </p>
+            <input
+              class="number-input-setter-value"
+              id="potential-y-position-setter-value"
+              type="text"
+              value=""
+              onfocusout="Konzola.yKoordinataInputFocusoutEventHandler(event)"
+            />
           </div>
         </div>
       </div>
