@@ -48,12 +48,8 @@ function generirajStacionarnuCesticu(xmin = 0, xmax = 10, ymin = 0, ymax = 10) {
     new MaterijalnaTocka(
       1,
       new Vektor2D(
-        Math.abs(Math.floor(Math.random() * 1000) % (xmax - xmin)) +
-          xmin +
-          +Math.random(),
-        Math.abs(Math.floor(Math.random() * 1000) % (ymax - ymin)) +
-          ymin +
-          Math.random()
+        Math.random() * (xmax - xmin) + xmin,
+        Math.random() * (ymax - ymin) + ymin
       ),
       new Vektor2D(0, 0)
     ),
