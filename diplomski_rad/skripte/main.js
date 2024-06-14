@@ -47,7 +47,11 @@ function main(defaultVrijednosti, parametri) {
         potencijali[i].pomakni(vremenskiPomak * Konzola.preciznostSimulacije);
       }
       let framerate = (iframe++ / (Date.now() / 1000 - starttime)).toFixed(6);
-      Konzola.gks.tekst("FPS: " + framerate, 0.5, 9.5);
+      Konzola.gks.tekst(
+        "FPS: " + framerate,
+        Konzola.gks.xmin + 0.025 * Konzola.gks.xmax,
+        Konzola.gks.ymax - 0.05 * Konzola.gks.ymax
+      );
 
       if (Konzola.prviFrame) {
         Konzola.prviFrame = false;
