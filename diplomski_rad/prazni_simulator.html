@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head id="">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Prazan simulator</title>
+    <script src="skripte/pokretanje.js"></script>
+    <script>
+      function pokreni() {
+        let p = {
+          klikEksplozija: () => {},
+          gksXmin: 0,
+          gksXmax: 10,
+          gksYmin: 0,
+          gksYmax: 10,
+          listaPotencijala: [],
+          preciznostSimulacije: 1,
+          prviFrame: false,
+          brEksplozije: 0,
+          gravitacija: 0,
+          otpor: 0,
+          granice: { left: true, top: true, right: true, bottom: true },
+          velicinaSloja: 0,
+          xminSloja: 0,
+          xmaxSloja: 0,
+          yminSloja: 0,
+          ymaxSloja: 0,
+        };
+
+        let parametri = new Parametri();
+        parametri.postaviParametre(p);
+        main(parametri);
+      }
+    </script>
+  </head>
+  <body>
+    <div id="template-container"></div>
+  </body>
+</html>
