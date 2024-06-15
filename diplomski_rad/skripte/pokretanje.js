@@ -136,7 +136,7 @@ function dohvatiHtmlKomponentu(predputanja) {
         <label for="radio-jce" title="Jednostruki Coulomb eksplozija">jcE</label>
         <input type="radio" id="radio-vce" name="click_setter" value="visestrukiCoulombEksplozija" title="Višestruki Coulomb eksplozija" onclick="Konzola.klikMetodaSelectEventHandler(this.value)" />
         <label for="radio-vce" title="Višestruki Coulomb eksplozija">vcE</label>
-        <input type="radio" id="radio-dp" name="click_setter" value="dp" title="Dodavanje potencijala" onclick="Konzola.klikMetodaSelectEventHandler(this.value)" />
+        <input type="radio" id="radio-dp" name="click_setter" value="dodavanjePotencijala" title="Dodavanje potencijala" onclick="Konzola.klikMetodaSelectEventHandler(this.value)" />
         <label for="radio-dp" title="Dodavanje potencijala">dP</label>
         <input type="radio" id="radio-no" name="click_setter" value="praznaFunkcija" title="Ništa" onclick="Konzola.klikMetodaSelectEventHandler(this.value)" />
         <label for="radio-no" title="Prazna funkcija">-</label>

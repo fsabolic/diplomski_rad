@@ -365,7 +365,7 @@ class Konzola {
     console.log(123123123);
   }
 
-  static postaviPotencaijalNaKlik() {
+  static postaviPotencijalNaKlik() {
     this.postaviNaPlatnoKlik((event) => {
       let pozicijaPotencijala = dohvatiPozicijuKlika(event);
       let noviPotencijal = new CoulombovPotencijal(
@@ -487,8 +487,11 @@ class Konzola {
       case "visestrukiCoulombEksplozija":
         this.postaviEksplozijuNaKlik(visestrukiCoulombEksplozija);
         break;
-      case "dp":
-        this.postaviPotencaijalNaKlik();
+      case "dodavanjePotencijala":
+        this.postaviPotencijalNaKlik();
+        break;
+      case "praznaFunkcija":
+        this.postaviNaPlatnoKlik(this.praznaFunkcija);
         break;
     }
   }
