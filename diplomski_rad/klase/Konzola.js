@@ -360,6 +360,11 @@ class Konzola {
       }
     });
   }
+
+  static praznaFunkcija() {
+    console.log(123123123);
+  }
+
   static postaviPotencaijalNaKlik() {
     this.postaviNaPlatnoKlik((event) => {
       let pozicijaPotencijala = dohvatiPozicijuKlika(event);
