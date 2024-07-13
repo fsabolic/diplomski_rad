@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
-  let predputanja = odrediPredputanju();
+  let predputanja = odrediPredputanju() + "/2d/";
 
   var listaImporta = [
     "klase/Vektor2D.js",
