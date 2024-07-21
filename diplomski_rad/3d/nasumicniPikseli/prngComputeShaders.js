@@ -1,3 +1,4 @@
+//SOURCE: https://developer.nvidia.com/gpugems/gpugems3/part-vi-gpu-computing/chapter-37-efficient-random-number-generation-and-application
 const prngComputeShaders = /*wgsl*/ `
 
 const pi: f32 = 3.1415926535897932384626433832795;
