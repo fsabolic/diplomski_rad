@@ -1,5 +1,5 @@
 //SOURCE: https://webgpufundamentals.org/webgpu/lessons/webgpu-cameras.html
-function definirajPiramidu2() {
+function definirajPiramidu() {
   let osnovnaKoordinata = 5;
   const koordinate = [
     //A
@@ -68,8 +68,8 @@ function definirajPiramidu2() {
   }
 
   return {
-    podaciKoordinata2: podaciKoordinata,
-    podaciBoja2: podaciBoja,
-    brojVrhova2: brojVrhova,
+    podaciKoordinata: podaciKoordinata,
+    podaciBoja: podaciBoja,
+    brojVrhova: brojVrhova,
   };
 }

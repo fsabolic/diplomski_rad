@@ -1,4 +1,4 @@
-const renderShaders = /*wgsl*/ `
+const particleRenderShaders = /*wgsl*/ `
 
 @group(0) @binding(0) var<storage> x_coords: array<f32>;
 @group(0) @binding(1) var<storage> y_coords: array<f32>;
