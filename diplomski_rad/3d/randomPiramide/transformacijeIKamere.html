@@ -1,0 +1,412 @@
+<!--SOURCE: https://webgpufundamentals.org/webgpu/lessons/webgpu-cameras.html-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Random piramide</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="varijable.js"></script>
+    <script src="skripte/definirajPiramidu.js"></script>
+    <script src="skripte/vec3.js"></script>
+    <script src="skripte/mat4.js"></script>
+    <script src="shaderi/crtanje3DShader.js"></script>
+    <script src="shaderi/prngComputeShaders.js"></script>
+    <script type="module">
+      import GUI from "./gui_lib/muigui-0.x.module.js";
+
+      async function postaviWebGPU() {
+        //UČITAVANJE KONTEKSTA I OSTALIH WEBGPU STVARI
+        adapter = await navigator.gpu?.requestAdapter();
+        device = await adapter?.requestDevice();
+        if (!device) {
+          fail("need a browser that supports WebGPU");
+          return;
+        }
+
+        canvas = document.querySelector("canvas");
+        context = canvas.getContext("webgpu");
+        presentationFormat = navigator.gpu.getPreferredCanvasFormat();
+        context.configure({
+          device,
+          format: presentationFormat,
+          alphaMode: "premultiplied",
+        });
+      }
+
+      function dodajRand() {
+        return Math.random() * 10;
+      }
+
+      function kreirajBuffere() {
+        //KREIRANJE BUFFERA
+
+        //_____uniform matrix buffer_____
+        uniformParametersValues = new ArrayBuffer(80);
+        uniformParametersViews = {
+          matrix: new Float32Array(uniformParametersValues, 0, 16),
+          eye: new Float32Array(uniformParametersValues, 64, 3),
+        };
+
+        uniformParametersBuffer = device.createBuffer({
+          label: "uniform matrix buffer",
+          size: uniformParametersValues.byteLength,
+          usage: GPUBufferUsage.UNIFORM | GPUBufferUsage.COPY_DST,
+        });
+
+        //_____default piramida buffer_____
+        let { podaciKoordinata, podaciBoja, brojVrhova } = definirajPiramidu();
+        brojVrhovaPiramide = brojVrhova;
+        const pyramidValues = new ArrayBuffer(544);
+        let pyramidViews = [];
+        for (let i = 0; i < brojVrhova; i++) {
+          pyramidViews.push({
+            position: new Float32Array(pyramidValues, 32 * i, 4),
+            color: new Float32Array(pyramidValues, 32 * i + 16, 4),
+          });
+          pyramidViews[i].position.set([
+            podaciKoordinata[i * 4],
+            podaciKoordinata[i * 4 + 1],
+            podaciKoordinata[i * 4 + 2],
+            podaciKoordinata[i * 4 + 3],
+          ]);
+          pyramidViews[i].color.set([
+            podaciBoja[i * 4],
+            podaciBoja[i * 4 + 1],
+            podaciBoja[i * 4 + 2],
+            podaciBoja[i * 4 + 3],
+          ]);
+        }
+
+        uniformPyramidBuffer = device.createBuffer({
+          label: "default piramida buffer",
+          size: pyramidValues.byteLength,
+          usage: GPUBufferUsage.UNIFORM | GPUBufferUsage.COPY_DST,
+        });
+        device.queue.writeBuffer(uniformPyramidBuffer, 0, pyramidValues);
+
+        //_____seed storage buffer_____
+        seeds = new Uint32Array([
+          seeds[0] * dodajRand(),
+          seeds[1] * dodajRand(),
+          seeds[2] * dodajRand(),
+          seeds[3] * dodajRand(),
+        ]);
+        seedsBuffer = device.createBuffer({
+          label: "seeds buffer",
+          size: seeds.byteLength,
+          usage: GPUBufferUsage.UNIFORM | GPUBufferUsage.COPY_DST,
+        });
+        device.queue.writeBuffer(seedsBuffer, 0, seeds);
+
+        //_____resultWrite storage buffer_____ (za pisanje unutar shadera u GPU)
+        let xCoordArray = new Float32Array(brojCestica);
+        xCoordBuffer = device.createBuffer({
+          label: "xKoordinate buffer",
+          size: xCoordArray.byteLength,
+          usage:
+            GPUBufferUsage.STORAGE |
+            GPUBufferUsage.COPY_SRC |
+            GPUBufferUsage.COPY_DST,
+        });
+        //device.queue.writeBuffer(resultWriteBuffer, 0, input);
+
+        //_____resultWrite storage buffer_____ (za pisanje unutar shadera u GPU)
+        let yCoordArray = new Float32Array(brojCestica);
+        yCoordBuffer = device.createBuffer({
+          label: "yKoordinate buffer",
+          size: yCoordArray.byteLength,
+          usage:
+            GPUBufferUsage.STORAGE |
+            GPUBufferUsage.COPY_SRC |
+            GPUBufferUsage.COPY_DST,
+        });
+        //device.queue.writeBuffer(resultWriteBuffer, 0, input);
+
+        //_____resultWrite storage buffer_____ (za pisanje unutar shadera u GPU)
+        let zCoordArray = new Float32Array(brojCestica);
+        zCoordBuffer = device.createBuffer({
+          label: "zKoordinate buffer",
+          size: zCoordArray.byteLength,
+          usage:
+            GPUBufferUsage.STORAGE |
+            GPUBufferUsage.COPY_SRC |
+            GPUBufferUsage.COPY_DST,
+        });
+        //device.queue.writeBuffer(resultWriteBuffer, 0, input);
+      }
+
+      function kreirajPRNGComputeShader() {
+        //KOMPILACIJA --COMPUTE-- SHADERA
+        const prngComputeModule = device.createShaderModule({
+          label: "PRNG Compute Shader",
+          code: prngComputeShaders,
+        });
+
+        device.pushErrorScope("validation");
+
+        //IZRADA --COMPUTE-- PIPELINEA
+        let prngComputePipelineDescriptor = {
+          compute: {
+            module: prngComputeModule,
+            entryPoint: "popuniKoordinateCestica",
+          },
+          layout: "auto",
+        };
+
+        prngComputePipeline = device.createComputePipeline(
+          prngComputePipelineDescriptor
+        );
+
+        //IZRADA --COMPUTE-- BIND GROUP-A
+        prngComputeBindGroup = device.createBindGroup({
+          layout: prngComputePipeline.getBindGroupLayout(0),
+          entries: [
+            {
+              binding: 0,
+              resource: { buffer: xCoordBuffer },
+            },
+            {
+              binding: 1,
+              resource: { buffer: yCoordBuffer },
+            },
+            {
+              binding: 2,
+              resource: { buffer: zCoordBuffer },
+            },
+            {
+              binding: 3,
+              resource: { buffer: seedsBuffer },
+            },
+          ],
+        });
+      }
+
+      function kreirajPyramidRenderShader() {
+        //KOMPILACIJA -- PYRAMID RENDER-- SHADERA
+        let crtanje3DModule = device.createShaderModule({
+          code: crtanje3DShader,
+        });
+
+        pyramid3DRenderPipeline = device.createRenderPipeline({
+          label: "2 attributes",
+          layout: "auto",
+          vertex: {
+            module: crtanje3DModule,
+          },
+          fragment: {
+            module: crtanje3DModule,
+            targets: [{ format: presentationFormat }],
+          },
+          primitive: {
+            cullMode: "back",
+          },
+          depthStencil: {
+            depthWriteEnabled: true,
+            depthCompare: "less",
+            format: "depth24plus",
+          },
+        });
+
+        pyramid3DRenderbindGroup = device.createBindGroup({
+          label: "bind group for object",
+          layout: pyramid3DRenderPipeline.getBindGroupLayout(0),
+          entries: [
+            { binding: 0, resource: { buffer: uniformParametersBuffer } },
+            { binding: 1, resource: { buffer: uniformPyramidBuffer } },
+            {
+              binding: 2,
+              resource: { buffer: xCoordBuffer },
+            },
+            {
+              binding: 3,
+              resource: { buffer: yCoordBuffer },
+            },
+            {
+              binding: 4,
+              resource: { buffer: zCoordBuffer },
+            },
+          ],
+        });
+      }
+
+      function postaviGUI(render) {
+        const radToDegOptions = {
+          min: -360,
+          max: 360,
+          step: 1,
+          converters: GUI.converters.radToDeg,
+        };
+        const gui = new GUI();
+        gui.onChange(render);
+        gui.add(settings, "fieldOfView", {
+          min: 1,
+          max: 179,
+          converters: GUI.converters.radToDeg,
+        });
+        gui.add(settings, "cameraAngle", radToDegOptions);
+      }
+
+      function postaviMatricu3DTransformacija() {
+        const aspect = canvas.clientWidth / canvas.clientHeight;
+        const projection = mat4.perspektiva(
+          settings.fieldOfView,
+          aspect,
+          1, // zNear
+          2000 // zFar
+        );
+
+        const fPosition = [0, 0, 0];
+        const radius = 200;
+        let tempMatrix = mat4.rotacijaY(settings.cameraAngle);
+        mat4.translatiraj(tempMatrix, [0, 0, radius * 1.5], tempMatrix);
+
+        const eye = tempMatrix.slice(12, 15);
+
+        let mn = 1.7;
+        uniformParametersViews.eye.set(
+          new Float32Array([eye[0] * mn, eye[1] * mn, eye[2] * mn])
+        );
+
+        const up = [0, 1, 0];
+        const viewMatrix = mat4.pogledaj(eye, fPosition, up);
+        const viewProjectionMatrix = mat4.mnozi(projection, viewMatrix);
+
+        const angle = 0;
+        const x = 0;
+        const y = 0;
+        const z = 0;
+
+        return mat4.translatiraj(
+          viewProjectionMatrix,
+          [x, y, z],
+          uniformParametersViews.matrix
+        );
+      }
+
+      function izvrsiPRNGComputeShader() {
+        //IZRADA --COMPUTE-- ENCODERA
+        const computeEncoder = device.createCommandEncoder({
+          label: "PRNG encoder",
+        });
+        const computePass = computeEncoder.beginComputePass({
+          label: "PRNG compute pass",
+        });
+        computePass.setPipeline(prngComputePipeline);
+        computePass.setBindGroup(0, prngComputeBindGroup);
+        computePass.dispatchWorkgroups(
+          brojCestica / (brojCestica < 256 ? 1 : 256)
+        );
+        computePass.end();
+
+        const commandBuffer = computeEncoder.finish();
+        device.queue.submit([commandBuffer]);
+      }
+
+      function izvrsi3DPiramidaRenderShader() {
+        const canvasTexture = context.getCurrentTexture();
+        const renderPassDescriptor = {
+          label: "our basic canvas renderPass",
+          colorAttachments: [
+            {
+              view: context.getCurrentTexture(),
+              loadOp: "clear",
+              storeOp: "store",
+            },
+          ],
+          depthStencilAttachment: {
+            view: context.getCurrentTexture(),
+            depthClearValue: 1.0,
+            depthLoadOp: "clear",
+            depthStoreOp: "store",
+          },
+        };
+        renderPassDescriptor.colorAttachments[0].view =
+          canvasTexture.createView();
+
+        if (
+          !depthTexture ||
+          depthTexture.width !== canvasTexture.width ||
+          depthTexture.height !== canvasTexture.height
+        ) {
+          if (depthTexture) {
+            depthTexture.destroy();
+          }
+          depthTexture = device.createTexture({
+            size: [canvasTexture.width, canvasTexture.height],
+            format: "depth24plus",
+            usage: GPUTextureUsage.RENDER_ATTACHMENT,
+          });
+        }
+        renderPassDescriptor.depthStencilAttachment.view =
+          depthTexture.createView();
+
+        const encoder = device.createCommandEncoder();
+        const pass = encoder.beginRenderPass(renderPassDescriptor);
+        pass.setPipeline(pyramid3DRenderPipeline);
+
+        device.queue.writeBuffer(
+          uniformParametersBuffer,
+          0,
+          uniformParametersValues
+        );
+        pass.setBindGroup(0, pyramid3DRenderbindGroup);
+        pass.draw(brojVrhovaPiramide, brojCestica);
+        pass.end();
+        const commandBuffer = encoder.finish();
+        device.queue.submit([commandBuffer]);
+      }
+
+      let sa = 0.001;
+      function render() {
+        settings.cameraAngle += sa;
+        postaviMatricu3DTransformacija();
+        izvrsi3DPiramidaRenderShader();
+        requestAnimationFrame(render);
+      }
+
+      function postaviCanvasObserver() {
+        //OVO TREBA OBRISAT
+        const observer = new ResizeObserver((entries) => {
+          for (const entry of entries) {
+            const canvas = entry.target;
+            const width = entry.contentBoxSize[0].inlineSize;
+            const height = entry.contentBoxSize[0].blockSize;
+            canvas.width = Math.max(
+              1,
+              Math.min(width, device.limits.maxTextureDimension2D)
+            );
+            canvas.height = Math.max(
+              1,
+              Math.min(height, device.limits.maxTextureDimension2D)
+            );
+
+            render();
+          }
+        });
+        observer.observe(canvas);
+      }
+
+      async function main() {
+        await postaviWebGPU();
+        kreirajBuffere();
+        kreirajPyramidRenderShader();
+        postaviGUI(render);
+        postaviCanvasObserver();
+        kreirajPRNGComputeShader();
+        izvrsiPRNGComputeShader();
+      }
+
+      function fail(msg) {
+        alert(msg);
+      }
+
+      main();
+    </script>
+  </head>
+  <body>
+    <canvas></canvas>
+  </body>
+</html>

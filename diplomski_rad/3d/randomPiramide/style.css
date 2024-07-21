@@ -1,0 +1,19 @@
+/*SOURCE: https://webgpufundamentals.org/webgpu/lessons/webgpu-cameras.html*/
+@import url(https://webgpufundamentals.org/webgpu/resources/webgpu-lesson.css);
+html, body {
+  margin: 0;       /* remove the default margin          */
+  height: 100%;    /* make the html,body fill the page   */
+}
+:root {
+  --bg-color: #fff;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg-color: #000;
+  }
+}
+canvas {
+  display: block;  /* make the canvas act like a block   */
+  width: 100%;     /* make the canvas fill its container */
+  height: 100%;
+}
