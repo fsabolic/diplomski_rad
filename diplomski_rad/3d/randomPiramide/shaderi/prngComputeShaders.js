@@ -2,10 +2,13 @@
 const prngComputeShaders = /*wgsl*/ `
 
 const pi: f32 = 3.1415926535897932384626433832795;
-@group(0) @binding(3) var<uniform> seeds: vec4<u32>;
-@group(0) @binding(0) var<storage, read_write> x_coords: array<f32>;
-@group(0) @binding(1) var<storage, read_write> y_coords: array<f32>;
-@group(0) @binding(2) var<storage, read_write> z_coords: array<f32>;
+@group(0) @binding(0) var<uniform> seeds: vec4<u32>;
+@group(0) @binding(1) var<storage, read_write> x_coords: array<f32>;
+@group(0) @binding(2) var<storage, read_write> y_coords: array<f32>;
+@group(0) @binding(3) var<storage, read_write> z_coords: array<f32>;
+@group(0) @binding(4) var<storage, read_write> x_velocity: array<f32>;
+@group(0) @binding(5) var<storage, read_write> y_velocity: array<f32>;
+@group(0) @binding(6) var<storage, read_write> z_velocity: array<f32>;
 
 @compute @workgroup_size(256) fn popuniKoordinateCestica(
   @builtin(global_invocation_id) id: vec3u
@@ -28,9 +31,45 @@ const pi: f32 = 3.1415926535897932384626433832795;
         }
     }
 
-    x_coords[idx] = normaliziraj(sqrt(-2*log(u[0]))*cos(2*pi*u[1])); //BoxMuller transformacija
-    y_coords[idx] = normaliziraj(sqrt(-2*log(u[0]))*sin(2*pi*u[1])); //BoxMuller transformacija
-    z_coords[idx] = normaliziraj(sqrt(-2*log(u[2]))*sin(2*pi*u[3])); //BoxMuller transformacija
+    var multi : f32 = 1;
+    x_coords[idx] = normaliziraj(sqrt(-2*log(u[0]))*cos(2*pi*u[1]))*multi; //BoxMuller transformacija
+    y_coords[idx] = normaliziraj(sqrt(-2*log(u[0]))*sin(2*pi*u[1]))*multi; //BoxMuller transformacija
+    z_coords[idx] = normaliziraj(sqrt(-2*log(u[2]))*sin(2*pi*u[3]))*multi; //BoxMuller transformacija
+
+    x_velocity[idx] =  0;
+    y_velocity[idx] =  0;
+    z_velocity[idx] =  0;
+
+    var potential_coords : vec3f = vec3f(0,0,0);
+    var particle_coords : vec3f =  vec3f(x_coords[idx],y_coords[idx],z_coords[idx]);
+    var r_res = potential_coords - particle_coords;
+    var potential_particle_distance:f32 = distance(particle_coords,potential_coords);
+
+    var k : f32 = 250;
+    var charge : f32 = -1;
+    var distance_scalar : f32 = 1/pow(potential_particle_distance,1.5);
+
+    r_res.x = r_res.x*k*charge;
+    r_res.y = r_res.y*k*charge;
+    r_res.z = r_res.z*k*charge;
+
+    r_res.x = r_res.x*distance_scalar;
+    r_res.y = r_res.y*distance_scalar;
+    r_res.z = r_res.z*distance_scalar;
+
+    var dt: f32 = 0.001;
+    var dt_mass : f32 = dt/0.1;
+
+
+    x_velocity[idx] +=  dt_mass*r_res.x;
+    y_velocity[idx] +=  dt_mass*r_res.y;
+    z_velocity[idx] +=  dt_mass*r_res.z;
+
+    
+    x_coords[idx] +=  dt*x_velocity[idx];
+    y_coords[idx] +=  dt*y_velocity[idx];
+    z_coords[idx] +=  dt*z_velocity[idx];
+
 }
 
 

@@ -26,16 +26,14 @@ const crtanje3DShader = /*wgsl*/ `
   @vertex fn vs(@builtin(vertex_index) iVertex:u32,@builtin(instance_index) iInstance:u32) -> VSOutput {
     var vsOut: VSOutput;
   
-    var multi : f32 =1100;
-    var offsetVec:vec4f = vec4f(x_coords[iInstance]*multi,y_coords[iInstance]*multi,z_coords[iInstance]*multi,1);
+    var offsetVec:vec4f = vec4f(x_coords[iInstance],y_coords[iInstance],z_coords[iInstance],1);
     
     vsOut.position = uniforms.matrix * (pyramid_vertex[iVertex].position+offsetVec);
     vsOut.color = pyramid_vertex[iVertex].color;
 
-    var cameraPosition: vec3f = uniforms.eye;
+    var cameraPosition: vec3f = vec3f(uniforms.eye.x,uniforms.eye.y,uniforms.eye.z/2);
     var particlePosition: vec3f = offsetVec.xyz;
     vsOut.distance = distance(particlePosition, cameraPosition);
-
     return vsOut;
   }
 
