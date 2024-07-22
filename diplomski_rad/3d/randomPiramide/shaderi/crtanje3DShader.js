@@ -38,7 +38,7 @@ const crtanje3DShader = /*wgsl*/ `
   }
 
   @fragment fn fs(vsOut: VSOutput) -> @location(0) vec4f {
-    let distanceFactor = 1.0 / (1 + vsOut.distance * 0.005);
+    let distanceFactor = 1.25 / (1 + vsOut.distance * 0.005);
     let adjustedColor = vsOut.color * distanceFactor;
     return adjustedColor;
   }

@@ -375,9 +375,9 @@
         );
 
         const fPosition = [0, 0, 0];
-        const radius = -80;
+        const radius = -105;
         let tempMatrix = mat4.rotacijaY(settings.cameraAngle);
-        mat4.translatiraj(tempMatrix, [0, 80, radius], tempMatrix);
+        mat4.translatiraj(tempMatrix, [0, 100, radius], tempMatrix);
 
         const eye = tempMatrix.slice(12, 15);
 
@@ -494,7 +494,7 @@
         device.queue.submit([commandBuffer]);
       }
 
-      let dt = 0.01;
+      let dt = 0.0085;
       function render() {
         settings.cameraAngle += 0;
         device.queue.writeBuffer(uniformTimeBuffer, 0, new Float32Array([dt]));

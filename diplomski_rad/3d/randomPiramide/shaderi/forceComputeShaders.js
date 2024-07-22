@@ -41,7 +41,7 @@ const forceComputeShaders = /*wgsl*/ `
     y_velocity[idx] +=  dt_mass*r_res.y+1*-g;
     z_velocity[idx] +=  dt_mass*r_res.z+0;
 
-    var resistance : f32 = 0.001;
+    var resistance : f32 = 0.01;
 
     x_velocity[idx] +=  x_velocity[idx] *-resistance;
     y_velocity[idx] +=  y_velocity[idx] *-resistance;
