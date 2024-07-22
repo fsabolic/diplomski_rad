@@ -35,15 +35,27 @@ const forceComputeShaders = /*wgsl*/ `
     var dt: f32 = time;
     var dt_mass : f32 = dt/1;
 
+    var g : f32 = 3;
 
-    x_velocity[idx] +=  dt_mass*r_res.x;
-    y_velocity[idx] +=  dt_mass*r_res.y;
-    z_velocity[idx] +=  dt_mass*r_res.z;
+    x_velocity[idx] +=  dt_mass*r_res.x+0;
+    y_velocity[idx] +=  dt_mass*r_res.y+1*-g;
+    z_velocity[idx] +=  dt_mass*r_res.z+0;
+
+    var resistance : f32 = 0.001;
+
+    x_velocity[idx] +=  x_velocity[idx] *-resistance;
+    y_velocity[idx] +=  y_velocity[idx] *-resistance;
+    z_velocity[idx] +=  z_velocity[idx] *-resistance;
 
     
     x_coords[idx] +=  dt*x_velocity[idx];
     y_coords[idx] +=  dt*y_velocity[idx];
     z_coords[idx] +=  dt*z_velocity[idx];
+    
+    if(y_coords[idx]<0){
+      y_velocity[idx] *=  -1;
+      y_coords[idx] = 0;
+    }
 
 }
 `;
