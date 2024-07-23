@@ -12,9 +12,9 @@
     <script src="skripte/definirajPiramidu.js"></script>
     <script src="skripte/vec3.js"></script>
     <script src="skripte/mat4.js"></script>
-    <script src="shaderi/crtanje3DShader.js"></script>
+    <script src="shaderi/cesticeRenderShaders.js"></script>
     <script src="shaderi/prngComputeShaders.js"></script>
-    <script src="shaderi/forceComputeShaders.js"></script>
+    <script src="shaderi/sileComputeShaders.js"></script>
     <script type="module">
       import GUI from "./gui_lib/muigui-0.x.module.js";
 
@@ -38,7 +38,7 @@
       }
 
       function dodajRand() {
-        return 1;
+        return Math.random() * 10;
       }
 
       function kreirajBuffere() {
@@ -246,7 +246,7 @@
         //KOMPILACIJA --COMPUTE-- SHADERA
         const forceComputeModule = device.createShaderModule({
           label: "Force Compute Shader",
-          code: forceComputeShaders,
+          code: sileComputeShaders,
         });
 
         device.pushErrorScope("validation");
@@ -255,7 +255,7 @@
         let forceComputePipelineDescriptor = {
           compute: {
             module: forceComputeModule,
-            entryPoint: "popuniKoordinateCestica",
+            entryPoint: "djelujSilomNaCestice",
           },
           layout: "auto",
         };
@@ -303,7 +303,7 @@
       function kreirajPyramidRenderShader() {
         //KOMPILACIJA -- PYRAMID RENDER-- SHADERA
         let crtanje3DModule = device.createShaderModule({
-          code: crtanje3DShader,
+          code: cesticeRenderShaders,
         });
 
         pyramid3DRenderPipeline = device.createRenderPipeline({
@@ -374,8 +374,8 @@
           2000 // zFar
         );
 
-        const fPosition = [0, 0, 0];
-        const radius = -105;
+        const fPosition = [0, 145, 0];
+        const radius = -305;
         let tempMatrix = mat4.rotacijaY(settings.cameraAngle);
         mat4.translatiraj(tempMatrix, [0, 100, radius], tempMatrix);
 
