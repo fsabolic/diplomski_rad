@@ -62,7 +62,7 @@ struct VrhCestice{
 //Fragment shader za bojanje čestica tako da su svijetlije što su bliže kameri
 @fragment fn fs(vsOut: VSOutput) -> @location(0) vec4f {
   //Izračun faktora udaljenosti koji "smanjuje/povećava" svjetlinu čestice
-  let faktor_udaljenosti = 1.25 / (1 + vsOut.udaljenost * 0.0025);
+  let faktor_udaljenosti =4 / (3 + vsOut.udaljenost * 0.0025);
   let prilagodena_boja = vsOut.boja * faktor_udaljenosti;
   return prilagodena_boja;
 }

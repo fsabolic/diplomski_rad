@@ -372,17 +372,17 @@
           settings.fieldOfView,
           aspect,
           1, // zNear
-          2000 // zFar
+          2000000000 // zFar
         );
 
-        const fPosition = [0, 345, 0];
-        const radius = -405 - 400;
+        const fPosition = [0, 1245, 0];
+        const radius = -405 - 1500;
         let tempMatrix = mat4.rotacijaY(settings.cameraAngle);
-        mat4.translatiraj(tempMatrix, [0, 300, radius], tempMatrix);
+        mat4.translatiraj(tempMatrix, [0, 700, radius], tempMatrix);
 
         const eye = tempMatrix.slice(12, 15);
 
-        let mn = 1.7;
+        let mn = 1.5;
         uniformParametersViews.eye.set(
           new Float32Array([eye[0] * mn, eye[1] * mn, eye[2] * mn])
         );

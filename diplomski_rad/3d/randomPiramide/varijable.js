@@ -4,7 +4,7 @@ let canvas;
 let context;
 let presentationFormat;
 
-let brojCestica = 256 * 20;
+let brojCestica = 256 * 25;
 let seeds = new Uint32Array([123456789, 362436069, 521288629, 88675123]);
 let brojVrhovaPiramide;
 let xCoordBuffer;

@@ -32,7 +32,7 @@ const pi: f32 = 3.1415926535897932384626433832795;
     }
 
     var multi : f32 = 0.03;
-    var trans : f32 = 1000;
+    var trans : f32 = 4000;
     x_coords[idx] = normaliziraj(sqrt(-2*log(u[0]))*cos(2*pi*u[1]))*multi; //BoxMuller transformacija
     y_coords[idx] = normaliziraj(sqrt(-2*log(u[0]))*sin(2*pi*u[1]))*multi+trans; //BoxMuller transformacija
     z_coords[idx] = normaliziraj(sqrt(-2*log(u[2]))*sin(2*pi*u[3]))*multi; //BoxMuller transformacija
@@ -46,9 +46,9 @@ const pi: f32 = 3.1415926535897932384626433832795;
     var r_res = potential_coords - particle_coords;
     var potential_particle_distance:f32 = distance(particle_coords,potential_coords);
 
-    var k : f32 = 20;
+    var k : f32 = 400;
     var charge : f32 = -1;
-    var distance_scalar : f32 = 1/pow(potential_particle_distance,2);
+    var distance_scalar : f32 = 1/pow(potential_particle_distance,1.5);
 
     r_res.x = r_res.x*k*charge;
     r_res.y = r_res.y*k*charge;

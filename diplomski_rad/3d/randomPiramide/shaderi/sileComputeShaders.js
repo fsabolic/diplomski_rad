@@ -52,14 +52,14 @@ fn djelujPotencijalom(dretva_id:u32) -> vec3f {
 
 
 fn djelujGravitacijom(masa_cestice:f32) -> vec3f {
-  var g : f32 = 100;
+  var g : f32 = 300;
 
   return vec3f(0,masa_cestice*-g,0);
 }
 
 
 fn djelujOtporom(dretva_id:u32) -> vec3f {
-  var otpor : f32 = 0.45;
+  var otpor : f32 = 0.35;
   return vec3f(-otpor*x_brzina[dretva_id],-otpor*y_brzina[dretva_id],-otpor*z_brzina[dretva_id]);
 }
 
