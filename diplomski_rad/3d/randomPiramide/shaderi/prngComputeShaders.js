@@ -47,34 +47,20 @@ const pi: f32 = 3.1415926535897932384626433832795;
     y_brzina[dretva_id] =  0;
     z_brzina[dretva_id] =  0;
 
-    var potential_koordinate : vec3f = vec3f(0,trans,0);
-    var particle_koordinate : vec3f =  vec3f(x_koordinate[dretva_id],y_koordinate[dretva_id],z_koordinate[dretva_id]);
-    var r_res = potential_koordinate - particle_koordinate;
-    var potential_particle_distance:f32 = distance(particle_koordinate,potential_koordinate);
+    var pozicija_potencijala : vec3f = vec3f(0,trans,0);
+    var masa_cestice : f32 = 1;
+    var r_rez_potencijala = djelujPotencijalom(dretva_id,pozicija_potencijala,4000);
+    var r_rez_gravitacije = djelujGravitacijom(masa_cestice);
+    var r_rez_otpora = djelujOtporom(dretva_id);
 
-    var k : f32 = 400;
-    var charge : f32 = -1;
-    var distance_scalar : f32 = 1/pow(potential_particle_distance,1.5);
-
-    r_res.x = r_res.x*k*charge;
-    r_res.y = r_res.y*k*charge;
-    r_res.z = r_res.z*k*charge;
-
-    r_res.x = r_res.x*distance_scalar;
-    r_res.y = r_res.y*distance_scalar;
-    r_res.z = r_res.z*distance_scalar;
-
-    var dt_mass : f32 = parametri.dt/0.1;
-
-
-    x_brzina[dretva_id] +=  dt_mass*r_res.x;
-    y_brzina[dretva_id] +=  dt_mass*r_res.y;
-    z_brzina[dretva_id] +=  dt_mass*r_res.z;
-
+    var r_rez = r_rez_potencijala+r_rez_gravitacije+r_rez_otpora;
     
-    x_koordinate[dretva_id] +=  parametri.dt*x_brzina[dretva_id];
-    y_koordinate[dretva_id] +=  parametri.dt*y_brzina[dretva_id];
-    z_koordinate[dretva_id] +=  parametri.dt*z_brzina[dretva_id];
+    pomakni_cesticu(r_rez,masa_cestice,dretva_id);
+    
+    if(y_koordinate[dretva_id]<0){
+      y_brzina[dretva_id] *=  -0.5;
+      y_koordinate[dretva_id] = 0;
+    }
 
 }
 
@@ -119,8 +105,8 @@ fn normaliziraj(vrijednost:f32)-> f32{
       let dretva_id = i_dretve.x;
   
       var masa_cestice : f32 = 1;
-  
-      var r_rez_potencijala = djelujPotencijalom(dretva_id);
+      var pozicija_potencijala : vec3f = vec3f(0,0,0);
+      var r_rez_potencijala = djelujPotencijalom(dretva_id,pozicija_potencijala,0);
       var r_rez_gravitacije = djelujGravitacijom(masa_cestice);
       var r_rez_otpora = djelujOtporom(dretva_id);
   
@@ -136,15 +122,14 @@ fn normaliziraj(vrijednost:f32)-> f32{
   }
   
   
-  fn djelujPotencijalom(dretva_id:u32) -> vec3f {    
-      var pozicija_potencijala : vec3f = vec3f(0,0,0);
+  fn djelujPotencijalom(dretva_id:u32,pozicija_potencijala:vec3f,k:f32) -> vec3f {    
+      
       var pozicija_cestice : vec3f =  vec3f(x_koordinate[dretva_id],y_koordinate[dretva_id],z_koordinate[dretva_id]);
       var r_rez = pozicija_potencijala - pozicija_cestice;
       var udaljenost_od_potencijala:f32 = distance(pozicija_potencijala,pozicija_cestice);
   
-      var k : f32 = 0;
       var naboj : f32 = -1;
-      var potencijal_udaljenosti : f32 = 1/pow(udaljenost_od_potencijala,2);
+      var potencijal_udaljenosti : f32 = 1/pow(udaljenost_od_potencijala,1.5);
   
       r_rez.x = r_rez.x*k*naboj*potencijal_udaljenosti;
       r_rez.y = r_rez.y*k*naboj*potencijal_udaljenosti;
