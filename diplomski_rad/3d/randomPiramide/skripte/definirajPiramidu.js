@@ -1,6 +1,6 @@
 //SOURCE: https://webgpufundamentals.org/webgpu/lessons/webgpu-cameras.html
 function definirajPiramidu() {
-  let osnovnaKoordinata = 1.5;
+  let osnovnaKoordinata = 4.5;
   const koordinate = [
     //A
     osnovnaKoordinata,

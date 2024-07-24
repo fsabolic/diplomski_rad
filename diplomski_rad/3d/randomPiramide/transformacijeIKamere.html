@@ -365,6 +365,7 @@
         gui.add(settings, "cameraAngle", radToDegOptions);
       }
 
+      let ax = 0;
       function postaviMatricu3DTransformacija() {
         const aspect = canvas.clientWidth / canvas.clientHeight;
         const projection = mat4.perspektiva(
@@ -374,10 +375,10 @@
           2000 // zFar
         );
 
-        const fPosition = [0, 145, 0];
-        const radius = -305;
+        const fPosition = [0, 345, 0];
+        const radius = -405 - 400;
         let tempMatrix = mat4.rotacijaY(settings.cameraAngle);
-        mat4.translatiraj(tempMatrix, [0, 100, radius], tempMatrix);
+        mat4.translatiraj(tempMatrix, [0, 300, radius], tempMatrix);
 
         const eye = tempMatrix.slice(12, 15);
 
@@ -494,7 +495,7 @@
         device.queue.submit([commandBuffer]);
       }
 
-      let dt = 0.0085;
+      let dt = 0.01667;
       function render() {
         settings.cameraAngle += 0;
         device.queue.writeBuffer(uniformTimeBuffer, 0, new Float32Array([dt]));
