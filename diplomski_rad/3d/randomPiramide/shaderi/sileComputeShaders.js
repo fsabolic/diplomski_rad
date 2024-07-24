@@ -1,8 +1,13 @@
 //SOURCE: https://developer.nvidia.com/gpugems/gpugems3/part-vi-gpu-computing/chapter-37-efficient-random-number-generation-and-application
 const sileComputeShaders = /*wgsl*/ `
 
+struct Parametri{
+  dt:f32,
+  otpor:f32,
+  gravitacija:f32,
+}
 
-@group(0) @binding(0) var<uniform> dt: f32;
+@group(0) @binding(0) var<uniform> parametri: Parametri;
 @group(0) @binding(1) var<storage, read_write> x_koordinate: array<f32>;
 @group(0) @binding(2) var<storage, read_write> y_koordinate: array<f32>;
 @group(0) @binding(3) var<storage, read_write> z_koordinate: array<f32>;
@@ -52,24 +57,22 @@ fn djelujPotencijalom(dretva_id:u32) -> vec3f {
 
 
 fn djelujGravitacijom(masa_cestice:f32) -> vec3f {
-  var g : f32 = 300;
 
-  return vec3f(0,masa_cestice*-g,0);
+  return vec3f(0,masa_cestice*-parametri.gravitacija,0);
 }
 
 
 fn djelujOtporom(dretva_id:u32) -> vec3f {
-  var otpor : f32 = 0.35;
-  return vec3f(-otpor*x_brzina[dretva_id],-otpor*y_brzina[dretva_id],-otpor*z_brzina[dretva_id]);
+  return vec3f(-parametri.otpor*x_brzina[dretva_id],-parametri.otpor*y_brzina[dretva_id],-parametri.otpor*z_brzina[dretva_id]);
 }
 
 fn pomakni_cesticu(rezultantna_sila:vec3f,masa_cestice:f32,dretva_id:u32){
-  x_brzina[dretva_id] +=  (dt/masa_cestice)*rezultantna_sila.x;
-  y_brzina[dretva_id] +=  (dt/masa_cestice)*rezultantna_sila.y;
-  z_brzina[dretva_id] +=  (dt/masa_cestice)*rezultantna_sila.z;
+  x_brzina[dretva_id] +=  (parametri.dt/masa_cestice)*rezultantna_sila.x;
+  y_brzina[dretva_id] +=  (parametri.dt/masa_cestice)*rezultantna_sila.y;
+  z_brzina[dretva_id] +=  (parametri.dt/masa_cestice)*rezultantna_sila.z;
 
-  x_koordinate[dretva_id] += dt * x_brzina[dretva_id];
-  y_koordinate[dretva_id] += dt * y_brzina[dretva_id];
-  z_koordinate[dretva_id] += dt * z_brzina[dretva_id];
+  x_koordinate[dretva_id] += parametri.dt * x_brzina[dretva_id];
+  y_koordinate[dretva_id] += parametri.dt * y_brzina[dretva_id];
+  z_koordinate[dretva_id] += parametri.dt * z_brzina[dretva_id];
 }
 `;

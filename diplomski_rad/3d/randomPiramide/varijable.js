@@ -19,7 +19,9 @@ let uniformParametersValues;
 let uniformParametersViews;
 let uniformPyramidBuffer;
 let uniformPyramidViews;
-let uniformTimeBuffer;
+let uniformSimulacijaParametriBuffer;
+let uniformSimulacijaParametriValues;
+let uniformSimulacijaParametriViews;
 
 let prngComputePipeline;
 let prngComputeBindGroup;
@@ -29,8 +31,10 @@ let forceComputePipeline;
 let forceComputeBindGroup;
 
 const settings = {
-  fieldOfView: (100 * Math.PI) / 180,
-  cameraAngle: 0,
+  seeds: { z1: 0, z2: 0, z3: 0, z4: 0 },
+  dt: 0.01667,
+  otpor: 0.35,
+  gravitacija: 300,
 };
 //ovo mora bit globalna varijabla
 let depthTexture;
