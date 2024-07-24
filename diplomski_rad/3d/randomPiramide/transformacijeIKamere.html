@@ -13,7 +13,7 @@
     <script src="skripte/vec3.js"></script>
     <script src="skripte/mat4.js"></script>
     <script src="shaderi/cesticeRenderShaders.js"></script>
-    <script src="shaderi/prngComputeShaders.js"></script>
+    <script src="shaderi/computeShaders.js"></script>
     <script type="module">
       import GUI from "https://webgpufundamentals.org/3rdparty/muigui-0.x.module.js";
       import TextNumber from "https://webgpufundamentals.org/3rdparty/muigui-0.x.module.js";
@@ -45,15 +45,16 @@
         //KREIRANJE BUFFERA
 
         //_____uniform matrix buffer_____
-        uniformParametersValues = new ArrayBuffer(80);
-        uniformParametersViews = {
-          matrix: new Float32Array(uniformParametersValues, 0, 16),
-          eye: new Float32Array(uniformParametersValues, 64, 3),
+        uniRenderParamsValues = new ArrayBuffer(80);
+        uniRenderParamsViews = {
+          matrix: new Float32Array(uniRenderParamsValues, 0, 16),
+          eye: new Float32Array(uniRenderParamsValues, 64, 3),
+          incr: new Float32Array(uniRenderParamsValues, 76, 1),
         };
 
-        uniformParametersBuffer = device.createBuffer({
+        uniRenderParamsBuffer = device.createBuffer({
           label: "uniform matrix buffer",
-          size: uniformParametersValues.byteLength,
+          size: uniRenderParamsValues.byteLength,
           usage: GPUBufferUsage.UNIFORM | GPUBufferUsage.COPY_DST,
         });
 
@@ -81,12 +82,12 @@
           ]);
         }
 
-        uniformPyramidBuffer = device.createBuffer({
+        uniPiramidaBuffer = device.createBuffer({
           label: "default piramida buffer",
           size: pyramidValues.byteLength,
           usage: GPUBufferUsage.UNIFORM | GPUBufferUsage.COPY_DST,
         });
-        device.queue.writeBuffer(uniformPyramidBuffer, 0, pyramidValues);
+        device.queue.writeBuffer(uniPiramidaBuffer, 0, pyramidValues);
 
         //_____seed storage buffer_____
         seeds = new Uint32Array([
@@ -103,8 +104,8 @@
         device.queue.writeBuffer(seedsBuffer, 0, seeds);
 
         //_____resultWrite storage buffer_____ (za pisanje unutar shadera u GPU)
-        let xCoordArray = new Float32Array(brojCestica);
-        xCoordBuffer = device.createBuffer({
+        let xCoordArray = new Float32Array(brojCesticaX256);
+        xKoordinateBuffer = device.createBuffer({
           label: "xKoordinate buffer",
           size: xCoordArray.byteLength,
           usage:
@@ -115,8 +116,8 @@
         //device.queue.writeBuffer(resultWriteBuffer, 0, input);
 
         //_____resultWrite storage buffer_____ (za pisanje unutar shadera u GPU)
-        let yCoordArray = new Float32Array(brojCestica);
-        yCoordBuffer = device.createBuffer({
+        let yCoordArray = new Float32Array(brojCesticaX256);
+        yKoordinateBuffer = device.createBuffer({
           label: "yKoordinate buffer",
           size: yCoordArray.byteLength,
           usage:
@@ -127,8 +128,8 @@
         //device.queue.writeBuffer(resultWriteBuffer, 0, input);
 
         //_____resultWrite storage buffer_____ (za pisanje unutar shadera u GPU)
-        let zCoordArray = new Float32Array(brojCestica);
-        zCoordBuffer = device.createBuffer({
+        let zCoordArray = new Float32Array(brojCesticaX256);
+        zKoordinateBuffer = device.createBuffer({
           label: "zKoordinate buffer",
           size: zCoordArray.byteLength,
           usage:
@@ -139,8 +140,8 @@
         //device.queue.writeBuffer(resultWriteBuffer, 0, input);
 
         //_____resultWrite storage buffer_____ (za pisanje unutar shadera u GPU)
-        let xVelocityArray = new Float32Array(brojCestica);
-        xVelocityBuffer = device.createBuffer({
+        let xVelocityArray = new Float32Array(brojCesticaX256);
+        xBrzinaBuffer = device.createBuffer({
           label: "zBrzina buffer",
           size: xVelocityArray.byteLength,
           usage:
@@ -151,8 +152,8 @@
         //device.queue.writeBuffer(resultWriteBuffer, 0, input);
 
         //_____resultWrite storage buffer_____ (za pisanje unutar shadera u GPU)
-        let yVelocityArray = new Float32Array(brojCestica);
-        yVelocityBuffer = device.createBuffer({
+        let yVelocityArray = new Float32Array(brojCesticaX256);
+        yBrzinaBuffer = device.createBuffer({
           label: "yKoordinate buffer",
           size: yVelocityArray.byteLength,
           usage:
@@ -163,8 +164,8 @@
         //device.queue.writeBuffer(resultWriteBuffer, 0, input);
 
         //_____resultWrite storage buffer_____ (za pisanje unutar shadera u GPU)
-        let zVelocityArray = new Float32Array(brojCestica);
-        zVelocityBuffer = device.createBuffer({
+        let zVelocityArray = new Float32Array(brojCesticaX256);
+        zBrzinaBuffer = device.createBuffer({
           label: "zKoordinate buffer",
           size: zVelocityArray.byteLength,
           usage:
@@ -175,15 +176,15 @@
         //device.queue.writeBuffer(resultWriteBuffer, 0, input);
 
         //_____resultWrite storage buffer_____ (za pisanje unutar shadera u GPU)
-        uniformSimulacijaParametriValues = new ArrayBuffer(12);
-        uniformSimulacijaParametriViews = {
-          dt: new Float32Array(uniformSimulacijaParametriValues, 0, 1),
-          otpor: new Float32Array(uniformSimulacijaParametriValues, 4, 1),
-          gravitacija: new Float32Array(uniformSimulacijaParametriValues, 8, 1),
+        uniCompParamsValues = new ArrayBuffer(12);
+        uniCompParamsViews = {
+          dt: new Float32Array(uniCompParamsValues, 0, 1),
+          otpor: new Float32Array(uniCompParamsValues, 4, 1),
+          gravitacija: new Float32Array(uniCompParamsValues, 8, 1),
         };
-        uniformSimulacijaParametriBuffer = device.createBuffer({
+        uniCompParamsBuffer = device.createBuffer({
           label: "simulacija buffer",
-          size: uniformParametersValues.byteLength,
+          size: uniRenderParamsValues.byteLength,
           usage: GPUBufferUsage.UNIFORM | GPUBufferUsage.COPY_DST,
         });
         //device.queue.writeBuffer(resultWriteBuffer, 0, input);
@@ -193,7 +194,7 @@
         //KOMPILACIJA --COMPUTE-- SHADERA
         const prngComputeModule = device.createShaderModule({
           label: "PRNG Compute Shader",
-          code: prngComputeShaders,
+          code: computeShaders,
         });
 
         device.pushErrorScope("validation");
@@ -221,31 +222,31 @@
             },
             {
               binding: 1,
-              resource: { buffer: uniformSimulacijaParametriBuffer },
+              resource: { buffer: uniCompParamsBuffer },
             },
             {
               binding: 2,
-              resource: { buffer: xCoordBuffer },
+              resource: { buffer: xKoordinateBuffer },
             },
             {
               binding: 3,
-              resource: { buffer: yCoordBuffer },
+              resource: { buffer: yKoordinateBuffer },
             },
             {
               binding: 4,
-              resource: { buffer: zCoordBuffer },
+              resource: { buffer: zKoordinateBuffer },
             },
             {
               binding: 5,
-              resource: { buffer: xVelocityBuffer },
+              resource: { buffer: xBrzinaBuffer },
             },
             {
               binding: 6,
-              resource: { buffer: yVelocityBuffer },
+              resource: { buffer: yBrzinaBuffer },
             },
             {
               binding: 7,
-              resource: { buffer: zVelocityBuffer },
+              resource: { buffer: zBrzinaBuffer },
             },
           ],
         });
@@ -255,7 +256,7 @@
         //KOMPILACIJA --COMPUTE-- SHADERA
         const forceComputeModule = device.createShaderModule({
           label: "Force Compute Shader",
-          code: prngComputeShaders,
+          code: computeShaders,
         });
 
         device.pushErrorScope("validation");
@@ -269,41 +270,41 @@
           layout: "auto",
         };
 
-        forceComputePipeline = device.createComputePipeline(
+        sileComputePipeline = device.createComputePipeline(
           forceComputePipelineDescriptor
         );
 
         //IZRADA --COMPUTE-- BIND GROUP-A
-        forceComputeBindGroup = device.createBindGroup({
-          layout: forceComputePipeline.getBindGroupLayout(0),
+        sileComputeBindGroup = device.createBindGroup({
+          layout: sileComputePipeline.getBindGroupLayout(0),
           entries: [
             {
               binding: 1,
-              resource: { buffer: uniformSimulacijaParametriBuffer },
+              resource: { buffer: uniCompParamsBuffer },
             },
             {
               binding: 2,
-              resource: { buffer: xCoordBuffer },
+              resource: { buffer: xKoordinateBuffer },
             },
             {
               binding: 3,
-              resource: { buffer: yCoordBuffer },
+              resource: { buffer: yKoordinateBuffer },
             },
             {
               binding: 4,
-              resource: { buffer: zCoordBuffer },
+              resource: { buffer: zKoordinateBuffer },
             },
             {
               binding: 5,
-              resource: { buffer: xVelocityBuffer },
+              resource: { buffer: xBrzinaBuffer },
             },
             {
               binding: 6,
-              resource: { buffer: yVelocityBuffer },
+              resource: { buffer: yBrzinaBuffer },
             },
             {
               binding: 7,
-              resource: { buffer: zVelocityBuffer },
+              resource: { buffer: zBrzinaBuffer },
             },
           ],
         });
@@ -315,7 +316,7 @@
           code: cesticeRenderShaders,
         });
 
-        pyramid3DRenderPipeline = device.createRenderPipeline({
+        cesticeRenderPipeline = device.createRenderPipeline({
           label: "2 attributes",
           layout: "auto",
           vertex: {
@@ -335,23 +336,23 @@
           },
         });
 
-        pyramid3DRenderbindGroup = device.createBindGroup({
+        cesticeRenderbindGroup = device.createBindGroup({
           label: "bind group for object",
-          layout: pyramid3DRenderPipeline.getBindGroupLayout(0),
+          layout: cesticeRenderPipeline.getBindGroupLayout(0),
           entries: [
-            { binding: 0, resource: { buffer: uniformParametersBuffer } },
-            { binding: 1, resource: { buffer: uniformPyramidBuffer } },
+            { binding: 0, resource: { buffer: uniRenderParamsBuffer } },
+            { binding: 1, resource: { buffer: uniPiramidaBuffer } },
             {
               binding: 2,
-              resource: { buffer: xCoordBuffer },
+              resource: { buffer: xKoordinateBuffer },
             },
             {
               binding: 3,
-              resource: { buffer: yCoordBuffer },
+              resource: { buffer: yKoordinateBuffer },
             },
             {
               binding: 4,
-              resource: { buffer: zCoordBuffer },
+              resource: { buffer: zKoordinateBuffer },
             },
           ],
         });
@@ -360,11 +361,11 @@
       function postaviGUI(render) {
         const gui = new GUI();
         gui.onChange(render);
-        gui.add(settings, "dt");
-        gui.add(settings, "otpor", { min: 0, max: 5 });
-        gui.add(settings, "gravitacija", { min: 0, max: 1000 });
-        gui.addButton("pokreni", (_) => (settings.dt = 0.01667));
-        gui.addButton("pauziraj", (_) => (settings.dt = 0));
+        gui.add(postavke, "dt");
+        gui.add(postavke, "otpor", { min: 0, max: 5 });
+        gui.add(postavke, "gravitacija", { min: 0, max: 1000 });
+        gui.addButton("pokreni", (_) => (postavke.dt = 0.01667));
+        gui.addButton("pauziraj", (_) => (postavke.dt = 0));
       }
 
       let ax = 0;
@@ -385,7 +386,7 @@
         const eye = tempMatrix.slice(12, 15);
 
         let mn = 1.5;
-        uniformParametersViews.eye.set(
+        uniRenderParamsViews.eye.set(
           new Float32Array([eye[0] * mn, eye[1] * mn, eye[2] * mn])
         );
 
@@ -401,7 +402,7 @@
         return mat4.translatiraj(
           viewProjectionMatrix,
           [x, y, z],
-          uniformParametersViews.matrix
+          uniRenderParamsViews.matrix
         );
       }
 
@@ -416,7 +417,7 @@
         computePass.setPipeline(prngComputePipeline);
         computePass.setBindGroup(0, prngComputeBindGroup);
         computePass.dispatchWorkgroups(
-          brojCestica / (brojCestica < 256 ? 1 : 256)
+          brojCesticaX256 / (brojCesticaX256 < 256 ? 1 : 256)
         );
         computePass.end();
 
@@ -464,15 +465,15 @@
 
         const encoder = device.createCommandEncoder();
         const pass = encoder.beginRenderPass(renderPassDescriptor);
-        pass.setPipeline(pyramid3DRenderPipeline);
+        pass.setPipeline(cesticeRenderPipeline);
 
         device.queue.writeBuffer(
-          uniformParametersBuffer,
+          uniRenderParamsBuffer,
           0,
-          uniformParametersValues
+          uniRenderParamsValues
         );
-        pass.setBindGroup(0, pyramid3DRenderbindGroup);
-        pass.draw(brojVrhovaPiramide, brojCestica);
+        pass.setBindGroup(0, cesticeRenderbindGroup);
+        pass.draw(brojVrhovaPiramide, brojCesticaX256);
         pass.end();
         const commandBuffer = encoder.finish();
         device.queue.submit([commandBuffer]);
@@ -486,10 +487,10 @@
         const computePass = computeEncoder.beginComputePass({
           label: "Force compute pass",
         });
-        computePass.setPipeline(forceComputePipeline);
-        computePass.setBindGroup(0, forceComputeBindGroup);
+        computePass.setPipeline(sileComputePipeline);
+        computePass.setBindGroup(0, sileComputeBindGroup);
         computePass.dispatchWorkgroups(
-          brojCestica / (brojCestica < 256 ? 1 : 256)
+          brojCesticaX256 / (brojCesticaX256 < 256 ? 1 : 256)
         );
         computePass.end();
 
@@ -498,14 +499,12 @@
       }
 
       function postaviParametre() {
-        uniformSimulacijaParametriViews.dt.set([settings.dt]);
-        uniformSimulacijaParametriViews.otpor.set([settings.otpor]);
-        uniformSimulacijaParametriViews.gravitacija.set([settings.gravitacija]);
-        device.queue.writeBuffer(
-          uniformSimulacijaParametriBuffer,
-          0,
-          uniformSimulacijaParametriValues
-        );
+        uniCompParamsViews.dt.set([postavke.dt]);
+        uniCompParamsViews.otpor.set([postavke.otpor]);
+        uniCompParamsViews.gravitacija.set([postavke.gravitacija]);
+        postavke.incr += 0.14;
+        uniRenderParamsViews.incr.set([postavke.incr]);
+        device.queue.writeBuffer(uniCompParamsBuffer, 0, uniCompParamsValues);
       }
       function render() {
         postaviParametre();

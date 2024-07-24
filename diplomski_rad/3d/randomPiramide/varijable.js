@@ -4,37 +4,38 @@ let canvas;
 let context;
 let presentationFormat;
 
-let brojCestica = 256 * 25;
+let brojCesticaX256 = 256 * 25;
 let seeds = new Uint32Array([123456789, 362436069, 521288629, 88675123]);
 let brojVrhovaPiramide;
-let xCoordBuffer;
-let yCoordBuffer;
-let zCoordBuffer;
-let xVelocityBuffer;
-let yVelocityBuffer;
-let zVelocityBuffer;
+let xKoordinateBuffer;
+let yKoordinateBuffer;
+let zKoordinateBuffer;
+let xBrzinaBuffer;
+let yBrzinaBuffer;
+let zBrzinaBuffer;
 let seedsBuffer;
-let uniformParametersBuffer;
-let uniformParametersValues;
-let uniformParametersViews;
-let uniformPyramidBuffer;
-let uniformPyramidViews;
-let uniformSimulacijaParametriBuffer;
-let uniformSimulacijaParametriValues;
-let uniformSimulacijaParametriViews;
+let uniRenderParamsBuffer;
+let uniRenderParamsValues;
+let uniRenderParamsViews;
+let uniPiramidaBuffer;
+let uniPiramidaViews;
+let uniCompParamsBuffer;
+let uniCompParamsValues;
+let uniCompParamsViews;
 
 let prngComputePipeline;
 let prngComputeBindGroup;
-let pyramid3DRenderPipeline;
-let pyramid3DRenderbindGroup;
-let forceComputePipeline;
-let forceComputeBindGroup;
+let cesticeRenderPipeline;
+let cesticeRenderbindGroup;
+let sileComputePipeline;
+let sileComputeBindGroup;
 
-const settings = {
+const postavke = {
   seeds: { z1: 0, z2: 0, z3: 0, z4: 0 },
   dt: 0.01667,
   otpor: 0.35,
   gravitacija: 300,
+  incr: 0,
 };
 //ovo mora bit globalna varijabla
 let depthTexture;

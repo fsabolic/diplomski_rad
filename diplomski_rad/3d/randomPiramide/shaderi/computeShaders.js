@@ -1,9 +1,12 @@
 //SOURCE: https://developer.nvidia.com/gpugems/gpugems3/part-vi-gpu-computing/chapter-37-efficient-random-number-generation-and-application
-const prngComputeShaders = /*wgsl*/ `
+
+const computeShaders = /*wgsl*/ `
+
 struct Parametri{
     dt:f32,
     otpor:f32,
     gravitacija:f32,
+    incr:u32,
   }
   
 const pi: f32 = 3.1415926535897932384626433832795;
@@ -49,34 +52,26 @@ const pi: f32 = 3.1415926535897932384626433832795;
 
     var pozicija_potencijala : vec3f = vec3f(0,trans,0);
     var masa_cestice : f32 = 1;
-    var r_rez_potencijala = djelujPotencijalom(dretva_id,pozicija_potencijala,4000);
+    var r_rez_potencijala = djelujPotencijalom(dretva_id,pozicija_potencijala,4200);
     var r_rez_gravitacije = djelujGravitacijom(masa_cestice);
     var r_rez_otpora = djelujOtporom(dretva_id);
 
     var r_rez = r_rez_potencijala+r_rez_gravitacije+r_rez_otpora;
     
     pomakni_cesticu(r_rez,masa_cestice,dretva_id);
-    
-    if(y_koordinate[dretva_id]<0){
-      y_brzina[dretva_id] *=  -0.5;
-      y_koordinate[dretva_id] = 0;
-    }
 
+    odbijCesticuOdPoda(dretva_id);
 }
 
-
-// TausStep
 fn tausStep(z: u32, S1: u32, S2: u32, S3: u32, M: u32) -> u32 {
     let b = (((z << S1) ^ z) >> S2);
     return (((z & M) << S3) ^ b);
 }
 
-// LCGStep
 fn lcgStep(z: u32, A: u32, C: u32) -> u32 {
     return A * z + C;
 }
 
-// HybridTaus
 fn hybridTaus(z1: u32, z2: u32, z3: u32, z4: u32) -> f32 {
     let t1 = tausStep(z1, 13u, 19u, 12u, 4294967294u);
     let t2 = tausStep(z2, 2u, 25u, 4u, 4294967288u);
@@ -109,22 +104,20 @@ fn normaliziraj(vrijednost:f32)-> f32{
       var r_rez_potencijala = djelujPotencijalom(dretva_id,pozicija_potencijala,0);
       var r_rez_gravitacije = djelujGravitacijom(masa_cestice);
       var r_rez_otpora = djelujOtporom(dretva_id);
-  
       var r_rez = r_rez_potencijala+r_rez_gravitacije+r_rez_otpora;
       
       pomakni_cesticu(r_rez,masa_cestice,dretva_id);
       
-      if(y_koordinate[dretva_id]<0){
-        y_brzina[dretva_id] *=  -0.5;
-        y_koordinate[dretva_id] = 0;
-      }
+      odbijCesticuOdPoda(dretva_id);
   
   }
   
   
   fn djelujPotencijalom(dretva_id:u32,pozicija_potencijala:vec3f,k:f32) -> vec3f {    
       
-      var pozicija_cestice : vec3f =  vec3f(x_koordinate[dretva_id],y_koordinate[dretva_id],z_koordinate[dretva_id]);
+      var pozicija_cestice : vec3f =  vec3f(x_koordinate[dretva_id],
+                                            y_koordinate[dretva_id],
+                                            z_koordinate[dretva_id]);
       var r_rez = pozicija_potencijala - pozicija_cestice;
       var udaljenost_od_potencijala:f32 = distance(pozicija_potencijala,pozicija_cestice);
   
@@ -145,7 +138,9 @@ fn normaliziraj(vrijednost:f32)-> f32{
   
   
   fn djelujOtporom(dretva_id:u32) -> vec3f {
-    return vec3f(-parametri.otpor*x_brzina[dretva_id],-parametri.otpor*y_brzina[dretva_id],-parametri.otpor*z_brzina[dretva_id]);
+    return vec3f(-parametri.otpor*x_brzina[dretva_id],
+                -parametri.otpor*y_brzina[dretva_id],
+                -parametri.otpor*z_brzina[dretva_id]);
   }
   
   fn pomakni_cesticu(rezultantna_sila:vec3f,masa_cestice:f32,dretva_id:u32){
@@ -158,4 +153,10 @@ fn normaliziraj(vrijednost:f32)-> f32{
     z_koordinate[dretva_id] += parametri.dt * z_brzina[dretva_id];
   }
 
+  fn odbijCesticuOdPoda(dretva_id:u32){
+    if(y_koordinate[dretva_id]<0){
+      y_brzina[dretva_id] *=  -0.5;
+      y_koordinate[dretva_id] = 0;
+    }
+  }
 `;

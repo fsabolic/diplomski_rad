@@ -1,6 +1,6 @@
 //SOURCE: https://webgpufundamentals.org/webgpu/lessons/webgpu-cameras.html
 function definirajPiramidu() {
-  let osnovnaKoordinata = 10;
+  let osnovnaKoordinata = 7;
   const koordinate = [
     //A
     osnovnaKoordinata,
@@ -34,6 +34,7 @@ function definirajPiramidu() {
   ];
 
   const boje = [
+    /*
     //rozna
     200, 70, 120,
     //zuta
@@ -42,6 +43,15 @@ function definirajPiramidu() {
     70, 120, 200,
     //zelena
     120, 200, 70,
+    */
+    //orange1
+    255, 135, 60,
+    //orange1
+    255, 115, 0,
+    //orange1
+    255, 105, 20,
+    //orange1
+    255, 145, 60,
   ];
 
   const brojVrhova = indeksi.length;
