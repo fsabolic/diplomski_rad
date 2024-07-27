@@ -10,9 +10,8 @@ function postaviMatricu3DTransformacija() {
   const objekt = [0, 1245, 0];
   const promatrac = [0, 700, -1905];
 
-  let mn = 1;
   uniRenderParamsViews.pozicijaPromatraca.set(
-    new Float32Array([promatrac[0] * mn, promatrac[1] * mn, promatrac[2] * mn])
+    new Float32Array([promatrac[0], promatrac[1], promatrac[2]])
   );
 
   const up = [0, 1, 0];
