@@ -95,7 +95,6 @@ function izvrsiCesticeRenderShader() {
   );
   cesticeRenderPass.setPipeline(cesticeRenderPipeline);
 
-  device.queue.writeBuffer(uniRenderParamsBuffer, 0, uniRenderParamsValues);
   cesticeRenderPass.setBindGroup(0, cesticeRenderbindGroup);
   cesticeRenderPass.draw(brojVrhovaCestice, brojCesticaXWG);
   cesticeRenderPass.end();

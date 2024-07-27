@@ -22,24 +22,19 @@
     <script src="shaderi/computeShaderi/sileComputeShader.js"></script>
     <script src="shaderi/computeShaderi/prngComputeShader.js"></script>
     <script type="module">
-      import GUI from "https://webgpufundamentals.org/3rdparty/muigui-0.x.module.js";
-      function postaviGUI(render) {
-        const gui = new GUI();
-        gui.onChange(render);
-        gui.add(postavke, "dt");
-        gui.add(postavke, "otpor", { min: 0, max: 5 });
-        gui.add(postavke, "gravitacija", { min: 0, max: 1000 });
-        gui.addButton("pokreni", (_) => (postavke.dt = 0.01667));
-        gui.addButton("pauziraj", (_) => (postavke.dt = 0));
-      }
-
       function postaviParametre() {
         uniCompParamsViews.dt.set([postavke.dt]);
         uniCompParamsViews.otpor.set([postavke.otpor]);
         uniCompParamsViews.gravitacija.set([postavke.gravitacija]);
+        device.queue.writeBuffer(uniCompParamsBuffer, 0, uniCompParamsValues);
+
         postavke.incr += 0.07;
         uniRenderParamsViews.iteracija.set([postavke.incr]);
-        device.queue.writeBuffer(uniCompParamsBuffer, 0, uniCompParamsValues);
+        device.queue.writeBuffer(
+          uniRenderParamsBuffer,
+          0,
+          uniRenderParamsValues
+        );
       }
 
       function render() {
@@ -76,7 +71,6 @@
         await postaviWebGPU();
         kreirajBuffere();
         kreirajCesticeRenderShader();
-        postaviGUI(render);
         postaviCanvasObserver();
         kreirajPRNGComputeShader();
         postaviParametre();

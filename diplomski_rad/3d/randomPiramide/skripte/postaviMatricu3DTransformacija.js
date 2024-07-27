@@ -18,14 +18,9 @@ function postaviMatricu3DTransformacija() {
   const viewMatrix = mat4.pogledaj(promatrac, objekt, up);
   const viewProjectionMatrix = mat4.mnozi(perspektiva, viewMatrix);
 
-  const angle = 0;
-  const x = 0;
-  const y = 0;
-  const z = 0;
-
-  return mat4.translatiraj(
+  mat4.mnozi(
     viewProjectionMatrix,
-    [x, y, z],
+    mat4.identitet(),
     uniRenderParamsViews.matrica3d
   );
 }
