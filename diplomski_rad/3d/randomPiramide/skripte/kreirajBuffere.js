@@ -4,14 +4,18 @@ function kreirajBuffere() {
   //_____seed storage buffer_____
   //pohranjuju se vrijednosti seedova za pseudonasumično generiranje čestica
   function dodajRand() {
-    return Math.random() * 10;
+    if (!postavke.reset) return Math.random() * 10;
+    return 1;
   }
-
-  seeds = new Uint32Array([
-    seeds[0] * dodajRand(),
-    seeds[1] * dodajRand(),
-    seeds[2] * dodajRand(),
-    seeds[3] * dodajRand(),
+  postavke.seeds.z1 *= dodajRand();
+  postavke.seeds.z2 *= dodajRand();
+  postavke.seeds.z3 *= dodajRand();
+  postavke.seeds.z4 *= dodajRand();
+  let seeds = new Uint32Array([
+    postavke.seeds.z1,
+    postavke.seeds.z2,
+    postavke.seeds.z3,
+    postavke.seeds.z4,
   ]);
   seedsBuffer = device.createBuffer({
     label: "Seeds Buffer",
@@ -54,6 +58,7 @@ function kreirajBuffere() {
 
   //_____render parametri uniform buffer_____
   //pohranjuju se vrijednosti parametara za crtanje čestica
+  brojCesticaXWG = postavke.brojCesticaXWG;
   uniRenderParamsValues = new ArrayBuffer(80);
   uniRenderParamsViews = {
     matrica3d: new Float32Array(uniRenderParamsValues, 0, 16),

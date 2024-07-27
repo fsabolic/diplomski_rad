@@ -1,7 +1,6 @@
-/*SOURCE: https://webgpufundamentals.org/webgpu/lessons/webgpu-cameras.html*/
 html, body {
-  margin: 0;       /* remove the default margin          */
-  height: 100%;    /* make the html,body fill the page   */
+  margin: 0;        
+  height: 100%;  
 }
 
 canvas {
@@ -9,4 +8,108 @@ canvas {
   width: 100%;  
   height: 100%;
   background-color: rgb(20, 20, 20);
+}
+
+.console-container {
+  position: fixed;
+  top: 20px;           
+  right: 20px;       
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  padding: 5px;
+  z-index: 1000;    
+}
+
+#close {
+  background-color: rgba(100, 100, 200, 0.5); 
+  color: white;
+  border: none;
+  font-size: 14px;
+  width: 28px; 
+  height: 28px;
+  text-align: center;
+  line-height: 26px;
+  border-radius: 4px; 
+  cursor: pointer; 
+}
+
+.console {
+  padding: 10px; 
+  background-color: rgba(12, 12, 12, 0.3); 
+  border-radius: 6px; 
+  display: flex;
+  flex-direction: column;
+  gap: 10px; 
+}
+
+.console-button-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.console-button-container > button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  background-color: rgba(61, 61, 61, 0.3);
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.console-button-container > button:hover {
+  background-color: rgba(111, 101, 114, 0.3);
+}
+
+
+.console-button-container > button > img {
+  width: 24px;
+  height: 24px;
+  opacity: 0.8;
+}
+
+.console-inputs-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px; 
+  justify-content: center;
+  align-items: center;
+}
+
+.console-input {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+}
+
+
+.input-label {
+  font-size: 12px;
+  color: #e0e0e0; 
+  margin-bottom: 4px;
+  min-width: 20%;
+}
+
+.input-input {
+  max-width: 50%;
+  padding: 5px;
+  border: 1px solid #666; 
+  border-radius: 4px;
+  background-color: rgba(255, 255, 255, 0.2); 
+  color: #fff;
+  text-align: right;
+}
+
+output{
+  width: 60px;
+  background-color: red;
+}
+
+.input-input:focus {
+  outline: none;
 }

@@ -6,7 +6,6 @@ let presentationFormat;
 
 let brojWG = 256;
 let brojCesticaXWG = brojWG * 25;
-let seeds = new Uint32Array([123456789, 362436069, 521288629, 88675123]);
 let brojVrhovaCestice;
 let xKoordinateBuffer;
 let yKoordinateBuffer;
@@ -30,13 +29,14 @@ let cesticeRenderPipeline;
 let cesticeRenderbindGroup;
 let sileComputePipeline;
 let sileComputeBindGroup;
-
-const postavke = {
-  seeds: { z1: 0, z2: 0, z3: 0, z4: 0 },
+let postavke = {
+  brojCesticaXWG: brojCesticaXWG,
+  seeds: { z1: 123456789, z2: 362436069, z3: 521288629, z4: 88675123 },
+  reset: false,
   dt: 0.01667,
   otpor: 0.35,
   gravitacija: 300,
   incr: 0,
+  pauza: false,
 };
-//ovo mora bit globalna varijabla
 let depthTexture;

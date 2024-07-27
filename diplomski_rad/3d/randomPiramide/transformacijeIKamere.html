@@ -16,6 +16,8 @@
     <script src="skripte/odrediWorkgroupBroj.js"></script>
     <script src="skripte/postaviWebGPU.js"></script>
     <script src="skripte/postaviMatricu3DTransformacija.js"></script>
+    <script src="skripte/cookies.js"></script>
+    <script src="skripte/simulatorKomande.js"></script>
     <script src="shaderi/renderShaderi/cesticeRenderShaderiWGSL.js"></script>
     <script src="shaderi/renderShaderi/cesticeRenderShader.js"></script>
     <script src="shaderi/computeShaderi/computeShaderiWGSL.js"></script>
@@ -37,16 +39,7 @@
         );
       }
 
-      function render() {
-        postaviParametre();
-        postaviMatricu3DTransformacija();
-        izvrsiSileComputeShader();
-        izvrsiCesticeRenderShader();
-        requestAnimationFrame(render);
-      }
-
       function postaviCanvasObserver() {
-        //OVO TREBA OBRISAT
         const observer = new ResizeObserver((entries) => {
           for (const entry of entries) {
             const canvas = entry.target;
@@ -67,15 +60,42 @@
         observer.observe(canvas);
       }
 
+      function postaviPostavke() {
+        let cookiePostavke = dohvatiPostavkeCookie();
+        if (cookiePostavke) {
+          if (cookiePostavke.reset) {
+            postavke = cookiePostavke;
+          }
+          document.getElementById("gravity").value = postavke.gravitacija;
+          document.getElementById("resistance").value = postavke.otpor;
+          document.getElementById("dt").value = postavke.dt * 2000;
+          document.getElementById("number-of-particles").value =
+            postavke.brojCesticaXWG / brojWG;
+        }
+      }
+
+      function render() {
+        if (!postavke.pauza) {
+          postaviParametre();
+          postaviMatricu3DTransformacija();
+          izvrsiSileComputeShader();
+          izvrsiCesticeRenderShader();
+        }
+        requestAnimationFrame(render);
+      }
+
       async function main() {
         await postaviWebGPU();
+        postaviPostavke();
         kreirajBuffere();
         kreirajCesticeRenderShader();
-        postaviCanvasObserver();
         kreirajPRNGComputeShader();
         postaviParametre();
         izvrsiPRNGComputeShader();
         kreirajSileComputeShader();
+        postavke.reset = false;
+        postaviPostavkeCookie();
+        postaviCanvasObserver();
       }
 
       function fail(msg) {
@@ -86,6 +106,68 @@
     </script>
   </head>
   <body>
+    <div class="console-container">
+      <button id="close" type="button" onclick="zatvori(event)">-</button>
+      <div id="console" class="console" style="opacity: 100">
+        <div class="console-button-container">
+          <button id="start" type="button" onclick="pokreni()">
+            <img src="./assets/play.png" />
+          </button>
+          <button id="stop" type="button" onclick="pauziraj()">
+            <img src="./assets/pause.png" />
+          </button>
+          <button id="restart" type="button" onclick="reset()">
+            <img src="./assets/restart.png" />
+          </button>
+          <button id="reload" type="button" onclick="reload()">
+            <img src="./assets/reload.png" />
+          </button>
+        </div>
+        <div class="console-inputs-container">
+          <div class="console-input">
+            <label class="input-label">dt</label>
+            <input
+              id="dt"
+              class="input-input"
+              type="range"
+              min="0"
+              max="120"
+              value="60"
+              id="dt-slider"
+              oninput="dt(value)"
+            />
+          </div>
+          <div class="console-input">
+            <label class="input-label">Br. č.</label>
+            <input
+              id="number-of-particles"
+              class="input-input"
+              type="text"
+              oninput="brCestica(value)"
+              value="25"
+            />
+          </div>
+          <div class="console-input">
+            <label class="input-label">Grav.</label>
+            <input
+              id="gravity"
+              class="input-input"
+              type="text"
+              oninput="gravitacija(value)"
+            />
+          </div>
+          <div class="console-input">
+            <label class="input-label">Otpor</label>
+            <input
+              id="resistance"
+              class="input-input"
+              type="text"
+              oninput="otpor(value)"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
     <canvas></canvas>
   </body>
 </html>
