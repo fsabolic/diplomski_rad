@@ -72,8 +72,8 @@ struct VrhCestice{
 
   //Računanje udaljenosti između kamere i vrha čestice koji se trenutno gleda
   var pozicija_kamere: vec3f = vec3f(parametri.pozicija_promatraca.x,
-                                    parametri.pozicija_promatraca.y+700,
-                                    parametri.pozicija_promatraca.z-1905);
+                                    parametri.pozicija_promatraca.y,
+                                    parametri.pozicija_promatraca.z);
   var pozicija_cestice: vec3f = vektor_pomaka.xyz;
   vsOut.udaljenost = distance(pozicija_cestice, pozicija_kamere);
 
