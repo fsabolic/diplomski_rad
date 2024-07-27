@@ -1,9 +1,9 @@
-const cesticeRenderShaders = /*wgsl*/ `
+const cesticeRenderShaderiWGSL = /*wgsl*/ `
 //Parametri simulacije (uniforms)
 struct Parametri {
   matrica_3d: mat4x4f,
   pozicija_promatraca: vec3f,
-  incr:f32,
+  iteracija:f32,
 };
 
 //Struktura za prosljeđivanje podataka o vrhu
@@ -48,12 +48,11 @@ struct VrhCestice{
     
   // Rotacijska matrica za rotaciju oko osi z
   var rotacijska_matrica = mat4x4<f32>(
-    cos(f32(parametri.incr)), -sin(f32(parametri.incr)), 0.0,0.0,
-    sin(f32(parametri.incr)), cos(f32(parametri.incr)),  0.0,0.0,
+    cos(f32(parametri.iteracija+f32(i_instance)/1)), -sin(f32(parametri.iteracija+f32(i_instance)/1)), 0.0,0.0,
+    sin(f32(parametri.iteracija+f32(i_instance)/1)), cos(f32(parametri.iteracija+f32(i_instance)/1)),  0.0,0.0,
     0.0,      0.0,       1.0,0.0,
     0.0,      0.0,       0.0,1.0,
   );
-
 
   if((vrhovi_cestice[i_vertex].koordinate+vektor_pomaka).y<100){
     rotacijska_matrica = mat4x4<f32>(
@@ -73,8 +72,8 @@ struct VrhCestice{
 
   //Računanje udaljenosti između kamere i vrha čestice koji se trenutno gleda
   var pozicija_kamere: vec3f = vec3f(parametri.pozicija_promatraca.x,
-                                    parametri.pozicija_promatraca.y,
-                                    parametri.pozicija_promatraca.z/2);
+                                    parametri.pozicija_promatraca.y+700,
+                                    parametri.pozicija_promatraca.z-1905);
   var pozicija_cestice: vec3f = vektor_pomaka.xyz;
   vsOut.udaljenost = distance(pozicija_cestice, pozicija_kamere);
 
@@ -84,7 +83,7 @@ struct VrhCestice{
 //Fragment shader za bojanje čestica tako da su svijetlije što su bliže kameri
 @fragment fn fs(vsOut: VSOutput) -> @location(0) vec4f {
   //Izračun faktora udaljenosti koji "smanjuje/povećava" svjetlinu čestice
-  let faktor_udaljenosti =14 / (4 + vsOut.udaljenost * 0.0025);
+  let faktor_udaljenosti =10 / (2 + vsOut.udaljenost * 0.0025);
   let prilagodena_boja = vsOut.boja * faktor_udaljenosti;
   return prilagodena_boja;
 }

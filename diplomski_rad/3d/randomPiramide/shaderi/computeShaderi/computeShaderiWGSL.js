@@ -1,6 +1,6 @@
 //SOURCE: https://developer.nvidia.com/gpugems/gpugems3/part-vi-gpu-computing/chapter-37-efficient-random-number-generation-and-application
 
-const computeShaders = /*wgsl*/ `
+const computeShaderiWGSL = /*wgsl*/ `
 
 struct Parametri{
     dt:f32,

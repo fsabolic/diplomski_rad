@@ -1,5 +1,5 @@
 //SOURCE: https://webgpufundamentals.org/webgpu/lessons/webgpu-cameras.html
-function definirajPiramidu() {
+function definirajCesticu() {
   let osnovnaKoordinata = 7;
   const koordinate = [
     //A
@@ -43,7 +43,7 @@ function definirajPiramidu() {
     70, 120, 200,
     //zelena
     120, 200, 70,
-    */
+*/
     //orange1
     255, 135, 60,
     //orange1
@@ -55,7 +55,7 @@ function definirajPiramidu() {
   ];
 
   const brojVrhova = indeksi.length;
-  const podaciKoordinata = new Float32Array(brojVrhova * 4); // xyz + color
+  const podaciKoordinata = new Float32Array(brojVrhova * 4);
   const podaciBoja = new Float32Array(brojVrhova * 4);
 
   for (let i = 0; i < indeksi.length; ++i) {
