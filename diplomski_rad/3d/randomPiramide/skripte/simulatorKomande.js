@@ -98,49 +98,52 @@ function handleKeyboardInput(event) {
   switch (event.key) {
     case "A":
     case "a":
-      postavke.pozicijaKamere.x -= 75;
+      postavke.pozicijaKamere.x -= 175;
       break;
     case "D":
     case "d":
-      postavke.pozicijaKamere.x += 75;
+      postavke.pozicijaKamere.x += 175;
       break;
     case "W":
     case "w":
-      postavke.pozicijaKamere.z += 75;
+      postavke.pozicijaKamere.z += 175;
       break;
     case "S":
     case "s":
-      postavke.pozicijaKamere.z -= 75;
+      postavke.pozicijaKamere.z -= 175;
       break;
 
     case "ArrowUp":
-      postavke.pozicijaObjekta.y += 75;
+      postavke.pozicijaObjekta.y += 175;
       break;
     case "ArrowDown":
-      postavke.pozicijaObjekta.y -= 75;
+      postavke.pozicijaObjekta.y -= 175;
       break;
     case "ArrowLeft":
-      postavke.pozicijaObjekta.x += 75;
+      postavke.pozicijaObjekta.x += 175;
       break;
     case "ArrowRight":
-      postavke.pozicijaObjekta.x -= 75;
+      postavke.pozicijaObjekta.x -= 175;
       break;
     case "Shift":
-      postavke.pozicijaObjekta.z += 75;
+      postavke.pozicijaObjekta.z += 175;
       break;
     case "Control":
-      postavke.pozicijaObjekta.z -= 75;
+      postavke.pozicijaObjekta.z -= 175;
       break;
   }
-  console.log(event.key);
+  document.getElementById("keys-logger").innerHTML = event.key;
 }
 
 function handleMouseScroll(event) {
-  postavke.pozicijaKamere.y -= event.deltaY * 1;
+  let upDown = event.deltaY > 0;
+  document.getElementById("keys-logger").innerHTML = !upDown
+    ? "ScrollUp"
+    : "ScrollDown";
+  postavke.pozicijaKamere.y -= event.deltaY * 1.2;
 }
 
-// Function to add event listeners
-function addEventListeners() {
+function dodajEventListenere() {
   window.addEventListener("keydown", handleKeyboardInput);
   window.addEventListener("wheel", handleMouseScroll);
 }

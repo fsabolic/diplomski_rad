@@ -142,7 +142,7 @@
         kreirajSileComputeShader();
         postavke.reset = false;
         postaviPostavkeCookie();
-        addEventListeners();
+        dodajEventListenere();
         postaviCanvasObserver();
       }
 
@@ -154,6 +154,15 @@
     </script>
   </head>
   <body>
+    <div style="position: fixed; color: white; background-color: black">
+      <div style="display: flex">
+        <p id="fps-counter">123.2</p>
+        <p>&nbsp;FPS</p>
+      </div>
+      <div style="display: flex">
+        <p id="keys-logger">123.2</p>
+      </div>
+    </div>
     <div class="console-container">
       <button id="close" type="button" onclick="zatvori(event)">-</button>
       <div id="console" class="console" style="opacity: 100">
