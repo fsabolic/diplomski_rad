@@ -23,6 +23,7 @@
     <script src="shaderi/computeShaderi/computeShaderiWGSL.js"></script>
     <script src="shaderi/computeShaderi/sileComputeShader.js"></script>
     <script src="shaderi/computeShaderi/prngComputeShader.js"></script>
+    <script src="shaderi/renderShaderi/gridRenderShader.js"></script>
     <script type="module">
       function postaviParametre() {
         uniCompParamsViews.dt.set([postavke.dt]);
@@ -71,6 +72,8 @@
           document.getElementById("dt").value = postavke.dt * 2000;
           document.getElementById("number-of-particles").value =
             postavke.brojCesticaXWG / brojWG;
+
+          document.getElementById("grid").checked = postavke.grid;
         }
       }
 
@@ -80,6 +83,7 @@
           postaviMatricu3DTransformacija();
           izvrsiSileComputeShader();
           izvrsiCesticeRenderShader();
+          if (postavke.grid) izvrsiGridRenderShader();
         }
         requestAnimationFrame(render);
       }
@@ -89,6 +93,7 @@
         postaviPostavke();
         kreirajBuffere();
         kreirajCesticeRenderShader();
+        kreirajGridRenderShader();
         kreirajPRNGComputeShader();
         postaviParametre();
         izvrsiPRNGComputeShader();
@@ -124,6 +129,16 @@
           </button>
         </div>
         <div class="console-inputs-container">
+          <div class="console-input">
+            <label class="input-label">Grid</label>
+            <input
+              id="grid"
+              class="input-input"
+              type="checkbox"
+              id="grid"
+              oninput="grid(value)"
+            />
+          </div>
           <div class="console-input">
             <label class="input-label">dt</label>
             <input

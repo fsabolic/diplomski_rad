@@ -32,7 +32,7 @@ struct VrhCestice{
   var<storage> z_koordinate: array<f32>;
 
 //Vertex shader za crtanje čestica
-@vertex fn vs(
+@vertex fn vsCestice(
   @builtin(vertex_index) i_vertex:u32,
   @builtin(instance_index) i_instance:u32) -> VSOutput {
 
@@ -81,10 +81,50 @@ struct VrhCestice{
 }
 
 //Fragment shader za bojanje čestica tako da su svijetlije što su bliže kameri
-@fragment fn fs(vsOut: VSOutput) -> @location(0) vec4f {
+@fragment fn fsCestice(vsOut: VSOutput) -> @location(0) vec4f {
   //Izračun faktora udaljenosti koji "smanjuje/povećava" svjetlinu čestice
   let faktor_udaljenosti =5 / (3 + vsOut.udaljenost * 0.00045);
   let prilagodena_boja = vsOut.boja * faktor_udaljenosti;
   return prilagodena_boja;
 }
+
+@vertex fn vsGrid(
+  @builtin(vertex_index) i_vertex:u32,
+  @builtin(instance_index) i_instance:u32) -> VSOutput {
+
+  var vsOut: VSOutput;
+  var br_iteracija = u32(5000);
+  var sirina_resetke = f32(100000);
+  var razmak_resetki = f32(500);
+  var predznak = 1.0;
+  if(i_vertex%2==1){
+    predznak*=-1;
+  }
+
+  var x = 0.0;
+  var z = predznak*sirina_resetke;
+  var pomak_u_iza = i_instance;
+
+  if(i_instance>br_iteracija){
+    pomak_u_iza -= br_iteracija;
+    x = razmak_resetki*f32(pomak_u_iza)-sirina_resetke*2;
+
+  }else{
+    x = razmak_resetki*f32(pomak_u_iza)-sirina_resetke*2;
+    let pom = z;
+    z = x;
+    x = pom;
+  }
+
+  vsOut.koordinate_vrha = vec4f(x,0,z,1);
+  vsOut.koordinate_vrha = parametri.matrica_3d*vsOut.koordinate_vrha;
+
+  return vsOut;
+}
+
+
+@fragment fn fsGrid(vsOut: VSOutput) -> @location(0) vec4f {
+  return vec4f(0.17,0.17,0.17,1);
+}
+
 `;

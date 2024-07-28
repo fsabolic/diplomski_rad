@@ -4,7 +4,7 @@ function postaviMatricu3DTransformacija() {
     (100 * Math.PI) / 180,
     aspekt,
     1, // zBlizu
-    2000000000 // zDaleko
+    15000 // zDaleko
   );
 
   const objekt = [0, 1245, 0];

@@ -52,3 +52,7 @@ function brCestica(value) {
   if (value > Math.pow(2, 16)) return;
   postavke.brojCesticaXWG = 256 * value;
 }
+
+function grid(value) {
+  postavke.grid = !postavke.grid;
+}

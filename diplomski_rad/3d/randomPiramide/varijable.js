@@ -38,5 +38,6 @@ let postavke = {
   gravitacija: 300,
   incr: 0,
   pauza: false,
+  grid: true,
 };
 let depthTexture;

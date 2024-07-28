@@ -12,9 +12,11 @@ function kreirajCesticeRenderShader() {
     layout: "auto",
     vertex: {
       module: cesticeRenderModule,
+      entryPoint: "vsCestice",
     },
     fragment: {
       module: cesticeRenderModule,
+      entryPoint: "fsCestice",
       targets: [{ format: presentationFormat }],
     },
     primitive: {
