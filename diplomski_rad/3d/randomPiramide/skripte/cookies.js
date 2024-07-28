@@ -3,11 +3,11 @@ function dohvatiPostavkeCookie() {
   if (!cookieString) return null;
   let cookiePostavke = JSON.parse(cookieString.split("=")[1]);
 
-  cookiePostavke = window.localStorage.getItem("postavke-webgpu-sim");
+  cookieString = window.localStorage.getItem("postavke-webgpu-sim");
 
   if (!cookieString) return null;
 
-  return JSON.parse(cookiePostavke);
+  return JSON.parse(cookieString);
 }
 
 function postaviPostavkeCookie() {
