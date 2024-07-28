@@ -119,7 +119,11 @@
           postavke.pozicijaKamere.z;
       }
 
+      let iframe = 0;
+      let starttime = Date.now() / 1000;
       function render() {
+        let framerate = (iframe++ / (Date.now() / 1000 - starttime)).toFixed(3);
+        document.getElementById("fps-counter").innerHTML = framerate;
         if (!postavke.pauza) {
           postaviMatricu3DTransformacija();
           postaviParametre();
@@ -154,13 +158,13 @@
     </script>
   </head>
   <body>
-    <div style="position: fixed; color: white; background-color: black">
-      <div style="display: flex">
+    <div class="stats-display">
+      <div class="fps">
         <p id="fps-counter">123.2</p>
         <p>&nbsp;FPS</p>
       </div>
-      <div style="display: flex">
-        <p id="keys-logger">123.2</p>
+      <div class="logger">
+        <p id="keys-logger">Pritisnite W</p>
       </div>
     </div>
     <div class="console-container">
