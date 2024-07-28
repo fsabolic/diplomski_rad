@@ -7,8 +7,16 @@ function postaviMatricu3DTransformacija() {
     100000 // zDaleko
   );
 
-  const objekt = [0, 1245, 0];
-  const promatrac = [0, 700, -1905];
+  const objekt = [
+    postavke.pozicijaObjekta.x,
+    postavke.pozicijaObjekta.y,
+    postavke.pozicijaObjekta.z,
+  ];
+  const promatrac = [
+    postavke.pozicijaKamere.x,
+    postavke.pozicijaKamere.y,
+    postavke.pozicijaKamere.z,
+  ];
 
   const up = [0, 1, 0];
   const viewMatrix = mat4.pogledaj(promatrac, objekt, up);

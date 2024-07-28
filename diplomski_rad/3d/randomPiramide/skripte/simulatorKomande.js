@@ -66,3 +66,81 @@ function explosionPositionY(value) {
 function explosionPositionZ(value) {
   postavke.pozicijaEksplozije.z = value.target.value;
 }
+function potentialStrength(value) {
+  postavke.snagaPotencijala = value;
+}
+
+function particleRadius(value) {
+  postavke.radijusCestica = value;
+}
+
+function objectPositionX(value) {
+  postavke.pozicijaObjekta.x = value.target.value;
+}
+function objectPositionY(value) {
+  postavke.pozicijaObjekta.y = value.target.value;
+}
+function objectPositionZ(value) {
+  postavke.pozicijaObjekta.z = value.target.value;
+}
+
+function cameraPositionX(value) {
+  postavke.pozicijaKamere.x = value.target.value;
+}
+function cameraPositionY(value) {
+  postavke.pozicijaKamere.y = value.target.value;
+}
+function cameraPositionZ(value) {
+  postavke.pozicijaKamere.z = value.target.value;
+}
+
+function handleKeyboardInput(event) {
+  switch (event.key) {
+    case "A":
+    case "a":
+      postavke.pozicijaKamere.x -= 75;
+      break;
+    case "D":
+    case "d":
+      postavke.pozicijaKamere.x += 75;
+      break;
+    case "W":
+    case "w":
+      postavke.pozicijaKamere.z += 75;
+      break;
+    case "S":
+    case "s":
+      postavke.pozicijaKamere.z -= 75;
+      break;
+
+    case "ArrowUp":
+      postavke.pozicijaObjekta.y += 75;
+      break;
+    case "ArrowDown":
+      postavke.pozicijaObjekta.y -= 75;
+      break;
+    case "ArrowLeft":
+      postavke.pozicijaObjekta.x += 75;
+      break;
+    case "ArrowRight":
+      postavke.pozicijaObjekta.x -= 75;
+      break;
+    case "Shift":
+      postavke.pozicijaObjekta.z += 75;
+      break;
+    case "Control":
+      postavke.pozicijaObjekta.z -= 75;
+      break;
+  }
+  console.log(event.key);
+}
+
+function handleMouseScroll(event) {
+  postavke.pozicijaKamere.y -= event.deltaY * 1;
+}
+
+// Function to add event listeners
+function addEventListeners() {
+  window.addEventListener("keydown", handleKeyboardInput);
+  window.addEventListener("wheel", handleMouseScroll);
+}

@@ -40,5 +40,9 @@ let postavke = {
   pauza: false,
   grid: true,
   pozicijaEksplozije: { x: 0, y: 4000, z: 0 },
+  snagaPotencijala: 70000,
+  radijusCestica: 1.2,
+  pozicijaObjekta: { x: 0, y: 1245, z: 0 },
+  pozicijaKamere: { x: 0, y: 700, z: -1905 },
 };
 let depthTexture;

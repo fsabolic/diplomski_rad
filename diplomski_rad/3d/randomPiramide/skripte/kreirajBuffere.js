@@ -80,12 +80,14 @@ function kreirajBuffere() {
 
   //_____compute parametri uniform buffer_____
   //pohranjuju se vrijednosti parametara za generiranje čestica
-  uniCompParamsValues = new ArrayBuffer(32);
+  uniCompParamsValues = new ArrayBuffer(48);
   uniCompParamsViews = {
     dt: new Float32Array(uniCompParamsValues, 0, 1),
     otpor: new Float32Array(uniCompParamsValues, 4, 1),
     gravitacija: new Float32Array(uniCompParamsValues, 8, 1),
     pozicijaEksplozije: new Float32Array(uniCompParamsValues, 16, 3),
+    snagaPotencijala: new Float32Array(uniCompParamsValues, 28, 1),
+    radijusCestica: new Float32Array(uniCompParamsValues, 32, 1),
   };
   uniCompParamsBuffer = device.createBuffer({
     label: "Uniform Compute Params Buffer",

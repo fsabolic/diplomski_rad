@@ -34,6 +34,8 @@
           postavke.pozicijaEksplozije.y,
           postavke.pozicijaEksplozije.z,
         ]);
+        uniCompParamsViews.snagaPotencijala.set([postavke.snagaPotencijala]);
+        uniCompParamsViews.radijusCestica.set([postavke.radijusCestica]);
         device.queue.writeBuffer(uniCompParamsBuffer, 0, uniCompParamsValues);
 
         postavke.incr += 0.07;
@@ -44,6 +46,18 @@
           0,
           uniRenderParamsValues
         );
+        document.getElementById("object-position-x").value =
+          postavke.pozicijaObjekta.x;
+        document.getElementById("object-position-y").value =
+          postavke.pozicijaObjekta.y;
+        document.getElementById("object-position-z").value =
+          postavke.pozicijaObjekta.z;
+        document.getElementById("camera-position-x").value =
+          postavke.pozicijaKamere.x;
+        document.getElementById("camera-position-y").value =
+          postavke.pozicijaKamere.y;
+        document.getElementById("camera-position-z").value =
+          postavke.pozicijaKamere.z;
       }
 
       function postaviCanvasObserver() {
@@ -73,20 +87,36 @@
           if (cookiePostavke.reset) {
             postavke = cookiePostavke;
           }
-          document.getElementById("gravity").value = postavke.gravitacija;
-          document.getElementById("resistance").value = postavke.otpor;
-          document.getElementById("dt").value = postavke.dt * 2000;
-          document.getElementById("number-of-particles").value =
-            postavke.brojCesticaXWG / brojWG;
-
-          document.getElementById("grid").checked = postavke.grid;
-          document.getElementById("explosion-position-x").value =
-            postavke.pozicijaEksplozije.x;
-          document.getElementById("explosion-position-y").value =
-            postavke.pozicijaEksplozije.y;
-          document.getElementById("explosion-position-z").value =
-            postavke.pozicijaEksplozije.z;
         }
+        document.getElementById("gravity").value = postavke.gravitacija;
+        document.getElementById("resistance").value = postavke.otpor;
+        document.getElementById("dt").value = postavke.dt * 2000;
+        document.getElementById("number-of-particles").value =
+          postavke.brojCesticaXWG / brojWG;
+
+        document.getElementById("grid").checked = postavke.grid;
+        document.getElementById("explosion-position-x").value =
+          postavke.pozicijaEksplozije.x;
+        document.getElementById("explosion-position-y").value =
+          postavke.pozicijaEksplozije.y;
+        document.getElementById("explosion-position-z").value =
+          postavke.pozicijaEksplozije.z;
+        document.getElementById("potential-strength").value =
+          postavke.snagaPotencijala;
+        document.getElementById("potential-particle-radius").value =
+          postavke.radijusCestica;
+        document.getElementById("object-position-x").value =
+          postavke.pozicijaObjekta.x;
+        document.getElementById("object-position-y").value =
+          postavke.pozicijaObjekta.y;
+        document.getElementById("object-position-z").value =
+          postavke.pozicijaObjekta.z;
+        document.getElementById("camera-position-x").value =
+          postavke.pozicijaKamere.x;
+        document.getElementById("camera-position-y").value =
+          postavke.pozicijaKamere.y;
+        document.getElementById("camera-position-z").value =
+          postavke.pozicijaKamere.z;
       }
 
       function render() {
@@ -112,6 +142,7 @@
         kreirajSileComputeShader();
         postavke.reset = false;
         postaviPostavkeCookie();
+        addEventListeners();
         postaviCanvasObserver();
       }
 
@@ -172,6 +203,24 @@
               type="text"
               oninput="brCestica(value)"
               value="25"
+            />
+          </div>
+          <div class="console-input">
+            <label class="input-label">Snaga</label>
+            <input
+              id="potential-strength"
+              class="input-input"
+              type="text"
+              oninput="potentialStrength(value)"
+            />
+          </div>
+          <div class="console-input">
+            <label class="input-label">Radijus</label>
+            <input
+              id="potential-particle-radius"
+              class="input-input"
+              type="text"
+              oninput="particleRadius(value)"
             />
           </div>
           <div class="console-input">
@@ -238,13 +287,28 @@
                   <img width="25px" height="20px" src="./assets/object.svg" />
                 </td>
                 <td class="coordinates-cell">
-                  <input class="coordinates-input" type="text" />
+                  <input
+                    class="coordinates-input"
+                    type="text"
+                    id="object-position-x"
+                    oninput="objectPositionX(event)"
+                  />
                 </td>
                 <td class="coordinates-cell">
-                  <input class="coordinates-input" type="text" />
+                  <input
+                    class="coordinates-input"
+                    type="text"
+                    id="object-position-y"
+                    oninput="objectPositionY(event)"
+                  />
                 </td>
                 <td class="coordinates-cell">
-                  <input class="coordinates-input" type="text" />
+                  <input
+                    class="coordinates-input"
+                    type="text"
+                    id="object-position-z"
+                    oninput="objectPositionZ(event)"
+                  />
                 </td>
               </tr>
               <tr class="coordinates-row">
@@ -252,13 +316,28 @@
                   <img width="25px" height="20px" src="./assets/camera.svg" />
                 </td>
                 <td class="coordinates-cell">
-                  <input class="coordinates-input" type="text" />
+                  <input
+                    class="coordinates-input"
+                    type="text"
+                    id="camera-position-x"
+                    oninput="cameraPositionX(event)"
+                  />
                 </td>
                 <td class="coordinates-cell">
-                  <input class="coordinates-input" type="text" />
+                  <input
+                    class="coordinates-input"
+                    type="text"
+                    id="camera-position-y"
+                    oninput="cameraPositionY(event)"
+                  />
                 </td>
                 <td class="coordinates-cell">
-                  <input class="coordinates-input" type="text" />
+                  <input
+                    class="coordinates-input"
+                    type="text"
+                    id="camera-position-z"
+                    oninput="cameraPositionZ(event)"
+                  />
                 </td>
               </tr>
             </tbody>
