@@ -6,7 +6,7 @@ struct Parametri{
     dt:f32,
     otpor:f32,
     gravitacija:f32,
-    incr:u32,
+    pozicija_eksplozije:vec3f,
   }
   
 const pi: f32 = 3.1415926535897932384626433832795;
@@ -40,19 +40,20 @@ const pi: f32 = 3.1415926535897932384626433832795;
         }
     }
 
-    var multi : f32 = 0.2;
+    var multi : f32 =1.2;
     var trans : f32 = 4000;
-    x_koordinate[dretva_id] = normaliziraj(sqrt(-2*log(u[0]))*cos(2*pi*u[1]))*multi; //BoxMuller transformacija
-    y_koordinate[dretva_id] = normaliziraj(sqrt(-2*log(u[0]))*sin(2*pi*u[1]))*multi+trans; //BoxMuller transformacija
-    z_koordinate[dretva_id] = normaliziraj(sqrt(-2*log(u[2]))*sin(2*pi*u[3]))*multi; //BoxMuller transformacija
+
+    var pozicija_potencijala = parametri.pozicija_eksplozije;
+    x_koordinate[dretva_id] = normaliziraj(sqrt(-2*log(u[0]))*cos(2*pi*u[1]))*multi+pozicija_potencijala.x; //BoxMuller transformacija
+    y_koordinate[dretva_id] = normaliziraj(sqrt(-2*log(u[0]))*sin(2*pi*u[1]))*multi+pozicija_potencijala.y; //BoxMuller transformacija
+    z_koordinate[dretva_id] = normaliziraj(sqrt(-2*log(u[2]))*sin(2*pi*u[3]))*multi+pozicija_potencijala.z; //BoxMuller transformacija
 
     x_brzina[dretva_id] =  0;
     y_brzina[dretva_id] =  0;
     z_brzina[dretva_id] =  0;
 
-    var pozicija_potencijala : vec3f = vec3f(0,trans,0);
     var masa_cestice : f32 = 1;
-    var r_rez_potencijala = djelujPotencijalom(dretva_id,pozicija_potencijala,20000);
+    var r_rez_potencijala = djelujPotencijalom(dretva_id,pozicija_potencijala,70000);
     var r_rez_gravitacije = djelujGravitacijom(masa_cestice);
     var r_rez_otpora = djelujOtporom(dretva_id);
 

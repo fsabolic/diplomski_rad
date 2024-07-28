@@ -53,6 +53,16 @@ function brCestica(value) {
   postavke.brojCesticaXWG = 256 * value;
 }
 
-function grid(value) {
+function grid() {
   postavke.grid = !postavke.grid;
+}
+
+function explosionPositionX(value) {
+  postavke.pozicijaEksplozije.x = value.target.value;
+}
+function explosionPositionY(value) {
+  postavke.pozicijaEksplozije.y = value.target.value;
+}
+function explosionPositionZ(value) {
+  postavke.pozicijaEksplozije.z = value.target.value;
 }

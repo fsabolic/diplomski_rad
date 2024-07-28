@@ -62,10 +62,16 @@ function kreirajBuffere() {
   uniRenderParamsValues = new ArrayBuffer(80);
   uniRenderParamsViews = {
     matrica3d: new Float32Array(uniRenderParamsValues, 0, 16),
-    pozicijaPromatraca: new Float32Array(uniRenderParamsValues, 64, 3),
+    pozicijaEksplozije: new Float32Array(uniRenderParamsValues, 64, 3),
     iteracija: new Float32Array(uniRenderParamsValues, 76, 1),
   };
-
+  uniRenderParamsViews.pozicijaEksplozije.set(
+    new Float32Array([
+      postavke.pozicijaEksplozije.x,
+      postavke.pozicijaEksplozije.y,
+      postavke.pozicijaEksplozije.z,
+    ])
+  );
   uniRenderParamsBuffer = device.createBuffer({
     label: "Uniform Render Params Buffer",
     size: uniRenderParamsValues.byteLength,
@@ -74,11 +80,12 @@ function kreirajBuffere() {
 
   //_____compute parametri uniform buffer_____
   //pohranjuju se vrijednosti parametara za generiranje čestica
-  uniCompParamsValues = new ArrayBuffer(16);
+  uniCompParamsValues = new ArrayBuffer(32);
   uniCompParamsViews = {
     dt: new Float32Array(uniCompParamsValues, 0, 1),
     otpor: new Float32Array(uniCompParamsValues, 4, 1),
     gravitacija: new Float32Array(uniCompParamsValues, 8, 1),
+    pozicijaEksplozije: new Float32Array(uniCompParamsValues, 16, 3),
   };
   uniCompParamsBuffer = device.createBuffer({
     label: "Uniform Compute Params Buffer",

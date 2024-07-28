@@ -39,5 +39,6 @@ let postavke = {
   incr: 0,
   pauza: false,
   grid: true,
+  pozicijaEksplozije: { x: 0, y: 4000, z: 0 },
 };
 let depthTexture;

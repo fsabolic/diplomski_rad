@@ -2,7 +2,7 @@ const cesticeRenderShaderiWGSL = /*wgsl*/ `
 //Parametri simulacije (uniforms)
 struct Parametri {
   matrica_3d: mat4x4f,
-  pozicija_promatraca: vec3f,
+  pozicija_eksplozije: vec3f,
   iteracija:f32,
 };
 
@@ -71,9 +71,9 @@ struct VrhCestice{
   vsOut.boja = vrhovi_cestice[i_vertex].boja;
 
   //Računanje udaljenosti između kamere i vrha čestice koji se trenutno gleda
-  var pozicija_kamere: vec3f = vec3f(parametri.pozicija_promatraca.x*1.7,
-                                    parametri.pozicija_promatraca.y*1.7,
-                                    parametri.pozicija_promatraca.z*1.7);
+  var pozicija_kamere: vec3f = vec3f(parametri.pozicija_eksplozije.x,
+                                    parametri.pozicija_eksplozije.y,
+                                    parametri.pozicija_eksplozije.z);
   var pozicija_cestice: vec3f = vektor_pomaka.xyz;
   vsOut.udaljenost = distance(pozicija_cestice, pozicija_kamere);
 
@@ -83,7 +83,9 @@ struct VrhCestice{
 //Fragment shader za bojanje čestica tako da su svijetlije što su bliže kameri
 @fragment fn fsCestice(vsOut: VSOutput) -> @location(0) vec4f {
   //Izračun faktora udaljenosti koji "smanjuje/povećava" svjetlinu čestice
-  let faktor_udaljenosti =5 / (3 + vsOut.udaljenost * 0.00045);
+  let faktor_udaljenosti = 8 / (3 + vsOut.udaljenost * 0.001);
+
+
   let prilagodena_boja = vsOut.boja * faktor_udaljenosti;
   return prilagodena_boja;
 }

@@ -29,10 +29,16 @@
         uniCompParamsViews.dt.set([postavke.dt]);
         uniCompParamsViews.otpor.set([postavke.otpor]);
         uniCompParamsViews.gravitacija.set([postavke.gravitacija]);
+        uniCompParamsViews.pozicijaEksplozije.set([
+          postavke.pozicijaEksplozije.x,
+          postavke.pozicijaEksplozije.y,
+          postavke.pozicijaEksplozije.z,
+        ]);
         device.queue.writeBuffer(uniCompParamsBuffer, 0, uniCompParamsValues);
 
         postavke.incr += 0.07;
         uniRenderParamsViews.iteracija.set([postavke.incr]);
+
         device.queue.writeBuffer(
           uniRenderParamsBuffer,
           0,
@@ -74,13 +80,19 @@
             postavke.brojCesticaXWG / brojWG;
 
           document.getElementById("grid").checked = postavke.grid;
+          document.getElementById("explosion-position-x").value =
+            postavke.pozicijaEksplozije.x;
+          document.getElementById("explosion-position-y").value =
+            postavke.pozicijaEksplozije.y;
+          document.getElementById("explosion-position-z").value =
+            postavke.pozicijaEksplozije.z;
         }
       }
 
       function render() {
         if (!postavke.pauza) {
-          postaviParametre();
           postaviMatricu3DTransformacija();
+          postaviParametre();
           izvrsiSileComputeShader();
           izvrsiCesticeRenderShader();
           if (postavke.grid) izvrsiGridRenderShader();
@@ -136,7 +148,7 @@
               class="input-input"
               type="checkbox"
               id="grid"
-              oninput="grid(value)"
+              oninput="grid()"
             />
           </div>
           <div class="console-input">
@@ -180,6 +192,77 @@
               oninput="otpor(value)"
             />
           </div>
+        </div>
+        <div class="console-coordinates-table">
+          <table class="coordinates-table">
+            <thead>
+              <tr class="coordinates-header-row">
+                <th class="coordinates-header-cell"></th>
+                <th class="coordinates-header-cell">x</th>
+                <th class="coordinates-header-cell">y</th>
+                <th class="coordinates-header-cell">z</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="coordinates-row">
+                <td class="coordinates-cell">
+                  <img width="25px" height="20px" src="./assets/bomb.svg" />
+                </td>
+                <td class="coordinates-cell">
+                  <input
+                    id="explosion-position-x"
+                    class="coordinates-input"
+                    type="text"
+                    oninput="explosionPositionX(event)"
+                  />
+                </td>
+                <td class="coordinates-cell">
+                  <input
+                    class="coordinates-input"
+                    type="text"
+                    id="explosion-position-y"
+                    oninput="explosionPositionY(event)"
+                  />
+                </td>
+                <td class="coordinates-cell">
+                  <input
+                    class="coordinates-input"
+                    type="text"
+                    id="explosion-position-z"
+                    oninput="explosionPositionZ(event)"
+                  />
+                </td>
+              </tr>
+              <tr class="coordinates-row">
+                <td class="coordinates-cell">
+                  <img width="25px" height="20px" src="./assets/object.svg" />
+                </td>
+                <td class="coordinates-cell">
+                  <input class="coordinates-input" type="text" />
+                </td>
+                <td class="coordinates-cell">
+                  <input class="coordinates-input" type="text" />
+                </td>
+                <td class="coordinates-cell">
+                  <input class="coordinates-input" type="text" />
+                </td>
+              </tr>
+              <tr class="coordinates-row">
+                <td class="coordinates-cell">
+                  <img width="25px" height="20px" src="./assets/camera.svg" />
+                </td>
+                <td class="coordinates-cell">
+                  <input class="coordinates-input" type="text" />
+                </td>
+                <td class="coordinates-cell">
+                  <input class="coordinates-input" type="text" />
+                </td>
+                <td class="coordinates-cell">
+                  <input class="coordinates-input" type="text" />
+                </td>
+              </tr>
+            </tbody>
+          </table>
         </div>
       </div>
     </div>
