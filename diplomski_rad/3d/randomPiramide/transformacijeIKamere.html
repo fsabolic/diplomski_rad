@@ -74,7 +74,6 @@
               1,
               Math.min(height, device.limits.maxTextureDimension2D)
             );
-
             render();
           }
         });
@@ -131,7 +130,11 @@
           izvrsiCesticeRenderShader();
           if (postavke.grid) izvrsiGridRenderShader();
         }
-        requestAnimationFrame(render);
+      }
+
+      function simulacija() {
+        render();
+        requestAnimationFrame(simulacija);
       }
 
       async function main() {
@@ -148,6 +151,7 @@
         postaviPostavkeLocalStorage();
         dodajEventListenere();
         postaviCanvasObserver();
+        simulacija();
       }
 
       function fail(msg) {
