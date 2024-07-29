@@ -16,7 +16,7 @@
     <script src="skripte/odrediWorkgroupBroj.js"></script>
     <script src="skripte/postaviWebGPU.js"></script>
     <script src="skripte/postaviMatricu3DTransformacija.js"></script>
-    <script src="skripte/cookies.js"></script>
+    <script src="skripte/localStorage.js"></script>
     <script src="skripte/simulatorKomande.js"></script>
     <script src="shaderi/renderShaderi/cesticeRenderShaderiWGSL.js"></script>
     <script src="shaderi/renderShaderi/cesticeRenderShader.js"></script>
@@ -82,10 +82,10 @@
       }
 
       function postaviPostavke() {
-        let cookiePostavke = dohvatiPostavkeCookie();
-        if (cookiePostavke) {
-          if (cookiePostavke.reset) {
-            postavke = cookiePostavke;
+        let localStoragePostavke = dohvatiPostavkeLocalStorage();
+        if (localStoragePostavke) {
+          if (localStoragePostavke.reset) {
+            postavke = localStoragePostavke;
           }
         }
         document.getElementById("gravity").value = postavke.gravitacija;
@@ -145,7 +145,7 @@
         izvrsiPRNGComputeShader();
         kreirajSileComputeShader();
         postavke.reset = false;
-        postaviPostavkeCookie();
+        postaviPostavkeLocalStorage();
         dodajEventListenere();
         postaviCanvasObserver();
       }

@@ -28,7 +28,7 @@ function zatvori(event) {
 function reset() {
   postavke.incr = 0;
   postavke.reset = true;
-  postaviPostavkeCookie();
+  postaviPostavkeLocalStorage();
   location.reload(true);
 }
 
