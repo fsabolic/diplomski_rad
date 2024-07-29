@@ -98,11 +98,11 @@ function handleKeyboardInput(event) {
   switch (event.key) {
     case "A":
     case "a":
-      postavke.pozicijaKamere.x -= 175;
+      postavke.pozicijaKamere.x += 175;
       break;
     case "D":
     case "d":
-      postavke.pozicijaKamere.x += 175;
+      postavke.pozicijaKamere.x -= 175;
       break;
     case "W":
     case "w":
