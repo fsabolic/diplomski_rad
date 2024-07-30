@@ -3,7 +3,7 @@
   <head id="">
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Gljiva 2.2. - Više potencijala</title>
+    <title>Gljiva 2.7. - Više potencijala</title>
     <script src="../../skripte/pokretanje.js"></script>
     <script>
       function pokreni() {
@@ -18,38 +18,38 @@
               .setPotencijalUdaljenosti(9)
               .setMinUdaljenost(6.25)
               .setMaxUdaljenost(0.3)
-              .setXMnozitelj(0.25)
+              .setXMnozitelj(0.3)
               .build(),
-            new CoulombovPotencijalBuilder(25000, new Vektor2D(17, 24.2), 1)
-              .setPotencijalUdaljenosti(6)
-              .setMinUdaljenost(2.9)
-              .setMaxUdaljenost(0.9)
+            new CoulombovPotencijalBuilder(400000, new Vektor2D(17, 25), 1)
+              .setPotencijalUdaljenosti(9)
+              .setMinUdaljenost(2.95)
+              .setMaxUdaljenost(0.15)
               .setXMnozitelj(1)
               .build(),
-            new CoulombovPotencijalBuilder(25000, new Vektor2D(23, 24.2), 1)
-              .setPotencijalUdaljenosti(6)
-              .setMinUdaljenost(2.9)
-              .setMaxUdaljenost(0.9)
+            new CoulombovPotencijalBuilder(400000, new Vektor2D(23, 25), 1)
+              .setPotencijalUdaljenosti(9)
+              .setMinUdaljenost(2.95)
+              .setMaxUdaljenost(0.15)
               .setXMnozitelj(1)
               .build(),
-            new CoulombovPotencijalBuilder(750, new Vektor2D(20, 19.8), -1)
-              .setPotencijalUdaljenosti(4)
-              .setMinUdaljenost(1)
-              .setMaxUdaljenost(0.5)
+            new CoulombovPotencijalBuilder(2, new Vektor2D(20, 45), -1)
+              .setPotencijalUdaljenosti(1)
+              .setMinUdaljenost(3)
+              .setMaxUdaljenost(-1)
               .setXMnozitelj(1)
               .build(),
           ],
           preciznostSimulacije: 1,
           prviFrame: true,
           brEksplozije: 1000,
-          gravitacija: 9.81,
+          gravitacija: 0,
           otpor: 1.5,
-          granice: { left: true, top: false, right: true, bottom: true },
+          granice: { left: false, top: false, right: false, bottom: true },
           velicinaSloja: 15000,
           xminSloja: 0,
           xmaxSloja: 40,
           yminSloja: 0,
-          ymaxSloja: 1.5,
+          ymaxSloja: 5,
         };
 
         let parametri = new Parametri();

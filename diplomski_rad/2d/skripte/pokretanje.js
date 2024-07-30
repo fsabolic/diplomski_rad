@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   var link = document.createElement("link");
   link.rel = "stylesheet";
-  link.href = predputanja + "css/global.css";
+  link.href = predputanja + "css/style.css";
   document.head.appendChild(link);
 
   let scriptLoadPromises = listaImporta.map((src) => {

@@ -3,8 +3,8 @@
   <head id="">
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Gljiva 1.2. - Nepokretni privlačni potencijal</title>
-    <script src="../../../../skripte/pokretanje.js"></script>
+    <title>Gljiva 1.1. - Nepokretni privlačni potencijal</title>
+    <script src="../../../skripte/pokretanje.js"></script>
     <script>
       function pokreni() {
         let p = {
@@ -14,11 +14,10 @@
           gksYmin: 0,
           gksYmax: 10,
           listaPotencijala: [
-            new CoulombovPotencijalBuilder(700, new Vektor2D(5, 5), 1)
+            new CoulombovPotencijalBuilder(800, new Vektor2D(5, 5), 1)
               .setPotencijalUdaljenosti(4)
               .setMinUdaljenost(0.5)
-              .setMaxUdaljenost(0.2)
-              .setXMnozitelj(0.05)
+              .setMaxUdaljenost(0.1)
               .build(),
           ],
           preciznostSimulacije: 1,

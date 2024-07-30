@@ -16,3 +16,7 @@ async function postaviWebGPU() {
     alphaMode: "premultiplied",
   });
 }
+
+function fail(msg) {
+  alert(msg);
+}

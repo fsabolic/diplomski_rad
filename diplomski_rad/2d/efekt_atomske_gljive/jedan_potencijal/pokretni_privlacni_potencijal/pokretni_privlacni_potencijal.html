@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Gljiva 2.1. - Pokretni privlačni potencijal</title>
-    <script src="../../../../../skripte/pokretanje.js"></script>
+    <script src="../../../skripte/pokretanje.js"></script>
     <script>
       function pokreni() {
         let p = {
@@ -14,10 +14,11 @@
           gksYmin: 0,
           gksYmax: 10,
           listaPotencijala: [
-            new CoulombovPotencijalBuilder(11, new Vektor2D(5, 5 - 3.92), 1)
-              .setPotencijalUdaljenosti(2)
+            new CoulombovPotencijalBuilder(150, new Vektor2D(5, 5 - 3.2), 1)
+              .setPotencijalUdaljenosti(3)
+              .setXMnozitelj(0)
               .setPomak((parametar) => {
-                return new Vektor2D(0, 7 * parametar);
+                return new Vektor2D(0, 20 * parametar);
               })
               .build(),
           ],
