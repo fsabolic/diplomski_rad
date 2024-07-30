@@ -246,7 +246,7 @@ class Konzola {
     }
     this.potencijaliHTML.selectedIndex = 0;
     this.potencijaliHTML.addEventListener("change", (event) => {
-      let potencijalId = event.explicitOriginalTarget.value;
+      let potencijalId = event.target.value;
       this.postaviHtmlPotencijal(potencijalId);
     });
   }
@@ -361,9 +361,7 @@ class Konzola {
     });
   }
 
-  static praznaFunkcija() {
-    console.log(123123123);
-  }
+  static praznaFunkcija() {}
 
   static postaviPotencijalNaKlik() {
     this.postaviNaPlatnoKlik((event) => {
