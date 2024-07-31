@@ -159,7 +159,7 @@ class Konzola {
     });
   }
 
-  //kod za deep copy preuzet s:s
+  //kod za deep copy preuzet:
   //https://saturncloud.io/blog/what-is-the-most-efficient-way-to-deep-clone-an-object-in-javascript/
   //https://stackoverflow.com/questions/77353410/how-to-deep-clone-with-prototype-chain
   static deepClone(objekt) {
@@ -304,40 +304,7 @@ class Konzola {
       }
     }
   }
-  /*
-  static postaviEksplozijuNaKlik(klikEksplozija) {
-    this.postaviNaPlatnoKlik((event) => {
-      klikEksplozija(event, this.gks, this.cesticeSave, 1000);
-    });
-  }
-  */
 
-  /*
-  static postaviEksplozijuNaKlik(klikEksplozija) {
-    this.postaviNaPlatnoKlik(async (event) => {
-      let centar = dohvatiPozicijuKlika(event);
-      let dobiveneCestice = await klikEksplozija(
-        centar[0],
-        centar[1],
-        this.brojCesticaEksplozije
-      );
-      for (let i = 0; i < this.brojCesticaEksplozije; i++) {
-        this.cesticeSave.push(dobiveneCestice[i]);
-      }
-
-      function dohvatiPozicijuKlika(event) {
-        let canvasGranica = window.getComputedStyle(Konzola.platnoHTML);
-        let centarX = event.clientX - Konzola.platnoHTML.offsetLeft;
-        let centarY = event.clientY - Konzola.platnoHTML.offsetTop;
-        let centar = Konzola.gks.transformirajPiksele(
-          centarX - parseFloat(canvasGranica.borderLeftWidth),
-          centarY - parseFloat(canvasGranica.borderRightWidth)
-        );
-        return centar;
-      }
-    });
-  }
-*/
   static postaviEksplozijuNaKlik(klikEksplozija) {
     this.postaviNaPlatnoKlik((event) => {
       let centar = dohvatiPozicijuKlika(event);
