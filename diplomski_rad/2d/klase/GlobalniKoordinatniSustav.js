@@ -13,33 +13,17 @@ class GlobalniKoordinatniSustav {
     this.xmax = xmax;
     this.ymin = ymin;
     this.ymax = ymax;
-  } // constructor
+  }
 
   transformirajPiksele(x, y) {
     return [(x - this.px) / this.sx, (y - this.py) / this.sy];
   }
+
   ocisti() {
     let max = this.h;
     if (this.w > this.h) max = this.w;
     this.g.clearRect(0, 0, max, max);
-  } // ocisti
-
-  postaviNa(x, y) {
-    this.g.beginPath();
-    this.g.moveTo(this.sx * x + this.px, this.sy * y + this.py);
-  } // postaviNa
-
-  linijaDo(x, y) {
-    this.g.lineTo(this.sx * x + this.px, this.sy * y + this.py);
-  } // linijaDo
-
-  koristiBoju(c) {
-    this.g.strokeStyle = c;
-  } // koristiBoju
-
-  povuciLiniju() {
-    this.g.stroke();
-  } // povuciLiniju
+  }
 
   puniKrug(x, y, R, boja) {
     this.g.beginPath();
@@ -52,15 +36,16 @@ class GlobalniKoordinatniSustav {
     );
     this.g.fillStyle = boja;
     this.g.fill();
-  } // puniKrug
+  }
 
   piksel(x, y, boja) {
     this.g.fillStyle = boja;
     this.g.fillRect(this.sx * x + this.px, this.sy * y + this.py, 1, 1);
   }
+
   tekst(str, x, y, font = "16px Arial") {
     this.g.font = font;
     this.g.fillStyle = "white";
     this.g.fillText(str, this.sx * x + this.px, this.sy * y + this.py);
-  } // tekst
-} // class GKS
+  }
+}

@@ -29,7 +29,7 @@ class Konzola {
   static bottomGranica = true;
   static rightGranica = true;
   static brojCesticaEksplozije = 1000;
-  static gravitacija = new Fizika(9.81);
+  static gravitacija = new SilaTeza(9.81);
   static otpor = new Otpor(0.47);
   static potencijalSave = null;
   static brojCesticaSloja = 0;
@@ -137,7 +137,7 @@ class Konzola {
     this.bottomGranica = parametri.granice.bottom;
     this.leftGranica = parametri.granice.left;
     this.brojCesticaEksplozije = parametri.brEksplozije;
-    this.gravitacija = new Fizika(parametri.gravitacija);
+    this.gravitacija = new SilaTeza(parametri.gravitacija);
     this.otpor = new Otpor(parametri.otpor);
     this.brojCesticaSloja = parametri.velicinaSloja;
     this.xminCestica = parametri.xminSloja;
@@ -452,7 +452,7 @@ class Konzola {
     ) {
       vrijednostGravitacije = 9.81;
     }
-    this.gravitacija = new Fizika(Number.parseFloat(vrijednostGravitacije));
+    this.gravitacija = new SilaTeza(Number.parseFloat(vrijednostGravitacije));
   }
 
   static otporInputFocusoutEventHandler(event) {

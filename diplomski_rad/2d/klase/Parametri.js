@@ -9,7 +9,7 @@ class Parametri {
     this.preciznostSimulacije = 1;
     this.prviFrame = true;
     this.brEksplozije = 1000;
-    this.gravitacija = new Fizika(0);
+    this.gravitacija = new SilaTeza(0);
     this.otpor = new Otpor(0);
     this.granice = { left: true, top: true, right: true, bottom: true };
     this.velicinaSloja = 0;

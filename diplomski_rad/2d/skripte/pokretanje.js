@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   var listaImporta = [
     "klase/Vektor2D.js",
-    "klase/Fizika.js",
+    "klase/SilaTeza.js",
     "klase/Cestica.js",
     "klase/Otpor.js",
     "klase/GlobalniKoordinatniSustav.js",
