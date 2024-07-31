@@ -45,7 +45,7 @@ function otpor(value) {
 }
 
 function dt(value) {
-  postavke.dt = 0 + value / 2000;
+  postavke.dt = value;
 }
 
 function brCestica(value) {

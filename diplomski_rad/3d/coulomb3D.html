@@ -89,7 +89,7 @@
         }
         document.getElementById("gravity").value = postavke.gravitacija;
         document.getElementById("resistance").value = postavke.otpor;
-        document.getElementById("dt").value = postavke.dt * 2000;
+        document.getElementById("dt").value = postavke.dt;
         document.getElementById("number-of-particles").value =
           postavke.brojCesticaXWG / brojWG;
 
@@ -196,15 +196,11 @@
             />
           </div>
           <div class="console-input">
-            <label class="input-label">Brzina (dt)</label>
+            <label class="input-label">Korak (dt)</label>
             <input
               id="dt"
               class="input-input"
-              type="range"
-              min="0"
-              max="120"
-              value="60"
-              id="dt-slider"
+              type="text"
               oninput="dt(value)"
             />
           </div>
@@ -219,7 +215,7 @@
             />
           </div>
           <div class="console-input">
-            <label class="input-label">Snaga eksplozije</label>
+            <label class="input-label">Silina eksplozije</label>
             <input
               id="potential-strength"
               class="input-input"
@@ -228,7 +224,7 @@
             />
           </div>
           <div class="console-input">
-            <label class="input-label">Radijus čestica</label>
+            <label class="input-label">Polumjer čestica</label>
             <input
               id="potential-particle-radius"
               class="input-input"
@@ -237,7 +233,7 @@
             />
           </div>
           <div class="console-input">
-            <label class="input-label">Gravitacija</label>
+            <label class="input-label">Sila teža</label>
             <input
               id="gravity"
               class="input-input"
@@ -246,7 +242,7 @@
             />
           </div>
           <div class="console-input">
-            <label class="input-label">Otpor</label>
+            <label class="input-label">Otpor sredstva</label>
             <input
               id="resistance"
               class="input-input"
