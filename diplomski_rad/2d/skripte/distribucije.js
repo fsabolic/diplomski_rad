@@ -14,13 +14,13 @@ function nasumicniUniformniSkupovi(brojTocaka, dimenzije = 2) {
   if (brojSkupova % 2 != 0) brojSkupova += 1;
   let uniformniSkupovi = [];
   for (let i = 0; i < brojSkupova; i++) {
-    uniformniSkupovi.push(nasumcniUniformniSkup(brojTocaka));
+    uniformniSkupovi.push(nasumicniUniformniSkup(brojTocaka));
   }
 
   return uniformniSkupovi;
 }
 
-function nasumcniUniformniSkup(brojTocaka) {
+function nasumicniUniformniSkup(brojTocaka) {
   let uniformniSkup = [];
   for (let j = 0; j < brojTocaka; j++) {
     uniformniSkup.push(Math.random());
