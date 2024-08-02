@@ -1,5 +1,5 @@
 class Cestica {
-  constructor(promjer, materijalnaTocka, boja) {
+  constructor(promjer, materijalnaTocka, boja = "yellow") {
     this.materijalnaTocka = materijalnaTocka;
     this.boja = boja;
     this.promjer = promjer;
@@ -24,6 +24,6 @@ class Cestica {
   }
 
   iscrtaj(gks) {
-    gks.piksel(this.materijalnaTocka.r.x, this.materijalnaTocka.r.y, "yellow");
+    gks.piksel(this.materijalnaTocka.r.x, this.materijalnaTocka.r.y, this.boja);
   }
 }

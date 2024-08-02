@@ -12,8 +12,7 @@ function gaussEksplozija(centarX, centarY, brojCestica, cesticeEksplozije) {
         2 + Math.random(),
         new Vektor2D(centarX, centarY),
         new Vektor2D(tocka[0][0] * multi, tocka[1][0] * multi)
-      ),
-      "red"
+      )
     );
     cesticeEksplozije.push(cestica);
   }

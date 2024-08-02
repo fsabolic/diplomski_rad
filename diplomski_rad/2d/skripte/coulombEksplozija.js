@@ -13,8 +13,7 @@ function coulombEksplozija(centarX, centarY, brojCestica, cesticeEksplozije) {
         2 + Math.random(),
         new Vektor2D(tocka[0][0] / 50 + centarX, tocka[1][0] / 50 + centarY),
         new Vektor2D(0, 0)
-      ),
-      "red"
+      )
     );
 
     cesticeEksplozije.push(cestica);

@@ -11,8 +11,7 @@ function pravilnaEksplozija(centarX, centarY, brojCestica, cesticeEksplozije) {
         2,
         new Vektor2D(centarX, centarY),
         pocetniVektor.rotirajOkoPocetka((i * 360) / brojCestica)
-      ),
-      "red"
+      )
     );
     cesticeEksplozije.push(cestica);
   }
