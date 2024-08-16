@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Lokalne, globalne i zaslonske koordinate</title>
+    <script>
+      class Tocka {
+        constructor(x, y) {
+          this.x = x;
+          this.y = y;
+        }
+      }
+
+      class Trokut {
+        constructor() {
+          this.tockaA = new Tocka(0, 0);
+          this.tockaB = new Tocka(150, 0);
+          this.tockaC = new Tocka(75, 150);
+        }
+      }
+
+      class Translator {
+        static pomakniTrokut(trokut, x, y) {
+          trokut.tockaA.x += x;
+          trokut.tockaA.y += y;
+          trokut.tockaB.x += x;
+          trokut.tockaB.y += y;
+          trokut.tockaC.x += x;
+          trokut.tockaC.y += y;
+        }
+      }
+
+      class GlobalniKoordinatniSustav {
+        constructor(platno, xmin, xmax, ymin, ymax) {
+          this.context = platno.getContext("2d");
+          this.w = platno.width;
+          this.h = platno.height;
+
+          this.sx = this.w / (xmax - xmin);
+          this.sy = -this.h / (ymax - ymin);
+          this.px = -this.sx * xmin;
+          this.py = -this.sy * ymax;
+
+          this.xmin = xmin;
+          this.xmax = xmax;
+          this.ymin = ymin;
+          this.ymax = ymax;
+        }
+
+        postaviOlovku() {
+          this.context.beginPath();
+          this.context.strokeStyle = "green";
+        }
+
+        postaviNa(x, y) {
+          this.context.moveTo(x * this.sx + this.px, y * this.sy + this.py);
+        }
+
+        linijaDo(x, y) {
+          this.context.lineTo(x * this.sx + this.px, y * this.sy + this.py);
+        }
+
+        nacrtaj() {
+          this.context.stroke();
+        }
+      }
+
+      function main() {
+        let canvas = document.getElementById("canvas");
+        let context = canvas.getContext("2d");
+
+        //Tri trokuta s lokalnim koordinatama
+        let trokuti = [new Trokut(), new Trokut(), new Trokut()];
+
+        let pomaci = [
+          new Tocka(200, 0),
+          new Tocka(-75, 200),
+          new Tocka(-75, -150),
+        ];
+
+        let gks = new GlobalniKoordinatniSustav(canvas, -400, 400, -400, 400);
+
+        for (let i = 0; i < trokuti.length; i++) {
+          //Transformacija kooridnata pojedinog troktuta u globalne koordinate
+          Translator.pomakniTrokut(trokuti[i], pomaci[i].x, pomaci[i].y);
+
+          gks.postaviOlovku();
+          gks.postaviNa(trokuti[i].tockaA.x, trokuti[i].tockaA.y);
+          gks.linijaDo(trokuti[i].tockaB.x, trokuti[i].tockaB.y);
+          gks.linijaDo(trokuti[i].tockaC.x, trokuti[i].tockaC.y);
+          gks.linijaDo(trokuti[i].tockaA.x, trokuti[i].tockaA.y);
+          gks.nacrtaj();
+        }
+      }
+
+      window.onload = main;
+    </script>
+  </head>
+  <body>
+    <canvas
+      id="canvas"
+      width="500"
+      height="500"
+      style="border: 1px solid black"
+    ></canvas>
+  </body>
+</html>

@@ -19,7 +19,7 @@ class Cestica {
       this.materijalnaTocka.v.y = -this.materijalnaTocka.v.y;
     }
     if (this.materijalnaTocka.r.y < gks.ymin + this.promjer && bottom) {
-      this.materijalnaTocka.r.y = this.promjer;
+      this.materijalnaTocka.r.y = gks.ymin + this.promjer;
     }
   }
 

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Canvas trokut</title>
+    <script>
+      function trokut() {
+        let canvas = document.getElementById("canvas");
+        let context = canvas.getContext("2d");
+
+        context.beginPath();
+        context.moveTo(250, 200);
+        context.lineTo(175, 300);
+        context.lineTo(325, 300);
+        context.lineTo(250, 200);
+        context.stroke();
+      }
+
+      window.onload = trokut;
+    </script>
+  </head>
+  <body>
+    <canvas
+      id="canvas"
+      width="500"
+      height="500"
+      style="border: 1px solid black"
+    ></canvas>
+  </body>
+</html>
