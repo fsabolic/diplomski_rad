@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Coulomb eksplozija (demo)</title>
+    <script src="../2d/klase/Vektor2D.js"></script>
+    <script src="../2d/klase/MaterijalnaTocka.js"></script>
+    <script src="../2d/klase/Cestica.js"></script>
+    <script src="../2d/klase/GlobalniKoordinatniSustav.js"></script>
+    <script src="../2d/skripte/distribucije.js"></script>
+    <script src="../2d/klase/CoulombovPotencijal.js"></script>
+    <script src="../2d/klase/CoulombovPotencijalBuilder.js"></script>
+
+    <script src="../2d/skripte/coulombEksplozija.js"></script>
+    <script>
+      function main() {
+        let canvas = document.getElementById("canvas");
+        let gks = new GlobalniKoordinatniSustav(canvas, -10, 10, -10, 10);
+
+        let brojCestica = 10000;
+        let cesticeEksplozije = [];
+
+        coulombEksplozija(0, -3, brojCestica, cesticeEksplozije);
+
+        let dt = 0.001;
+
+        function render() {
+          gks.ocisti();
+          for (let i = 0; i < brojCestica; i++) {
+            cesticeEksplozije[i].materijalnaTocka.pomakni(
+              dt,
+              new Vektor2D(0, 0)
+            );
+            cesticeEksplozije[i].iscrtaj(gks);
+            cesticeEksplozije[i].zarobi(gks, false, false, true, false);
+          }
+          requestAnimationFrame(render);
+        }
+
+        render();
+      }
+
+      window.onload = main;
+    </script>
+  </head>
+  <body>
+    <canvas
+      id="canvas"
+      width="600"
+      height="600"
+      style="border: 1px solid black; background-color: black"
+    ></canvas>
+  </body>
+</html>
