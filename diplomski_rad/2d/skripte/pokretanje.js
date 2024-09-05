@@ -93,7 +93,7 @@ function dohvatiHtmlKomponentu(predputanja) {
       </div>
       <div class="setters">
         <div class="simulation-precision number-input">
-          <p class="number-input-setter-text" id="simulation-precision-text">Korak (dt):</p>
+          <p class="number-input-setter-text" id="simulation-precision-text">Preciznost:</p>
           <input class="number-input-setter-value" id="simulation-precision-value" type="text" value="" onfocusout="Konzola.preciznostInputFocusoutEventHandler(event)" />
         </div>
         <div class="particle-counter number-input">

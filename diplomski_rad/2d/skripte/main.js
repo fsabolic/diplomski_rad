@@ -1,5 +1,5 @@
-function main(defaultVrijednosti, parametri) {
-  Konzola.initKonzola(defaultVrijednosti, parametri);
+function main(parametri) {
+  Konzola.initKonzola(parametri);
   let potencijali = Konzola.potencijalSave;
   let cestice = Konzola.cesticeSave;
   let dt = 1.0 / 60;
