@@ -1,3 +1,4 @@
+https://fsabolic.github.io/diplomski_rad/diplomski_rad/
 # Vizualizacija eksplozija korištenjem čestičnog modela
 
 Ovaj projekt predstavlja diplomski rad za završetak diplomskog studija "Informatičko i programsko inženjerstvo" na Fakultetu organizacije i informatike. Cilj diplomskog rada je što vjernije vizualizirati eksplozije čestica koristeći razne tehnike i parametre na čestičnom modelu. Sam projekt se sastoji od nekoliko različitih implementacija kojima se pokušava što točnije prikazati kretanje čestica nakon eksplozije.
