@@ -1,0 +1,2280 @@
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.8.25)  8 SEP 2024 05:45
+entering extended mode
+ \write18 enabled.
+ %&-line parsing enabled.
+**vizualizacijaEksplozijaKoristenjemCesticnogModela.tex
+(./vizualizacijaEksplozijaKoristenjemCesticnogModela.tex
+LaTeX2e <2024-06-01> patch level 2
+L3 programming layer <2024-07-20>
+(./foi.cls
+Document Class: foi 
+
+(d:/Aplikacije/TexLive/install/texlive/2024/texmf-dist/tex/latex/base/report.cl
+s
+Document Class: report 2024/02/08 v1.4n Standard LaTeX document class
+
+(d:/Aplikacije/TexLive/install/texlive/2024/texmf-dist/tex/latex/base/size11.cl
+o
+File: size11.clo 2024/02/08 v1.4n Standard LaTeX file (size option)
+)
+\c@part=\count194
+\c@chapter=\count195
+\c@section=\count196
+\c@subsection=\count197
+\c@subsubsection=\count198
+\c@paragraph=\count199
+\c@subparagraph=\count266
+\c@figure=\count267
+\c@table=\count268
+\abovecaptionskip=\skip49
+\belowcaptionskip=\skip50
+\bibindent=\dimen141
+)
+(d:/Aplikacije/TexLive/install/texlive/2024/texmf-dist/tex/latex/geometry/geome
+try.sty
+Package: geometry 2020/01/02 v5.9 Page Geometry
+
+(d:/Aplikacije/TexLive/install/texlive/2024/texmf-dist/tex/latex/graphics/keyva
+l.sty
+Package: keyval 2022/05/29 v1.15 key=value parser (DPC)
+\KV@toks@=\toks17
+)
+(d:/Aplikacije/TexLive/install/texlive/2024/texmf-dist/tex/generic/iftex/ifvtex
+.sty
+Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
+
+(d:/Aplikacije/TexLive/install/texlive/2024/texmf-dist/tex/generic/iftex/iftex.
+sty
+Package: iftex 2022/02/03 v1.0f TeX engine tests
+))
+\Gm@cnth=\count269
+\Gm@cntv=\count270
+\c@Gm@tempcnt=\count271
+\Gm@bindingoffset=\dimen142
+\Gm@wd@mp=\dimen143
+\Gm@odd@mp=\dimen144
+\Gm@even@mp=\dimen145
+\Gm@layoutwidth=\dimen146
+\Gm@layoutheight=\dimen147
+\Gm@layouthoffset=\dimen148
+\Gm@layoutvoffset=\dimen149
+\Gm@dimlist=\toks18
+)
+(d:/Aplikacije/TexLive/install/texlive/2024/texmf-dist/tex/latex/base/inputenc.
+sty
+Package: inputenc 2024/02/08 v1.3d Input encoding file
+\inpenc@prehook=\toks19
+\inpenc@posthook=\toks20
+)
+(d:/Aplikacije/TexLive/install/texlive/2024/texmf-dist/tex/generic/babel/babel.
+sty
+Package: babel 2024/08/18 v24.8 The Babel package
+\babel@savecnt=\count272
+\U@D=\dimen150
+\l@unhyphenated=\language89
+
+(d:/Aplikacije/TexLive/install/texlive/2024/texmf-dist/tex/generic/babel/txtbab
+el.def)
+\bbl@readstream=\read2
+\bbl@dirlevel=\count273
+
+(d:/Aplikacije/TexLive/install/texlive/2024/texmf-dist/tex/generic/babel-croati
+an/croatian.ldf
+Language: croatian 2014/03/31 v1.3m Croatian support from the babel system
+))
+(d:/Aplikacije/TexLive/install/texlive/2024/texmf-dist/tex/generic/babel/locale
+/hr/babel-croatian.tex
+Package babel Info: Importing font and identification data for croatian
+(babel)             from babel-hr.ini. Reported on input line 11.
+)
+(d:/Aplikacije/TexLive/install/texlive/2024/texmf-dist/tex/latex/csquotes/csquo
+tes.sty
+Package: csquotes 2024-04-04 v5.2o context-sensitive quotations (JAW)
+
+(d:/Aplikacije/TexLive/install/texlive/2024/texmf-dist/tex/latex/etoolbox/etool
+box.sty
+Package: etoolbox 2020/10/05 v2.5k e-TeX tools for LaTeX (JAW)
+\etb@tempcnta=\count274
+)
+\csq@reset=\count275
+\csq@gtype=\count276
+\csq@glevel=\count277
+\csq@qlevel=\count278
+\csq@maxlvl=\count279
+\csq@tshold=\count280
+\csq@ltx@everypar=\toks21
+
+(d:/Aplikacije/TexLive/install/texlive/2024/texmf-dist/tex/latex/csquotes/csquo
+tes.def
+File: csquotes.def 2024-04-04 v5.2o csquotes generic definitions (JAW)
+)
+Package csquotes Info: Trying to load configuration file 'csquotes.cfg'...
+Package csquotes Info: ... configuration file loaded successfully.
+
+(d:/Aplikacije/TexLive/install/texlive/2024/texmf-dist/tex/latex/csquotes/csquo
+tes.cfg
+File: csquotes.cfg 
+))
+(d:/Aplikacije/TexLive/install/texlive/2024/texmf-dist/tex/latex/base/fontenc.s
+ty
+Package: fontenc 2021/04/29 v2.0v Standard LaTeX package
+)
+(d:/Aplikacije/TexLive/install/texlive/2024/texmf-dist/tex/latex/anyfontsize/an
+yfontsize.sty
+Package: anyfontsize 2007/11/22 anyfontsize.sty by pts
+)
+(d:/Aplikacije/TexLive/install/texlive/2024/texmf-dist/tex/latex/graphics/graph
+icx.sty
+Package: graphicx 2021/09/16 v1.2d Enhanced LaTeX Graphics (DPC,SPQR)
+
+(d:/Aplikacije/TexLive/install/texlive/2024/texmf-dist/tex/latex/graphics/graph
+ics.sty
+Package: graphics 2024/05/23 v1.4g Standard LaTeX Graphics (DPC,SPQR)
+
+(d:/Aplikacije/TexLive/install/texlive/2024/texmf-dist/tex/latex/graphics/trig.
+sty
+Package: trig 2023/12/02 v1.11 sin cos tan (DPC)
+)
+(d:/Aplikacije/TexLive/install/texlive/2024/texmf-dist/tex/latex/graphics-cfg/g
+raphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 106.
+
+(d:/Aplikacije/TexLive/install/texlive/2024/texmf-dist/tex/latex/graphics-def/p
+dftex.def
+File: pdftex.def 2024/04/13 v1.2c Graphics/color driver for pdftex
+))
+\Gin@req@height=\dimen151
+\Gin@req@width=\dimen152
+)
+(d:/Aplikacije/TexLive/install/texlive/2024/texmf-dist/tex/latex/amsfonts/amssy
+mb.sty
+Package: amssymb 2013/01/14 v3.01 AMS font symbols
+
+(d:/Aplikacije/TexLive/install/texlive/2024/texmf-dist/tex/latex/amsfonts/amsfo
+nts.sty
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\@emptytoks=\toks22
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+))
+(d:/Aplikacije/TexLive/install/texlive/2024/texmf-dist/tex/latex/amsmath/amsmat
+h.sty
+Package: amsmath 2024/05/23 v2.17q AMS math features
+\@mathmargin=\skip51
+
+For additional information on amsmath, use the `?' option.
+
+(d:/Aplikacije/TexLive/install/texlive/2024/texmf-dist/tex/latex/amsmath/amstex
+t.sty
+Package: amstext 2021/08/26 v2.01 AMS text
+
+(d:/Aplikacije/TexLive/install/texlive/2024/texmf-dist/tex/latex/amsmath/amsgen
+.sty
+File: amsgen.sty 1999/11/30 v2.0 generic functions
+\@emptytoks=\toks23
+\ex@=\dimen153
+))
+(d:/Aplikacije/TexLive/install/texlive/2024/texmf-dist/tex/latex/amsmath/amsbsy
+.sty
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
+\pmbraise@=\dimen154
+)
+(d:/Aplikacije/TexLive/install/texlive/2024/texmf-dist/tex/latex/amsmath/amsopn
+.sty
+Package: amsopn 2022/04/08 v2.04 operator names
+)
+\inf@bad=\count281
+LaTeX Info: Redefining \frac on input line 233.
+\uproot@=\count282
+\leftroot@=\count283
+LaTeX Info: Redefining \overline on input line 398.
+LaTeX Info: Redefining \colon on input line 409.
+\classnum@=\count284
+\DOTSCASE@=\count285
+LaTeX Info: Redefining \ldots on input line 495.
+LaTeX Info: Redefining \dots on input line 498.
+LaTeX Info: Redefining \cdots on input line 619.
+\Mathstrutbox@=\box52
+\strutbox@=\box53
+LaTeX Info: Redefining \big on input line 721.
+LaTeX Info: Redefining \Big on input line 722.
+LaTeX Info: Redefining \bigg on input line 723.
+LaTeX Info: Redefining \Bigg on input line 724.
+\big@size=\dimen155
+LaTeX Font Info:    Redeclaring font encoding OML on input line 742.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 743.
+\macc@depth=\count286
+LaTeX Info: Redefining \bmod on input line 904.
+LaTeX Info: Redefining \pmod on input line 909.
+LaTeX Info: Redefining \smash on input line 939.
+LaTeX Info: Redefining \relbar on input line 969.
+LaTeX Info: Redefining \Relbar on input line 970.
+\c@MaxMatrixCols=\count287
+\dotsspace@=\muskip17
+\c@parentequation=\count288
+\dspbrk@lvl=\count289
+\tag@help=\toks24
+\row@=\count290
+\column@=\count291
+\maxfields@=\count292
+\andhelp@=\toks25
+\eqnshift@=\dimen156
+\alignsep@=\dimen157
+\tagshift@=\dimen158
+\tagwidth@=\dimen159
+\totwidth@=\dimen160
+\lineht@=\dimen161
+\@envbody=\toks26
+\multlinegap=\skip52
+\multlinetaggap=\skip53
+\mathdisplay@stack=\toks27
+LaTeX Info: Redefining \[ on input line 2953.
+LaTeX Info: Redefining \] on input line 2954.
+)
+(d:/Aplikacije/TexLive/install/texlive/2024/texmf-dist/tex/latex/caption/captio
+n.sty
+Package: caption 2023/08/05 v3.6o Customizing captions (AR)
+
+(d:/Aplikacije/TexLive/install/texlive/2024/texmf-dist/tex/latex/caption/captio
+n3.sty
+Package: caption3 2023/07/31 v2.4d caption3 kernel (AR)
+\caption@tempdima=\dimen162
+\captionmargin=\dimen163
+\caption@leftmargin=\dimen164
+\caption@rightmargin=\dimen165
+\caption@width=\dimen166
+\caption@indent=\dimen167
+\caption@parindent=\dimen168
+\caption@hangindent=\dimen169
+Package caption Info: Standard document class detected.
+)
+\c@caption@flags=\count293
+\c@continuedfloat=\count294
+)
+(d:/Aplikacije/TexLive/install/texlive/2024/texmf-dist/tex/latex/base/ifthen.st
+y
+Package: ifthen 2024/03/16 v1.1e Standard LaTeX ifthen package (DPC)
+) (d:/Aplikacije/TexLive/install/texlive/2024/texmf-dist/tex/latex/url/url.sty
+\Urlmuskip=\muskip18
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+)
+(d:/Aplikacije/TexLive/install/texlive/2024/texmf-dist/tex/latex/enumitem/enumi
+tem.sty
+Package: enumitem 2019/06/20 v3.9 Customized lists
+\labelindent=\skip54
+\enit@outerparindent=\dimen170
+\enit@toks=\toks28
+\enit@inbox=\box54
+\enit@count@id=\count295
+\enitdp@description=\count296
+)
+(d:/Aplikacije/TexLive/install/texlive/2024/texmf-dist/tex/latex/titlesec/title
+sec.sty
+Package: titlesec 2023/10/27 v2.16 Sectioning titles
+\ttl@box=\box55
+\beforetitleunit=\skip55
+\aftertitleunit=\skip56
+\ttl@plus=\dimen171
+\ttl@minus=\dimen172
+\ttl@toksa=\toks29
+\titlewidth=\dimen173
+\titlewidthlast=\dimen174
+\titlewidthfirst=\dimen175
+)
+(d:/Aplikacije/TexLive/install/texlive/2024/texmf-dist/tex/latex/tools/tabularx
+.sty
+Package: tabularx 2023/12/11 v2.12a `tabularx' package (DPC)
+
+(d:/Aplikacije/TexLive/install/texlive/2024/texmf-dist/tex/latex/tools/array.st
+y
+Package: array 2024/06/14 v2.6d Tabular extension package (FMi)
+\col@sep=\dimen176
+\ar@mcellbox=\box56
+\extrarowheight=\dimen177
+\NC@list=\toks30
+\extratabsurround=\skip57
+\backup@length=\skip58
+\ar@cellbox=\box57
+)
+\TX@col@width=\dimen178
+\TX@old@table=\dimen179
+\TX@old@col=\dimen180
+\TX@target=\dimen181
+\TX@delta=\dimen182
+\TX@cols=\count297
+\TX@ftn=\toks31
+)
+(d:/Aplikacije/TexLive/install/texlive/2024/texmf-dist/tex/latex/fancyhdr/fancy
+hdr.sty
+Package: fancyhdr 2024/07/23 v4.3.1 Extensive control of page headers and foote
+rs
+\f@nch@headwidth=\skip59
+\f@nch@O@elh=\skip60
+\f@nch@O@erh=\skip61
+\f@nch@O@olh=\skip62
+\f@nch@O@orh=\skip63
+\f@nch@O@elf=\skip64
+\f@nch@O@erf=\skip65
+\f@nch@O@olf=\skip66
+\f@nch@O@orf=\skip67
+)
+(d:/Aplikacije/TexLive/install/texlive/2024/texmf-dist/tex/latex/chngcntr/chngc
+ntr.sty
+Package: chngcntr 2018/04/09 v1.1a change counter resetting
+Package chngcntr Info: \counterwithout already defined.
+(chngcntr)             Quitting chngcntr on input line 21.
+)
+(d:/Aplikacije/TexLive/install/texlive/2024/texmf-dist/tex/latex/xcolor/xcolor.
+sty
+Package: xcolor 2023/11/15 v3.01 LaTeX color extensions (UK)
+
+(d:/Aplikacije/TexLive/install/texlive/2024/texmf-dist/tex/latex/graphics-cfg/c
+olor.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package xcolor Info: Driver file: pdftex.def on input line 274.
+
+(d:/Aplikacije/TexLive/install/texlive/2024/texmf-dist/tex/latex/graphics/mathc
+olor.ltx)
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1350.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1354.
+Package xcolor Info: Model `RGB' extended on input line 1366.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1368.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1369.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1370.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1371.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1372.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1373.
+)
+(d:/Aplikacije/TexLive/install/texlive/2024/texmf-dist/tex/latex/colortbl/color
+tbl.sty
+Package: colortbl 2024/07/06 v1.0i Color table columns (DPC)
+\everycr=\toks32
+\minrowclearance=\skip68
+\rownum=\count298
+)
+(d:/Aplikacije/TexLive/install/texlive/2024/texmf-dist/tex/latex/listings/listi
+ngs.sty
+\lst@mode=\count299
+\lst@gtempboxa=\box58
+\lst@token=\toks33
+\lst@length=\count300
+\lst@currlwidth=\dimen183
+\lst@column=\count301
+\lst@pos=\count302
+\lst@lostspace=\dimen184
+\lst@width=\dimen185
+\lst@newlines=\count303
+\lst@lineno=\count304
+\lst@maxwidth=\dimen186
+
+(d:/Aplikacije/TexLive/install/texlive/2024/texmf-dist/tex/latex/listings/lstpa
+tch.sty
+File: lstpatch.sty 2024/05/25 1.10b (Carsten Heinz)
+)
+(d:/Aplikacije/TexLive/install/texlive/2024/texmf-dist/tex/latex/listings/lstmi
+sc.sty
+File: lstmisc.sty 2024/05/25 1.10b (Carsten Heinz)
+\c@lstnumber=\count305
+\lst@skipnumbers=\count306
+\lst@framebox=\box59
+)
+(d:/Aplikacije/TexLive/install/texlive/2024/texmf-dist/tex/latex/listings/listi
+ngs.cfg
+File: listings.cfg 2024/05/25 1.10b listings configuration
+))
+Package: listings 2024/05/25 1.10b (Carsten Heinz)
+
+(d:/Aplikacije/TexLive/install/texlive/2024/texmf-dist/tex/latex/psnfss/times.s
+ty
+Package: times 2020/03/25 PSNFSS-v9.3 (SPQR) 
+)
+(d:/Aplikacije/TexLive/install/texlive/2024/texmf-dist/tex/latex/psnfss/courier
+.sty
+Package: courier 2020/03/25 PSNFSS-v9.3 (WaS) 
+)
+(d:/Aplikacije/TexLive/install/texlive/2024/texmf-dist/tex/latex/biblatex/bibla
+tex.sty
+Package: biblatex 2024/03/21 v3.20 programmable bibliographies (PK/MW)
+
+(d:/Aplikacije/TexLive/install/texlive/2024/texmf-dist/tex/generic/pdftexcmds/p
+dftexcmds.sty
+Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO
+)
+
+(d:/Aplikacije/TexLive/install/texlive/2024/texmf-dist/tex/generic/infwarerr/in
+fwarerr.sty
+Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
+)
+(d:/Aplikacije/TexLive/install/texlive/2024/texmf-dist/tex/generic/ltxcmds/ltxc
+mds.sty
+Package: ltxcmds 2023-12-04 v1.26 LaTeX kernel commands for general use (HO)
+)
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+)
+(d:/Aplikacije/TexLive/install/texlive/2024/texmf-dist/tex/latex/kvoptions/kvop
+tions.sty
+Package: kvoptions 2022-06-15 v3.15 Key value format for package options (HO)
+
+(d:/Aplikacije/TexLive/install/texlive/2024/texmf-dist/tex/latex/kvsetkeys/kvse
+tkeys.sty
+Package: kvsetkeys 2022-10-05 v1.19 Key value parser (HO)
+))
+(d:/Aplikacije/TexLive/install/texlive/2024/texmf-dist/tex/latex/logreq/logreq.
+sty
+Package: logreq 2010/08/04 v1.0 xml request logger
+\lrq@indent=\count307
+
+(d:/Aplikacije/TexLive/install/texlive/2024/texmf-dist/tex/latex/logreq/logreq.
+def
+File: logreq.def 2010/08/04 v1.0 logreq spec v1.0
+))
+\c@tabx@nest=\count308
+\c@listtotal=\count309
+\c@listcount=\count310
+\c@liststart=\count311
+\c@liststop=\count312
+\c@citecount=\count313
+\c@citetotal=\count314
+\c@multicitecount=\count315
+\c@multicitetotal=\count316
+\c@instcount=\count317
+\c@maxnames=\count318
+\c@minnames=\count319
+\c@maxitems=\count320
+\c@minitems=\count321
+\c@citecounter=\count322
+\c@maxcitecounter=\count323
+\c@savedcitecounter=\count324
+\c@uniquelist=\count325
+\c@uniquename=\count326
+\c@refsection=\count327
+\c@refsegment=\count328
+\c@maxextratitle=\count329
+\c@maxextratitleyear=\count330
+\c@maxextraname=\count331
+\c@maxextradate=\count332
+\c@maxextraalpha=\count333
+\c@abbrvpenalty=\count334
+\c@highnamepenalty=\count335
+\c@lownamepenalty=\count336
+\c@maxparens=\count337
+\c@parenlevel=\count338
+\blx@tempcnta=\count339
+\blx@tempcntb=\count340
+\blx@tempcntc=\count341
+\c@blx@maxsection=\count342
+\blx@maxsegment@0=\count343
+\blx@notetype=\count344
+\blx@parenlevel@text=\count345
+\blx@parenlevel@foot=\count346
+\blx@sectionciteorder@0=\count347
+\blx@sectionciteorderinternal@0=\count348
+\blx@entrysetcounter=\count349
+\blx@biblioinstance=\count350
+\labelnumberwidth=\skip69
+\labelalphawidth=\skip70
+\biblabelsep=\skip71
+\bibitemsep=\skip72
+\bibnamesep=\skip73
+\bibinitsep=\skip74
+\bibparsep=\skip75
+\bibhang=\skip76
+\blx@bcfin=\read3
+\blx@bcfout=\write3
+\blx@langwohyphens=\language90
+\c@mincomprange=\count351
+\c@maxcomprange=\count352
+\c@mincompwidth=\count353
+Package biblatex Info: Trying to load biblatex default data model...
+Package biblatex Info: ... file 'blx-dm.def' found.
+
+(d:/Aplikacije/TexLive/install/texlive/2024/texmf-dist/tex/latex/biblatex/blx-d
+m.def
+File: blx-dm.def 2024/03/21 v3.20 biblatex datamodel (PK/MW)
+)
+Package biblatex Info: Trying to load biblatex style data model...
+Package biblatex Info: ... file 'ieee.dbx' not found.
+Package biblatex Info: Trying to load biblatex custom data model...
+Package biblatex Info: ... file 'biblatex-dm.cfg' not found.
+\c@afterword=\count354
+\c@savedafterword=\count355
+\c@annotator=\count356
+\c@savedannotator=\count357
+\c@author=\count358
+\c@savedauthor=\count359
+\c@bookauthor=\count360
+\c@savedbookauthor=\count361
+\c@commentator=\count362
+\c@savedcommentator=\count363
+\c@editor=\count364
+\c@savededitor=\count365
+\c@editora=\count366
+\c@savededitora=\count367
+\c@editorb=\count368
+\c@savededitorb=\count369
+\c@editorc=\count370
+\c@savededitorc=\count371
+\c@foreword=\count372
+\c@savedforeword=\count373
+\c@holder=\count374
+\c@savedholder=\count375
+\c@introduction=\count376
+\c@savedintroduction=\count377
+\c@namea=\count378
+\c@savednamea=\count379
+\c@nameb=\count380
+\c@savednameb=\count381
+\c@namec=\count382
+\c@savednamec=\count383
+\c@translator=\count384
+\c@savedtranslator=\count385
+\c@shortauthor=\count386
+\c@savedshortauthor=\count387
+\c@shorteditor=\count388
+\c@savedshorteditor=\count389
+\c@labelname=\count390
+\c@savedlabelname=\count391
+\c@institution=\count392
+\c@savedinstitution=\count393
+\c@lista=\count394
+\c@savedlista=\count395
+\c@listb=\count396
+\c@savedlistb=\count397
+\c@listc=\count398
+\c@savedlistc=\count399
+\c@listd=\count400
+\c@savedlistd=\count401
+\c@liste=\count402
+\c@savedliste=\count403
+\c@listf=\count404
+\c@savedlistf=\count405
+\c@location=\count406
+\c@savedlocation=\count407
+\c@organization=\count408
+\c@savedorganization=\count409
+\c@origlocation=\count410
+\c@savedoriglocation=\count411
+\c@origpublisher=\count412
+\c@savedorigpublisher=\count413
+\c@publisher=\count414
+\c@savedpublisher=\count415
+\c@language=\count416
+\c@savedlanguage=\count417
+\c@origlanguage=\count418
+\c@savedoriglanguage=\count419
+\c@pageref=\count420
+\c@savedpageref=\count421
+\shorthandwidth=\skip77
+\shortjournalwidth=\skip78
+\shortserieswidth=\skip79
+\shorttitlewidth=\skip80
+\shortauthorwidth=\skip81
+\shorteditorwidth=\skip82
+\locallabelnumberwidth=\skip83
+\locallabelalphawidth=\skip84
+\localshorthandwidth=\skip85
+\localshortjournalwidth=\skip86
+\localshortserieswidth=\skip87
+\localshorttitlewidth=\skip88
+\localshortauthorwidth=\skip89
+\localshorteditorwidth=\skip90
+Package biblatex Info: Trying to load compatibility code...
+Package biblatex Info: ... file 'blx-compat.def' found.
+
+(d:/Aplikacije/TexLive/install/texlive/2024/texmf-dist/tex/latex/biblatex/blx-c
+ompat.def
+File: blx-compat.def 2024/03/21 v3.20 biblatex compatibility (PK/MW)
+)
+Package biblatex Info: Trying to load generic definitions...
+Package biblatex Info: ... file 'biblatex.def' found.
+
+(d:/Aplikacije/TexLive/install/texlive/2024/texmf-dist/tex/latex/biblatex/bibla
+tex.def
+File: biblatex.def 2024/03/21 v3.20 biblatex compatibility (PK/MW)
+\c@textcitecount=\count422
+\c@textcitetotal=\count423
+\c@textcitemaxnames=\count424
+\c@biburlbigbreakpenalty=\count425
+\c@biburlbreakpenalty=\count426
+\c@biburlnumpenalty=\count427
+\c@biburlucpenalty=\count428
+\c@biburllcpenalty=\count429
+\biburlbigskip=\muskip19
+\biburlnumskip=\muskip20
+\biburlucskip=\muskip21
+\biburllcskip=\muskip22
+\c@smartand=\count430
+)
+Package biblatex Info: Trying to load bibliography style 'ieee'...
+Package biblatex Info: ... file 'ieee.bbx' found.
+
+(d:/Aplikacije/TexLive/install/texlive/2024/texmf-dist/tex/latex/biblatex-ieee/
+ieee.bbx
+File: ieee.bbx 2024/08/14 v1.3g biblatex bibliography style
+Package biblatex Info: Trying to load bibliography style 'numeric-comp'...
+Package biblatex Info: ... file 'numeric-comp.bbx' found.
+
+(d:/Aplikacije/TexLive/install/texlive/2024/texmf-dist/tex/latex/biblatex/bbx/n
+umeric-comp.bbx
+File: numeric-comp.bbx 2024/03/21 v3.20 biblatex bibliography style (PK/MW)
+Package biblatex Info: Trying to load bibliography style 'numeric'...
+Package biblatex Info: ... file 'numeric.bbx' found.
+
+(d:/Aplikacije/TexLive/install/texlive/2024/texmf-dist/tex/latex/biblatex/bbx/n
+umeric.bbx
+File: numeric.bbx 2024/03/21 v3.20 biblatex bibliography style (PK/MW)
+Package biblatex Info: Trying to load bibliography style 'standard'...
+Package biblatex Info: ... file 'standard.bbx' found.
+
+(d:/Aplikacije/TexLive/install/texlive/2024/texmf-dist/tex/latex/biblatex/bbx/s
+tandard.bbx
+File: standard.bbx 2024/03/21 v3.20 biblatex bibliography style (PK/MW)
+\c@bbx:relatedcount=\count431
+\c@bbx:relatedtotal=\count432
+))))
+Package biblatex Info: Trying to load citation style 'ieee'...
+Package biblatex Info: ... file 'ieee.cbx' found.
+
+(d:/Aplikacije/TexLive/install/texlive/2024/texmf-dist/tex/latex/biblatex-ieee/
+ieee.cbx
+File: ieee.cbx 2024/08/14 v1.3g biblatex citation style
+Package biblatex Info: Trying to load citation style 'numeric-comp'...
+Package biblatex Info: ... file 'numeric-comp.cbx' found.
+
+(d:/Aplikacije/TexLive/install/texlive/2024/texmf-dist/tex/latex/biblatex/cbx/n
+umeric-comp.cbx
+File: numeric-comp.cbx 2024/03/21 v3.20 biblatex citation style (PK/MW)
+\c@cbx@tempcnta=\count433
+\c@cbx@tempcntb=\count434
+\c@cbx@tempcntc=\count435
+\c@cbx@tempcntd=\count436
+Package biblatex Info: Redefining '\cite'.
+Package biblatex Info: Redefining '\parencite'.
+Package biblatex Info: Redefining '\footcite'.
+Package biblatex Info: Redefining '\footcitetext'.
+Package biblatex Info: Redefining '\smartcite'.
+Package biblatex Info: Redefining '\supercite'.
+Package biblatex Info: Redefining '\textcite'.
+Package biblatex Info: Redefining '\textcites'.
+Package biblatex Info: Redefining '\cites'.
+Package biblatex Info: Redefining '\parencites'.
+Package biblatex Info: Redefining '\smartcites'.
+)
+Package biblatex Info: Redefining '\cite'.
+Package biblatex Info: Redefining '\supercite'.
+Package biblatex Info: Redefining '\cites'.
+)
+Package biblatex Info: Trying to load configuration file...
+Package biblatex Info: ... file 'biblatex.cfg' found.
+
+(d:/Aplikacije/TexLive/install/texlive/2024/texmf-dist/tex/latex/biblatex/bibla
+tex.cfg
+File: biblatex.cfg 
+)
+Package biblatex Info: Input encoding 'utf8' detected.
+Package biblatex Info: Document encoding is UTF8 ....
+
+(d:/Aplikacije/TexLive/install/texlive/2024/texmf-dist/tex/latex/l3kernel/expl3
+.sty
+Package: expl3 2024-07-20 L3 programming layer (loader) 
+
+(d:/Aplikacije/TexLive/install/texlive/2024/texmf-dist/tex/latex/l3backend/l3ba
+ckend-pdftex.def
+File: l3backend-pdftex.def 2024-05-08 L3 backend support: PDF output (pdfTeX)
+\l__color_backend_stack_int=\count437
+\l__pdf_internal_box=\box60
+))
+Package biblatex Info: ... and expl3
+(biblatex)             2024-07-20 L3 programming layer (loader) 
+(biblatex)             is new enough (at least 2020/04/06),
+(biblatex)             setting 'casechanger=expl3'.
+
+(d:/Aplikacije/TexLive/install/texlive/2024/texmf-dist/tex/latex/biblatex/blx-c
+ase-expl3.sty
+(d:/Aplikacije/TexLive/install/texlive/2024/texmf-dist/tex/latex/l3packages/xpa
+rse/xparse.sty
+Package: xparse 2024-05-08 L3 Experimental document command parser
+)
+Package: blx-case-expl3 2024/03/21 v3.20 expl3 case changing code for biblatex
+))
+(d:/Aplikacije/TexLive/install/texlive/2024/texmf-dist/tex/latex/float/float.st
+y
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count438
+\float@exts=\toks34
+\float@box=\box61
+\@float@everytoks=\toks35
+\@floatcapt=\box62
+)
+(d:/Aplikacije/TexLive/install/texlive/2024/texmf-dist/tex/latex/comment/commen
+t.sty
+\CommentStream=\write4
+ Excluding comment 'comment')
+(d:/Aplikacije/TexLive/install/texlive/2024/texmf-dist/tex/latex/tools/indentfi
+rst.sty
+Package: indentfirst 2023/07/02 v1.03 Indent first paragraph (DPC)
+)
+(d:/Aplikacije/TexLive/install/texlive/2024/texmf-dist/tex/latex/wrapfig/wrapfi
+g.sty
+\wrapoverhang=\dimen187
+\WF@size=\dimen188
+\c@WF@wrappedlines=\count439
+\WF@box=\box63
+\WF@everypar=\toks36
+Package: wrapfig 2003/01/31  v 3.6
+)
+(d:/Aplikacije/TexLive/install/texlive/2024/texmf-dist/tex/latex/setspace/setsp
+ace.sty
+Package: setspace 2022/12/04 v6.7b set line spacing
+)
+(d:/Aplikacije/TexLive/install/texlive/2024/texmf-dist/tex/latex/hyperref/hyper
+ref.sty
+Package: hyperref 2024-07-10 v7.01j Hypertext links for LaTeX
+
+(d:/Aplikacije/TexLive/install/texlive/2024/texmf-dist/tex/generic/kvdefinekeys
+/kvdefinekeys.sty
+Package: kvdefinekeys 2019-12-19 v1.6 Define keys (HO)
+)
+(d:/Aplikacije/TexLive/install/texlive/2024/texmf-dist/tex/generic/pdfescape/pd
+fescape.sty
+Package: pdfescape 2019/12/09 v1.15 Implements pdfTeX's escape features (HO)
+)
+(d:/Aplikacije/TexLive/install/texlive/2024/texmf-dist/tex/latex/hycolor/hycolo
+r.sty
+Package: hycolor 2020-01-27 v1.10 Color options for hyperref/bookmark (HO)
+)
+(d:/Aplikacije/TexLive/install/texlive/2024/texmf-dist/tex/latex/hyperref/namer
+ef.sty
+Package: nameref 2023-11-26 v2.56 Cross-referencing by name of section
+
+(d:/Aplikacije/TexLive/install/texlive/2024/texmf-dist/tex/latex/refcount/refco
+unt.sty
+Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
+)
+(d:/Aplikacije/TexLive/install/texlive/2024/texmf-dist/tex/generic/gettitlestri
+ng/gettitlestring.sty
+Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
+)
+\c@section@level=\count440
+)
+(d:/Aplikacije/TexLive/install/texlive/2024/texmf-dist/tex/generic/stringenc/st
+ringenc.sty
+Package: stringenc 2019/11/29 v1.12 Convert strings between diff. encodings (HO
+)
+)
+\@linkdim=\dimen189
+\Hy@linkcounter=\count441
+\Hy@pagecounter=\count442
+
+(d:/Aplikacije/TexLive/install/texlive/2024/texmf-dist/tex/latex/hyperref/pd1en
+c.def
+File: pd1enc.def 2024-07-10 v7.01j Hyperref: PDFDocEncoding definition (HO)
+Now handling font encoding PD1 ...
+... no UTF-8 mapping file for font encoding PD1
+)
+(d:/Aplikacije/TexLive/install/texlive/2024/texmf-dist/tex/generic/intcalc/intc
+alc.sty
+Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
+)
+\Hy@SavedSpaceFactor=\count443
+
+(d:/Aplikacije/TexLive/install/texlive/2024/texmf-dist/tex/latex/hyperref/puenc
+.def
+File: puenc.def 2024-07-10 v7.01j Hyperref: PDF Unicode definition (HO)
+Now handling font encoding PU ...
+... no UTF-8 mapping file for font encoding PU
+)
+Package hyperref Info: Option `bookmarks' set `true' on input line 4040.
+Package hyperref Info: Option `bookmarksnumbered' set `true' on input line 4040
+.
+Package hyperref Info: Option `colorlinks' set `false' on input line 4040.
+Package hyperref Info: Option `unicode' set `true' on input line 4040.
+Package hyperref Info: Hyper figures OFF on input line 4157.
+Package hyperref Info: Link nesting OFF on input line 4162.
+Package hyperref Info: Hyper index ON on input line 4165.
+Package hyperref Info: Plain pages OFF on input line 4172.
+Package hyperref Info: Backreferencing OFF on input line 4177.
+Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
+Package hyperref Info: Bookmarks ON on input line 4424.
+\c@Hy@tempcnt=\count444
+LaTeX Info: Redefining \url on input line 4763.
+\XeTeXLinkMargin=\dimen190
+
+(d:/Aplikacije/TexLive/install/texlive/2024/texmf-dist/tex/generic/bitset/bitse
+t.sty
+Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
+
+(d:/Aplikacije/TexLive/install/texlive/2024/texmf-dist/tex/generic/bigintcalc/b
+igintcalc.sty
+Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO
+)
+))
+\Fld@menulength=\count445
+\Field@Width=\dimen191
+\Fld@charsize=\dimen192
+Package hyperref Info: Hyper figures OFF on input line 6042.
+Package hyperref Info: Link nesting OFF on input line 6047.
+Package hyperref Info: Hyper index ON on input line 6050.
+Package hyperref Info: backreferencing OFF on input line 6057.
+Package hyperref Info: Link coloring OFF on input line 6062.
+Package hyperref Info: Link coloring with OCG OFF on input line 6067.
+Package hyperref Info: PDF/A mode OFF on input line 6072.
+
+(d:/Aplikacije/TexLive/install/texlive/2024/texmf-dist/tex/latex/base/atbegshi-
+ltx.sty
+Package: atbegshi-ltx 2021/01/10 v1.0c Emulation of the original atbegshi
+package with kernel methods
+)
+\Hy@abspage=\count446
+\c@Item=\count447
+\c@Hfootnote=\count448
+)
+Package hyperref Info: Driver: hpdftex.
+
+(d:/Aplikacije/TexLive/install/texlive/2024/texmf-dist/tex/latex/hyperref/hpdft
+ex.def
+File: hpdftex.def 2024-07-10 v7.01j Hyperref driver for pdfTeX
+
+(d:/Aplikacije/TexLive/install/texlive/2024/texmf-dist/tex/latex/base/atveryend
+-ltx.sty
+Package: atveryend-ltx 2020/08/19 v1.0a Emulation of the original atveryend pac
+kage
+with kernel methods
+)
+\Fld@listcount=\count449
+\c@bookmark@seq@number=\count450
+
+(d:/Aplikacije/TexLive/install/texlive/2024/texmf-dist/tex/latex/rerunfilecheck
+/rerunfilecheck.sty
+Package: rerunfilecheck 2022-07-10 v1.10 Rerun checks for auxiliary files (HO)
+
+(d:/Aplikacije/TexLive/install/texlive/2024/texmf-dist/tex/generic/uniquecounte
+r/uniquecounter.sty
+Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
+)
+Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
+85.
+)
+\Hy@SectionHShift=\skip91
+))
+(d:/Aplikacije/TexLive/install/texlive/2024/texmf-dist/tex/latex/lipsum/lipsum.
+sty
+(d:/Aplikacije/TexLive/install/texlive/2024/texmf-dist/tex/latex/l3packages/l3k
+eys2e/l3keys2e.sty
+Package: l3keys2e 2024-05-08 LaTeX2e option processing using LaTeX3 keys
+)
+Package: lipsum 2021-09-20 v2.7 150 paragraphs of Lorem Ipsum dummy text
+\g__lipsum_par_int=\count451
+\l__lipsum_a_int=\count452
+\l__lipsum_b_int=\count453
+
+(d:/Aplikacije/TexLive/install/texlive/2024/texmf-dist/tex/latex/lipsum/lipsum.
+ltd.tex))
+   defining Unicode char U+0140 (decimal 320)
+
+(d:/Aplikacije/TexLive/install/texlive/2024/texmf-dist/tex/latex/minted/minted.
+sty
+Package: minted 2023/12/18 v2.9 Yet another Pygments shim for LaTeX
+
+(d:/Aplikacije/TexLive/install/texlive/2024/texmf-dist/tex/latex/fvextra/fvextr
+a.sty
+Package: fvextra 2024/05/16 v1.7.0 fvextra - extensions and patches for fancyvr
+b
+
+(d:/Aplikacije/TexLive/install/texlive/2024/texmf-dist/tex/latex/fancyvrb/fancy
+vrb.sty
+Package: fancyvrb 2024/01/20 4.5c verbatim text (tvz,hv)
+\FV@CodeLineNo=\count454
+\FV@InFile=\read4
+\FV@TabBox=\box64
+\c@FancyVerbLine=\count455
+\FV@StepNumber=\count456
+\FV@OutFile=\write5
+)
+(d:/Aplikacije/TexLive/install/texlive/2024/texmf-dist/tex/latex/upquote/upquot
+e.sty
+Package: upquote 2012/04/19 v1.3 upright-quote and grave-accent glyphs in verba
+tim
+
+(d:/Aplikacije/TexLive/install/texlive/2024/texmf-dist/tex/latex/base/textcomp.
+sty
+Package: textcomp 2024/04/24 v2.1b Standard LaTeX package
+))
+(d:/Aplikacije/TexLive/install/texlive/2024/texmf-dist/tex/latex/lineno/lineno.
+sty
+Package: lineno 2023/05/20 line numbers on paragraphs v5.3
+\linenopenalty=\count457
+\output=\toks37
+\linenoprevgraf=\count458
+\linenumbersep=\dimen193
+\linenumberwidth=\dimen194
+\c@linenumber=\count459
+\c@pagewiselinenumber=\count460
+\c@LN@truepage=\count461
+\c@internallinenumber=\count462
+\c@internallinenumbers=\count463
+\quotelinenumbersep=\dimen195
+\bframerule=\dimen196
+\bframesep=\dimen197
+\bframebox=\box65
+\linenoamsmath@ams@eqpen=\count464
+
+
+LaTeX Warning: Command \@parboxrestore  has changed.
+               Check if current package is valid.
+
+LaTeX Info: Redefining \\ on input line 3180.
+)
+
+Package fvextra Warning: csquotes should be loaded after fvextra, to avoid a wa
+rning from the lineno package on input line 36.
+
+\c@FancyVerbWriteLine=\count465
+\c@FancyVerbBufferIndex=\count466
+\c@FancyVerbBufferLength=\count467
+\c@FancyVerbBufferLine=\count468
+\c@FV@oldbufferlength=\count469
+\c@FV@TrueTabGroupLevel=\count470
+\c@FV@TrueTabCounter=\count471
+\FV@TabBox@Group=\box66
+\FV@TmpLength=\skip92
+\c@FV@HighlightLinesStart=\count472
+\c@FV@HighlightLinesStop=\count473
+\FV@LoopCount=\count474
+\FV@NCharsBox=\box67
+\FV@BreakIndent=\dimen198
+\FV@BreakIndentNChars=\count475
+\FV@BreakSymbolSepLeft=\dimen199
+\FV@BreakSymbolSepLeftNChars=\count476
+\FV@BreakSymbolSepRight=\dimen256
+\FV@BreakSymbolSepRightNChars=\count477
+\FV@BreakSymbolIndentLeft=\dimen257
+\FV@BreakSymbolIndentLeftNChars=\count478
+\FV@BreakSymbolIndentRight=\dimen258
+\FV@BreakSymbolIndentRightNChars=\count479
+\c@FancyVerbLineBreakLast=\count480
+\FV@LineBox=\box68
+\FV@LineIndentBox=\box69
+\c@FV@BreakBufferDepth=\count481
+\FV@LineWidth=\dimen259
+)
+(d:/Aplikacije/TexLive/install/texlive/2024/texmf-dist/tex/latex/tools/shellesc
+.sty
+Package: shellesc 2023/07/08 v1.0d unified shell escape interface for LaTeX
+Package shellesc Info: Unrestricted shell escape enabled on input line 75.
+)
+(d:/Aplikacije/TexLive/install/texlive/2024/texmf-dist/tex/latex/ifplatform/ifp
+latform.sty
+Package: ifplatform 2017/10/13 v0.4a Testing for the operating system
+
+(d:/Aplikacije/TexLive/install/texlive/2024/texmf-dist/tex/generic/catchfile/ca
+tchfile.sty
+Package: catchfile 2019/12/09 v1.8 Catch the contents of a file (HO)
+
+(d:/Aplikacije/TexLive/install/texlive/2024/texmf-dist/tex/generic/etexcmds/ete
+xcmds.sty
+Package: etexcmds 2019/12/15 v1.7 Avoid name clashes with e-TeX commands (HO)
+))
+(d:/Aplikacije/TexLive/install/texlive/2024/texmf-dist/tex/generic/iftex/ifluat
+ex.sty
+Package: ifluatex 2019/10/25 v1.5 ifluatex legacy package. Use iftex instead.
+))
+(d:/Aplikacije/TexLive/install/texlive/2024/texmf-dist/tex/generic/xstring/xstr
+ing.sty
+(d:/Aplikacije/TexLive/install/texlive/2024/texmf-dist/tex/generic/xstring/xstr
+ing.tex
+\xs_counta=\count482
+\xs_countb=\count483
+)
+Package: xstring 2023/08/22 v1.86 String manipulations (CT)
+)
+(d:/Aplikacije/TexLive/install/texlive/2024/texmf-dist/tex/latex/framed/framed.
+sty
+Package: framed 2011/10/22 v 0.96: framed or shaded text with page breaks
+\OuterFrameSep=\skip93
+\fb@frw=\dimen260
+\fb@frh=\dimen261
+\FrameRule=\dimen262
+\FrameSep=\dimen263
+)
+\minted@appexistsfile=\read5
+\minted@bgbox=\box70
+\minted@code=\write6
+\c@minted@FancyVerbLineTemp=\count484
+\c@minted@pygmentizecounter=\count485
+\@float@every@listing=\toks38
+\c@listing=\count486
+)
+runsystem(if not exist _minted-vizualizacijaEksplozijaKoristenjemCesticnogModel
+a mkdir _minted-vizualizacijaEksplozijaKoristenjemCesticnogModela)...executed.
+
+
+(d:/Aplikacije/TexLive/install/texlive/2024/texmf-dist/tex/latex/bera/beramono.
+sty
+Package: beramono 2004/01/31 (WaS)
+)
+Package csquotes Info: Checking for multilingual support...
+Package csquotes Info: ... found 'babel' package.
+Package csquotes Info: Adjusting default style.
+Package csquotes Info: Redefining alias 'default' -> 'croatian'.
+runsystem(for ^%i in (pygmentize.exe pygmentize.bat pygmentize.cmd) do set > vi
+zualizacijaEksplozijaKoristenjemCesticnogModela.aex <nul: /p x=^%~$PATH:i>> viz
+ualizacijaEksplozijaKoristenjemCesticnogModela.aex)...executed.
+
+runsystem(del vizualizacijaEksplozijaKoristenjemCesticnogModela.aex)...executed
+.
+
+LaTeX Font Info:    Trying to load font information for T1+phv on input line 29
+.
+
+(d:/Aplikacije/TexLive/install/texlive/2024/texmf-dist/tex/latex/psnfss/t1phv.f
+d
+File: t1phv.fd 2020/03/25 scalable font definitions for T1/phv.
+) (./vizualizacijaEksplozijaKoristenjemCesticnogModela.aux)
+\openout1 = `vizualizacijaEksplozijaKoristenjemCesticnogModela.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+*geometry* verbose mode - [ preamble ] result:
+* driver: pdftex
+* paper: a4paper
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: 
+* h-part:(L,W,R)=(71.13188pt, 455.24411pt, 71.13188pt)
+* v-part:(T,H,B)=(71.13188pt, 702.78308pt, 71.13188pt)
+* \paperwidth=597.50787pt
+* \paperheight=845.04684pt
+* \textwidth=455.24411pt
+* \textheight=702.78308pt
+* \oddsidemargin=-1.1381pt
+* \evensidemargin=-1.1381pt
+* \topmargin=-38.1381pt
+* \headheight=12.0pt
+* \headsep=25.0pt
+* \topskip=11.0pt
+* \footskip=30.0pt
+* \marginparwidth=59.0pt
+* \marginparsep=10.0pt
+* \columnsep=10.0pt
+* \skip\footins=10.0pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidefalse
+* \@mparswitchfalse
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+
+(d:/Aplikacije/TexLive/install/texlive/2024/texmf-dist/tex/context/base/mkii/su
+pp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count487
+\scratchdimen=\dimen264
+\scratchbox=\box71
+\nofMPsegments=\count488
+\nofMParguments=\count489
+\everyMPshowfont=\toks39
+\MPscratchCnt=\count490
+\MPscratchDim=\dimen265
+\MPnumerator=\count491
+\makeMPintoPDFobject=\count492
+\everyMPtoPDFconversion=\toks40
+)
+(d:/Aplikacije/TexLive/install/texlive/2024/texmf-dist/tex/latex/epstopdf-pkg/e
+pstopdf-base.sty
+Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
+85.
+
+(d:/Aplikacije/TexLive/install/texlive/2024/texmf-dist/tex/latex/latexconfig/ep
+stopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
+))
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: float package is loaded.
+Package caption Info: hyperref package is loaded.
+Package caption Info: listings package is loaded.
+Package caption Info: wrapfig package is loaded.
+Package caption Info: End \AtBeginDocument code.
+\c@lstlisting=\count493
+Package biblatex Info: Trying to load language 'croatian'...
+Package biblatex Info: ... file 'croatian.lbx' found.
+
+(d:/Aplikacije/TexLive/install/texlive/2024/texmf-dist/tex/latex/biblatex/lbx/c
+roatian.lbx
+File: croatian.lbx 2024/03/21 v3.20 biblatex localization (PK/MW)
+)
+Package biblatex Info: Input encoding 'utf8' detected.
+Package biblatex Info: Automatic encoding selection.
+(biblatex)             Assuming data encoding 'utf8'.
+\openout3 = `vizualizacijaEksplozijaKoristenjemCesticnogModela.bcf'.
+
+Package biblatex Info: Trying to load bibliographic data...
+Package biblatex Info: ... file 'vizualizacijaEksplozijaKoristenjemCesticnogMod
+ela.bbl' found.
+ (./vizualizacijaEksplozijaKoristenjemCesticnogModela.bbl)
+Package biblatex Info: Reference section=0 on input line 29.
+Package biblatex Info: Reference segment=0 on input line 29.
+Package hyperref Info: Link coloring OFF on input line 29.
+
+(./vizualizacijaEksplozijaKoristenjemCesticnogModela.out)
+(./vizualizacijaEksplozijaKoristenjemCesticnogModela.out)
+\@outlinefile=\write7
+\openout7 = `vizualizacijaEksplozijaKoristenjemCesticnogModela.out'.
+
+
+
+[1
+
+{d:/Aplikacije/TexLive/install/texlive/2024/texmf-var/fonts/map/pdftex/updmap/p
+dftex.map}{d:/Aplikacije/TexLive/install/texlive/2024/texmf-dist/fonts/enc/dvip
+s/base/8r.enc}]
+
+[0]
+LaTeX Font Info:    Font shape `T1/phv/m/it' in size <10.95> not available
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 31.
+
+
+[1]
+
+[2] (./vizualizacijaEksplozijaKoristenjemCesticnogModela.toc
+LaTeX Font Info:    Trying to load font information for U+msa on input line 2.
+
+(d:/Aplikacije/TexLive/install/texlive/2024/texmf-dist/tex/latex/amsfonts/umsa.
+fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 2.
+
+(d:/Aplikacije/TexLive/install/texlive/2024/texmf-dist/tex/latex/amsfonts/umsb.
+fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+Overfull \hbox (1.29184pt too wide) detected at line 20
+ []\T1/phv/m/n/10.95 100
+ []
+
+
+Overfull \hbox (1.29184pt too wide) detected at line 21
+ []\T1/phv/m/n/10.95 100
+ []
+
+
+Overfull \hbox (1.29184pt too wide) detected at line 22
+ []\T1/phv/m/n/10.95 106
+ []
+
+
+Overfull \hbox (1.29184pt too wide) detected at line 23
+ []\T1/phv/m/n/10.95 110
+ []
+
+
+Overfull \hbox (1.29184pt too wide) detected at line 24
+ []\T1/phv/m/n/10.95 128
+ []
+
+
+Overfull \hbox (1.29184pt too wide) detected at line 25
+ []\T1/phv/m/n/10.95 131
+ []
+
+
+Overfull \hbox (1.29184pt too wide) detected at line 26
+ []\T1/phv/m/n/10.95 133
+ []
+
+)
+\tf@toc=\write8
+\openout8 = `vizualizacijaEksplozijaKoristenjemCesticnogModela.toc'.
+
+
+
+[3
+
+]
+Poglavlje 1.
+LaTeX Font Info:    Trying to load font information for T1+fvm on input line 44
+.
+(d:/Aplikacije/TexLive/install/texlive/2024/texmf-dist/tex/latex/bera/t1fvm.fd
+File: t1fvm.fd 2004/09/07 scalable font definitions for T1/fvm.
+)
+LaTeX Font Info:    Font shape `T1/fvm/m/n' will be
+(Font)              scaled to size 9.30756pt on input line 44.
+
+
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
+been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.45 
+      [1
+
+]
+
+[2]
+Poglavlje 2.
+\openout5 = `vizualizacijaEksplozijaKoristenjemCesticnogModela.pyg'.
+
+(./_minted-vizualizacijaEksplozijaKoristenjemCesticnogModela/default.pygstyle)
+(./_minted-vizualizacijaEksplozijaKoristenjemCesticnogModela/8AEA22A805274BD2F4
+16B71909B64FB1CD662BC72B5D9979E39935CD9DF421D8.pygtex
+
+[3
+
+]
+LaTeX Font Info:    Font shape `T1/fvm/m/it' in size <10.95> not available
+(Font)              Font shape `T1/fvm/m/sl' tried instead on input line 2.
+LaTeX Font Info:    Font shape `T1/fvm/m/sl' will be
+(Font)              scaled to size 9.30756pt on input line 2.
+LaTeX Font Info:    Font shape `T1/fvm/b/n' will be
+(Font)              scaled to size 9.30756pt on input line 3.
+)
+\openout5 = `vizualizacijaEksplozijaKoristenjemCesticnogModela.pyg'.
+
+
+(./_minted-vizualizacijaEksplozijaKoristenjemCesticnogModela/F6F142153ED03CA846
+BF54C0506100F2CD662BC72B5D9979E39935CD9DF421D8.pygtex)
+<slike/1_OsnovniCanvasTrokut.png, id=179, 503.8825pt x 503.8825pt>
+File: slike/1_OsnovniCanvasTrokut.png Graphic file (type png)
+<use slike/1_OsnovniCanvasTrokut.png>
+Package pdftex.def Info: slike/1_OsnovniCanvasTrokut.png  used on input line 11
+0.
+(pdftex.def)             Requested size: 409.71692pt x 409.71877pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 106--114
+
+ []
+
+
+
+[4]
+
+[5 <./slike/1_OsnovniCanvasTrokut.png>]
+<slike/2_LokalneKoordinateTrokut.png, id=197, 349.305pt x 284.56313pt>
+File: slike/2_LokalneKoordinateTrokut.png Graphic file (type png)
+<use slike/2_LokalneKoordinateTrokut.png>
+Package pdftex.def Info: slike/2_LokalneKoordinateTrokut.png  used on input lin
+e 126.
+(pdftex.def)             Requested size: 409.71692pt x 333.79724pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 122--130
+
+ []
+
+<slike/3_GlobalneKoordinateTrokuti.png, id=199, 709.2315pt x 690.1785pt>
+File: slike/3_GlobalneKoordinateTrokuti.png Graphic file (type png)
+<use slike/3_GlobalneKoordinateTrokuti.png>
+Package pdftex.def Info: slike/3_GlobalneKoordinateTrokuti.png  used on input l
+ine 136.
+(pdftex.def)             Requested size: 409.71692pt x 398.7136pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 132--140
+
+ []
+
+
+
+[6 <./slike/2_LokalneKoordinateTrokut.png>]
+<slike/4_ZaslonskeKoordinateCanvas.png, id=209, 503.8825pt x 503.8825pt>
+File: slike/4_ZaslonskeKoordinateCanvas.png Graphic file (type png)
+<use slike/4_ZaslonskeKoordinateCanvas.png>
+Package pdftex.def Info: slike/4_ZaslonskeKoordinateCanvas.png  used on input l
+ine 145.
+(pdftex.def)             Requested size: 409.71692pt x 409.71877pt.
+
+
+[7 <./slike/3_GlobalneKoordinateTrokuti.png>]
+
+[8 <./slike/4_ZaslonskeKoordinateCanvas.png>]
+<slike/5_GlobalniTrokutiUnutarZaslona.png, id=230, 606.76688pt x 595.47469pt>
+File: slike/5_GlobalniTrokutiUnutarZaslona.png Graphic file (type png)
+<use slike/5_GlobalniTrokutiUnutarZaslona.png>
+Package pdftex.def Info: slike/5_GlobalniTrokutiUnutarZaslona.png  used on inpu
+t line 187.
+(pdftex.def)             Requested size: 455.24411pt x 446.77754pt.
+<slike/6_SkaliraniGlobalniTrokutiUnutarZaslona.png, id=231, 593.96906pt x 510.4
+0688pt>
+File: slike/6_SkaliraniGlobalniTrokutiUnutarZaslona.png Graphic file (type png)
+
+<use slike/6_SkaliraniGlobalniTrokutiUnutarZaslona.png>
+Package pdftex.def Info: slike/6_SkaliraniGlobalniTrokutiUnutarZaslona.png  use
+d on input line 194.
+(pdftex.def)             Requested size: 409.71692pt x 352.08766pt.
+
+
+[9]
+
+[10 <./slike/5_GlobalniTrokutiUnutarZaslona.png>]
+<slike/7_TransformiraneGlobalneUZaslonske.png, id=251, 649.67719pt x 485.56406p
+t>
+File: slike/7_TransformiraneGlobalneUZaslonske.png Graphic file (type png)
+<use slike/7_TransformiraneGlobalneUZaslonske.png>
+Package pdftex.def Info: slike/7_TransformiraneGlobalneUZaslonske.png  used on 
+input line 205.
+(pdftex.def)             Requested size: 409.71692pt x 306.22556pt.
+
+
+[11 <./slike/6_SkaliraniGlobalniTrokutiUnutarZaslona.png>]
+<slike/8_TransformiraniTrokutiCanvas.png, id=262, 503.8825pt x 503.8825pt>
+File: slike/8_TransformiraniTrokutiCanvas.png Graphic file (type png)
+<use slike/8_TransformiraniTrokutiCanvas.png>
+Package pdftex.def Info: slike/8_TransformiraniTrokutiCanvas.png  used on input
+ line 217.
+(pdftex.def)             Requested size: 409.71692pt x 409.71877pt.
+
+
+[12 <./slike/7_TransformiraneGlobalneUZaslonske.png>]
+
+[13 <./slike/8_TransformiraniTrokutiCanvas.png>]
+Poglavlje 3.
+
+
+[14
+
+]
+
+[15]
+\openout5 = `vizualizacijaEksplozijaKoristenjemCesticnogModela.pyg'.
+
+
+(./_minted-vizualizacijaEksplozijaKoristenjemCesticnogModela/4FA80FAA3C158FE7CA
+12E5FE1891B61E8180520B668216DC38FDCF099997C4D5.pygtex
+
+[16])
+\openout5 = `vizualizacijaEksplozijaKoristenjemCesticnogModela.pyg'.
+
+
+(./_minted-vizualizacijaEksplozijaKoristenjemCesticnogModela/4688BF3DF1E25B5226
+85C43F114217478180520B668216DC38FDCF099997C4D5.pygtex)
+\openout5 = `vizualizacijaEksplozijaKoristenjemCesticnogModela.pyg'.
+
+
+(./_minted-vizualizacijaEksplozijaKoristenjemCesticnogModela/38CDAB4C5E53DB8C41
+24B74067EDF0898180520B668216DC38FDCF099997C4D5.pygtex
+
+[17])
+\openout5 = `vizualizacijaEksplozijaKoristenjemCesticnogModela.pyg'.
+
+
+(./_minted-vizualizacijaEksplozijaKoristenjemCesticnogModela/DB03527A6F58BCF7F8
+DF02954E079D978180520B668216DC38FDCF099997C4D5.pygtex)
+<slike/9_CesticaNaPlatnu.png, id=299, 604.2575pt x 604.2575pt>
+File: slike/9_CesticaNaPlatnu.png Graphic file (type png)
+<use slike/9_CesticaNaPlatnu.png>
+Package pdftex.def Info: slike/9_CesticaNaPlatnu.png  used on input line 360.
+(pdftex.def)             Requested size: 409.71692pt x 409.7187pt.
+
+
+[18]
+\openout5 = `vizualizacijaEksplozijaKoristenjemCesticnogModela.pyg'.
+
+
+(./_minted-vizualizacijaEksplozijaKoristenjemCesticnogModela/62CB1A67FF7D4C4554
+72453A30A73EBE8180520B668216DC38FDCF099997C4D5.pygtex
+
+[19 <./slike/9_CesticaNaPlatnu.png>])
+<slike/10_PutanjaCestice.png, id=312, 604.2575pt x 604.2575pt>
+File: slike/10_PutanjaCestice.png Graphic file (type png)
+<use slike/10_PutanjaCestice.png>
+Package pdftex.def Info: slike/10_PutanjaCestice.png  used on input line 390.
+(pdftex.def)             Requested size: 409.71692pt x 409.7187pt.
+
+
+[20 <./slike/10_PutanjaCestice.png>]
+\openout5 = `vizualizacijaEksplozijaKoristenjemCesticnogModela.pyg'.
+
+
+(./_minted-vizualizacijaEksplozijaKoristenjemCesticnogModela/560C8BBAE3EF7BA395
+0958D1517454538180520B668216DC38FDCF099997C4D5.pygtex)
+\openout5 = `vizualizacijaEksplozijaKoristenjemCesticnogModela.pyg'.
+
+
+(./_minted-vizualizacijaEksplozijaKoristenjemCesticnogModela/399D171177D4E5CDA3
+6A8E18E9D77F778180520B668216DC38FDCF099997C4D5.pygtex)
+<slike/11_PutanjaCesticeSOtporom.png, id=323, 604.2575pt x 604.2575pt>
+File: slike/11_PutanjaCesticeSOtporom.png Graphic file (type png)
+<use slike/11_PutanjaCesticeSOtporom.png>
+Package pdftex.def Info: slike/11_PutanjaCesticeSOtporom.png  used on input lin
+e 431.
+(pdftex.def)             Requested size: 409.71692pt x 409.7187pt.
+
+
+[21]
+\openout5 = `vizualizacijaEksplozijaKoristenjemCesticnogModela.pyg'.
+
+
+(./_minted-vizualizacijaEksplozijaKoristenjemCesticnogModela/D843044D879B3CA70D
+98993763E9C3708180520B668216DC38FDCF099997C4D5.pygtex
+
+[22 <./slike/11_PutanjaCesticeSOtporom.png>])
+\openout5 = `vizualizacijaEksplozijaKoristenjemCesticnogModela.pyg'.
+
+
+(./_minted-vizualizacijaEksplozijaKoristenjemCesticnogModela/91D88B31B4BB110B48
+95969BA43CCCE98180520B668216DC38FDCF099997C4D5.pygtex)
+<slike/12_PutanjaCesticeSilaTeza.png, id=338, 604.2575pt x 604.2575pt>
+File: slike/12_PutanjaCesticeSilaTeza.png Graphic file (type png)
+<use slike/12_PutanjaCesticeSilaTeza.png>
+Package pdftex.def Info: slike/12_PutanjaCesticeSilaTeza.png  used on input lin
+e 472.
+(pdftex.def)             Requested size: 409.71692pt x 409.7187pt.
+
+
+[23]
+\openout5 = `vizualizacijaEksplozijaKoristenjemCesticnogModela.pyg'.
+
+
+(./_minted-vizualizacijaEksplozijaKoristenjemCesticnogModela/FDBEB05B89741D24B1
+15B861219E50878180520B668216DC38FDCF099997C4D5.pygtex
+
+[24 <./slike/12_PutanjaCesticeSilaTeza.png>])
+<slike/13_PutanjaCesticeOtporSilaTeza.png, id=351, 604.2575pt x 604.2575pt>
+File: slike/13_PutanjaCesticeOtporSilaTeza.png Graphic file (type png)
+<use slike/13_PutanjaCesticeOtporSilaTeza.png>
+Package pdftex.def Info: slike/13_PutanjaCesticeOtporSilaTeza.png  used on inpu
+t line 498.
+(pdftex.def)             Requested size: 409.71692pt x 409.7187pt.
+\openout5 = `vizualizacijaEksplozijaKoristenjemCesticnogModela.pyg'.
+
+
+(./_minted-vizualizacijaEksplozijaKoristenjemCesticnogModela/8D328CD51EC5A19819
+AB70AE9F945F588180520B668216DC38FDCF099997C4D5.pygtex
+
+[25 <./slike/13_PutanjaCesticeOtporSilaTeza.png>])
+\openout5 = `vizualizacijaEksplozijaKoristenjemCesticnogModela.pyg'.
+
+
+(./_minted-vizualizacijaEksplozijaKoristenjemCesticnogModela/9055DB5C336CA85B25
+87738FFD59261F8180520B668216DC38FDCF099997C4D5.pygtex)
+<slike/14_AnimacijaPutanjaCestice.png, id=359, 1189.44376pt x 1790.69pt>
+File: slike/14_AnimacijaPutanjaCestice.png Graphic file (type png)
+<use slike/14_AnimacijaPutanjaCestice.png>
+Package pdftex.def Info: slike/14_AnimacijaPutanjaCestice.png  used on input li
+ne 549.
+(pdftex.def)             Requested size: 432.48051pt x 651.06898pt.
+
+
+[26]
+
+[27 <./slike/14_AnimacijaPutanjaCestice.png>]
+<slike/15_PravilnoCrtnjeEksplozije.png, id=373, 1616.0375pt x 3195.94pt>
+File: slike/15_PravilnoCrtnjeEksplozije.png Graphic file (type png)
+<use slike/15_PravilnoCrtnjeEksplozije.png>
+Package pdftex.def Info: slike/15_PravilnoCrtnjeEksplozije.png  used on input l
+ine 565.
+(pdftex.def)             Requested size: 318.66948pt x 630.20374pt.
+
+
+[28]
+
+[29 <./slike/15_PravilnoCrtnjeEksplozije.png>]
+\openout5 = `vizualizacijaEksplozijaKoristenjemCesticnogModela.pyg'.
+
+
+(./_minted-vizualizacijaEksplozijaKoristenjemCesticnogModela/89312642DA025A6D67
+B337458FAD7B018180520B668216DC38FDCF099997C4D5.pygtex)
+\openout5 = `vizualizacijaEksplozijaKoristenjemCesticnogModela.pyg'.
+
+
+(./_minted-vizualizacijaEksplozijaKoristenjemCesticnogModela/A4246B62DD531DD48C
+7AC7C9431EA69F8180520B668216DC38FDCF099997C4D5.pygtex
+
+[30])
+\openout5 = `vizualizacijaEksplozijaKoristenjemCesticnogModela.pyg'.
+
+
+(./_minted-vizualizacijaEksplozijaKoristenjemCesticnogModela/226173165272309383
+03F61FFFFD6A3B8180520B668216DC38FDCF099997C4D5.pygtex
+
+[31])
+<slike/16_PravilnaEksplozija.png, id=393, 604.2575pt x 1814.78pt>
+File: slike/16_PravilnaEksplozija.png Graphic file (type png)
+<use slike/16_PravilnaEksplozija.png>
+Package pdftex.def Info: slike/16_PravilnaEksplozija.png  used on input line 65
+3.
+(pdftex.def)             Requested size: 204.85846pt x 615.24481pt.
+
+
+[32]
+
+[33 <./slike/16_PravilnaEksplozija.png>]
+\openout5 = `vizualizacijaEksplozijaKoristenjemCesticnogModela.pyg'.
+
+
+(./_minted-vizualizacijaEksplozijaKoristenjemCesticnogModela/DDFBAA2D1BD4824C40
+2E98A3B48CB4F18180520B668216DC38FDCF099997C4D5.pygtex
+
+[34])
+Overfull \hbox (10.20215pt too wide) in paragraph at lines 700--701
+\T1/phv/m/n/10.95 nje uve-dena je pet-lja za ge-ne-ri-ra-nje £es-tica s na-su-m
+i£-nim br-zi-nama. Kako me-toda \T1/phv/m/sl/10.95 Math.random()
+ []
+
+<slike/17_UniformnaEksplozija.png, id=410, 604.2575pt x 1814.78pt>
+File: slike/17_UniformnaEksplozija.png Graphic file (type png)
+<use slike/17_UniformnaEksplozija.png>
+Package pdftex.def Info: slike/17_UniformnaEksplozija.png  used on input line 7
+04.
+(pdftex.def)             Requested size: 204.85846pt x 615.24481pt.
+
+
+[35]
+
+[36 <./slike/17_UniformnaEksplozija.png>]
+\openout5 = `vizualizacijaEksplozijaKoristenjemCesticnogModela.pyg'.
+
+
+(./_minted-vizualizacijaEksplozijaKoristenjemCesticnogModela/C987C7925762671AD9
+8A6EC14BD8FD8B8180520B668216DC38FDCF099997C4D5.pygtex
+
+[37]
+
+[38])
+\openout5 = `vizualizacijaEksplozijaKoristenjemCesticnogModela.pyg'.
+
+
+(./_minted-vizualizacijaEksplozijaKoristenjemCesticnogModela/B16174A37BC35D6EDE
+7267A560D713738180520B668216DC38FDCF099997C4D5.pygtex
+
+[39])
+\openout5 = `vizualizacijaEksplozijaKoristenjemCesticnogModela.pyg'.
+
+
+(./_minted-vizualizacijaEksplozijaKoristenjemCesticnogModela/6B3CF8EB4446DD234C
+C08949A789C0828180520B668216DC38FDCF099997C4D5.pygtex
+
+[40])
+<slike/18_GaussEksplozija.png, id=445, 604.2575pt x 1814.78pt>
+File: slike/18_GaussEksplozija.png Graphic file (type png)
+<use slike/18_GaussEksplozija.png>
+Package pdftex.def Info: slike/18_GaussEksplozija.png  used on input line 850.
+(pdftex.def)             Requested size: 204.85846pt x 615.24481pt.
+
+
+[41]
+
+[42 <./slike/18_GaussEksplozija.png>]
+\openout5 = `vizualizacijaEksplozijaKoristenjemCesticnogModela.pyg'.
+
+
+(./_minted-vizualizacijaEksplozijaKoristenjemCesticnogModela/41D61C93EB16109164
+4B7850006F198E8180520B668216DC38FDCF099997C4D5.pygtex
+
+[43])
+\openout5 = `vizualizacijaEksplozijaKoristenjemCesticnogModela.pyg'.
+
+
+(./_minted-vizualizacijaEksplozijaKoristenjemCesticnogModela/90B69FF6603132FE4D
+B32A3333E6F3B58180520B668216DC38FDCF099997C4D5.pygtex
+
+[44]
+
+[45])
+\openout5 = `vizualizacijaEksplozijaKoristenjemCesticnogModela.pyg'.
+
+
+(./_minted-vizualizacijaEksplozijaKoristenjemCesticnogModela/64E5DB52EB299974EB
+A52F1CC3549D6C8180520B668216DC38FDCF099997C4D5.pygtex
+
+[46])
+\openout5 = `vizualizacijaEksplozijaKoristenjemCesticnogModela.pyg'.
+
+
+(./_minted-vizualizacijaEksplozijaKoristenjemCesticnogModela/13E7367CFD8AE55FEA
+DC54245E640EB88180520B668216DC38FDCF099997C4D5.pygtex
+
+[47])
+\openout5 = `vizualizacijaEksplozijaKoristenjemCesticnogModela.pyg'.
+
+
+(./_minted-vizualizacijaEksplozijaKoristenjemCesticnogModela/2164174174340B6DCB
+E0B4908CC4923A8180520B668216DC38FDCF099997C4D5.pygtex
+
+[48])
+<slike/19_CoulombEksplozija.png, id=486, 604.2575pt x 1814.78pt>
+File: slike/19_CoulombEksplozija.png Graphic file (type png)
+<use slike/19_CoulombEksplozija.png>
+Package pdftex.def Info: slike/19_CoulombEksplozija.png  used on input line 107
+5.
+(pdftex.def)             Requested size: 204.85846pt x 615.24481pt.
+
+
+[49]
+
+[50 <./slike/19_CoulombEksplozija.png>]
+\openout5 = `vizualizacijaEksplozijaKoristenjemCesticnogModela.pyg'.
+
+
+(./_minted-vizualizacijaEksplozijaKoristenjemCesticnogModela/0852729EEF00AACC7E
+948D07F490079E8180520B668216DC38FDCF099997C4D5.pygtex
+
+[51]
+
+[52])
+\openout5 = `vizualizacijaEksplozijaKoristenjemCesticnogModela.pyg'.
+
+
+(./_minted-vizualizacijaEksplozijaKoristenjemCesticnogModela/F0C7B0BA6E254C0159
+6CFDA9F3BEF8208180520B668216DC38FDCF099997C4D5.pygtex)
+
+[53]
+<slike/20_VisestrukiCoulombEksplozija.png, id=511, 604.2575pt x 1814.78pt>
+File: slike/20_VisestrukiCoulombEksplozija.png Graphic file (type png)
+<use slike/20_VisestrukiCoulombEksplozija.png>
+Package pdftex.def Info: slike/20_VisestrukiCoulombEksplozija.png  used on inpu
+t line 1202.
+(pdftex.def)             Requested size: 204.85846pt x 615.24481pt.
+
+
+[54 <./slike/20_VisestrukiCoulombEksplozija.png>]
+
+[55]
+\openout5 = `vizualizacijaEksplozijaKoristenjemCesticnogModela.pyg'.
+
+
+(./_minted-vizualizacijaEksplozijaKoristenjemCesticnogModela/A1628DF544BB81C30A
+AB80EF8FFA05518180520B668216DC38FDCF099997C4D5.pygtex
+
+[56]
+
+[57])
+<slike/21_Simulator.png, id=533, 1013.7875pt x 899.36pt>
+File: slike/21_Simulator.png Graphic file (type png)
+<use slike/21_Simulator.png>
+Package pdftex.def Info: slike/21_Simulator.png  used on input line 1287.
+(pdftex.def)             Requested size: 409.71692pt x 363.4703pt.
+
+
+[58 <./slike/21_Simulator.png>]
+<slike/22_PESimulator.png, id=544, 1035.87pt x 899.36pt>
+File: slike/22_PESimulator.png Graphic file (type png)
+<use slike/22_PESimulator.png>
+Package pdftex.def Info: slike/22_PESimulator.png  used on input line 1298.
+(pdftex.def)             Requested size: 409.71692pt x 355.73047pt.
+<slike/23_GESimulator.png, id=545, 1035.87pt x 899.36pt>
+File: slike/23_GESimulator.png Graphic file (type png)
+<use slike/23_GESimulator.png>
+Package pdftex.def Info: slike/23_GESimulator.png  used on input line 1306.
+(pdftex.def)             Requested size: 409.71692pt x 355.73047pt.
+
+
+[59 <./slike/22_PESimulator.png>]
+<slike/24_CESimulator.png, id=555, 1035.87pt x 899.36pt>
+File: slike/24_CESimulator.png Graphic file (type png)
+<use slike/24_CESimulator.png>
+Package pdftex.def Info: slike/24_CESimulator.png  used on input line 1314.
+(pdftex.def)             Requested size: 409.71692pt x 355.73047pt.
+
+
+[60 <./slike/23_GESimulator.png>]
+<slike/25_VCESimulator.png, id=561, 1035.87pt x 899.36pt>
+File: slike/25_VCESimulator.png Graphic file (type png)
+<use slike/25_VCESimulator.png>
+Package pdftex.def Info: slike/25_VCESimulator.png  used on input line 1322.
+(pdftex.def)             Requested size: 409.71692pt x 355.73047pt.
+
+
+[61 <./slike/24_CESimulator.png>]
+<slike/26_NepokretniPotencijal.png, id=569, 1066.98625pt x 2720.1625pt>
+File: slike/26_NepokretniPotencijal.png Graphic file (type png)
+<use slike/26_NepokretniPotencijal.png>
+Package pdftex.def Info: slike/26_NepokretniPotencijal.png  used on input line 
+1334.
+(pdftex.def)             Requested size: 250.38564pt x 638.32515pt.
+
+
+[62 <./slike/25_VCESimulator.png>]
+
+[63 <./slike/26_NepokretniPotencijal.png>]
+<slike/27_PokretniPotencijal.png, id=585, 1066.98625pt x 2720.1625pt>
+File: slike/27_PokretniPotencijal.png Graphic file (type png)
+<use slike/27_PokretniPotencijal.png>
+Package pdftex.def Info: slike/27_PokretniPotencijal.png  used on input line 13
+44.
+(pdftex.def)             Requested size: 250.38564pt x 638.32515pt.
+
+
+[64]
+
+[65 <./slike/27_PokretniPotencijal.png>]
+<slike/28_VisePotencijala1.png, id=597, 1066.98625pt x 2720.1625pt>
+File: slike/28_VisePotencijala1.png Graphic file (type png)
+<use slike/28_VisePotencijala1.png>
+Package pdftex.def Info: slike/28_VisePotencijala1.png  used on input line 1354
+.
+(pdftex.def)             Requested size: 250.38564pt x 638.32515pt.
+
+
+[66]
+
+[67 <./slike/28_VisePotencijala1.png>]
+<slike/29_VisePotencijala2.png, id=609, 1066.98625pt x 2720.1625pt>
+File: slike/29_VisePotencijala2.png Graphic file (type png)
+<use slike/29_VisePotencijala2.png>
+Package pdftex.def Info: slike/29_VisePotencijala2.png  used on input line 1365
+.
+(pdftex.def)             Requested size: 250.38564pt x 638.32515pt.
+
+
+[68]
+
+[69 <./slike/29_VisePotencijala2.png>]
+
+[70]
+Poglavlje 4.
+<slike/30_Translacija.png, id=627, 280.47865pt x 135.00372pt>
+File: slike/30_Translacija.png Graphic file (type png)
+<use slike/30_Translacija.png>
+Package pdftex.def Info: slike/30_Translacija.png  used on input line 1400.
+(pdftex.def)             Requested size: 432.48051pt x 422.51387pt.
+
+
+[71
+
+]
+<slike/31_Skaliranje.png, id=635, 518.6842pt x 249.66pt>
+File: slike/31_Skaliranje.png Graphic file (type png)
+<use slike/31_Skaliranje.png>
+Package pdftex.def Info: slike/31_Skaliranje.png  used on input line 1426.
+(pdftex.def)             Requested size: 455.24411pt x 326.65318pt.
+
+
+[72 <./slike/30_Translacija.png>]
+<slike/32_Rotiranje.png, id=646, 391.35379pt x 188.37163pt>
+File: slike/32_Rotiranje.png Graphic file (type png)
+<use slike/32_Rotiranje.png>
+Package pdftex.def Info: slike/32_Rotiranje.png  used on input line 1462.
+(pdftex.def)             Requested size: 455.24411pt x 388.68796pt.
+
+
+[73 <./slike/31_Skaliranje.png>]
+<slike/33_TransSkalRot.png, id=661, 643.14839pt x 643.33043pt>
+File: slike/33_TransSkalRot.png Graphic file (type png)
+<use slike/33_TransSkalRot.png>
+Package pdftex.def Info: slike/33_TransSkalRot.png  used on input line 1473.
+(pdftex.def)             Requested size: 455.24411pt x 455.38368pt.
+
+
+[74 <./slike/32_Rotiranje.png>]
+<slike/34_TransSkalRotKRAJ.png, id=671, 546.12091pt x 318.75256pt>
+File: slike/34_TransSkalRotKRAJ.png Graphic file (type png)
+<use slike/34_TransSkalRotKRAJ.png>
+Package pdftex.def Info: slike/34_TransSkalRotKRAJ.png  used on input line 1480
+.
+(pdftex.def)             Requested size: 455.24411pt x 265.72212pt.
+
+
+[75 <./slike/33_TransSkalRot.png>]
+
+[76 <./slike/34_TransSkalRotKRAJ.png>]
+
+[77]
+
+[78]
+<slike/35_FrustumPerspektivneProjekcije.png, id=693, 1526.70375pt x 893.3375pt>
+
+File: slike/35_FrustumPerspektivneProjekcije.png Graphic file (type png)
+<use slike/35_FrustumPerspektivneProjekcije.png>
+Package pdftex.def Info: slike/35_FrustumPerspektivneProjekcije.png  used on in
+put line 1613.
+(pdftex.def)             Requested size: 432.48051pt x 342.40248pt.
+
+
+[79]
+
+[80 <./slike/35_FrustumPerspektivneProjekcije.png>]
+<slike/36_OrtogonalnaProjekcijaKuba.png, id=711, 1854.93pt x 893.3375pt>
+File: slike/36_OrtogonalnaProjekcijaKuba.png Graphic file (type png)
+<use slike/36_OrtogonalnaProjekcijaKuba.png>
+Package pdftex.def Info: slike/36_OrtogonalnaProjekcijaKuba.png  used on input 
+line 1626.
+(pdftex.def)             Requested size: 455.24411pt x 273.8511pt.
+
+
+[81 <./slike/36_OrtogonalnaProjekcijaKuba.png>]
+
+[82]
+<slike/37_PerspektivnaProjekcijaKuba.png, id=733, 1854.93pt x 893.3375pt>
+File: slike/37_PerspektivnaProjekcijaKuba.png Graphic file (type png)
+<use slike/37_PerspektivnaProjekcijaKuba.png>
+Package pdftex.def Info: slike/37_PerspektivnaProjekcijaKuba.png  used on input
+ line 1654.
+(pdftex.def)             Requested size: 432.48051pt x 208.28496pt.
+
+
+[83 <./slike/37_PerspektivnaProjekcijaKuba.png>]
+
+[84]
+<slike/38_Pipelines.png, id=751, 1573.88pt x 1181.41376pt>
+File: slike/38_Pipelines.png Graphic file (type png)
+<use slike/38_Pipelines.png>
+Package pdftex.def Info: slike/38_Pipelines.png  used on input line 1686.
+(pdftex.def)             Requested size: 432.48051pt x 324.6284pt.
+
+
+[85]
+
+[86 <./slike/38_Pipelines.png>]
+LaTeX Font Info:    Trying to load font information for TS1+phv on input line 1
+698.
+
+(d:/Aplikacije/TexLive/install/texlive/2024/texmf-dist/tex/latex/psnfss/ts1phv.
+fd
+File: ts1phv.fd 2020/03/25 scalable font definitions for TS1/phv.
+)
+
+[87]
+<slike/39_Buffers.png, id=777, 2934.965pt x 3245.12375pt>
+File: slike/39_Buffers.png Graphic file (type png)
+<use slike/39_Buffers.png>
+Package pdftex.def Info: slike/39_Buffers.png  used on input line 1722.
+(pdftex.def)             Requested size: 432.48051pt x 478.18121pt.
+
+
+[88]
+
+[89 <./slike/39_Buffers.png>]
+<slike/40_WebGPUSinusoida.png, id=791, 452.4403pt x 451.6875pt>
+File: slike/40_WebGPUSinusoida.png Graphic file (type png)
+<use slike/40_WebGPUSinusoida.png>
+Package pdftex.def Info: slike/40_WebGPUSinusoida.png  used on input line 1735.
+
+(pdftex.def)             Requested size: 432.48051pt x 431.76106pt.
+\openout5 = `vizualizacijaEksplozijaKoristenjemCesticnogModela.pyg'.
+
+
+(./_minted-vizualizacijaEksplozijaKoristenjemCesticnogModela/48537607B95BD6A393
+0AB8CAF03DEF3D8180520B668216DC38FDCF099997C4D5.pygtex
+LaTeX Info: Symbol \textasciigrave not provided by
+            font family fvm in TS1 encoding.
+            Default family used instead on input line 2.
+LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 2
+.
+
+(d:/Aplikacije/TexLive/install/texlive/2024/texmf-dist/tex/latex/base/t1cmtt.fd
+File: t1cmtt.fd 2023/04/13 v2.5m Standard LaTeX font definitions
+)
+LaTeX Font Info:    Trying to load font information for TS1+cmtt on input line 
+2.
+
+(d:/Aplikacije/TexLive/install/texlive/2024/texmf-dist/tex/latex/base/ts1cmtt.f
+d
+File: ts1cmtt.fd 2023/04/13 v2.5m Standard LaTeX font definitions
+)
+
+[90{d:/Aplikacije/TexLive/install/texlive/2024/texmf-dist/fonts/enc/dvips/cm-su
+per/cm-super-ts1.enc} <./slike/40_WebGPUSinusoida.png>]
+LaTeX Info: Symbol \textasciigrave not provided by
+            font family fvm in TS1 encoding.
+            Default family used instead on input line 20.
+LaTeX Info: Symbol \textasciigrave not provided by
+            font family fvm in TS1 encoding.
+            Default family used instead on input line 22.
+LaTeX Info: Symbol \textasciigrave not provided by
+            font family fvm in TS1 encoding.
+            Default family used instead on input line 35.
+LaTeX Info: Symbol \textasciigrave not provided by
+            font family fvm in TS1 encoding.
+            Default family used instead on input line 36.
+LaTeX Info: Symbol \textasciigrave not provided by
+            font family fvm in TS1 encoding.
+            Default family used instead on input line 41.
+)
+
+[91]
+\openout5 = `vizualizacijaEksplozijaKoristenjemCesticnogModela.pyg'.
+
+
+(./_minted-vizualizacijaEksplozijaKoristenjemCesticnogModela/F04D2A1E65A40B3800
+807EFD54503B318180520B668216DC38FDCF099997C4D5.pygtex)
+\openout5 = `vizualizacijaEksplozijaKoristenjemCesticnogModela.pyg'.
+
+
+(./_minted-vizualizacijaEksplozijaKoristenjemCesticnogModela/9A6D16A7E16F9E5ADE
+B269638AAD9D118180520B668216DC38FDCF099997C4D5.pygtex
+
+[92])
+\openout5 = `vizualizacijaEksplozijaKoristenjemCesticnogModela.pyg'.
+
+
+(./_minted-vizualizacijaEksplozijaKoristenjemCesticnogModela/3D79E75EBA86D26AA8
+0ADCE52AEDECB58180520B668216DC38FDCF099997C4D5.pygtex)
+\openout5 = `vizualizacijaEksplozijaKoristenjemCesticnogModela.pyg'.
+
+
+(./_minted-vizualizacijaEksplozijaKoristenjemCesticnogModela/5821B8969061F0A269
+BBF6CDD96BC5728180520B668216DC38FDCF099997C4D5.pygtex
+
+[93])
+\openout5 = `vizualizacijaEksplozijaKoristenjemCesticnogModela.pyg'.
+
+
+(./_minted-vizualizacijaEksplozijaKoristenjemCesticnogModela/E5A9DB987257B6E231
+7D155DE645228F8180520B668216DC38FDCF099997C4D5.pygtex
+
+[94])
+\openout5 = `vizualizacijaEksplozijaKoristenjemCesticnogModela.pyg'.
+
+
+(./_minted-vizualizacijaEksplozijaKoristenjemCesticnogModela/28BDF8A1D367CAFD64
+23A539A63849AA8180520B668216DC38FDCF099997C4D5.pygtex
+
+[95])
+
+[96]
+Poglavlje 5.
+\openout5 = `vizualizacijaEksplozijaKoristenjemCesticnogModela.pyg'.
+
+
+(./_minted-vizualizacijaEksplozijaKoristenjemCesticnogModela/DC9CCBE31844143B78
+05A6FB45C521768180520B668216DC38FDCF099997C4D5.pygtex
+
+[97
+
+]
+
+[98])
+<slike/41_Cestica.png, id=837, 98.0463pt x 79.0152pt>
+File: slike/41_Cestica.png Graphic file (type png)
+<use slike/41_Cestica.png>
+Package pdftex.def Info: slike/41_Cestica.png  used on input line 2043.
+(pdftex.def)             Requested size: 432.48051pt x 348.58664pt.
+
+
+[99]
+
+[100 <./slike/41_Cestica.png>]
+\openout5 = `vizualizacijaEksplozijaKoristenjemCesticnogModela.pyg'.
+
+
+(./_minted-vizualizacijaEksplozijaKoristenjemCesticnogModela/392F944A6FDACC4604
+9322301A4E2CDE50C963536CDDF1A9D611461DFE3692EA.pygtex)
+
+[101]
+\openout5 = `vizualizacijaEksplozijaKoristenjemCesticnogModela.pyg'.
+
+
+(./_minted-vizualizacijaEksplozijaKoristenjemCesticnogModela/96A789F0764EC2DFB8
+415A8EF0558C8A50C963536CDDF1A9D611461DFE3692EA.pygtex
+
+[102])
+\openout5 = `vizualizacijaEksplozijaKoristenjemCesticnogModela.pyg'.
+
+
+(./_minted-vizualizacijaEksplozijaKoristenjemCesticnogModela/87C81B01FD2FFC76AA
+98C9FDB14E800B50C963536CDDF1A9D611461DFE3692EA.pygtex)
+\openout5 = `vizualizacijaEksplozijaKoristenjemCesticnogModela.pyg'.
+
+
+(./_minted-vizualizacijaEksplozijaKoristenjemCesticnogModela/56AA0681850B21BD3E
+C9C9F5AFACF8F750C963536CDDF1A9D611461DFE3692EA.pygtex
+
+[103])
+\openout5 = `vizualizacijaEksplozijaKoristenjemCesticnogModela.pyg'.
+
+
+(./_minted-vizualizacijaEksplozijaKoristenjemCesticnogModela/082C5695906DDB8C31
+0ADD854D99463050C963536CDDF1A9D611461DFE3692EA.pygtex
+
+[104])
+\openout5 = `vizualizacijaEksplozijaKoristenjemCesticnogModela.pyg'.
+
+
+(./_minted-vizualizacijaEksplozijaKoristenjemCesticnogModela/CD6F3811C7CB8E88C3
+687A9B43E8E82850C963536CDDF1A9D611461DFE3692EA.pygtex
+
+[105])
+\openout5 = `vizualizacijaEksplozijaKoristenjemCesticnogModela.pyg'.
+
+
+(./_minted-vizualizacijaEksplozijaKoristenjemCesticnogModela/89AC742AC43B8824E4
+C5F11DA23889BC50C963536CDDF1A9D611461DFE3692EA.pygtex
+
+[106])
+\openout5 = `vizualizacijaEksplozijaKoristenjemCesticnogModela.pyg'.
+
+
+(./_minted-vizualizacijaEksplozijaKoristenjemCesticnogModela/1232607AC4AE00AFC1
+F01E0B6F7041B950C963536CDDF1A9D611461DFE3692EA.pygtex)
+\openout5 = `vizualizacijaEksplozijaKoristenjemCesticnogModela.pyg'.
+
+
+(./_minted-vizualizacijaEksplozijaKoristenjemCesticnogModela/75E2A4B73BB33E5E3F
+A9C49B06F7B2A250C963536CDDF1A9D611461DFE3692EA.pygtex
+
+[107])
+\openout5 = `vizualizacijaEksplozijaKoristenjemCesticnogModela.pyg'.
+
+
+(./_minted-vizualizacijaEksplozijaKoristenjemCesticnogModela/F233C658777618092B
+BB47FCB8F62F4E50C963536CDDF1A9D611461DFE3692EA.pygtex)
+\openout5 = `vizualizacijaEksplozijaKoristenjemCesticnogModela.pyg'.
+
+
+(./_minted-vizualizacijaEksplozijaKoristenjemCesticnogModela/BD8FF3FBA96447D316
+579A3C834A86D550C963536CDDF1A9D611461DFE3692EA.pygtex
+
+[108])
+\openout5 = `vizualizacijaEksplozijaKoristenjemCesticnogModela.pyg'.
+
+
+(./_minted-vizualizacijaEksplozijaKoristenjemCesticnogModela/39AC4014AC99049B8C
+ECE91012C349D950C963536CDDF1A9D611461DFE3692EA.pygtex)
+\openout5 = `vizualizacijaEksplozijaKoristenjemCesticnogModela.pyg'.
+
+
+(./_minted-vizualizacijaEksplozijaKoristenjemCesticnogModela/7503D8FFFE6C73F049
+DB37E9979E577F50C963536CDDF1A9D611461DFE3692EA.pygtex)
+\openout5 = `vizualizacijaEksplozijaKoristenjemCesticnogModela.pyg'.
+
+
+(./_minted-vizualizacijaEksplozijaKoristenjemCesticnogModela/520DB5BF1F459D1A44
+4E0361BDC78C8450C963536CDDF1A9D611461DFE3692EA.pygtex
+
+[109])
+\openout5 = `vizualizacijaEksplozijaKoristenjemCesticnogModela.pyg'.
+
+
+(./_minted-vizualizacijaEksplozijaKoristenjemCesticnogModela/706C6B180F4B68DEF2
+65CAADE0DF839F50C963536CDDF1A9D611461DFE3692EA.pygtex)
+\openout5 = `vizualizacijaEksplozijaKoristenjemCesticnogModela.pyg'.
+
+
+(./_minted-vizualizacijaEksplozijaKoristenjemCesticnogModela/B3DC9BFA6DE0BAE179
+1E2E0DDD99897A8180520B668216DC38FDCF099997C4D5.pygtex
+
+[110])
+\openout5 = `vizualizacijaEksplozijaKoristenjemCesticnogModela.pyg'.
+
+
+(./_minted-vizualizacijaEksplozijaKoristenjemCesticnogModela/BB16B609138FF39746
+BB4B95242598FB8180520B668216DC38FDCF099997C4D5.pygtex
+
+[111])
+\openout5 = `vizualizacijaEksplozijaKoristenjemCesticnogModela.pyg'.
+
+
+(./_minted-vizualizacijaEksplozijaKoristenjemCesticnogModela/E705E1C3A08A02141B
+3504B599E0EE658180520B668216DC38FDCF099997C4D5.pygtex
+
+[112]
+
+[113])
+\openout5 = `vizualizacijaEksplozijaKoristenjemCesticnogModela.pyg'.
+
+
+(./_minted-vizualizacijaEksplozijaKoristenjemCesticnogModela/BA25A978557E2609B1
+70A8E05CE015788180520B668216DC38FDCF099997C4D5.pygtex
+
+[114])
+\openout5 = `vizualizacijaEksplozijaKoristenjemCesticnogModela.pyg'.
+
+
+(./_minted-vizualizacijaEksplozijaKoristenjemCesticnogModela/9E7459C14FABEF0BA3
+D44A98F9EDCE918180520B668216DC38FDCF099997C4D5.pygtex
+
+[115])
+\openout5 = `vizualizacijaEksplozijaKoristenjemCesticnogModela.pyg'.
+
+
+(./_minted-vizualizacijaEksplozijaKoristenjemCesticnogModela/13388610F13296DB6A
+143A7785C0A0618180520B668216DC38FDCF099997C4D5.pygtex
+
+[116]
+
+[117])
+\openout5 = `vizualizacijaEksplozijaKoristenjemCesticnogModela.pyg'.
+
+
+(./_minted-vizualizacijaEksplozijaKoristenjemCesticnogModela/9292DE3FDC3C8EFDB0
+D159420BEDF2C88180520B668216DC38FDCF099997C4D5.pygtex
+
+[118]
+
+[119]
+
+[120])
+<slike/42_3DEskplozija25.png, id=946, 462.528pt x 701.2599pt>
+File: slike/42_3DEskplozija25.png Graphic file (type png)
+<use slike/42_3DEskplozija25.png>
+Package pdftex.def Info: slike/42_3DEskplozija25.png  used on input line 2765.
+(pdftex.def)             Requested size: 455.24411pt x 690.24753pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 2761--2769
+
+ []
+
+
+
+[121]
+Overfull \vbox (11.06444pt too high) has occurred while \output is active []
+
+
+
+[122 <./slike/42_3DEskplozija25.png>]
+<slike/43_3DEskplozija3907.png, id=959, 462.528pt x 701.2599pt>
+File: slike/43_3DEskplozija3907.png Graphic file (type png)
+<use slike/43_3DEskplozija3907.png>
+Package pdftex.def Info: slike/43_3DEskplozija3907.png  used on input line 2775
+.
+(pdftex.def)             Requested size: 455.24411pt x 690.24753pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 2771--2779
+
+ []
+
+
+
+[123]
+Overfull \vbox (11.06444pt too high) has occurred while \output is active []
+
+
+
+[124 <./slike/43_3DEskplozija3907.png>]
+<slike/44_3DEskplozija20000.png, id=971, 462.528pt x 701.2599pt>
+File: slike/44_3DEskplozija20000.png Graphic file (type png)
+<use slike/44_3DEskplozija20000.png>
+Package pdftex.def Info: slike/44_3DEskplozija20000.png  used on input line 278
+5.
+(pdftex.def)             Requested size: 455.24411pt x 690.24753pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 2781--2789
+
+ []
+
+
+
+[125]
+Overfull \vbox (11.06444pt too high) has occurred while \output is active []
+
+
+
+[126 <./slike/44_3DEskplozija20000.png>]
+
+[127]
+Poglavlje 6.
+
+
+[128
+
+]
+
+[129
+
+]
+
+[130]
+
+[131] (./vizualizacijaEksplozijaKoristenjemCesticnogModela.lof
+
+[132
+
+]
+Overfull \hbox (1.29184pt too wide) detected at line 47
+ []\T1/phv/m/n/10.95 100
+ []
+
+
+Overfull \hbox (1.29184pt too wide) detected at line 48
+ []\T1/phv/m/n/10.95 122
+ []
+
+
+Overfull \hbox (1.29184pt too wide) detected at line 49
+ []\T1/phv/m/n/10.95 124
+ []
+
+
+Overfull \hbox (1.29184pt too wide) detected at line 50
+ []\T1/phv/m/n/10.95 126
+ []
+
+)
+\tf@lof=\write9
+\openout9 = `vizualizacijaEksplozijaKoristenjemCesticnogModela.lof'.
+
+
+
+[133] (./vizualizacijaEksplozijaKoristenjemCesticnogModela.aux)
+ ***********
+LaTeX2e <2024-06-01> patch level 2
+L3 programming layer <2024-07-20>
+ ***********
+Package rerunfilecheck Info: File `vizualizacijaEksplozijaKoristenjemCesticnogM
+odela.out' has not changed.
+(rerunfilecheck)             Checksum: D18EB5AD827A61D288B3604F649F4F5C;4587.
+runsystem(del vizualizacijaEksplozijaKoristenjemCesticnogModela.pyg)...executed
+.
+
+Package logreq Info: Writing requests to 'vizualizacijaEksplozijaKoristenjemCes
+ticnogModela.run.xml'.
+\openout1 = `vizualizacijaEksplozijaKoristenjemCesticnogModela.run.xml'.
+
+ ) 
+Here is how much of TeX's memory you used:
+ 28652 strings out of 473578
+ 568981 string characters out of 5718661
+ 1946960 words of memory out of 5000000
+ 50725 multiletter control sequences out of 15000+600000
+ 602732 words of font info for 89 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 81i,12n,95p,3613b,2203s stack positions out of 10000i,1000n,20000p,200000b,200000s
+<d:/Aplikacije/TexLive/install/texlive/2024/texmf-dist/fonts/type1/public/ams
+fonts/cm/cmex10.pfb><d:/Aplikacije/TexLive/install/texlive/2024/texmf-dist/font
+s/type1/public/amsfonts/cm/cmmi10.pfb><d:/Aplikacije/TexLive/install/texlive/20
+24/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb><d:/Aplikacije/TexLive/i
+nstall/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><d:/Apl
+ikacije/TexLive/install/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/
+cmr6.pfb><d:/Aplikacije/TexLive/install/texlive/2024/texmf-dist/fonts/type1/pub
+lic/amsfonts/cm/cmr8.pfb><d:/Aplikacije/TexLive/install/texlive/2024/texmf-dist
+/fonts/type1/public/amsfonts/cm/cmsy10.pfb><d:/Aplikacije/TexLive/install/texli
+ve/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb><d:/Aplikacije/TexL
+ive/install/texlive/2024/texmf-dist/fonts/type1/public/bera/fvmb8a.pfb><d:/Apli
+kacije/TexLive/install/texlive/2024/texmf-dist/fonts/type1/public/bera/fvmr8a.p
+fb><d:/Aplikacije/TexLive/install/texlive/2024/texmf-dist/fonts/type1/public/be
+ra/fvmro8a.pfb><d:/Aplikacije/TexLive/install/texlive/2024/texmf-dist/fonts/typ
+e1/public/cm-super/sftt1095.pfb><d:/Aplikacije/TexLive/install/texlive/2024/tex
+mf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb><d:/Aplikacije/TexLive/install/texl
+ive/2024/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb><d:/Aplikacije/TexLive/
+install/texlive/2024/texmf-dist/fonts/type1/urw/helvetic/uhvro8a.pfb>
+Output written on vizualizacijaEksplozijaKoristenjemCesticnogModela.pdf (138 pa
+ges, 8585762 bytes).
+PDF statistics:
+ 1216 PDF objects out of 1440 (max. 8388607)
+ 944 compressed objects within 10 object streams
+ 249 named destinations out of 1000 (max. 500000)
+ 451 words of extra memory for PDF output out of 10000 (max. 10000000)
+

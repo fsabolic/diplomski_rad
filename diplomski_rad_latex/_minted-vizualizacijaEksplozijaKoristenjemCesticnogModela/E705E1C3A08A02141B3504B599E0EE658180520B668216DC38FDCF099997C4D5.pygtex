@@ -1,0 +1,61 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k+kd}{function}\PYG{+w}{ }\PYG{n+nx}{kreirajPRNGComputeShader}\PYG{p}{()}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{	}\PYG{k+kd}{const}\PYG{+w}{ }\PYG{n+nx}{prngComputeModule}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n+nx}{device}\PYG{p}{.}\PYG{n+nx}{createShaderModule}\PYG{p}{(\PYGZob{}}
+\PYG{+w}{		}\PYG{n+nx}{label}\PYG{o}{:}\PYG{+w}{ }\PYG{l+s+s2}{\PYGZdq{}PRNG Compute Shader\PYGZdq{}}\PYG{p}{,}
+\PYG{+w}{		}\PYG{n+nx}{code}\PYG{o}{:}\PYG{+w}{ }\PYG{n+nx}{computeShaderiWGSL}\PYG{p}{,}
+\PYG{+w}{	}\PYG{p}{\PYGZcb{});}
+\PYG{+w}{	}
+\PYG{+w}{	}\PYG{n+nx}{device}\PYG{p}{.}\PYG{n+nx}{pushErrorScope}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}validation\PYGZdq{}}\PYG{p}{);}
+
+\PYG{+w}{	}\PYG{k+kd}{let}\PYG{+w}{ }\PYG{n+nx}{prngComputePipelineDescriptor}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{		}\PYG{n+nx}{compute}\PYG{o}{:}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{			}\PYG{n+nx}{module}\PYG{o}{:}\PYG{+w}{ }\PYG{n+nx}{prngComputeModule}\PYG{p}{,}
+\PYG{+w}{			}\PYG{n+nx}{entryPoint}\PYG{o}{:}\PYG{+w}{ }\PYG{l+s+s2}{\PYGZdq{}popuniKoordinateCestica\PYGZdq{}}\PYG{p}{,}
+\PYG{+w}{		}\PYG{p}{\PYGZcb{},}
+\PYG{+w}{		}\PYG{n+nx}{layout}\PYG{o}{:}\PYG{+w}{ }\PYG{l+s+s2}{\PYGZdq{}auto\PYGZdq{}}\PYG{p}{,}
+\PYG{+w}{	}\PYG{p}{\PYGZcb{};}
+\PYG{+w}{	}\PYG{n+nx}{prngComputePipeline}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n+nx}{device}\PYG{p}{.}\PYG{n+nx}{createComputePipeline}\PYG{p}{(}
+\PYG{+w}{	}\PYG{n+nx}{prngComputePipelineDescriptor}
+\PYG{+w}{	}\PYG{p}{);}
+\PYG{+w}{	}
+\PYG{+w}{	}\PYG{n+nx}{prngComputeBindGroup}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n+nx}{device}\PYG{p}{.}\PYG{n+nx}{createBindGroup}\PYG{p}{(\PYGZob{}}
+\PYG{+w}{		}\PYG{n+nx}{label}\PYG{o}{:}\PYG{+w}{ }\PYG{l+s+s2}{\PYGZdq{}PRNG Bind Group\PYGZdq{}}\PYG{p}{,}
+\PYG{+w}{		}\PYG{n+nx}{layout}\PYG{o}{:}\PYG{+w}{ }\PYG{n+nx}{prngComputePipeline}\PYG{p}{.}\PYG{n+nx}{getBindGroupLayout}\PYG{p}{(}\PYG{l+m+mf}{0}\PYG{p}{),}
+\PYG{+w}{		}\PYG{n+nx}{entries}\PYG{o}{:}\PYG{+w}{ }\PYG{p}{[}
+\PYG{+w}{		}\PYG{p}{\PYGZob{}}
+\PYG{+w}{			}\PYG{n+nx}{binding}\PYG{o}{:}\PYG{+w}{ }\PYG{l+m+mf}{0}\PYG{p}{,}
+\PYG{+w}{			}\PYG{n+nx}{resource}\PYG{o}{:}\PYG{+w}{ }\PYG{p}{\PYGZob{}}\PYG{+w}{ }\PYG{n+nx}{buffer}\PYG{o}{:}\PYG{+w}{ }\PYG{n+nx}{seedsBuffer}\PYG{+w}{ }\PYG{p}{\PYGZcb{},}
+\PYG{+w}{		}\PYG{p}{\PYGZcb{},}
+\PYG{+w}{		}\PYG{p}{\PYGZob{}}
+\PYG{+w}{			}\PYG{n+nx}{binding}\PYG{o}{:}\PYG{+w}{ }\PYG{l+m+mf}{1}\PYG{p}{,}
+\PYG{+w}{			}\PYG{n+nx}{resource}\PYG{o}{:}\PYG{+w}{ }\PYG{p}{\PYGZob{}}\PYG{+w}{ }\PYG{n+nx}{buffer}\PYG{o}{:}\PYG{+w}{ }\PYG{n+nx}{uniCompParamsBuffer}\PYG{+w}{ }\PYG{p}{\PYGZcb{},}
+\PYG{+w}{		}\PYG{p}{\PYGZcb{},}
+\PYG{+w}{		}\PYG{p}{\PYGZob{}}
+\PYG{+w}{			}\PYG{n+nx}{binding}\PYG{o}{:}\PYG{+w}{ }\PYG{l+m+mf}{2}\PYG{p}{,}
+\PYG{+w}{			}\PYG{n+nx}{resource}\PYG{o}{:}\PYG{+w}{ }\PYG{p}{\PYGZob{}}\PYG{+w}{ }\PYG{n+nx}{buffer}\PYG{o}{:}\PYG{+w}{ }\PYG{n+nx}{xKoordinateBuffer}\PYG{+w}{ }\PYG{p}{\PYGZcb{},}
+\PYG{+w}{		}\PYG{p}{\PYGZcb{},}
+\PYG{+w}{		}\PYG{p}{\PYGZob{}}
+\PYG{+w}{			}\PYG{n+nx}{binding}\PYG{o}{:}\PYG{+w}{ }\PYG{l+m+mf}{3}\PYG{p}{,}
+\PYG{+w}{			}\PYG{n+nx}{resource}\PYG{o}{:}\PYG{+w}{ }\PYG{p}{\PYGZob{}}\PYG{+w}{ }\PYG{n+nx}{buffer}\PYG{o}{:}\PYG{+w}{ }\PYG{n+nx}{yKoordinateBuffer}\PYG{+w}{ }\PYG{p}{\PYGZcb{},}
+\PYG{+w}{		}\PYG{p}{\PYGZcb{},}
+\PYG{+w}{		}\PYG{p}{\PYGZob{}}
+\PYG{+w}{			}\PYG{n+nx}{binding}\PYG{o}{:}\PYG{+w}{ }\PYG{l+m+mf}{4}\PYG{p}{,}
+\PYG{+w}{			}\PYG{n+nx}{resource}\PYG{o}{:}\PYG{+w}{ }\PYG{p}{\PYGZob{}}\PYG{+w}{ }\PYG{n+nx}{buffer}\PYG{o}{:}\PYG{+w}{ }\PYG{n+nx}{zKoordinateBuffer}\PYG{+w}{ }\PYG{p}{\PYGZcb{},}
+\PYG{+w}{		}\PYG{p}{\PYGZcb{},}
+\PYG{+w}{		}\PYG{p}{\PYGZob{}}
+\PYG{+w}{			}\PYG{n+nx}{binding}\PYG{o}{:}\PYG{+w}{ }\PYG{l+m+mf}{5}\PYG{p}{,}
+\PYG{+w}{			}\PYG{n+nx}{resource}\PYG{o}{:}\PYG{+w}{ }\PYG{p}{\PYGZob{}}\PYG{+w}{ }\PYG{n+nx}{buffer}\PYG{o}{:}\PYG{+w}{ }\PYG{n+nx}{xBrzinaBuffer}\PYG{+w}{ }\PYG{p}{\PYGZcb{},}
+\PYG{+w}{		}\PYG{p}{\PYGZcb{},}
+\PYG{+w}{		}\PYG{p}{\PYGZob{}}
+\PYG{+w}{			}\PYG{n+nx}{binding}\PYG{o}{:}\PYG{+w}{ }\PYG{l+m+mf}{6}\PYG{p}{,}
+\PYG{+w}{			}\PYG{n+nx}{resource}\PYG{o}{:}\PYG{+w}{ }\PYG{p}{\PYGZob{}}\PYG{+w}{ }\PYG{n+nx}{buffer}\PYG{o}{:}\PYG{+w}{ }\PYG{n+nx}{yBrzinaBuffer}\PYG{+w}{ }\PYG{p}{\PYGZcb{},}
+\PYG{+w}{		}\PYG{p}{\PYGZcb{},}
+\PYG{+w}{		}\PYG{p}{\PYGZob{}}
+\PYG{+w}{			}\PYG{n+nx}{binding}\PYG{o}{:}\PYG{+w}{ }\PYG{l+m+mf}{7}\PYG{p}{,}
+\PYG{+w}{			}\PYG{n+nx}{resource}\PYG{o}{:}\PYG{+w}{ }\PYG{p}{\PYGZob{}}\PYG{+w}{ }\PYG{n+nx}{buffer}\PYG{o}{:}\PYG{+w}{ }\PYG{n+nx}{zBrzinaBuffer}\PYG{+w}{ }\PYG{p}{\PYGZcb{},}
+\PYG{+w}{		}\PYG{p}{\PYGZcb{},}
+\PYG{+w}{		}\PYG{p}{],}
+\PYG{+w}{	}\PYG{p}{\PYGZcb{});}
+\PYG{p}{\PYGZcb{}}
+
+\end{Verbatim}

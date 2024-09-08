@@ -1,0 +1,86 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k+kd}{function}\PYG{+w}{ }\PYG{n+nx}{definirajCesticu}\PYG{p}{()}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{	}\PYG{k+kd}{let}\PYG{+w}{ }\PYG{n+nx}{osnovnaKoordinata}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{l+m+mf}{7}\PYG{p}{;}
+\PYG{+w}{	}\PYG{k+kd}{const}\PYG{+w}{ }\PYG{n+nx}{koordinate}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{p}{[}
+\PYG{+w}{	}\PYG{c+c1}{//A}
+\PYG{+w}{	}\PYG{n+nx}{osnovnaKoordinata}\PYG{p}{,}
+\PYG{+w}{	}\PYG{n+nx}{osnovnaKoordinata}\PYG{p}{,}
+\PYG{+w}{	}\PYG{n+nx}{osnovnaKoordinata}\PYG{p}{,}
+\PYG{+w}{	}
+\PYG{+w}{	}\PYG{c+c1}{//B}
+\PYG{+w}{	}\PYG{n+nx}{osnovnaKoordinata}\PYG{p}{,}
+\PYG{+w}{	}\PYG{o}{\PYGZhy{}}\PYG{n+nx}{osnovnaKoordinata}\PYG{p}{,}
+\PYG{+w}{	}\PYG{o}{\PYGZhy{}}\PYG{n+nx}{osnovnaKoordinata}\PYG{p}{,}
+\PYG{+w}{	}\PYG{c+c1}{//C}
+\PYG{+w}{	}\PYG{o}{\PYGZhy{}}\PYG{n+nx}{osnovnaKoordinata}\PYG{p}{,}
+\PYG{+w}{	}\PYG{n+nx}{osnovnaKoordinata}\PYG{p}{,}
+\PYG{+w}{	}\PYG{o}{\PYGZhy{}}\PYG{n+nx}{osnovnaKoordinata}\PYG{p}{,}
+\PYG{+w}{	}\PYG{c+c1}{//D}
+\PYG{+w}{	}\PYG{o}{\PYGZhy{}}\PYG{n+nx}{osnovnaKoordinata}\PYG{p}{,}
+\PYG{+w}{	}\PYG{o}{\PYGZhy{}}\PYG{n+nx}{osnovnaKoordinata}\PYG{p}{,}
+\PYG{+w}{	}\PYG{n+nx}{osnovnaKoordinata}\PYG{p}{,}
+\PYG{+w}{	}\PYG{p}{];}
+\PYG{+w}{	}
+\PYG{+w}{	}\PYG{k+kd}{const}\PYG{+w}{ }\PYG{n+nx}{indeksi}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{p}{[}
+\PYG{+w}{	}\PYG{c+c1}{//ABC}
+\PYG{+w}{	}\PYG{l+m+mf}{0}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mf}{1}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mf}{2}\PYG{p}{,}
+\PYG{+w}{	}\PYG{c+c1}{//ADB}
+\PYG{+w}{	}\PYG{l+m+mf}{0}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mf}{3}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mf}{1}\PYG{p}{,}
+\PYG{+w}{	}\PYG{c+c1}{//ACD}
+\PYG{+w}{	}\PYG{l+m+mf}{0}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mf}{2}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mf}{3}\PYG{p}{,}
+\PYG{+w}{	}\PYG{c+c1}{//BDC}
+\PYG{+w}{	}\PYG{l+m+mf}{1}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mf}{3}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mf}{2}\PYG{p}{,}
+\PYG{+w}{	}\PYG{c+c1}{//4}
+\PYG{+w}{	}\PYG{p}{];}
+\PYG{+w}{	}
+\PYG{+w}{	}\PYG{k+kd}{const}\PYG{+w}{ }\PYG{n+nx}{boje}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{p}{[}
+\PYG{+w}{	}\PYG{c+cm}{/*}
+\PYG{c+cm}{	//rozna}
+\PYG{c+cm}{	200, 70, 120,}
+\PYG{c+cm}{	//zuta}
+\PYG{c+cm}{	200, 200, 0,}
+\PYG{c+cm}{	//plava}
+\PYG{c+cm}{	70, 120, 200,}
+\PYG{c+cm}{	//zelena}
+\PYG{c+cm}{	120, 200, 70,}
+\PYG{c+cm}{	*/}
+\PYG{+w}{	}\PYG{c+c1}{//orange1}
+\PYG{+w}{	}\PYG{l+m+mf}{255}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mf}{135}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mf}{60}\PYG{p}{,}
+\PYG{+w}{	}\PYG{c+c1}{//orange1}
+\PYG{+w}{	}\PYG{l+m+mf}{255}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mf}{115}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mf}{0}\PYG{p}{,}
+\PYG{+w}{	}\PYG{c+c1}{//orange1}
+\PYG{+w}{	}\PYG{l+m+mf}{255}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mf}{105}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mf}{20}\PYG{p}{,}
+\PYG{+w}{	}\PYG{c+c1}{//orange1}
+\PYG{+w}{	}\PYG{l+m+mf}{255}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mf}{145}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mf}{60}\PYG{p}{,}
+\PYG{+w}{	}\PYG{p}{];}
+\PYG{+w}{	}
+\PYG{+w}{	}\PYG{k+kd}{const}\PYG{+w}{ }\PYG{n+nx}{brojVrhova}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n+nx}{indeksi}\PYG{p}{.}\PYG{n+nx}{length}\PYG{p}{;}
+\PYG{+w}{	}\PYG{k+kd}{const}\PYG{+w}{ }\PYG{n+nx}{podaciKoordinata}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{o+ow}{new}\PYG{+w}{ }\PYG{n+nb}{Float32Array}\PYG{p}{(}\PYG{n+nx}{brojVrhova}\PYG{+w}{ }\PYG{o}{*}\PYG{+w}{ }\PYG{l+m+mf}{4}\PYG{p}{);}
+\PYG{+w}{	}\PYG{k+kd}{const}\PYG{+w}{ }\PYG{n+nx}{podaciBoja}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{o+ow}{new}\PYG{+w}{ }\PYG{n+nb}{Float32Array}\PYG{p}{(}\PYG{n+nx}{brojVrhova}\PYG{+w}{ }\PYG{o}{*}\PYG{+w}{ }\PYG{l+m+mf}{4}\PYG{p}{);}
+\PYG{+w}{	}
+\PYG{+w}{	}\PYG{k}{for}\PYG{+w}{ }\PYG{p}{(}\PYG{k+kd}{let}\PYG{+w}{ }\PYG{n+nx}{i}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{l+m+mf}{0}\PYG{p}{;}\PYG{+w}{ }\PYG{n+nx}{i}\PYG{+w}{ }\PYG{o}{\PYGZlt{}}\PYG{+w}{ }\PYG{n+nx}{indeksi}\PYG{p}{.}\PYG{n+nx}{length}\PYG{p}{;}\PYG{+w}{ }\PYG{o}{++}\PYG{n+nx}{i}\PYG{p}{)}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{		}\PYG{k+kd}{let}\PYG{+w}{ }\PYG{n+nx}{skaliraniIndexPozicije}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n+nx}{indeksi}\PYG{p}{[}\PYG{n+nx}{i}\PYG{p}{]}\PYG{+w}{ }\PYG{o}{*}\PYG{+w}{ }\PYG{l+m+mf}{3}\PYG{p}{;}
+\PYG{+w}{		}\PYG{k+kd}{const}\PYG{+w}{ }\PYG{n+nx}{pozicija}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n+nx}{koordinate}\PYG{p}{.}\PYG{n+nx}{slice}\PYG{p}{(}
+\PYG{+w}{		}\PYG{n+nx}{skaliraniIndexPozicije}\PYG{p}{,}
+\PYG{+w}{		}\PYG{n+nx}{skaliraniIndexPozicije}\PYG{+w}{ }\PYG{o}{+}\PYG{+w}{ }\PYG{l+m+mf}{3}
+\PYG{+w}{		}\PYG{p}{);}
+\PYG{+w}{		}\PYG{n+nx}{pozicija}\PYG{p}{.}\PYG{n+nx}{push}\PYG{p}{(}\PYG{l+m+mf}{1}\PYG{p}{);}
+\PYG{+w}{		}\PYG{n+nx}{podaciKoordinata}\PYG{p}{.}\PYG{n+nx}{set}\PYG{p}{(}\PYG{n+nx}{pozicija}\PYG{p}{,}\PYG{+w}{ }\PYG{n+nx}{i}\PYG{+w}{ }\PYG{o}{*}\PYG{+w}{ }\PYG{l+m+mf}{4}\PYG{p}{);}
+\PYG{+w}{		}
+\PYG{+w}{		}\PYG{k+kd}{let}\PYG{+w}{ }\PYG{n+nx}{skaliraniIndexBoje}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n+nb}{Math}\PYG{p}{.}\PYG{n+nx}{floor}\PYG{p}{((}\PYG{n+nx}{i}\PYG{+w}{ }\PYG{o}{*}\PYG{+w}{ }\PYG{l+m+mf}{3}\PYG{p}{)}\PYG{+w}{ }\PYG{o}{/}\PYG{+w}{ }\PYG{l+m+mf}{9}\PYG{p}{)}\PYG{+w}{ }\PYG{o}{*}\PYG{+w}{ }\PYG{l+m+mf}{3}\PYG{p}{;}
+\PYG{+w}{		}\PYG{k+kd}{const}\PYG{+w}{ }\PYG{n+nx}{boja}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{p}{[}
+\PYG{+w}{		}\PYG{n+nx}{boje}\PYG{p}{[}\PYG{n+nx}{skaliraniIndexBoje}\PYG{p}{]}\PYG{+w}{ }\PYG{o}{/}\PYG{+w}{ }\PYG{l+m+mf}{255}\PYG{p}{,}
+\PYG{+w}{		}\PYG{n+nx}{boje}\PYG{p}{[}\PYG{n+nx}{skaliraniIndexBoje}\PYG{+w}{ }\PYG{o}{+}\PYG{+w}{ }\PYG{l+m+mf}{1}\PYG{p}{]}\PYG{+w}{ }\PYG{o}{/}\PYG{+w}{ }\PYG{l+m+mf}{255}\PYG{p}{,}
+\PYG{+w}{		}\PYG{n+nx}{boje}\PYG{p}{[}\PYG{n+nx}{skaliraniIndexBoje}\PYG{+w}{ }\PYG{o}{+}\PYG{+w}{ }\PYG{l+m+mf}{2}\PYG{p}{]}\PYG{+w}{ }\PYG{o}{/}\PYG{+w}{ }\PYG{l+m+mf}{255}\PYG{p}{,}
+\PYG{+w}{		}\PYG{l+m+mf}{255}\PYG{+w}{ }\PYG{o}{/}\PYG{+w}{ }\PYG{l+m+mf}{255}\PYG{p}{,}
+\PYG{+w}{		}\PYG{p}{];}
+\PYG{+w}{		}\PYG{n+nx}{podaciBoja}\PYG{p}{.}\PYG{n+nx}{set}\PYG{p}{(}\PYG{n+nx}{boja}\PYG{p}{,}\PYG{+w}{ }\PYG{n+nx}{i}\PYG{+w}{ }\PYG{o}{*}\PYG{+w}{ }\PYG{l+m+mf}{4}\PYG{p}{);}
+\PYG{+w}{	}\PYG{p}{\PYGZcb{}}
+\PYG{+w}{	}\PYG{n+nx}{console}\PYG{p}{.}\PYG{n+nx}{log}\PYG{p}{(}\PYG{n+nx}{podaciBoja}\PYG{p}{);}
+\PYG{+w}{	}\PYG{k}{return}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{		}\PYG{n+nx}{podaciKoordinata}\PYG{o}{:}\PYG{+w}{ }\PYG{n+nx}{podaciKoordinata}\PYG{p}{,}
+\PYG{+w}{		}\PYG{n+nx}{podaciBoja}\PYG{o}{:}\PYG{+w}{ }\PYG{n+nx}{podaciBoja}\PYG{p}{,}
+\PYG{+w}{		}\PYG{n+nx}{brojVrhova}\PYG{o}{:}\PYG{+w}{ }\PYG{n+nx}{brojVrhova}\PYG{p}{,}
+\PYG{+w}{	}\PYG{p}{\PYGZcb{};}
+\PYG{p}{\PYGZcb{}}
+\end{Verbatim}

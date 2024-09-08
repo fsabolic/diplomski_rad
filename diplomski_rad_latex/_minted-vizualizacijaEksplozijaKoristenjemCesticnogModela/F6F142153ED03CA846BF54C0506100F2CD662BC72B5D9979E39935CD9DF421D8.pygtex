@@ -1,0 +1,18 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{p}{\PYGZlt{}}\PYG{n+nt}{script}\PYG{p}{\PYGZgt{}}
+\PYG{+w}{  }\PYG{k+kd}{function}\PYG{+w}{ }\PYG{n+nx}{trokut}\PYG{p}{()}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{k+kd}{let}\PYG{+w}{ }\PYG{n+nx}{canvas}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n+nb}{document}\PYG{p}{.}\PYG{n+nx}{getElementById}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}canvas\PYGZdq{}}\PYG{p}{);}
+\PYG{+w}{    }\PYG{k+kd}{let}\PYG{+w}{ }\PYG{n+nx}{context}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n+nx}{canvas}\PYG{p}{.}\PYG{n+nx}{getContext}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}2d\PYGZdq{}}\PYG{p}{);}
+
+\PYG{+w}{    }\PYG{n+nx}{context}\PYG{p}{.}\PYG{n+nx}{beginPath}\PYG{p}{();}
+\PYG{+w}{    }\PYG{n+nx}{context}\PYG{p}{.}\PYG{n+nx}{moveTo}\PYG{p}{(}\PYG{l+m+mf}{250}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mf}{200}\PYG{p}{);}
+\PYG{+w}{    }\PYG{n+nx}{context}\PYG{p}{.}\PYG{n+nx}{lineTo}\PYG{p}{(}\PYG{l+m+mf}{175}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mf}{300}\PYG{p}{);}
+\PYG{+w}{    }\PYG{n+nx}{context}\PYG{p}{.}\PYG{n+nx}{lineTo}\PYG{p}{(}\PYG{l+m+mf}{325}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mf}{300}\PYG{p}{);}
+\PYG{+w}{    }\PYG{n+nx}{context}\PYG{p}{.}\PYG{n+nx}{lineTo}\PYG{p}{(}\PYG{l+m+mf}{250}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mf}{200}\PYG{p}{);}
+\PYG{+w}{    }\PYG{n+nx}{context}\PYG{p}{.}\PYG{n+nx}{stroke}\PYG{p}{();}
+\PYG{+w}{  }\PYG{p}{\PYGZcb{}}
+
+\PYG{+w}{  }\PYG{n+nb}{window}\PYG{p}{.}\PYG{n+nx}{onload}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n+nx}{trokut}\PYG{p}{;}
+\PYG{p}{\PYGZlt{}/}\PYG{n+nt}{script}\PYG{p}{\PYGZgt{}}
+
+\end{Verbatim}

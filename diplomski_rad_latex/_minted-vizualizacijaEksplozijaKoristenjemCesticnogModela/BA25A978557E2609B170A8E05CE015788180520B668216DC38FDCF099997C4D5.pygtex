@@ -1,0 +1,51 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k+kd}{function}\PYG{+w}{ }\PYG{n+nx}{kreirajCesticeRenderShader}\PYG{p}{()}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{	}\PYG{k+kd}{let}\PYG{+w}{ }\PYG{n+nx}{cesticeRenderModule}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n+nx}{device}\PYG{p}{.}\PYG{n+nx}{createShaderModule}\PYG{p}{(\PYGZob{}}
+\PYG{+w}{		}\PYG{n+nx}{code}\PYG{o}{:}\PYG{+w}{ }\PYG{n+nx}{cesticeRenderShaderiWGSL}\PYG{p}{,}
+\PYG{+w}{	}\PYG{p}{\PYGZcb{});}
+\PYG{+w}{	}
+\PYG{+w}{	}\PYG{n+nx}{cesticeRenderPipeline}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n+nx}{device}\PYG{p}{.}\PYG{n+nx}{createRenderPipeline}\PYG{p}{(\PYGZob{}}
+\PYG{+w}{		}\PYG{n+nx}{label}\PYG{o}{:}\PYG{+w}{ }\PYG{l+s+s2}{\PYGZdq{}Cestice Render Shaders\PYGZdq{}}\PYG{p}{,}
+\PYG{+w}{		}\PYG{n+nx}{layout}\PYG{o}{:}\PYG{+w}{ }\PYG{l+s+s2}{\PYGZdq{}auto\PYGZdq{}}\PYG{p}{,}
+\PYG{+w}{		}\PYG{n+nx}{vertex}\PYG{o}{:}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{			}\PYG{n+nx}{module}\PYG{o}{:}\PYG{+w}{ }\PYG{n+nx}{cesticeRenderModule}\PYG{p}{,}
+\PYG{+w}{			}\PYG{n+nx}{entryPoint}\PYG{o}{:}\PYG{+w}{ }\PYG{l+s+s2}{\PYGZdq{}vsCestice\PYGZdq{}}\PYG{p}{,}
+\PYG{+w}{		}\PYG{p}{\PYGZcb{},}
+\PYG{+w}{		}\PYG{n+nx}{fragment}\PYG{o}{:}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{			}\PYG{n+nx}{module}\PYG{o}{:}\PYG{+w}{ }\PYG{n+nx}{cesticeRenderModule}\PYG{p}{,}
+\PYG{+w}{			}\PYG{n+nx}{entryPoint}\PYG{o}{:}\PYG{+w}{ }\PYG{l+s+s2}{\PYGZdq{}fsCestice\PYGZdq{}}\PYG{p}{,}
+\PYG{+w}{			}\PYG{n+nx}{targets}\PYG{o}{:}\PYG{+w}{ }\PYG{p}{[\PYGZob{}}\PYG{+w}{ }\PYG{n+nx}{format}\PYG{o}{:}\PYG{+w}{ }\PYG{n+nx}{presentationFormat}\PYG{+w}{ }\PYG{p}{\PYGZcb{}],}
+\PYG{+w}{		}\PYG{p}{\PYGZcb{},}
+\PYG{+w}{		}\PYG{n+nx}{primitive}\PYG{o}{:}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{			}\PYG{n+nx}{cullMode}\PYG{o}{:}\PYG{+w}{ }\PYG{l+s+s2}{\PYGZdq{}back\PYGZdq{}}\PYG{p}{,}
+\PYG{+w}{			}\PYG{n+nx}{topology}\PYG{o}{:}\PYG{+w}{ }\PYG{l+s+s2}{\PYGZdq{}triangle\PYGZhy{}list\PYGZdq{}}\PYG{p}{,}
+\PYG{+w}{		}\PYG{p}{\PYGZcb{},}
+\PYG{+w}{		}\PYG{n+nx}{depthStencil}\PYG{o}{:}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{			}\PYG{n+nx}{depthWriteEnabled}\PYG{o}{:}\PYG{+w}{ }\PYG{k+kc}{true}\PYG{p}{,}
+\PYG{+w}{			}\PYG{n+nx}{depthCompare}\PYG{o}{:}\PYG{+w}{ }\PYG{l+s+s2}{\PYGZdq{}less\PYGZdq{}}\PYG{p}{,}
+\PYG{+w}{			}\PYG{n+nx}{format}\PYG{o}{:}\PYG{+w}{ }\PYG{l+s+s2}{\PYGZdq{}depth24plus\PYGZdq{}}\PYG{p}{,}
+\PYG{+w}{		}\PYG{p}{\PYGZcb{},}
+\PYG{+w}{	}\PYG{p}{\PYGZcb{});}
+\PYG{+w}{	}
+\PYG{+w}{	}\PYG{n+nx}{cesticeRenderbindGroup}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n+nx}{device}\PYG{p}{.}\PYG{n+nx}{createBindGroup}\PYG{p}{(\PYGZob{}}
+\PYG{+w}{		}\PYG{n+nx}{label}\PYG{o}{:}\PYG{+w}{ }\PYG{l+s+s2}{\PYGZdq{}Cestice Bind Group\PYGZdq{}}\PYG{p}{,}
+\PYG{+w}{		}\PYG{n+nx}{layout}\PYG{o}{:}\PYG{+w}{ }\PYG{n+nx}{cesticeRenderPipeline}\PYG{p}{.}\PYG{n+nx}{getBindGroupLayout}\PYG{p}{(}\PYG{l+m+mf}{0}\PYG{p}{),}
+\PYG{+w}{		}\PYG{n+nx}{entries}\PYG{o}{:}\PYG{+w}{ }\PYG{p}{[}
+\PYG{+w}{		}\PYG{p}{\PYGZob{}}\PYG{+w}{ }\PYG{n+nx}{binding}\PYG{o}{:}\PYG{+w}{ }\PYG{l+m+mf}{0}\PYG{p}{,}\PYG{+w}{ }\PYG{n+nx}{resource}\PYG{o}{:}\PYG{+w}{ }\PYG{p}{\PYGZob{}}\PYG{+w}{ }\PYG{n+nx}{buffer}\PYG{o}{:}\PYG{+w}{ }\PYG{n+nx}{uniRenderParamsBuffer}\PYG{+w}{ }\PYG{p}{\PYGZcb{}}\PYG{+w}{ }\PYG{p}{\PYGZcb{},}
+\PYG{+w}{		}\PYG{p}{\PYGZob{}}\PYG{+w}{ }\PYG{n+nx}{binding}\PYG{o}{:}\PYG{+w}{ }\PYG{l+m+mf}{1}\PYG{p}{,}\PYG{+w}{ }\PYG{n+nx}{resource}\PYG{o}{:}\PYG{+w}{ }\PYG{p}{\PYGZob{}}\PYG{+w}{ }\PYG{n+nx}{buffer}\PYG{o}{:}\PYG{+w}{ }\PYG{n+nx}{uniCesticaBuffer}\PYG{+w}{ }\PYG{p}{\PYGZcb{}}\PYG{+w}{ }\PYG{p}{\PYGZcb{},}
+\PYG{+w}{		}\PYG{p}{\PYGZob{}}
+\PYG{+w}{			}\PYG{n+nx}{binding}\PYG{o}{:}\PYG{+w}{ }\PYG{l+m+mf}{2}\PYG{p}{,}
+\PYG{+w}{			}\PYG{n+nx}{resource}\PYG{o}{:}\PYG{+w}{ }\PYG{p}{\PYGZob{}}\PYG{+w}{ }\PYG{n+nx}{buffer}\PYG{o}{:}\PYG{+w}{ }\PYG{n+nx}{xKoordinateBuffer}\PYG{+w}{ }\PYG{p}{\PYGZcb{},}
+\PYG{+w}{		}\PYG{p}{\PYGZcb{},}
+\PYG{+w}{		}\PYG{p}{\PYGZob{}}
+\PYG{+w}{			}\PYG{n+nx}{binding}\PYG{o}{:}\PYG{+w}{ }\PYG{l+m+mf}{3}\PYG{p}{,}
+\PYG{+w}{			}\PYG{n+nx}{resource}\PYG{o}{:}\PYG{+w}{ }\PYG{p}{\PYGZob{}}\PYG{+w}{ }\PYG{n+nx}{buffer}\PYG{o}{:}\PYG{+w}{ }\PYG{n+nx}{yKoordinateBuffer}\PYG{+w}{ }\PYG{p}{\PYGZcb{},}
+\PYG{+w}{		}\PYG{p}{\PYGZcb{},}
+\PYG{+w}{		}\PYG{p}{\PYGZob{}}
+\PYG{+w}{			}\PYG{n+nx}{binding}\PYG{o}{:}\PYG{+w}{ }\PYG{l+m+mf}{4}\PYG{p}{,}
+\PYG{+w}{			}\PYG{n+nx}{resource}\PYG{o}{:}\PYG{+w}{ }\PYG{p}{\PYGZob{}}\PYG{+w}{ }\PYG{n+nx}{buffer}\PYG{o}{:}\PYG{+w}{ }\PYG{n+nx}{zKoordinateBuffer}\PYG{+w}{ }\PYG{p}{\PYGZcb{},}
+\PYG{+w}{		}\PYG{p}{\PYGZcb{},}
+\PYG{+w}{		}\PYG{p}{],}
+\PYG{+w}{	}\PYG{p}{\PYGZcb{});}
+\PYG{p}{\PYGZcb{}}
+\end{Verbatim}

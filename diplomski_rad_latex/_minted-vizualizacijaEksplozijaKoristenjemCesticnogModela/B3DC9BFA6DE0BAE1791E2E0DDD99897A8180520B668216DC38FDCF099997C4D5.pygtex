@@ -1,0 +1,25 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k}{async}\PYG{+w}{ }\PYG{k+kd}{function}\PYG{+w}{ }\PYG{n+nx}{postaviWebGPU}\PYG{p}{()}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{	}\PYG{c+c1}{//Učitavanje konteksta i ostalih WebGPU stvari za rad}
+\PYG{+w}{	}\PYG{n+nx}{adapter}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{k}{await}\PYG{+w}{ }\PYG{n+nx}{navigator}\PYG{p}{.}\PYG{n+nx}{gpu}\PYG{o}{?}\PYG{p}{.}\PYG{n+nx}{requestAdapter}\PYG{p}{();}
+\PYG{+w}{	}\PYG{n+nx}{device}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{k}{await}\PYG{+w}{ }\PYG{n+nx}{adapter}\PYG{o}{?}\PYG{p}{.}\PYG{n+nx}{requestDevice}\PYG{p}{();}
+\PYG{+w}{	}\PYG{k}{if}\PYG{+w}{ }\PYG{p}{(}\PYG{o}{!}\PYG{n+nx}{device}\PYG{p}{)}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{		}\PYG{n+nx}{fail}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}Ovaj preglednik ne podržava WebGPU\PYGZdq{}}\PYG{p}{);}
+\PYG{+w}{		}\PYG{k}{return}\PYG{p}{;}
+\PYG{+w}{	}\PYG{p}{\PYGZcb{}}
+\PYG{+w}{	}
+\PYG{+w}{	}\PYG{n+nx}{canvas}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n+nb}{document}\PYG{p}{.}\PYG{n+nx}{querySelector}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}canvas\PYGZdq{}}\PYG{p}{);}
+\PYG{+w}{	}\PYG{n+nx}{context}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n+nx}{canvas}\PYG{p}{.}\PYG{n+nx}{getContext}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}webgpu\PYGZdq{}}\PYG{p}{);}
+\PYG{+w}{	}\PYG{n+nx}{presentationFormat}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n+nx}{navigator}\PYG{p}{.}\PYG{n+nx}{gpu}\PYG{p}{.}\PYG{n+nx}{getPreferredCanvasFormat}\PYG{p}{();}
+\PYG{+w}{	}\PYG{n+nx}{context}\PYG{p}{.}\PYG{n+nx}{configure}\PYG{p}{(\PYGZob{}}
+\PYG{+w}{		}\PYG{n+nx}{device}\PYG{p}{,}
+\PYG{+w}{		}\PYG{n+nx}{format}\PYG{o}{:}\PYG{+w}{ }\PYG{n+nx}{presentationFormat}\PYG{p}{,}
+\PYG{+w}{		}\PYG{n+nx}{alphaMode}\PYG{o}{:}\PYG{+w}{ }\PYG{l+s+s2}{\PYGZdq{}premultiplied\PYGZdq{}}\PYG{p}{,}
+\PYG{+w}{	}\PYG{p}{\PYGZcb{});}
+\PYG{p}{\PYGZcb{}}
+
+\PYG{k+kd}{function}\PYG{+w}{ }\PYG{n+nx}{fail}\PYG{p}{(}\PYG{n+nx}{msg}\PYG{p}{)}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{	}\PYG{n+nx}{alert}\PYG{p}{(}\PYG{n+nx}{msg}\PYG{p}{);}
+\PYG{p}{\PYGZcb{}}
+
+\end{Verbatim}

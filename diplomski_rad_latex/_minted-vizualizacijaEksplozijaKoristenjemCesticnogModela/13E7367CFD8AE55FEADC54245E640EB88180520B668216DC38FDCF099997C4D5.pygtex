@@ -1,0 +1,45 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k+kd}{function}\PYG{+w}{ }\PYG{n+nx}{coulombEksplozija}\PYG{p}{(}\PYG{n+nx}{centarX}\PYG{p}{,}\PYG{+w}{ }\PYG{n+nx}{centarY}\PYG{p}{,}\PYG{+w}{ }\PYG{n+nx}{brojCestica}\PYG{p}{,}\PYG{+w}{ }\PYG{n+nx}{cesticeEksplozije}\PYG{p}{)}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{  }\PYG{k}{if}\PYG{+w}{ }\PYG{p}{(}\PYG{o}{!}\PYG{n+nx}{brojCesticaJeURasponu}\PYG{p}{(}\PYG{n+nx}{brojCestica}\PYG{p}{))}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{k}{throw}\PYG{+w}{ }\PYG{n+ne}{Error}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}Broj čestica u eksploziji nije dobro definiran!\PYGZdq{}}\PYG{p}{);}
+\PYG{+w}{  }\PYG{p}{\PYGZcb{}}
+
+\PYG{+w}{  }\PYG{k+kd}{let}\PYG{+w}{ }\PYG{n+nx}{polumjer}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{l+m+mf}{0.06}\PYG{p}{;}
+\PYG{+w}{  }\PYG{k+kd}{let}\PYG{+w}{ }\PYG{n+nx}{pocetniVektor}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{o+ow}{new}\PYG{+w}{ }\PYG{n+nx}{Vektor2D}\PYG{p}{(}\PYG{n+nx}{centarX}\PYG{p}{,}\PYG{+w}{ }\PYG{n+nx}{centarY}\PYG{p}{);}
+\PYG{+w}{  }\PYG{k}{for}\PYG{+w}{ }\PYG{p}{(}\PYG{k+kd}{let}\PYG{+w}{ }\PYG{n+nx}{i}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{l+m+mf}{0}\PYG{p}{;}\PYG{+w}{ }\PYG{n+nx}{i}\PYG{+w}{ }\PYG{o}{\PYGZlt{}}\PYG{+w}{ }\PYG{n+nx}{brojCestica}\PYG{p}{;}\PYG{+w}{ }\PYG{n+nx}{i}\PYG{o}{++}\PYG{p}{)}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{k+kd}{let}\PYG{+w}{ }\PYG{n+nx}{tocka}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n+nx}{nasumnicnaNormalnaDistribucija}\PYG{p}{(}\PYG{l+m+mf}{1}\PYG{p}{);}
+\PYG{+w}{    }\PYG{k+kd}{let}\PYG{+w}{ }\PYG{n+nx}{cestica}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{o+ow}{new}\PYG{+w}{ }\PYG{n+nx}{Cestica}\PYG{p}{(}
+\PYG{+w}{      }\PYG{l+m+mf}{0.1}\PYG{p}{,}
+\PYG{+w}{      }\PYG{o+ow}{new}\PYG{+w}{ }\PYG{n+nx}{MaterijalnaTocka}\PYG{p}{(}
+\PYG{+w}{        }\PYG{l+m+mf}{2}\PYG{+w}{ }\PYG{o}{+}\PYG{+w}{ }\PYG{n+nb}{Math}\PYG{p}{.}\PYG{n+nx}{random}\PYG{p}{(),}
+\PYG{+w}{        }\PYG{o+ow}{new}\PYG{+w}{ }\PYG{n+nx}{Vektor2D}\PYG{p}{(}\PYG{n+nx}{tocka}\PYG{p}{[}\PYG{l+m+mf}{0}\PYG{p}{][}\PYG{l+m+mf}{0}\PYG{p}{]}\PYG{+w}{ }\PYG{o}{/}\PYG{+w}{ }\PYG{l+m+mf}{50}\PYG{+w}{ }\PYG{o}{+}\PYG{+w}{ }\PYG{n+nx}{centarX}\PYG{p}{,}\PYG{+w}{ }\PYG{n+nx}{tocka}\PYG{p}{[}\PYG{l+m+mf}{1}\PYG{p}{][}\PYG{l+m+mf}{0}\PYG{p}{]}\PYG{+w}{ }\PYG{o}{/}\PYG{+w}{ }\PYG{l+m+mf}{50}\PYG{+w}{ }\PYG{o}{+}\PYG{+w}{ }\PYG{n+nx}{centarY}\PYG{p}{),}
+\PYG{+w}{        }\PYG{o+ow}{new}\PYG{+w}{ }\PYG{n+nx}{Vektor2D}\PYG{p}{(}\PYG{l+m+mf}{0}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mf}{0}\PYG{p}{)}
+\PYG{+w}{      }\PYG{p}{)}
+\PYG{+w}{    }\PYG{p}{);}
+
+\PYG{+w}{    }\PYG{n+nx}{cesticeEksplozije}\PYG{p}{.}\PYG{n+nx}{push}\PYG{p}{(}\PYG{n+nx}{cestica}\PYG{p}{);}
+\PYG{+w}{  }\PYG{p}{\PYGZcb{}}
+
+\PYG{+w}{  }\PYG{n+nx}{djelujPotencijalomNaCestice}\PYG{p}{(}\PYG{n+nx}{pocetniVektor}\PYG{p}{,}\PYG{+w}{ }\PYG{n+nx}{cesticeEksplozije}\PYG{p}{,}\PYG{+w}{ }\PYG{n+nx}{polumjer}\PYG{p}{);}
+\PYG{p}{\PYGZcb{}}
+
+\PYG{k+kd}{function}\PYG{+w}{ }\PYG{n+nx}{djelujPotencijalomNaCestice}\PYG{p}{(}
+\PYG{+w}{  }\PYG{n+nx}{pocetniVektor}\PYG{p}{,}
+\PYG{+w}{  }\PYG{n+nx}{cesticeEksplozije}\PYG{p}{,}
+\PYG{+w}{  }\PYG{n+nx}{polumjer}
+\PYG{p}{)}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{  }\PYG{k+kd}{let}\PYG{+w}{ }\PYG{n+nx}{potencijal}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{o+ow}{new}\PYG{+w}{ }\PYG{n+nx}{CoulombovPotencijalBuilder}\PYG{p}{(}\PYG{l+m+mf}{150}\PYG{p}{,}\PYG{+w}{ }\PYG{n+nx}{pocetniVektor}\PYG{p}{,}\PYG{+w}{ }\PYG{o}{\PYGZhy{}}\PYG{l+m+mf}{1}\PYG{p}{)}
+\PYG{+w}{    }\PYG{p}{.}\PYG{n+nx}{setPotencijalUdaljenosti}\PYG{p}{(}\PYG{l+m+mf}{2}\PYG{p}{)}
+\PYG{+w}{    }\PYG{p}{.}\PYG{n+nx}{setMinUdaljenost}\PYG{p}{(}\PYG{n+nx}{polumjer}\PYG{p}{)}
+\PYG{+w}{    }\PYG{p}{.}\PYG{n+nx}{build}\PYG{p}{();}
+\PYG{+w}{  }\PYG{n+nx}{CoulombovPotencijal}\PYG{p}{.}\PYG{n+nx}{br}\PYG{+w}{ }\PYG{o}{\PYGZhy{}=}\PYG{+w}{ }\PYG{l+m+mf}{1}\PYG{p}{;}
+\PYG{+w}{  }\PYG{k+kd}{let}\PYG{+w}{ }\PYG{n+nx}{brCestica}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n+nx}{cesticeEksplozije}\PYG{p}{.}\PYG{n+nx}{length}\PYG{p}{;}
+\PYG{+w}{  }\PYG{k}{for}\PYG{+w}{ }\PYG{p}{(}\PYG{k+kd}{let}\PYG{+w}{ }\PYG{n+nx}{i}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{l+m+mf}{0}\PYG{p}{;}\PYG{+w}{ }\PYG{n+nx}{i}\PYG{+w}{ }\PYG{o}{\PYGZlt{}}\PYG{+w}{ }\PYG{n+nx}{brCestica}\PYG{p}{;}\PYG{+w}{ }\PYG{n+nx}{i}\PYG{o}{++}\PYG{p}{)}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{n+nx}{cesticeEksplozije}\PYG{p}{[}\PYG{n+nx}{i}\PYG{p}{].}\PYG{n+nx}{materijalnaTocka}\PYG{p}{.}\PYG{n+nx}{pomakni}\PYG{p}{(}
+\PYG{+w}{      }\PYG{l+m+mf}{0.01}\PYG{p}{,}
+\PYG{+w}{      }\PYG{n+nx}{potencijal}\PYG{p}{.}\PYG{n+nx}{F}\PYG{p}{(}\PYG{n+nx}{cesticeEksplozije}\PYG{p}{[}\PYG{n+nx}{i}\PYG{p}{].}\PYG{n+nx}{materijalnaTocka}\PYG{p}{)}
+\PYG{+w}{    }\PYG{p}{);}
+\PYG{+w}{  }\PYG{p}{\PYGZcb{}}
+\PYG{p}{\PYGZcb{}}
+
+\end{Verbatim}

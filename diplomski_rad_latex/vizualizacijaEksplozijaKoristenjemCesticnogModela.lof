@@ -1,0 +1,51 @@
+\babel@toc {croatian}{}\relax 
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {1}{\ignorespaces Prikaz jednostavnog trokuta koristeći Canvas API}}{5}{figure.caption.2}%
+\contentsline {figure}{\numberline {2}{\ignorespaces Prikaz trokuta definiranog lokalnim koordinatama}}{6}{figure.caption.3}%
+\contentsline {figure}{\numberline {3}{\ignorespaces Prikaz trokuta definiranih globalnim koordinatama}}{7}{figure.caption.4}%
+\contentsline {figure}{\numberline {4}{\ignorespaces Prikaz trokuta definiranih globalnim koordinatama unutar platna}}{8}{figure.caption.5}%
+\contentsline {figure}{\numberline {5}{\ignorespaces Prikaz trokuta definiranih globalnim koordinatama}}{10}{figure.caption.6}%
+\contentsline {figure}{\numberline {6}{\ignorespaces Prikaz trokuta sa skaliranim globalnim koordinatama}}{11}{figure.caption.7}%
+\contentsline {figure}{\numberline {7}{\ignorespaces Nacrtani trokuti nakon transformacije koordinata}}{12}{figure.caption.8}%
+\contentsline {figure}{\numberline {8}{\ignorespaces Crtanje trokuta primjenom klase \textit {GlobalniKoordinatniSustav}}}{13}{figure.caption.9}%
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {9}{\ignorespaces Prikaz jedne stacionarne čestice}}{19}{figure.caption.10}%
+\contentsline {figure}{\numberline {10}{\ignorespaces Prikaz putanje čestice}}{20}{figure.caption.11}%
+\contentsline {figure}{\numberline {11}{\ignorespaces Prikaz putanje čestice s otporom}}{22}{figure.caption.12}%
+\contentsline {figure}{\numberline {12}{\ignorespaces Prikaz putanje čestice na koju djeluje sila teža}}{24}{figure.caption.13}%
+\contentsline {figure}{\numberline {13}{\ignorespaces Prikaz putanje čestice s djelovanjem otpora i sile teže}}{25}{figure.caption.14}%
+\contentsline {figure}{\numberline {14}{\ignorespaces Prikaz dijelova animacije kretanja čestice}}{27}{figure.caption.15}%
+\contentsline {figure}{\numberline {15}{\ignorespaces Generiranje brzina čestica u obliku kružnice}}{29}{figure.caption.16}%
+\contentsline {figure}{\numberline {16}{\ignorespaces Pravilna eksplozija}}{33}{figure.caption.17}%
+\contentsline {figure}{\numberline {17}{\ignorespaces Uniformna eksplozija}}{36}{figure.caption.18}%
+\contentsline {figure}{\numberline {18}{\ignorespaces Gaussova eksplozija}}{42}{figure.caption.19}%
+\contentsline {figure}{\numberline {19}{\ignorespaces Coulombova eksplozija}}{50}{figure.caption.20}%
+\contentsline {figure}{\numberline {20}{\ignorespaces Višestruki Coulombova eksplozija}}{54}{figure.caption.21}%
+\contentsline {figure}{\numberline {21}{\ignorespaces Višestruka Coulombova eksplozija}}{58}{figure.caption.22}%
+\contentsline {figure}{\numberline {22}{\ignorespaces Pravilna eksplozija na simulatoru}}{59}{figure.caption.23}%
+\contentsline {figure}{\numberline {23}{\ignorespaces Gaussova eksplozija na simulatoru}}{60}{figure.caption.24}%
+\contentsline {figure}{\numberline {24}{\ignorespaces Coulombova eksplozija na simulatoru}}{61}{figure.caption.25}%
+\contentsline {figure}{\numberline {25}{\ignorespaces Višestruka Coulombova eksplozija na simulatoru}}{62}{figure.caption.26}%
+\contentsline {figure}{\numberline {26}{\ignorespaces Vizualizacija atomske gljive s nepokretnim potencijalom}}{63}{figure.caption.27}%
+\contentsline {figure}{\numberline {27}{\ignorespaces Vizualizacija atomske gljive s pokretnim potencijalom}}{65}{figure.caption.28}%
+\contentsline {figure}{\numberline {28}{\ignorespaces Vizualizacija atomske gljive s više nepokretnih potencijala}}{67}{figure.caption.29}%
+\contentsline {figure}{\numberline {29}{\ignorespaces Vizualizacija atomske gljive s više prepravljenih nepokretnih potencijala}}{69}{figure.caption.30}%
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {30}{\ignorespaces Translacija točke $A$ u točku $A'$}}{72}{figure.caption.31}%
+\contentsline {figure}{\numberline {31}{\ignorespaces Skaliranje dužine $\overline {AB}$}}{73}{figure.caption.32}%
+\contentsline {figure}{\numberline {32}{\ignorespaces Rotiranje dužine $\overline {AB}$}}{74}{figure.caption.33}%
+\contentsline {figure}{\numberline {33}{\ignorespaces Rotiranje dužine $\overline {AB}$}}{75}{figure.caption.34}%
+\contentsline {figure}{\numberline {34}{\ignorespaces Rotiranje dužine $\overline {AB}$}}{76}{figure.caption.35}%
+\contentsline {figure}{\numberline {35}{\ignorespaces Frustum perspektivne projekcije}}{80}{figure.caption.36}%
+\contentsline {figure}{\numberline {36}{\ignorespaces Kocke dobivene korištenjem ortogonalne projekcije}}{81}{figure.caption.37}%
+\contentsline {figure}{\numberline {37}{\ignorespaces Kocke dobivene korištenjem perspektivne projekcije}}{83}{figure.caption.38}%
+\contentsline {figure}{\numberline {38}{\ignorespaces Prikaz \textit {shadera} unutar protočnih sustava}}{86}{figure.caption.39}%
+\contentsline {figure}{\numberline {39}{\ignorespaces Prikaz procesa unutar GPU-a}}{89}{figure.caption.40}%
+\contentsline {figure}{\numberline {40}{\ignorespaces Animacija sinusoide napravljena koristeći WebGPU, JavaScript i WGSL}}{90}{figure.caption.41}%
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {41}{\ignorespaces Prikaz 3D čestice (piramide)}}{100}{figure.caption.42}%
+\contentsline {figure}{\numberline {42}{\ignorespaces 3D vizualizacija eksplozije 6400 čestica}}{122}{figure.caption.43}%
+\contentsline {figure}{\numberline {43}{\ignorespaces 3D vizualizacija eksplozije 1000192 čestica}}{124}{figure.caption.44}%
+\contentsline {figure}{\numberline {44}{\ignorespaces 3D vizualizacija eksplozije 5120000 čestica}}{126}{figure.caption.45}%
+\addvspace {10\p@ }

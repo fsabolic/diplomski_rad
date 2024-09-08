@@ -1,0 +1,9 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{+w}{ }\PYG{k+kd}{var}\PYG{+w}{ }\PYG{n}{srediste\PYGZus{}eksplozije}\PYG{p}{:}\PYG{+w}{ }\PYG{n+nb}{vec3f}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n+nb}{vec3f}\PYG{p}{(}\PYG{n}{parametri}\PYG{p}{.}\PYG{n}{pozicija\PYGZus{}eksplozije}\PYG{p}{.}\PYG{n}{x}\PYG{p}{,}
+\PYG{+w}{	}\PYG{n}{parametri}\PYG{p}{.}\PYG{n}{pozicija\PYGZus{}eksplozije}\PYG{p}{.}\PYG{n}{y}\PYG{p}{,}
+\PYG{+w}{	}\PYG{n}{parametri}\PYG{p}{.}\PYG{n}{pozicija\PYGZus{}eksplozije}\PYG{p}{.}\PYG{n}{z}\PYG{p}{);}
+\PYG{k+kd}{var}\PYG{+w}{ }\PYG{n}{pozicija\PYGZus{}cestice}\PYG{p}{:}\PYG{+w}{ }\PYG{n+nb}{vec3f}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{vektor\PYGZus{}pomaka}\PYG{p}{.}\PYG{n}{xyz}\PYG{p}{;}
+\PYG{n}{vsOut}\PYG{p}{.}\PYG{n}{udaljenost}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{distance}\PYG{p}{(}\PYG{n}{pozicija\PYGZus{}cestice}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{srediste\PYGZus{}eksplozije}\PYG{p}{);}
+
+\PYG{k}{return}\PYG{+w}{ }\PYG{n}{vsOut}\PYG{p}{;}
+\end{Verbatim}

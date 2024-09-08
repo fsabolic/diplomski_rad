@@ -1,0 +1,25 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{+w}{ }\PYG{k+kd}{var}\PYG{+w}{ }\PYG{n}{rotacijska\PYGZus{}matrica}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n+nb}{mat4x4}\PYG{o}{\PYGZlt{}}\PYG{n+nb}{f32}\PYG{o}{\PYGZgt{}}\PYG{p}{(}
+\PYG{+w}{	}\PYG{n}{cos}\PYG{p}{(}\PYG{n+nb}{f32}\PYG{p}{(}\PYG{n}{parametri}\PYG{p}{.}\PYG{n}{iteracija}\PYG{o}{+}\PYG{n+nb}{f32}\PYG{p}{(}\PYG{n}{i\PYGZus{}instance}\PYG{p}{)}\PYG{o}{/}\PYG{l+m+mi}{1}\PYG{p}{)),}
+\PYG{+w}{		}\PYG{o}{\PYGZhy{}}\PYG{n}{sin}\PYG{p}{(}\PYG{n+nb}{f32}\PYG{p}{(}\PYG{n}{parametri}\PYG{p}{.}\PYG{n}{iteracija}\PYG{o}{+}\PYG{n+nb}{f32}\PYG{p}{(}\PYG{n}{i\PYGZus{}instance}\PYG{p}{)}\PYG{o}{/}\PYG{l+m+mi}{1}\PYG{p}{)),}\PYG{+w}{ }\PYG{l+m+mf}{0.0}\PYG{p}{,}\PYG{l+m+mf}{0.0}\PYG{p}{,}
+\PYG{+w}{	}\PYG{n}{sin}\PYG{p}{(}\PYG{n+nb}{f32}\PYG{p}{(}\PYG{n}{parametri}\PYG{p}{.}\PYG{n}{iteracija}\PYG{o}{+}\PYG{n+nb}{f32}\PYG{p}{(}\PYG{n}{i\PYGZus{}instance}\PYG{p}{)}\PYG{o}{/}\PYG{l+m+mi}{1}\PYG{p}{)),}
+\PYG{+w}{		}\PYG{n}{cos}\PYG{p}{(}\PYG{n+nb}{f32}\PYG{p}{(}\PYG{n}{parametri}\PYG{p}{.}\PYG{n}{iteracija}\PYG{o}{+}\PYG{n+nb}{f32}\PYG{p}{(}\PYG{n}{i\PYGZus{}instance}\PYG{p}{)}\PYG{o}{/}\PYG{l+m+mi}{1}\PYG{p}{)),}\PYG{+w}{  }\PYG{l+m+mf}{0.0}\PYG{p}{,}\PYG{l+m+mf}{0.0}\PYG{p}{,}
+\PYG{+w}{	}\PYG{l+m+mf}{0.0}\PYG{p}{,}\PYG{+w}{      }\PYG{l+m+mf}{0.0}\PYG{p}{,}\PYG{+w}{       }\PYG{l+m+mf}{1.0}\PYG{p}{,}\PYG{l+m+mf}{0.0}\PYG{p}{,}
+\PYG{+w}{	}\PYG{l+m+mf}{0.0}\PYG{p}{,}\PYG{+w}{      }\PYG{l+m+mf}{0.0}\PYG{p}{,}\PYG{+w}{       }\PYG{l+m+mf}{0.0}\PYG{p}{,}\PYG{l+m+mf}{1.0}\PYG{p}{,}
+\PYG{p}{);}
+
+\PYG{k}{if}\PYG{p}{((}\PYG{n}{vrhovi\PYGZus{}cestice}\PYG{p}{[}\PYG{n}{i\PYGZus{}vertex}\PYG{p}{].}\PYG{n}{koordinate}\PYG{o}{+}\PYG{n}{vektor\PYGZus{}pomaka}\PYG{p}{).}\PYG{n}{y}\PYG{o}{\PYGZlt{}}\PYG{l+m+mi}{100}\PYG{p}{)\PYGZob{}}
+\PYG{+w}{	}\PYG{n}{rotacijska\PYGZus{}matrica}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n+nb}{mat4x4}\PYG{o}{\PYGZlt{}}\PYG{n+nb}{f32}\PYG{o}{\PYGZgt{}}\PYG{p}{(}
+\PYG{+w}{	}\PYG{l+m+mf}{1.0}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mf}{0.0}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mf}{0.0}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mf}{0.0}\PYG{p}{,}
+\PYG{+w}{	}\PYG{l+m+mf}{0.0}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mf}{1.0}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mf}{0.0}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mf}{0.0}\PYG{p}{,}
+\PYG{+w}{	}\PYG{l+m+mf}{0.0}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mf}{0.0}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mf}{1.0}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mf}{0.0}\PYG{p}{,}
+\PYG{+w}{	}\PYG{l+m+mf}{0.0}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mf}{0.0}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mf}{0.0}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mf}{1.0}\PYG{p}{,}
+\PYG{+w}{	}\PYG{p}{);}
+\PYG{p}{\PYGZcb{}}
+
+\PYG{k+kd}{let}\PYG{+w}{ }\PYG{n}{rotiran\PYGZus{}vrh}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{p}{(}\PYG{n}{rotacijska\PYGZus{}matrica}\PYG{+w}{ }\PYG{o}{*}\PYG{+w}{  }\PYG{n}{vrhovi\PYGZus{}cestice}\PYG{p}{[}\PYG{n}{i\PYGZus{}vertex}\PYG{p}{].}\PYG{n}{koordinate}\PYG{p}{)}
+\PYG{+w}{				}\PYG{o}{+}\PYG{n}{vektor\PYGZus{}pomaka}\PYG{p}{;}
+\PYG{+w}{				}
+\PYG{n}{vsOut}\PYG{p}{.}\PYG{n}{koordinate\PYGZus{}vrha}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{parametri}\PYG{p}{.}\PYG{n}{matrica\PYGZus{}3d}\PYG{+w}{ }\PYG{o}{*}\PYG{+w}{ }\PYG{n}{rotiran\PYGZus{}vrh}\PYG{p}{;}
+\PYG{n}{vsOut}\PYG{p}{.}\PYG{n}{boja}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{vrhovi\PYGZus{}cestice}\PYG{p}{[}\PYG{n}{i\PYGZus{}vertex}\PYG{p}{].}\PYG{n}{boja}\PYG{p}{;}
+\end{Verbatim}

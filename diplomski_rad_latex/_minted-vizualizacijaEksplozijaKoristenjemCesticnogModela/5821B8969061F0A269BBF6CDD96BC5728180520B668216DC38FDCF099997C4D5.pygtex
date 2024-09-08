@@ -1,0 +1,24 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k+kd}{const}\PYG{+w}{ }\PYG{n+nx}{bindGroupLayout}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n+nx}{device}\PYG{p}{.}\PYG{n+nx}{createBindGroupLayout}\PYG{p}{(\PYGZob{}}
+\PYG{+w}{	}\PYG{n+nx}{entries}\PYG{o}{:}\PYG{+w}{ }\PYG{p}{[}
+\PYG{+w}{	}\PYG{p}{\PYGZob{}}
+\PYG{+w}{		}\PYG{n+nx}{binding}\PYG{o}{:}\PYG{+w}{ }\PYG{l+m+mf}{0}\PYG{p}{,}
+\PYG{+w}{		}\PYG{n+nx}{visibility}\PYG{o}{:}\PYG{+w}{ }\PYG{n+nx}{GPUShaderStage}\PYG{p}{.}\PYG{n+nx}{COMPUTE}\PYG{p}{,}
+\PYG{+w}{		}\PYG{n+nx}{buffer}\PYG{o}{:}\PYG{+w}{ }\PYG{p}{\PYGZob{}}\PYG{+w}{ }\PYG{n+nx}{type}\PYG{o}{:}\PYG{+w}{ }\PYG{l+s+s2}{\PYGZdq{}storage\PYGZdq{}}\PYG{+w}{ }\PYG{p}{\PYGZcb{},}
+\PYG{+w}{	}\PYG{p}{\PYGZcb{},}
+\PYG{+w}{	}\PYG{p}{\PYGZob{}}
+\PYG{+w}{		}\PYG{n+nx}{binding}\PYG{o}{:}\PYG{+w}{ }\PYG{l+m+mf}{1}\PYG{p}{,}
+\PYG{+w}{		}\PYG{n+nx}{visibility}\PYG{o}{:}\PYG{+w}{ }\PYG{n+nx}{GPUShaderStage}\PYG{p}{.}\PYG{n+nx}{COMPUTE}\PYG{p}{,}
+\PYG{+w}{		}\PYG{n+nx}{buffer}\PYG{o}{:}\PYG{+w}{ }\PYG{p}{\PYGZob{}}\PYG{+w}{ }\PYG{n+nx}{type}\PYG{o}{:}\PYG{+w}{ }\PYG{l+s+s2}{\PYGZdq{}uniform\PYGZdq{}}\PYG{+w}{ }\PYG{p}{\PYGZcb{},}
+\PYG{+w}{	}\PYG{p}{\PYGZcb{},}
+\PYG{+w}{	}\PYG{p}{],}
+\PYG{p}{\PYGZcb{});}
+
+\PYG{k+kd}{const}\PYG{+w}{ }\PYG{n+nx}{bindGroup}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n+nx}{device}\PYG{p}{.}\PYG{n+nx}{createBindGroup}\PYG{p}{(\PYGZob{}}
+\PYG{+w}{	}\PYG{n+nx}{layout}\PYG{o}{:}\PYG{+w}{ }\PYG{n+nx}{bindGroupLayout}\PYG{p}{,}
+\PYG{+w}{	}\PYG{n+nx}{entries}\PYG{o}{:}\PYG{+w}{ }\PYG{p}{[}
+\PYG{+w}{	}\PYG{p}{\PYGZob{}}\PYG{+w}{ }\PYG{n+nx}{binding}\PYG{o}{:}\PYG{+w}{ }\PYG{l+m+mf}{0}\PYG{p}{,}\PYG{+w}{ }\PYG{n+nx}{resource}\PYG{o}{:}\PYG{+w}{ }\PYG{p}{\PYGZob{}}\PYG{+w}{ }\PYG{n+nx}{buffer}\PYG{o}{:}\PYG{+w}{ }\PYG{n+nx}{tockeVertexStorageBuff}\PYG{+w}{ }\PYG{p}{\PYGZcb{}}\PYG{+w}{ }\PYG{p}{\PYGZcb{},}
+\PYG{+w}{	}\PYG{p}{\PYGZob{}}\PYG{+w}{ }\PYG{n+nx}{binding}\PYG{o}{:}\PYG{+w}{ }\PYG{l+m+mf}{1}\PYG{p}{,}\PYG{+w}{ }\PYG{n+nx}{resource}\PYG{o}{:}\PYG{+w}{ }\PYG{p}{\PYGZob{}}\PYG{+w}{ }\PYG{n+nx}{buffer}\PYG{o}{:}\PYG{+w}{ }\PYG{n+nx}{vrijemeUnifBuff}\PYG{+w}{ }\PYG{p}{\PYGZcb{}}\PYG{+w}{ }\PYG{p}{\PYGZcb{},}
+\PYG{+w}{	}\PYG{p}{],}
+\PYG{p}{\PYGZcb{});}
+\end{Verbatim}

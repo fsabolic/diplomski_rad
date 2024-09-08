@@ -1,0 +1,19 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{c+cp}{\PYGZlt{}!DOCTYPE html\PYGZgt{}}
+\PYG{p}{\PYGZlt{}}\PYG{n+nt}{html}\PYG{p}{\PYGZgt{}}
+  \PYG{p}{\PYGZlt{}}\PYG{n+nt}{head}\PYG{p}{\PYGZgt{}}
+    \PYG{p}{\PYGZlt{}}\PYG{n+nt}{meta} \PYG{n+na}{charset}\PYG{o}{=}\PYG{l+s}{\PYGZdq{}utf\PYGZhy{}8\PYGZdq{}} \PYG{p}{/\PYGZgt{}}
+    \PYG{p}{\PYGZlt{}}\PYG{n+nt}{meta} \PYG{n+na}{http\PYGZhy{}equiv}\PYG{o}{=}\PYG{l+s}{\PYGZdq{}X\PYGZhy{}UA\PYGZhy{}Compatible\PYGZdq{}} \PYG{n+na}{content}\PYG{o}{=}\PYG{l+s}{\PYGZdq{}IE=edge\PYGZdq{}} \PYG{p}{/\PYGZgt{}}
+    \PYG{p}{\PYGZlt{}}\PYG{n+nt}{title}\PYG{p}{\PYGZgt{}}Canvas trokut\PYG{p}{\PYGZlt{}/}\PYG{n+nt}{title}\PYG{p}{\PYGZgt{}}
+  \PYG{p}{\PYGZlt{}/}\PYG{n+nt}{head}\PYG{p}{\PYGZgt{}}
+  \PYG{p}{\PYGZlt{}}\PYG{n+nt}{body}\PYG{p}{\PYGZgt{}}
+    \PYG{p}{\PYGZlt{}}\PYG{n+nt}{canvas}
+      \PYG{n+na}{id}\PYG{o}{=}\PYG{l+s}{\PYGZdq{}canvas\PYGZdq{}}
+      \PYG{n+na}{width}\PYG{o}{=}\PYG{l+s}{\PYGZdq{}500\PYGZdq{}}
+      \PYG{n+na}{height}\PYG{o}{=}\PYG{l+s}{\PYGZdq{}500\PYGZdq{}}
+      \PYG{n+na}{style}\PYG{o}{=}\PYG{l+s}{\PYGZdq{}border: 1px solid black\PYGZdq{}}
+    \PYG{p}{\PYGZgt{}\PYGZlt{}/}\PYG{n+nt}{canvas}\PYG{p}{\PYGZgt{}}
+  \PYG{p}{\PYGZlt{}/}\PYG{n+nt}{body}\PYG{p}{\PYGZgt{}}
+\PYG{p}{\PYGZlt{}/}\PYG{n+nt}{html}\PYG{p}{\PYGZgt{}}
+
+\end{Verbatim}

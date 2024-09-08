@@ -1,0 +1,8 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{n+nd}{@fragment}\PYG{+w}{ }\PYG{k}{fn}\PYG{+w}{ }\PYG{n}{fsCestice}\PYG{p}{(}\PYG{n}{vsOut}\PYG{p}{:}\PYG{+w}{ }\PYG{n}{VSOutput}\PYG{p}{)}\PYG{+w}{ }\PYG{p}{\PYGZhy{}\PYGZgt{}}\PYG{+w}{ }\PYG{n+nd}{@location}\PYG{p}{(}\PYG{l+m+mi}{0}\PYG{p}{)}\PYG{+w}{ }\PYG{n+nb}{vec4f}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{	}\PYG{k+kd}{let}\PYG{+w}{ }\PYG{n}{faktor\PYGZus{}udaljenosti}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{l+m+mi}{8}\PYG{+w}{ }\PYG{o}{/}\PYG{+w}{ }\PYG{p}{(}\PYG{l+m+mi}{3}\PYG{+w}{ }\PYG{o}{+}\PYG{+w}{ }\PYG{n}{vsOut}\PYG{p}{.}\PYG{n}{udaljenost}\PYG{+w}{ }\PYG{o}{*}\PYG{+w}{ }\PYG{l+m+mf}{0.001}\PYG{p}{);}
+\PYG{+w}{	}
+\PYG{+w}{	}\PYG{k+kd}{let}\PYG{+w}{ }\PYG{n}{prilagodena\PYGZus{}boja}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{vsOut}\PYG{p}{.}\PYG{n}{boja}\PYG{+w}{ }\PYG{o}{*}\PYG{+w}{ }\PYG{n}{faktor\PYGZus{}udaljenosti}\PYG{p}{;}
+\PYG{+w}{	}\PYG{k}{return}\PYG{+w}{ }\PYG{n}{prilagodena\PYGZus{}boja}\PYG{p}{;}
+\PYG{p}{\PYGZcb{}}
+\end{Verbatim}

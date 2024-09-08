@@ -1,0 +1,33 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k+kd}{const}\PYG{+w}{ }\PYG{n+nx}{computePipeline}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n+nx}{device}\PYG{p}{.}\PYG{n+nx}{createComputePipeline}\PYG{p}{(\PYGZob{}}
+\PYG{+w}{	}\PYG{n+nx}{layout}\PYG{o}{:}\PYG{+w}{ }\PYG{n+nx}{device}\PYG{p}{.}\PYG{n+nx}{createPipelineLayout}\PYG{p}{(\PYGZob{}}
+\PYG{+w}{		}\PYG{n+nx}{bindGroupLayouts}\PYG{o}{:}\PYG{+w}{ }\PYG{p}{[}\PYG{n+nx}{bindGroupLayout}\PYG{p}{],}
+\PYG{+w}{	}\PYG{p}{\PYGZcb{}),}
+\PYG{+w}{	}\PYG{n+nx}{compute}\PYG{o}{:}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{		}\PYG{n+nx}{module}\PYG{o}{:}\PYG{+w}{ }\PYG{n+nx}{computeShaderModule}\PYG{p}{,}
+\PYG{+w}{		}\PYG{n+nx}{entryPoint}\PYG{o}{:}\PYG{+w}{ }\PYG{l+s+s2}{\PYGZdq{}generirajTocke\PYGZdq{}}\PYG{p}{,}
+\PYG{+w}{	}\PYG{p}{\PYGZcb{},}
+\PYG{p}{\PYGZcb{});}
+
+\PYG{k+kd}{const}\PYG{+w}{ }\PYG{n+nx}{renderPipeline}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n+nx}{device}\PYG{p}{.}\PYG{n+nx}{createRenderPipeline}\PYG{p}{(\PYGZob{}}
+\PYG{+w}{	}\PYG{n+nx}{layout}\PYG{o}{:}\PYG{+w}{ }\PYG{l+s+s2}{\PYGZdq{}auto\PYGZdq{}}\PYG{p}{,}
+\PYG{+w}{	}\PYG{n+nx}{vertex}\PYG{o}{:}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{		}\PYG{n+nx}{module}\PYG{o}{:}\PYG{+w}{ }\PYG{n+nx}{vertexShaderModule}\PYG{p}{,}
+\PYG{+w}{		}\PYG{n+nx}{entryPoint}\PYG{o}{:}\PYG{+w}{ }\PYG{l+s+s2}{\PYGZdq{}postaviVrhove\PYGZdq{}}\PYG{p}{,}
+\PYG{+w}{		}\PYG{n+nx}{buffers}\PYG{o}{:}\PYG{+w}{ }\PYG{p}{[}
+\PYG{+w}{		}\PYG{p}{\PYGZob{}}
+\PYG{+w}{			}\PYG{n+nx}{arrayStride}\PYG{o}{:}\PYG{+w}{ }\PYG{l+m+mf}{8}\PYG{p}{,}
+\PYG{+w}{			}\PYG{n+nx}{attributes}\PYG{o}{:}\PYG{+w}{ }\PYG{p}{[}
+\PYG{+w}{			}\PYG{p}{\PYGZob{}}\PYG{+w}{ }\PYG{n+nx}{shaderLocation}\PYG{o}{:}\PYG{+w}{ }\PYG{l+m+mf}{0}\PYG{p}{,}\PYG{+w}{ }\PYG{n+nx}{format}\PYG{o}{:}\PYG{+w}{ }\PYG{l+s+s2}{\PYGZdq{}float32x2\PYGZdq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{n+nx}{offset}\PYG{o}{:}\PYG{+w}{ }\PYG{l+m+mf}{0}\PYG{+w}{ }\PYG{p}{\PYGZcb{},}
+\PYG{+w}{			}\PYG{p}{],}
+\PYG{+w}{		}\PYG{p}{\PYGZcb{},}
+\PYG{+w}{		}\PYG{p}{],}
+\PYG{+w}{	}\PYG{p}{\PYGZcb{},}
+\PYG{+w}{	}\PYG{n+nx}{fragment}\PYG{o}{:}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{		}\PYG{n+nx}{module}\PYG{o}{:}\PYG{+w}{ }\PYG{n+nx}{fragmentShaderModule}\PYG{p}{,}
+\PYG{+w}{		}\PYG{n+nx}{entryPoint}\PYG{o}{:}\PYG{+w}{ }\PYG{l+s+s2}{\PYGZdq{}postaviBoju\PYGZdq{}}\PYG{p}{,}
+\PYG{+w}{		}\PYG{n+nx}{targets}\PYG{o}{:}\PYG{+w}{ }\PYG{p}{[\PYGZob{}}\PYG{+w}{ }\PYG{n+nx}{format}\PYG{o}{:}\PYG{+w}{ }\PYG{l+s+s2}{\PYGZdq{}bgra8unorm\PYGZdq{}}\PYG{+w}{ }\PYG{p}{\PYGZcb{}],}
+\PYG{+w}{	}\PYG{p}{\PYGZcb{},}
+\PYG{+w}{	}\PYG{n+nx}{primitive}\PYG{o}{:}\PYG{+w}{ }\PYG{p}{\PYGZob{}}\PYG{+w}{ }\PYG{n+nx}{topology}\PYG{o}{:}\PYG{+w}{ }\PYG{l+s+s2}{\PYGZdq{}point\PYGZhy{}list\PYGZdq{}}\PYG{+w}{ }\PYG{p}{\PYGZcb{},}
+\PYG{p}{\PYGZcb{});}
+\end{Verbatim}

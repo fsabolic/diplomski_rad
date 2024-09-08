@@ -1,0 +1,36 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{n+nd}{@vertex}\PYG{+w}{ }\PYG{k}{fn}\PYG{+w}{ }\PYG{n}{vsGrid}\PYG{p}{(}
+\PYG{n+nd}{@builtin}\PYG{p}{(}\PYG{n+nb}{vertex\PYGZus{}index}\PYG{p}{)}\PYG{+w}{ }\PYG{n}{i\PYGZus{}vertex}\PYG{p}{:}\PYG{n+nb}{u32}\PYG{p}{,}
+\PYG{n+nd}{@builtin}\PYG{p}{(}\PYG{n+nb}{instance\PYGZus{}index}\PYG{p}{)}\PYG{+w}{ }\PYG{n}{i\PYGZus{}instance}\PYG{p}{:}\PYG{n+nb}{u32}\PYG{p}{)}\PYG{+w}{ }\PYG{p}{\PYGZhy{}\PYGZgt{}}\PYG{+w}{ }\PYG{n}{VSOutput}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{	}
+\PYG{+w}{	}\PYG{k+kd}{var}\PYG{+w}{ }\PYG{n}{vsOut}\PYG{p}{:}\PYG{+w}{ }\PYG{n}{VSOutput}\PYG{p}{;}
+\PYG{+w}{	}\PYG{k+kd}{var}\PYG{+w}{ }\PYG{n}{br\PYGZus{}iteracija}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n+nb}{u32}\PYG{p}{(}\PYG{l+m+mi}{5000}\PYG{p}{);}
+\PYG{+w}{	}\PYG{k+kd}{var}\PYG{+w}{ }\PYG{n}{sirina\PYGZus{}resetke}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n+nb}{f32}\PYG{p}{(}\PYG{l+m+mi}{100000}\PYG{p}{);}
+\PYG{+w}{	}\PYG{k+kd}{var}\PYG{+w}{ }\PYG{n}{razmak\PYGZus{}resetki}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n+nb}{f32}\PYG{p}{(}\PYG{l+m+mi}{500}\PYG{p}{);}
+\PYG{+w}{	}\PYG{k+kd}{var}\PYG{+w}{ }\PYG{n}{predznak}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{l+m+mf}{1.0}\PYG{p}{;}
+\PYG{+w}{	}\PYG{k}{if}\PYG{p}{(}\PYG{n}{i\PYGZus{}vertex}\PYG{o}{\PYGZpc{}}\PYG{l+m+mi}{2}\PYG{o}{==}\PYG{l+m+mi}{1}\PYG{p}{)\PYGZob{}}
+\PYG{+w}{		}\PYG{n}{predznak}\PYG{o}{*=\PYGZhy{}}\PYG{l+m+mi}{1}\PYG{p}{;}
+\PYG{+w}{	}\PYG{p}{\PYGZcb{}}
+\PYG{+w}{	}
+\PYG{+w}{	}\PYG{k+kd}{var}\PYG{+w}{ }\PYG{n}{x}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{l+m+mf}{0.0}\PYG{p}{;}
+\PYG{+w}{	}\PYG{k+kd}{var}\PYG{+w}{ }\PYG{n}{z}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{predznak}\PYG{o}{*}\PYG{n}{sirina\PYGZus{}resetke}\PYG{p}{;}
+\PYG{+w}{	}\PYG{k+kd}{var}\PYG{+w}{ }\PYG{n}{pomak\PYGZus{}u\PYGZus{}iza}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{i\PYGZus{}instance}\PYG{p}{;}
+\PYG{+w}{	}
+\PYG{+w}{	}\PYG{k}{if}\PYG{p}{(}\PYG{n}{i\PYGZus{}instance}\PYG{o}{\PYGZgt{}}\PYG{n}{br\PYGZus{}iteracija}\PYG{p}{)\PYGZob{}}
+\PYG{+w}{		}\PYG{n}{pomak\PYGZus{}u\PYGZus{}iza}\PYG{+w}{ }\PYG{o}{\PYGZhy{}=}\PYG{+w}{ }\PYG{n}{br\PYGZus{}iteracija}\PYG{p}{;}
+\PYG{+w}{		}\PYG{n}{x}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{razmak\PYGZus{}resetki}\PYG{o}{*}\PYG{n+nb}{f32}\PYG{p}{(}\PYG{n}{pomak\PYGZus{}u\PYGZus{}iza}\PYG{p}{)}\PYG{o}{\PYGZhy{}}\PYG{n}{sirina\PYGZus{}resetke}\PYG{o}{*}\PYG{l+m+mi}{2}\PYG{p}{;}
+\PYG{+w}{		}
+\PYG{+w}{	}\PYG{p}{\PYGZcb{}}\PYG{k}{else}\PYG{p}{\PYGZob{}}
+\PYG{+w}{		}\PYG{n}{x}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{razmak\PYGZus{}resetki}\PYG{o}{*}\PYG{n+nb}{f32}\PYG{p}{(}\PYG{n}{pomak\PYGZus{}u\PYGZus{}iza}\PYG{p}{)}\PYG{o}{\PYGZhy{}}\PYG{n}{sirina\PYGZus{}resetke}\PYG{o}{*}\PYG{l+m+mi}{2}\PYG{p}{;}
+\PYG{+w}{		}\PYG{k+kd}{let}\PYG{+w}{ }\PYG{n}{pom}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{z}\PYG{p}{;}
+\PYG{+w}{		}\PYG{n}{z}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{x}\PYG{p}{;}
+\PYG{+w}{		}\PYG{n}{x}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{pom}\PYG{p}{;}
+\PYG{+w}{	}\PYG{p}{\PYGZcb{}}
+\PYG{+w}{	}
+\PYG{+w}{	}\PYG{n}{vsOut}\PYG{p}{.}\PYG{n}{koordinate\PYGZus{}vrha}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n+nb}{vec4f}\PYG{p}{(}\PYG{n}{x}\PYG{p}{,}\PYG{l+m+mi}{0}\PYG{p}{,}\PYG{n}{z}\PYG{p}{,}\PYG{l+m+mi}{1}\PYG{p}{);}
+\PYG{+w}{	}\PYG{n}{vsOut}\PYG{p}{.}\PYG{n}{koordinate\PYGZus{}vrha}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{parametri}\PYG{p}{.}\PYG{n}{matrica\PYGZus{}3d}\PYG{o}{*}\PYG{n}{vsOut}\PYG{p}{.}\PYG{n}{koordinate\PYGZus{}vrha}\PYG{p}{;}
+\PYG{+w}{	}
+\PYG{+w}{	}\PYG{k}{return}\PYG{+w}{ }\PYG{n}{vsOut}\PYG{p}{;}
+\PYG{p}{\PYGZcb{}}
+
+\end{Verbatim}

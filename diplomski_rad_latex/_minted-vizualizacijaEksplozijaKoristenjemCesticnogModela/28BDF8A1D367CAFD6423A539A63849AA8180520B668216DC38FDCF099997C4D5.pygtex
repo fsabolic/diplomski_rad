@@ -1,0 +1,39 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k+kd}{let}\PYG{+w}{ }\PYG{n+nx}{i}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{l+m+mf}{0}\PYG{p}{;}
+\PYG{k+kd}{function}\PYG{+w}{ }\PYG{n+nx}{slicica}\PYG{p}{()}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{	}\PYG{k+kd}{const}\PYG{+w}{ }\PYG{n+nx}{vrijeme}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{p}{(}\PYG{n+nx}{i}\PYG{o}{++}\PYG{p}{)}\PYG{+w}{ }\PYG{o}{/}\PYG{+w}{ }\PYG{l+m+mf}{125}\PYG{p}{;}
+\PYG{+w}{	}\PYG{n+nx}{device}\PYG{p}{.}\PYG{n+nx}{queue}\PYG{p}{.}\PYG{n+nx}{writeBuffer}\PYG{p}{(}
+\PYG{+w}{	}\PYG{n+nx}{vrijemeUnifBuff}\PYG{p}{,}
+\PYG{+w}{	}\PYG{l+m+mf}{0}\PYG{p}{,}
+\PYG{+w}{	}\PYG{o+ow}{new}\PYG{+w}{ }\PYG{n+nb}{Float32Array}\PYG{p}{([}\PYG{n+nx}{vrijeme}\PYG{p}{])}
+\PYG{+w}{	}\PYG{p}{);}
+\PYG{+w}{	}
+\PYG{+w}{	}\PYG{k+kd}{const}\PYG{+w}{ }\PYG{n+nx}{commandEncoder}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n+nx}{device}\PYG{p}{.}\PYG{n+nx}{createCommandEncoder}\PYG{p}{();}
+\PYG{+w}{	}
+\PYG{+w}{	}\PYG{k+kd}{const}\PYG{+w}{ }\PYG{n+nx}{computePass}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n+nx}{commandEncoder}\PYG{p}{.}\PYG{n+nx}{beginComputePass}\PYG{p}{();}
+\PYG{+w}{	}\PYG{n+nx}{computePass}\PYG{p}{.}\PYG{n+nx}{setPipeline}\PYG{p}{(}\PYG{n+nx}{computePipeline}\PYG{p}{);}
+\PYG{+w}{	}\PYG{n+nx}{computePass}\PYG{p}{.}\PYG{n+nx}{setBindGroup}\PYG{p}{(}\PYG{l+m+mf}{0}\PYG{p}{,}\PYG{+w}{ }\PYG{n+nx}{bindGroup}\PYG{p}{);}
+\PYG{+w}{	}\PYG{n+nx}{computePass}\PYG{p}{.}\PYG{n+nx}{dispatchWorkgroups}\PYG{p}{(}\PYG{n+nb}{Math}\PYG{p}{.}\PYG{n+nx}{ceil}\PYG{p}{(}\PYG{n+nx}{brTocaka}\PYG{+w}{ }\PYG{o}{/}\PYG{+w}{ }\PYG{l+m+mf}{64}\PYG{p}{));}
+\PYG{+w}{	}\PYG{n+nx}{computePass}\PYG{p}{.}\PYG{n+nx}{end}\PYG{p}{();}
+\PYG{+w}{	}
+\PYG{+w}{	}\PYG{k+kd}{const}\PYG{+w}{ }\PYG{n+nx}{renderPass}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n+nx}{commandEncoder}\PYG{p}{.}\PYG{n+nx}{beginRenderPass}\PYG{p}{(\PYGZob{}}
+\PYG{+w}{		}\PYG{n+nx}{colorAttachments}\PYG{o}{:}\PYG{+w}{ }\PYG{p}{[}
+\PYG{+w}{		}\PYG{p}{\PYGZob{}}
+\PYG{+w}{			}\PYG{n+nx}{view}\PYG{o}{:}\PYG{+w}{ }\PYG{n+nx}{context}\PYG{p}{.}\PYG{n+nx}{getCurrentTexture}\PYG{p}{().}\PYG{n+nx}{createView}\PYG{p}{(),}
+\PYG{+w}{			}\PYG{n+nx}{loadOp}\PYG{o}{:}\PYG{+w}{ }\PYG{l+s+s2}{\PYGZdq{}clear\PYGZdq{}}\PYG{p}{,}
+\PYG{+w}{			}\PYG{n+nx}{storeOp}\PYG{o}{:}\PYG{+w}{ }\PYG{l+s+s2}{\PYGZdq{}store\PYGZdq{}}\PYG{p}{,}
+\PYG{+w}{			}\PYG{n+nx}{clearValue}\PYG{o}{:}\PYG{+w}{ }\PYG{p}{\PYGZob{}}\PYG{+w}{ }\PYG{n+nx}{r}\PYG{o}{:}\PYG{+w}{ }\PYG{l+m+mf}{0.0}\PYG{p}{,}\PYG{+w}{ }\PYG{n+nx}{g}\PYG{o}{:}\PYG{+w}{ }\PYG{l+m+mf}{0.0}\PYG{p}{,}\PYG{+w}{ }\PYG{n+nx}{b}\PYG{o}{:}\PYG{+w}{ }\PYG{l+m+mf}{0.0}\PYG{p}{,}\PYG{+w}{ }\PYG{n+nx}{a}\PYG{o}{:}\PYG{+w}{ }\PYG{l+m+mf}{1.0}\PYG{+w}{ }\PYG{p}{\PYGZcb{},}
+\PYG{+w}{		}\PYG{p}{\PYGZcb{},}
+\PYG{+w}{		}\PYG{p}{],}
+\PYG{+w}{	}\PYG{p}{\PYGZcb{});}
+\PYG{+w}{	}\PYG{n+nx}{renderPass}\PYG{p}{.}\PYG{n+nx}{setPipeline}\PYG{p}{(}\PYG{n+nx}{renderPipeline}\PYG{p}{);}
+\PYG{+w}{	}\PYG{n+nx}{renderPass}\PYG{p}{.}\PYG{n+nx}{setVertexBuffer}\PYG{p}{(}\PYG{l+m+mf}{0}\PYG{p}{,}\PYG{+w}{ }\PYG{n+nx}{tockeVertexStorageBuff}\PYG{p}{);}
+\PYG{+w}{	}\PYG{n+nx}{renderPass}\PYG{p}{.}\PYG{n+nx}{draw}\PYG{p}{(}\PYG{n+nx}{brTocaka}\PYG{p}{);}
+\PYG{+w}{	}\PYG{n+nx}{renderPass}\PYG{p}{.}\PYG{n+nx}{end}\PYG{p}{();}
+\PYG{+w}{	}
+\PYG{+w}{	}\PYG{n+nx}{device}\PYG{p}{.}\PYG{n+nx}{queue}\PYG{p}{.}\PYG{n+nx}{submit}\PYG{p}{([}\PYG{n+nx}{commandEncoder}\PYG{p}{.}\PYG{n+nx}{finish}\PYG{p}{()]);}
+\PYG{+w}{	}\PYG{n+nx}{requestAnimationFrame}\PYG{p}{(}\PYG{n+nx}{slicica}\PYG{p}{);}
+\PYG{p}{\PYGZcb{}}
+
+\PYG{n+nx}{requestAnimationFrame}\PYG{p}{(}\PYG{n+nx}{slicica}\PYG{p}{);}
+\end{Verbatim}

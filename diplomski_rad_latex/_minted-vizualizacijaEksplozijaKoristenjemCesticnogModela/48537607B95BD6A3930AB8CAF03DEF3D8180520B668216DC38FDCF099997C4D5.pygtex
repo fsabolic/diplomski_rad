@@ -1,0 +1,42 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k+kd}{const}\PYG{+w}{ }\PYG{n+nx}{computeShaderWGSL}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{l+s+sb}{`}
+\PYG{l+s+sb}{struct Tocka \PYGZob{}}
+\PYG{l+s+sb}{	pozicija: vec2\PYGZlt{}f32\PYGZgt{},}
+\PYG{l+s+sb}{\PYGZcb{}}
+
+\PYG{l+s+sb}{@group(0) @binding(0) var\PYGZlt{}storage, read\PYGZus{}write\PYGZgt{} tocke: array\PYGZlt{}Tocka\PYGZgt{};}
+\PYG{l+s+sb}{@group(0) @binding(1) var\PYGZlt{}uniform\PYGZgt{} vrijeme: f32;}
+
+\PYG{l+s+sb}{@compute @workgroup\PYGZus{}size(64)}
+\PYG{l+s+sb}{fn generirajTocke(@builtin(global\PYGZus{}invocation\PYGZus{}id) global\PYGZus{}id: vec3\PYGZlt{}u32\PYGZgt{}) \PYGZob{}}
+\PYG{l+s+sb}{	let index = global\PYGZus{}id.x;}
+\PYG{l+s+sb}{	if (index \PYGZgt{}= arrayLength(\PYGZam{}tocke)) \PYGZob{}}
+\PYG{l+s+sb}{		return;}
+\PYG{l+s+sb}{	\PYGZcb{}}
+\PYG{l+s+sb}{	let x = f32(index) / f32(arrayLength(\PYGZam{}tocke)) * 2.0 * 3.14159;}
+\PYG{l+s+sb}{	let y = sin(x + vrijeme);}
+\PYG{l+s+sb}{	tocke[index].pozicija = vec2\PYGZlt{}f32\PYGZgt{}(x / 3.14159 \PYGZhy{} 1.0, y * 0.5);}
+\PYG{l+s+sb}{\PYGZcb{}}
+\PYG{l+s+sb}{`}\PYG{p}{;}
+
+\PYG{k+kd}{const}\PYG{+w}{ }\PYG{n+nx}{vertexShaderWGSL}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{l+s+sb}{`}
+\PYG{l+s+sb}{struct VrhOutput \PYGZob{}}
+\PYG{l+s+sb}{	@builtin(position) pozicija: vec4\PYGZlt{}f32\PYGZgt{},}
+\PYG{l+s+sb}{	@location(0) boja: vec4\PYGZlt{}f32\PYGZgt{},}
+\PYG{l+s+sb}{\PYGZcb{}}
+
+\PYG{l+s+sb}{@vertex}
+\PYG{l+s+sb}{fn postaviVrhove(@location(0) pozicija: vec2\PYGZlt{}f32\PYGZgt{}) \PYGZhy{}\PYGZgt{} VrhOutput \PYGZob{}}
+\PYG{l+s+sb}{	var out: VrhOutput;}
+\PYG{l+s+sb}{	out.pozicija = vec4\PYGZlt{}f32\PYGZgt{}(pozicija, 0.0, 1.0);}
+\PYG{l+s+sb}{	out.boja = vec4\PYGZlt{}f32\PYGZgt{}(pozicija.x + 1.0, pozicija.y + 0.5, 0.5, 1.0);}
+\PYG{l+s+sb}{	return out;}
+\PYG{l+s+sb}{\PYGZcb{}}
+\PYG{l+s+sb}{`}\PYG{p}{;}
+\PYG{k+kd}{const}\PYG{+w}{ }\PYG{n+nx}{fragmentShaderWGSL}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{l+s+sb}{`}
+\PYG{l+s+sb}{@fragment}
+\PYG{l+s+sb}{fn postaviBoju(@location(0) boja: vec4\PYGZlt{}f32\PYGZgt{}) \PYGZhy{}\PYGZgt{} @location(0) vec4\PYGZlt{}f32\PYGZgt{} \PYGZob{}}
+\PYG{l+s+sb}{	return boja;}
+\PYG{l+s+sb}{\PYGZcb{}}
+\PYG{l+s+sb}{`}\PYG{p}{;}
+\end{Verbatim}

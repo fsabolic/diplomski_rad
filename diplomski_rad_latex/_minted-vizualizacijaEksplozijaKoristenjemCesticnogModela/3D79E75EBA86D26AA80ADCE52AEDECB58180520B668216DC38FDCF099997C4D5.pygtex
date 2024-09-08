@@ -1,0 +1,13 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k+kd}{const}\PYG{+w}{ }\PYG{n+nx}{computeShaderModule}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n+nx}{device}\PYG{p}{.}\PYG{n+nx}{createShaderModule}\PYG{p}{(\PYGZob{}}
+\PYG{+w}{	}\PYG{n+nx}{code}\PYG{o}{:}\PYG{+w}{ }\PYG{n+nx}{computeShaderWGSL}\PYG{p}{,}
+\PYG{p}{\PYGZcb{});}
+
+\PYG{k+kd}{const}\PYG{+w}{ }\PYG{n+nx}{vertexShaderModule}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n+nx}{device}\PYG{p}{.}\PYG{n+nx}{createShaderModule}\PYG{p}{(\PYGZob{}}
+\PYG{+w}{	}\PYG{n+nx}{code}\PYG{o}{:}\PYG{+w}{ }\PYG{n+nx}{vertexShaderWGSL}\PYG{p}{,}
+\PYG{p}{\PYGZcb{});}
+
+\PYG{k+kd}{const}\PYG{+w}{ }\PYG{n+nx}{fragmentShaderModule}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n+nx}{device}\PYG{p}{.}\PYG{n+nx}{createShaderModule}\PYG{p}{(\PYGZob{}}
+\PYG{+w}{	}\PYG{n+nx}{code}\PYG{o}{:}\PYG{+w}{ }\PYG{n+nx}{fragmentShaderWGSL}\PYG{p}{,}
+\PYG{p}{\PYGZcb{});}
+\end{Verbatim}

@@ -1,0 +1,38 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k+kd}{class}\PYG{+w}{ }\PYG{n+nx}{CoulombovPotencijalBuilder}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{  }\PYG{k+kr}{constructor}\PYG{p}{(}\PYG{n+nx}{k}\PYG{p}{,}\PYG{+w}{ }\PYG{n+nx}{rVektor}\PYG{p}{,}\PYG{+w}{ }\PYG{n+nx}{naboj}\PYG{p}{)}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{k}{this}\PYG{p}{.}\PYG{n+nx}{potencijal}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{o+ow}{new}\PYG{+w}{ }\PYG{n+nx}{CoulombovPotencijal}\PYG{p}{(}\PYG{n+nx}{k}\PYG{p}{,}\PYG{+w}{ }\PYG{n+nx}{rVektor}\PYG{p}{,}\PYG{+w}{ }\PYG{n+nx}{naboj}\PYG{p}{);}
+\PYG{+w}{  }\PYG{p}{\PYGZcb{}}
+
+\PYG{+w}{  }\PYG{n+nx}{setPotencijalUdaljenosti}\PYG{p}{(}\PYG{n+nx}{potencijalUdaljenosti}\PYG{p}{)}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{k}{this}\PYG{p}{.}\PYG{n+nx}{potencijal}\PYG{p}{.}\PYG{n+nx}{potencijalUdaljenosti}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n+nx}{potencijalUdaljenosti}\PYG{p}{;}
+\PYG{+w}{    }\PYG{k}{return}\PYG{+w}{ }\PYG{k}{this}\PYG{p}{;}
+\PYG{+w}{  }\PYG{p}{\PYGZcb{}}
+
+\PYG{+w}{  }\PYG{n+nx}{setMaxUdaljenost}\PYG{p}{(}\PYG{n+nx}{maxUdaljenost}\PYG{p}{)}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{k}{this}\PYG{p}{.}\PYG{n+nx}{potencijal}\PYG{p}{.}\PYG{n+nx}{maxUdaljenost}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n+nx}{maxUdaljenost}\PYG{p}{;}
+\PYG{+w}{    }\PYG{k}{return}\PYG{+w}{ }\PYG{k}{this}\PYG{p}{;}
+\PYG{+w}{  }\PYG{p}{\PYGZcb{}}
+
+\PYG{+w}{  }\PYG{n+nx}{setMinUdaljenost}\PYG{p}{(}\PYG{n+nx}{minUdaljenost}\PYG{p}{)}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{k}{this}\PYG{p}{.}\PYG{n+nx}{potencijal}\PYG{p}{.}\PYG{n+nx}{minUdaljenost}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n+nx}{minUdaljenost}\PYG{p}{;}
+\PYG{+w}{    }\PYG{k}{return}\PYG{+w}{ }\PYG{k}{this}\PYG{p}{;}
+\PYG{+w}{  }\PYG{p}{\PYGZcb{}}
+
+\PYG{+w}{  }\PYG{n+nx}{setXMnozitelj}\PYG{p}{(}\PYG{n+nx}{xMnozitelj}\PYG{p}{)}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{k}{this}\PYG{p}{.}\PYG{n+nx}{potencijal}\PYG{p}{.}\PYG{n+nx}{xMnozitelj}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n+nx}{xMnozitelj}\PYG{p}{;}
+\PYG{+w}{    }\PYG{k}{return}\PYG{+w}{ }\PYG{k}{this}\PYG{p}{;}
+\PYG{+w}{  }\PYG{p}{\PYGZcb{}}
+
+\PYG{+w}{  }\PYG{n+nx}{setPomak}\PYG{p}{(}\PYG{n+nx}{pomak}\PYG{p}{)}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{k}{this}\PYG{p}{.}\PYG{n+nx}{potencijal}\PYG{p}{.}\PYG{n+nx}{pomak}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n+nx}{pomak}\PYG{p}{;}
+\PYG{+w}{    }\PYG{k}{return}\PYG{+w}{ }\PYG{k}{this}\PYG{p}{;}
+\PYG{+w}{  }\PYG{p}{\PYGZcb{}}
+
+\PYG{+w}{  }\PYG{n+nx}{build}\PYG{p}{()}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{k+kd}{let}\PYG{+w}{ }\PYG{n+nx}{krajnjiPotencijal}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{k}{this}\PYG{p}{.}\PYG{n+nx}{potencijal}\PYG{p}{;}
+\PYG{+w}{    }\PYG{k}{this}\PYG{p}{.}\PYG{n+nx}{potencijal}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{k+kc}{null}\PYG{p}{;}
+\PYG{+w}{    }\PYG{k}{return}\PYG{+w}{ }\PYG{n+nx}{krajnjiPotencijal}\PYG{p}{;}
+\PYG{+w}{  }\PYG{p}{\PYGZcb{}}
+\PYG{p}{\PYGZcb{}}
+\end{Verbatim}

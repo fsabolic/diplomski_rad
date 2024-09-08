@@ -3,7 +3,9 @@ async function postaviWebGPU() {
   adapter = await navigator.gpu?.requestAdapter();
   device = await adapter?.requestDevice();
   if (!device) {
-    fail("Ovaj preglednik ne podržava WebGPU");
+    fail(
+      "Ovaj preglednik ne podržava WebGPU (Pokušajte na Microsoft Edge pregledniku)"
+    );
     return;
   }
 

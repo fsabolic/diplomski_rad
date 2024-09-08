@@ -1,0 +1,103 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k+kd}{function}\PYG{+w}{ }\PYG{n+nx}{izvrsiCesticeRenderShader}\PYG{p}{()}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{	}\PYG{k+kd}{const}\PYG{+w}{ }\PYG{n+nx}{canvasTexture}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n+nx}{context}\PYG{p}{.}\PYG{n+nx}{getCurrentTexture}\PYG{p}{();}
+\PYG{+w}{	}\PYG{k+kd}{const}\PYG{+w}{ }\PYG{n+nx}{cesticeRenderPassDescriptor}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{		}\PYG{n+nx}{label}\PYG{o}{:}\PYG{+w}{ }\PYG{l+s+s2}{\PYGZdq{}Cestice Shader RenderPass\PYGZdq{}}\PYG{p}{,}
+\PYG{+w}{		}\PYG{n+nx}{colorAttachments}\PYG{o}{:}\PYG{+w}{ }\PYG{p}{[}
+\PYG{+w}{		}\PYG{p}{\PYGZob{}}
+\PYG{+w}{			}\PYG{n+nx}{view}\PYG{o}{:}\PYG{+w}{ }\PYG{n+nx}{context}\PYG{p}{.}\PYG{n+nx}{getCurrentTexture}\PYG{p}{(),}
+\PYG{+w}{			}\PYG{n+nx}{loadOp}\PYG{o}{:}\PYG{+w}{ }\PYG{l+s+s2}{\PYGZdq{}clear\PYGZdq{}}\PYG{p}{,}
+\PYG{+w}{			}\PYG{n+nx}{storeOp}\PYG{o}{:}\PYG{+w}{ }\PYG{l+s+s2}{\PYGZdq{}store\PYGZdq{}}\PYG{p}{,}
+\PYG{+w}{		}\PYG{p}{\PYGZcb{},}
+\PYG{+w}{		}\PYG{p}{],}
+\PYG{+w}{		}\PYG{n+nx}{depthStencilAttachment}\PYG{o}{:}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{			}\PYG{n+nx}{view}\PYG{o}{:}\PYG{+w}{ }\PYG{n+nx}{context}\PYG{p}{.}\PYG{n+nx}{getCurrentTexture}\PYG{p}{(),}
+\PYG{+w}{			}\PYG{n+nx}{depthClearValue}\PYG{o}{:}\PYG{+w}{ }\PYG{l+m+mf}{1.0}\PYG{p}{,}
+\PYG{+w}{			}\PYG{n+nx}{depthLoadOp}\PYG{o}{:}\PYG{+w}{ }\PYG{l+s+s2}{\PYGZdq{}clear\PYGZdq{}}\PYG{p}{,}
+\PYG{+w}{			}\PYG{n+nx}{depthStoreOp}\PYG{o}{:}\PYG{+w}{ }\PYG{l+s+s2}{\PYGZdq{}store\PYGZdq{}}\PYG{p}{,}
+\PYG{+w}{		}\PYG{p}{\PYGZcb{},}
+\PYG{+w}{	}\PYG{p}{\PYGZcb{};}
+\PYG{+w}{	}\PYG{n+nx}{cesticeRenderPassDescriptor}\PYG{p}{.}\PYG{n+nx}{colorAttachments}\PYG{p}{[}\PYG{l+m+mf}{0}\PYG{p}{].}\PYG{n+nx}{view}\PYG{+w}{ }\PYG{o}{=}
+\PYG{+w}{	}\PYG{n+nx}{canvasTexture}\PYG{p}{.}\PYG{n+nx}{createView}\PYG{p}{();}
+\PYG{+w}{	}
+\PYG{+w}{	}\PYG{k}{if}\PYG{+w}{ }\PYG{p}{(}
+\PYG{+w}{	}\PYG{o}{!}\PYG{n+nx}{depthTexture}\PYG{+w}{ }\PYG{o}{||}
+\PYG{+w}{	}\PYG{n+nx}{depthTexture}\PYG{p}{.}\PYG{n+nx}{width}\PYG{+w}{ }\PYG{o}{!==}\PYG{+w}{ }\PYG{n+nx}{canvasTexture}\PYG{p}{.}\PYG{n+nx}{width}\PYG{+w}{ }\PYG{o}{||}
+\PYG{+w}{	}\PYG{n+nx}{depthTexture}\PYG{p}{.}\PYG{n+nx}{height}\PYG{+w}{ }\PYG{o}{!==}\PYG{+w}{ }\PYG{n+nx}{canvasTexture}\PYG{p}{.}\PYG{n+nx}{height}
+\PYG{+w}{	}\PYG{p}{)}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{		}\PYG{k}{if}\PYG{+w}{ }\PYG{p}{(}\PYG{n+nx}{depthTexture}\PYG{p}{)}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{			}\PYG{n+nx}{depthTexture}\PYG{p}{.}\PYG{n+nx}{destroy}\PYG{p}{();}
+\PYG{+w}{		}\PYG{p}{\PYGZcb{}}
+\PYG{+w}{		}\PYG{n+nx}{depthTexture}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n+nx}{device}\PYG{p}{.}\PYG{n+nx}{createTexture}\PYG{p}{(\PYGZob{}}
+\PYG{+w}{			}\PYG{n+nx}{size}\PYG{o}{:}\PYG{+w}{ }\PYG{p}{[}\PYG{n+nx}{canvasTexture}\PYG{p}{.}\PYG{n+nx}{width}\PYG{p}{,}\PYG{+w}{ }\PYG{n+nx}{canvasTexture}\PYG{p}{.}\PYG{n+nx}{height}\PYG{p}{],}
+\PYG{+w}{			}\PYG{n+nx}{format}\PYG{o}{:}\PYG{+w}{ }\PYG{l+s+s2}{\PYGZdq{}depth24plus\PYGZdq{}}\PYG{p}{,}
+\PYG{+w}{			}\PYG{n+nx}{usage}\PYG{o}{:}\PYG{+w}{ }\PYG{n+nx}{GPUTextureUsage}\PYG{p}{.}\PYG{n+nx}{RENDER\PYGZus{}ATTACHMENT}\PYG{p}{,}
+\PYG{+w}{		}\PYG{p}{\PYGZcb{});}
+\PYG{+w}{	}\PYG{p}{\PYGZcb{}}
+\PYG{+w}{	}\PYG{n+nx}{cesticeRenderPassDescriptor}\PYG{p}{.}\PYG{n+nx}{depthStencilAttachment}\PYG{p}{.}\PYG{n+nx}{view}\PYG{+w}{ }\PYG{o}{=}
+\PYG{+w}{	}\PYG{n+nx}{depthTexture}\PYG{p}{.}\PYG{n+nx}{createView}\PYG{p}{();}
+\PYG{+w}{	}
+\PYG{+w}{	}\PYG{k+kd}{const}\PYG{+w}{ }\PYG{n+nx}{cesticeCommandEncoder}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n+nx}{device}\PYG{p}{.}\PYG{n+nx}{createCommandEncoder}\PYG{p}{();}
+\PYG{+w}{	}\PYG{k+kd}{const}\PYG{+w}{ }\PYG{n+nx}{cesticeRenderPass}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n+nx}{cesticeCommandEncoder}\PYG{p}{.}\PYG{n+nx}{beginRenderPass}\PYG{p}{(}
+\PYG{+w}{	}\PYG{n+nx}{cesticeRenderPassDescriptor}
+\PYG{+w}{	}\PYG{p}{);}
+\PYG{+w}{	}\PYG{n+nx}{cesticeRenderPass}\PYG{p}{.}\PYG{n+nx}{setPipeline}\PYG{p}{(}\PYG{n+nx}{cesticeRenderPipeline}\PYG{p}{);}
+\PYG{+w}{	}
+\PYG{+w}{	}\PYG{n+nx}{cesticeRenderPass}\PYG{p}{.}\PYG{n+nx}{setBindGroup}\PYG{p}{(}\PYG{l+m+mf}{0}\PYG{p}{,}\PYG{+w}{ }\PYG{n+nx}{cesticeRenderbindGroup}\PYG{p}{);}
+\PYG{+w}{	}\PYG{n+nx}{cesticeRenderPass}\PYG{p}{.}\PYG{n+nx}{draw}\PYG{p}{(}\PYG{n+nx}{brojVrhovaCestice}\PYG{p}{,}\PYG{+w}{ }\PYG{n+nx}{brojCesticaXWG}\PYG{p}{);}
+\PYG{+w}{	}\PYG{n+nx}{cesticeRenderPass}\PYG{p}{.}\PYG{n+nx}{end}\PYG{p}{();}
+\PYG{+w}{	}\PYG{k+kd}{const}\PYG{+w}{ }\PYG{n+nx}{commandBuffer}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n+nx}{cesticeCommandEncoder}\PYG{p}{.}\PYG{n+nx}{finish}\PYG{p}{();}
+\PYG{+w}{	}\PYG{n+nx}{device}\PYG{p}{.}\PYG{n+nx}{queue}\PYG{p}{.}\PYG{n+nx}{submit}\PYG{p}{([}\PYG{n+nx}{commandBuffer}\PYG{p}{]);}
+\PYG{p}{\PYGZcb{}}
+
+\PYG{k+kd}{function}\PYG{+w}{ }\PYG{n+nx}{izvrsiGridRenderShader}\PYG{p}{()}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{	}\PYG{k+kd}{const}\PYG{+w}{ }\PYG{n+nx}{canvasTexture}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n+nx}{context}\PYG{p}{.}\PYG{n+nx}{getCurrentTexture}\PYG{p}{();}
+\PYG{+w}{	}\PYG{k+kd}{const}\PYG{+w}{ }\PYG{n+nx}{gridRenderPassDescriptor}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{		}\PYG{n+nx}{label}\PYG{o}{:}\PYG{+w}{ }\PYG{l+s+s2}{\PYGZdq{}Grid Shader RenderPass\PYGZdq{}}\PYG{p}{,}
+\PYG{+w}{		}\PYG{n+nx}{colorAttachments}\PYG{o}{:}\PYG{+w}{ }\PYG{p}{[}
+\PYG{+w}{		}\PYG{p}{\PYGZob{}}
+\PYG{+w}{			}\PYG{n+nx}{view}\PYG{o}{:}\PYG{+w}{ }\PYG{n+nx}{context}\PYG{p}{.}\PYG{n+nx}{getCurrentTexture}\PYG{p}{(),}
+\PYG{+w}{			}\PYG{n+nx}{loadOp}\PYG{o}{:}\PYG{+w}{ }\PYG{l+s+s2}{\PYGZdq{}load\PYGZdq{}}\PYG{p}{,}
+\PYG{+w}{			}\PYG{n+nx}{storeOp}\PYG{o}{:}\PYG{+w}{ }\PYG{l+s+s2}{\PYGZdq{}store\PYGZdq{}}\PYG{p}{,}
+\PYG{+w}{		}\PYG{p}{\PYGZcb{},}
+\PYG{+w}{		}\PYG{p}{],}
+\PYG{+w}{		}\PYG{n+nx}{depthStencilAttachment}\PYG{o}{:}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{			}\PYG{n+nx}{view}\PYG{o}{:}\PYG{+w}{ }\PYG{n+nx}{context}\PYG{p}{.}\PYG{n+nx}{getCurrentTexture}\PYG{p}{(),}
+\PYG{+w}{			}\PYG{n+nx}{depthClearValue}\PYG{o}{:}\PYG{+w}{ }\PYG{l+m+mf}{1.0}\PYG{p}{,}
+\PYG{+w}{			}\PYG{n+nx}{depthLoadOp}\PYG{o}{:}\PYG{+w}{ }\PYG{l+s+s2}{\PYGZdq{}load\PYGZdq{}}\PYG{p}{,}
+\PYG{+w}{			}\PYG{n+nx}{depthStoreOp}\PYG{o}{:}\PYG{+w}{ }\PYG{l+s+s2}{\PYGZdq{}store\PYGZdq{}}\PYG{p}{,}
+\PYG{+w}{		}\PYG{p}{\PYGZcb{},}
+\PYG{+w}{	}\PYG{p}{\PYGZcb{};}
+\PYG{+w}{	}\PYG{n+nx}{gridRenderPassDescriptor}\PYG{p}{.}\PYG{n+nx}{colorAttachments}\PYG{p}{[}\PYG{l+m+mf}{0}\PYG{p}{].}\PYG{n+nx}{view}\PYG{+w}{ }\PYG{o}{=}
+\PYG{+w}{	}\PYG{n+nx}{canvasTexture}\PYG{p}{.}\PYG{n+nx}{createView}\PYG{p}{();}
+\PYG{+w}{	}\PYG{k}{if}\PYG{+w}{ }\PYG{p}{(}
+\PYG{+w}{	}\PYG{o}{!}\PYG{n+nx}{depthTexture}\PYG{+w}{ }\PYG{o}{||}
+\PYG{+w}{	}\PYG{n+nx}{depthTexture}\PYG{p}{.}\PYG{n+nx}{width}\PYG{+w}{ }\PYG{o}{!==}\PYG{+w}{ }\PYG{n+nx}{canvasTexture}\PYG{p}{.}\PYG{n+nx}{width}\PYG{+w}{ }\PYG{o}{||}
+\PYG{+w}{	}\PYG{n+nx}{depthTexture}\PYG{p}{.}\PYG{n+nx}{height}\PYG{+w}{ }\PYG{o}{!==}\PYG{+w}{ }\PYG{n+nx}{canvasTexture}\PYG{p}{.}\PYG{n+nx}{height}
+\PYG{+w}{	}\PYG{p}{)}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{		}\PYG{k}{if}\PYG{+w}{ }\PYG{p}{(}\PYG{n+nx}{depthTexture}\PYG{p}{)}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{			}\PYG{n+nx}{depthTexture}\PYG{p}{.}\PYG{n+nx}{destroy}\PYG{p}{();}
+\PYG{+w}{		}\PYG{p}{\PYGZcb{}}
+\PYG{+w}{		}\PYG{n+nx}{depthTexture}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n+nx}{device}\PYG{p}{.}\PYG{n+nx}{createTexture}\PYG{p}{(\PYGZob{}}
+\PYG{+w}{			}\PYG{n+nx}{size}\PYG{o}{:}\PYG{+w}{ }\PYG{p}{[}\PYG{n+nx}{canvasTexture}\PYG{p}{.}\PYG{n+nx}{width}\PYG{p}{,}\PYG{+w}{ }\PYG{n+nx}{canvasTexture}\PYG{p}{.}\PYG{n+nx}{height}\PYG{p}{],}
+\PYG{+w}{			}\PYG{n+nx}{format}\PYG{o}{:}\PYG{+w}{ }\PYG{l+s+s2}{\PYGZdq{}depth24plus\PYGZdq{}}\PYG{p}{,}
+\PYG{+w}{			}\PYG{n+nx}{usage}\PYG{o}{:}\PYG{+w}{ }\PYG{n+nx}{GPUTextureUsage}\PYG{p}{.}\PYG{n+nx}{RENDER\PYGZus{}ATTACHMENT}\PYG{p}{,}
+\PYG{+w}{		}\PYG{p}{\PYGZcb{});}
+\PYG{+w}{	}\PYG{p}{\PYGZcb{}}
+\PYG{+w}{	}\PYG{n+nx}{gridRenderPassDescriptor}\PYG{p}{.}\PYG{n+nx}{depthStencilAttachment}\PYG{p}{.}\PYG{n+nx}{view}\PYG{+w}{ }\PYG{o}{=}
+\PYG{+w}{	}\PYG{n+nx}{depthTexture}\PYG{p}{.}\PYG{n+nx}{createView}\PYG{p}{();}
+\PYG{+w}{	}
+\PYG{+w}{	}\PYG{k+kd}{const}\PYG{+w}{ }\PYG{n+nx}{gridCommandEncoder}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n+nx}{device}\PYG{p}{.}\PYG{n+nx}{createCommandEncoder}\PYG{p}{();}
+\PYG{+w}{	}\PYG{k+kd}{const}\PYG{+w}{ }\PYG{n+nx}{gridRenderPass}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n+nx}{gridCommandEncoder}\PYG{p}{.}\PYG{n+nx}{beginRenderPass}\PYG{p}{(}
+\PYG{+w}{	}\PYG{n+nx}{gridRenderPassDescriptor}
+\PYG{+w}{	}\PYG{p}{);}
+\PYG{+w}{	}\PYG{n+nx}{gridRenderPass}\PYG{p}{.}\PYG{n+nx}{setPipeline}\PYG{p}{(}\PYG{n+nx}{gridRenderPipeline}\PYG{p}{);}
+\PYG{+w}{	}
+\PYG{+w}{	}\PYG{n+nx}{gridRenderPass}\PYG{p}{.}\PYG{n+nx}{setBindGroup}\PYG{p}{(}\PYG{l+m+mf}{0}\PYG{p}{,}\PYG{+w}{ }\PYG{n+nx}{gridRenderbindGroup}\PYG{p}{);}
+\PYG{+w}{	}\PYG{n+nx}{gridRenderPass}\PYG{p}{.}\PYG{n+nx}{draw}\PYG{p}{(}\PYG{l+m+mf}{2}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mf}{10000}\PYG{p}{);}
+\PYG{+w}{	}\PYG{n+nx}{gridRenderPass}\PYG{p}{.}\PYG{n+nx}{end}\PYG{p}{();}
+\PYG{+w}{	}\PYG{k+kd}{const}\PYG{+w}{ }\PYG{n+nx}{commandBuffer}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n+nx}{gridCommandEncoder}\PYG{p}{.}\PYG{n+nx}{finish}\PYG{p}{();}
+\PYG{+w}{	}\PYG{n+nx}{device}\PYG{p}{.}\PYG{n+nx}{queue}\PYG{p}{.}\PYG{n+nx}{submit}\PYG{p}{([}\PYG{n+nx}{commandBuffer}\PYG{p}{]);}
+\PYG{p}{\PYGZcb{}}
+
+\end{Verbatim}

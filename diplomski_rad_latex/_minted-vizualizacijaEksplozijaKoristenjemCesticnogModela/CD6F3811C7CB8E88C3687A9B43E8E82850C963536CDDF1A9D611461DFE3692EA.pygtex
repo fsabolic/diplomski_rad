@@ -1,0 +1,20 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{n+nd}{@compute}\PYG{+w}{ }\PYG{n+nd}{@workgroup\PYGZus{}size}\PYG{p}{(}\PYG{l+m+mi}{256}\PYG{p}{)}\PYG{+w}{ }\PYG{k}{fn}\PYG{+w}{ }\PYG{n}{djelujSilomNaCestice}\PYG{p}{(}
+\PYG{+w}{	}\PYG{n+nd}{@builtin}\PYG{p}{(}\PYG{n+nb}{global\PYGZus{}invocation\PYGZus{}id}\PYG{p}{)}\PYG{+w}{ }\PYG{n}{i\PYGZus{}dretve}\PYG{p}{:}\PYG{+w}{ }\PYG{n+nb}{vec3u}
+\PYG{p}{)}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{	}\PYG{k+kd}{let}\PYG{+w}{ }\PYG{n}{dretva\PYGZus{}id}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{i\PYGZus{}dretve}\PYG{p}{.}\PYG{n}{x}\PYG{p}{;}
+\PYG{+w}{	}
+\PYG{+w}{	}\PYG{k+kd}{var}\PYG{+w}{ }\PYG{n}{masa\PYGZus{}cestice}\PYG{+w}{ }\PYG{p}{:}\PYG{+w}{ }\PYG{n+nb}{f32}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{l+m+mi}{1}\PYG{p}{;}
+\PYG{+w}{	}\PYG{k+kd}{var}\PYG{+w}{ }\PYG{n}{pozicija\PYGZus{}potencijala}\PYG{+w}{ }\PYG{p}{:}\PYG{+w}{ }\PYG{n+nb}{vec3f}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n+nb}{vec3f}\PYG{p}{(}\PYG{l+m+mi}{0}\PYG{p}{,}\PYG{l+m+mi}{0}\PYG{p}{,}\PYG{l+m+mi}{0}\PYG{p}{);}
+\PYG{+w}{	}\PYG{k+kd}{var}\PYG{+w}{ }\PYG{n}{r\PYGZus{}rez\PYGZus{}potencijala}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{djelujPotencijalom}\PYG{p}{(}\PYG{n}{dretva\PYGZus{}id}\PYG{p}{,}\PYG{n}{pozicija\PYGZus{}potencijala}\PYG{p}{,}\PYG{l+m+mi}{0}\PYG{p}{);}
+\PYG{+w}{	}\PYG{k+kd}{var}\PYG{+w}{ }\PYG{n}{r\PYGZus{}rez\PYGZus{}gravitacije}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{djelujGravitacijom}\PYG{p}{(}\PYG{n}{masa\PYGZus{}cestice}\PYG{p}{);}
+\PYG{+w}{	}\PYG{k+kd}{var}\PYG{+w}{ }\PYG{n}{r\PYGZus{}rez\PYGZus{}otpora}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{djelujOtporom}\PYG{p}{(}\PYG{n}{dretva\PYGZus{}id}\PYG{p}{);}
+\PYG{+w}{	}\PYG{k+kd}{var}\PYG{+w}{ }\PYG{n}{r\PYGZus{}rez}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{r\PYGZus{}rez\PYGZus{}potencijala}\PYG{o}{+}\PYG{n}{r\PYGZus{}rez\PYGZus{}gravitacije}\PYG{o}{+}\PYG{n}{r\PYGZus{}rez\PYGZus{}otpora}\PYG{p}{;}
+\PYG{+w}{	}
+\PYG{+w}{	}\PYG{n}{pomakni\PYGZus{}cesticu}\PYG{p}{(}\PYG{n}{r\PYGZus{}rez}\PYG{p}{,}\PYG{n}{masa\PYGZus{}cestice}\PYG{p}{,}\PYG{n}{dretva\PYGZus{}id}\PYG{p}{);}
+\PYG{+w}{	}
+\PYG{+w}{	}\PYG{n}{odbijCesticuOdPoda}\PYG{p}{(}\PYG{n}{dretva\PYGZus{}id}\PYG{p}{);}
+\PYG{+w}{	}
+\PYG{p}{\PYGZcb{}}
+\PYG{+w}{	}
+\end{Verbatim}

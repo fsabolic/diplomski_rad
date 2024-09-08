@@ -1,0 +1,17 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k+kd}{const}\PYG{+w}{ }\PYG{n+nx}{brTocaka}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{l+m+mf}{256}\PYG{+w}{ }\PYG{o}{*}\PYG{+w}{ }\PYG{l+m+mf}{10}\PYG{p}{;}
+
+\PYG{k+kd}{const}\PYG{+w}{ }\PYG{n+nx}{tockeVertexStorageBuff}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n+nx}{device}\PYG{p}{.}\PYG{n+nx}{createBuffer}\PYG{p}{(\PYGZob{}}
+\PYG{+w}{	}\PYG{n+nx}{size}\PYG{o}{:}\PYG{+w}{ }\PYG{n+nx}{brTocaka}\PYG{+w}{ }\PYG{o}{*}\PYG{+w}{ }\PYG{l+m+mf}{8}\PYG{p}{,}
+\PYG{+w}{	}\PYG{n+nx}{usage}\PYG{o}{:}
+\PYG{+w}{	}\PYG{n+nx}{GPUBufferUsage}\PYG{p}{.}\PYG{n+nx}{STORAGE}\PYG{+w}{ }\PYG{o}{|}
+\PYG{+w}{	}\PYG{n+nx}{GPUBufferUsage}\PYG{p}{.}\PYG{n+nx}{VERTEX}\PYG{+w}{ }\PYG{o}{|}
+\PYG{+w}{	}\PYG{n+nx}{GPUBufferUsage}\PYG{p}{.}\PYG{n+nx}{COPY\PYGZus{}DST}\PYG{p}{,}
+\PYG{p}{\PYGZcb{});}
+
+\PYG{k+kd}{const}\PYG{+w}{ }\PYG{n+nx}{vrijemeUnifBuff}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n+nx}{device}\PYG{p}{.}\PYG{n+nx}{createBuffer}\PYG{p}{(\PYGZob{}}
+\PYG{+w}{	}\PYG{n+nx}{size}\PYG{o}{:}\PYG{+w}{ }\PYG{l+m+mf}{4}\PYG{p}{,}
+\PYG{+w}{	}\PYG{n+nx}{usage}\PYG{o}{:}\PYG{+w}{ }\PYG{n+nx}{GPUBufferUsage}\PYG{p}{.}\PYG{n+nx}{UNIFORM}\PYG{+w}{ }\PYG{o}{|}\PYG{+w}{ }\PYG{n+nx}{GPUBufferUsage}\PYG{p}{.}\PYG{n+nx}{COPY\PYGZus{}DST}\PYG{p}{,}
+\PYG{p}{\PYGZcb{});}
+
+\end{Verbatim}

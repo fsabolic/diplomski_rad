@@ -1,0 +1,14 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k+kd}{class}\PYG{+w}{ }\PYG{n+nx}{MaterijalnaTocka}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{  }\PYG{k+kr}{constructor}\PYG{p}{(}\PYG{n+nx}{masa}\PYG{p}{,}\PYG{+w}{ }\PYG{n+nx}{rVektor}\PYG{p}{,}\PYG{+w}{ }\PYG{n+nx}{vVektor}\PYG{p}{)}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{k}{this}\PYG{p}{.}\PYG{n+nx}{masa}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n+nx}{masa}\PYG{p}{;}
+\PYG{+w}{    }\PYG{k}{this}\PYG{p}{.}\PYG{n+nx}{r}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n+nx}{rVektor}\PYG{p}{;}
+\PYG{+w}{    }\PYG{k}{this}\PYG{p}{.}\PYG{n+nx}{v}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n+nx}{vVektor}\PYG{p}{;}
+\PYG{+w}{  }\PYG{p}{\PYGZcb{}}
+
+\PYG{+w}{  }\PYG{n+nx}{pomakni}\PYG{p}{(}\PYG{n+nx}{dt}\PYG{p}{,}\PYG{+w}{ }\PYG{n+nx}{rezultantnaSila}\PYG{p}{)}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{k}{this}\PYG{p}{.}\PYG{n+nx}{v}\PYG{p}{.}\PYG{n+nx}{dodajCputaV}\PYG{p}{(}\PYG{n+nx}{dt}\PYG{+w}{ }\PYG{o}{/}\PYG{+w}{ }\PYG{k}{this}\PYG{p}{.}\PYG{n+nx}{masa}\PYG{p}{,}\PYG{+w}{ }\PYG{n+nx}{rezultantnaSila}\PYG{p}{);}
+\PYG{+w}{    }\PYG{k}{this}\PYG{p}{.}\PYG{n+nx}{r}\PYG{p}{.}\PYG{n+nx}{dodajCputaV}\PYG{p}{(}\PYG{n+nx}{dt}\PYG{p}{,}\PYG{+w}{ }\PYG{k}{this}\PYG{p}{.}\PYG{n+nx}{v}\PYG{p}{);}
+\PYG{+w}{  }\PYG{p}{\PYGZcb{}}
+\PYG{p}{\PYGZcb{}}
+\end{Verbatim}

@@ -1,0 +1,13 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{n+nd}{@group}\PYG{p}{(}\PYG{l+m+mi}{0}\PYG{p}{)}\PYG{+w}{ }\PYG{n+nd}{@binding}\PYG{p}{(}\PYG{l+m+mi}{0}\PYG{p}{)}
+\PYG{+w}{	}\PYG{k+kd}{var}\PYG{o}{\PYGZlt{}}\PYG{n+nb}{uniform}\PYG{o}{\PYGZgt{}}\PYG{+w}{ }\PYG{n}{parametri}\PYG{p}{:}\PYG{+w}{ }\PYG{n}{Parametri}\PYG{p}{;}
+\PYG{n+nd}{@group}\PYG{p}{(}\PYG{l+m+mi}{0}\PYG{p}{)}\PYG{+w}{ }\PYG{n+nd}{@binding}\PYG{p}{(}\PYG{l+m+mi}{1}\PYG{p}{)}
+\PYG{+w}{	}\PYG{k+kd}{var}\PYG{o}{\PYGZlt{}}\PYG{n+nb}{uniform}\PYG{o}{\PYGZgt{}}\PYG{+w}{ }\PYG{n}{vrhovi\PYGZus{}cestice}\PYG{p}{:}\PYG{+w}{ }\PYG{n+nb}{array}\PYG{o}{\PYGZlt{}}\PYG{n}{VrhCestice}\PYG{p}{,}\PYG{l+m+mi}{12}\PYG{o}{\PYGZgt{}}\PYG{p}{;}
+\PYG{n+nd}{@group}\PYG{p}{(}\PYG{l+m+mi}{0}\PYG{p}{)}\PYG{+w}{ }\PYG{n+nd}{@binding}\PYG{p}{(}\PYG{l+m+mi}{2}\PYG{p}{)}
+\PYG{+w}{	}\PYG{k+kd}{var}\PYG{o}{\PYGZlt{}}\PYG{n+nb}{storage}\PYG{o}{\PYGZgt{}}\PYG{+w}{ }\PYG{n}{x\PYGZus{}koordinate}\PYG{p}{:}\PYG{+w}{ }\PYG{n+nb}{array}\PYG{o}{\PYGZlt{}}\PYG{n+nb}{f32}\PYG{o}{\PYGZgt{}}\PYG{p}{;}
+\PYG{n+nd}{@group}\PYG{p}{(}\PYG{l+m+mi}{0}\PYG{p}{)}\PYG{+w}{ }\PYG{n+nd}{@binding}\PYG{p}{(}\PYG{l+m+mi}{3}\PYG{p}{)}
+\PYG{+w}{	}\PYG{k+kd}{var}\PYG{o}{\PYGZlt{}}\PYG{n+nb}{storage}\PYG{o}{\PYGZgt{}}\PYG{+w}{ }\PYG{n}{y\PYGZus{}koordinate}\PYG{p}{:}\PYG{+w}{ }\PYG{n+nb}{array}\PYG{o}{\PYGZlt{}}\PYG{n+nb}{f32}\PYG{o}{\PYGZgt{}}\PYG{p}{;}
+\PYG{n+nd}{@group}\PYG{p}{(}\PYG{l+m+mi}{0}\PYG{p}{)}\PYG{+w}{ }\PYG{n+nd}{@binding}\PYG{p}{(}\PYG{l+m+mi}{4}\PYG{p}{)}
+\PYG{+w}{	}\PYG{k+kd}{var}\PYG{o}{\PYGZlt{}}\PYG{n+nb}{storage}\PYG{o}{\PYGZgt{}}\PYG{+w}{ }\PYG{n}{z\PYGZus{}koordinate}\PYG{p}{:}\PYG{+w}{ }\PYG{n+nb}{array}\PYG{o}{\PYGZlt{}}\PYG{n+nb}{f32}\PYG{o}{\PYGZgt{}}\PYG{p}{;}
+
+\end{Verbatim}

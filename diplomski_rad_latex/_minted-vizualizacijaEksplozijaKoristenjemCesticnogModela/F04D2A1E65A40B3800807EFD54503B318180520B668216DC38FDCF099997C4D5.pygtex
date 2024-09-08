@@ -1,0 +1,12 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k+kd}{const}\PYG{+w}{ }\PYG{n+nx}{canvas}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n+nb}{document}\PYG{p}{.}\PYG{n+nx}{getElementById}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}container\PYGZdq{}}\PYG{p}{);}
+\PYG{k+kd}{const}\PYG{+w}{ }\PYG{n+nx}{context}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n+nx}{canvas}\PYG{p}{.}\PYG{n+nx}{getContext}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}webgpu\PYGZdq{}}\PYG{p}{);}
+\PYG{k+kd}{const}\PYG{+w}{ }\PYG{n+nx}{adapter}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{k}{await}\PYG{+w}{ }\PYG{n+nx}{navigator}\PYG{p}{.}\PYG{n+nx}{gpu}\PYG{p}{.}\PYG{n+nx}{requestAdapter}\PYG{p}{();}
+\PYG{k+kd}{const}\PYG{+w}{ }\PYG{n+nx}{device}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{k}{await}\PYG{+w}{ }\PYG{n+nx}{adapter}\PYG{p}{.}\PYG{n+nx}{requestDevice}\PYG{p}{();}
+
+\PYG{n+nx}{context}\PYG{p}{.}\PYG{n+nx}{configure}\PYG{p}{(\PYGZob{}}
+\PYG{+w}{	}\PYG{n+nx}{device}\PYG{o}{:}\PYG{+w}{ }\PYG{n+nx}{device}\PYG{p}{,}
+\PYG{+w}{	}\PYG{n+nx}{format}\PYG{o}{:}\PYG{+w}{ }\PYG{l+s+s2}{\PYGZdq{}bgra8unorm\PYGZdq{}}\PYG{p}{,}
+\PYG{+w}{	}\PYG{n+nx}{alphaMode}\PYG{o}{:}\PYG{+w}{ }\PYG{l+s+s2}{\PYGZdq{}premultiplied\PYGZdq{}}\PYG{p}{,}
+\PYG{p}{\PYGZcb{});}
+\end{Verbatim}

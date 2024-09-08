@@ -1,0 +1,18 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k}{struct}\PYG{+w}{ }\PYG{n}{Parametri}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{	}\PYG{n}{matrica\PYGZus{}3d}\PYG{p}{:}\PYG{+w}{ }\PYG{n+nb}{mat4x4f}\PYG{p}{,}
+\PYG{+w}{	}\PYG{n}{pozicija\PYGZus{}eksplozije}\PYG{p}{:}\PYG{+w}{ }\PYG{n+nb}{vec3f}\PYG{p}{,}
+\PYG{+w}{	}\PYG{n}{iteracija}\PYG{p}{:}\PYG{n+nb}{f32}\PYG{p}{,}
+\PYG{p}{\PYGZcb{};}
+
+\PYG{k}{struct}\PYG{+w}{ }\PYG{n}{VSOutput}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{	}\PYG{n+nd}{@builtin}\PYG{p}{(}\PYG{n+nb}{position}\PYG{p}{)}\PYG{+w}{ }\PYG{n}{koordinate\PYGZus{}vrha}\PYG{p}{:}\PYG{+w}{ }\PYG{n+nb}{vec4f}\PYG{p}{,}
+\PYG{+w}{	}\PYG{n+nd}{@location}\PYG{p}{(}\PYG{l+m+mi}{0}\PYG{p}{)}\PYG{+w}{ }\PYG{n}{boja}\PYG{p}{:}\PYG{+w}{ }\PYG{n+nb}{vec4f}\PYG{p}{,}
+\PYG{+w}{	}\PYG{n+nd}{@location}\PYG{p}{(}\PYG{l+m+mi}{1}\PYG{p}{)}\PYG{+w}{ }\PYG{n}{udaljenost}\PYG{p}{:}\PYG{+w}{ }\PYG{n+nb}{f32}\PYG{p}{,}
+\PYG{p}{\PYGZcb{};}
+
+\PYG{k}{struct}\PYG{+w}{ }\PYG{n}{VrhCestice}\PYG{p}{\PYGZob{}}
+\PYG{+w}{	}\PYG{n}{koordinate}\PYG{p}{:}\PYG{+w}{ }\PYG{n+nb}{vec4f}\PYG{p}{,}
+\PYG{+w}{	}\PYG{n}{boja}\PYG{p}{:}\PYG{+w}{ }\PYG{n+nb}{vec4f}\PYG{p}{,}
+\PYG{p}{\PYGZcb{}}
+\end{Verbatim}

@@ -1,0 +1,37 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k+kd}{let}\PYG{+w}{ }\PYG{n+nx}{canvas}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n+nb}{document}\PYG{p}{.}\PYG{n+nx}{getElementById}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}canvas\PYGZdq{}}\PYG{p}{);}
+\PYG{k+kd}{let}\PYG{+w}{ }\PYG{n+nx}{gks}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{o+ow}{new}\PYG{+w}{ }\PYG{n+nx}{GlobalniKoordinatniSustav}\PYG{p}{(}\PYG{n+nx}{canvas}\PYG{p}{,}\PYG{+w}{ }\PYG{o}{\PYGZhy{}}\PYG{l+m+mf}{10}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mf}{10}\PYG{p}{,}\PYG{+w}{ }\PYG{o}{\PYGZhy{}}\PYG{l+m+mf}{10}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mf}{10}\PYG{p}{);}
+
+\PYG{k+kd}{let}\PYG{+w}{ }\PYG{n+nx}{brojCestica}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{l+m+mf}{10000}\PYG{p}{;}
+\PYG{k+kd}{let}\PYG{+w}{ }\PYG{n+nx}{cesticeEksplozije}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{p}{[];}
+
+\PYG{k}{for}\PYG{+w}{ }\PYG{p}{(}\PYG{k+kd}{let}\PYG{+w}{ }\PYG{n+nx}{i}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{l+m+mf}{0}\PYG{p}{;}\PYG{+w}{ }\PYG{n+nx}{i}\PYG{+w}{ }\PYG{o}{\PYGZlt{}}\PYG{+w}{ }\PYG{n+nx}{brojCestica}\PYG{p}{;}\PYG{+w}{ }\PYG{n+nx}{i}\PYG{o}{++}\PYG{p}{)}
+\PYG{+w}{  }\PYG{n+nx}{cesticeEksplozije}\PYG{p}{.}\PYG{n+nx}{push}\PYG{p}{(}
+\PYG{+w}{    }\PYG{o+ow}{new}\PYG{+w}{ }\PYG{n+nx}{Cestica}\PYG{p}{(}
+\PYG{+w}{      }\PYG{l+m+mf}{0.1}\PYG{p}{,}
+\PYG{+w}{      }\PYG{o+ow}{new}\PYG{+w}{ }\PYG{n+nx}{MaterijalnaTocka}\PYG{p}{(}
+\PYG{+w}{        }\PYG{l+m+mf}{2}\PYG{p}{,}
+\PYG{+w}{        }\PYG{o+ow}{new}\PYG{+w}{ }\PYG{n+nx}{Vektor2D}\PYG{p}{(}\PYG{l+m+mf}{0}\PYG{p}{,}\PYG{+w}{ }\PYG{o}{\PYGZhy{}}\PYG{l+m+mf}{3}\PYG{p}{),}
+\PYG{+w}{        }\PYG{o+ow}{new}\PYG{+w}{ }\PYG{n+nx}{Vektor2D}\PYG{p}{(}\PYG{n+nb}{Math}\PYG{p}{.}\PYG{n+nx}{random}\PYG{p}{()}\PYG{+w}{ }\PYG{o}{*}\PYG{+w}{ }\PYG{l+m+mf}{20}\PYG{+w}{ }\PYG{o}{\PYGZhy{}}\PYG{+w}{ }\PYG{l+m+mf}{10}\PYG{p}{,}\PYG{+w}{ }\PYG{n+nb}{Math}\PYG{p}{.}\PYG{n+nx}{random}\PYG{p}{()}\PYG{+w}{ }\PYG{o}{*}\PYG{+w}{ }\PYG{l+m+mf}{20}\PYG{+w}{ }\PYG{o}{\PYGZhy{}}\PYG{+w}{ }\PYG{l+m+mf}{10}\PYG{p}{)}
+\PYG{+w}{      }\PYG{p}{)}
+\PYG{+w}{    }\PYG{p}{)}
+\PYG{+w}{  }\PYG{p}{);}
+
+\PYG{k+kd}{let}\PYG{+w}{ }\PYG{n+nx}{dt}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{l+m+mf}{0.001}\PYG{p}{;}
+
+\PYG{k+kd}{function}\PYG{+w}{ }\PYG{n+nx}{render}\PYG{p}{()}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{  }\PYG{n+nx}{gks}\PYG{p}{.}\PYG{n+nx}{ocisti}\PYG{p}{();}
+\PYG{+w}{  }\PYG{k}{for}\PYG{+w}{ }\PYG{p}{(}\PYG{k+kd}{let}\PYG{+w}{ }\PYG{n+nx}{i}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{l+m+mf}{0}\PYG{p}{;}\PYG{+w}{ }\PYG{n+nx}{i}\PYG{+w}{ }\PYG{o}{\PYGZlt{}}\PYG{+w}{ }\PYG{n+nx}{brojCestica}\PYG{p}{;}\PYG{+w}{ }\PYG{n+nx}{i}\PYG{o}{++}\PYG{p}{)}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{n+nx}{cesticeEksplozije}\PYG{p}{[}\PYG{n+nx}{i}\PYG{p}{].}\PYG{n+nx}{materijalnaTocka}\PYG{p}{.}\PYG{n+nx}{pomakni}\PYG{p}{(}
+\PYG{+w}{      }\PYG{n+nx}{dt}\PYG{p}{,}
+\PYG{+w}{      }\PYG{o+ow}{new}\PYG{+w}{ }\PYG{n+nx}{Vektor2D}\PYG{p}{(}\PYG{l+m+mf}{0}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mf}{0}\PYG{p}{)}
+\PYG{+w}{    }\PYG{p}{);}
+\PYG{+w}{    }\PYG{n+nx}{cesticeEksplozije}\PYG{p}{[}\PYG{n+nx}{i}\PYG{p}{].}\PYG{n+nx}{iscrtaj}\PYG{p}{(}\PYG{n+nx}{gks}\PYG{p}{);}
+\PYG{+w}{    }\PYG{n+nx}{cesticeEksplozije}\PYG{p}{[}\PYG{n+nx}{i}\PYG{p}{].}\PYG{n+nx}{zarobi}\PYG{p}{(}\PYG{n+nx}{gks}\PYG{p}{,}\PYG{+w}{ }\PYG{k+kc}{false}\PYG{p}{,}\PYG{+w}{ }\PYG{k+kc}{false}\PYG{p}{,}\PYG{+w}{ }\PYG{k+kc}{true}\PYG{p}{,}\PYG{+w}{ }\PYG{k+kc}{false}\PYG{p}{);}
+\PYG{+w}{  }\PYG{p}{\PYGZcb{}}
+\PYG{+w}{  }\PYG{n+nx}{requestAnimationFrame}\PYG{p}{(}\PYG{n+nx}{render}\PYG{p}{);}
+\PYG{p}{\PYGZcb{}}
+
+\PYG{n+nx}{render}\PYG{p}{();}
+
+\end{Verbatim}

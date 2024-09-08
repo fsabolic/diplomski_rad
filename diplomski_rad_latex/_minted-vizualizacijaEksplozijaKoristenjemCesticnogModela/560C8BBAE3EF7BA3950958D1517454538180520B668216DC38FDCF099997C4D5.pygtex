@@ -1,0 +1,13 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k+kd}{class}\PYG{+w}{ }\PYG{n+nx}{Otpor}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{  }\PYG{k+kr}{constructor}\PYG{p}{(}\PYG{n+nx}{o}\PYG{p}{)}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{k}{this}\PYG{p}{.}\PYG{n+nx}{o}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n+nx}{o}\PYG{p}{;}
+\PYG{+w}{  }\PYG{p}{\PYGZcb{}}
+\PYG{+w}{  }\PYG{n+nx}{F}\PYG{p}{(}\PYG{n+nx}{materijalnaTocka}\PYG{p}{)}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{k}{return}\PYG{+w}{ }\PYG{o+ow}{new}\PYG{+w}{ }\PYG{n+nx}{Vektor2D}\PYG{p}{(}
+\PYG{+w}{      }\PYG{o}{\PYGZhy{}}\PYG{k}{this}\PYG{p}{.}\PYG{n+nx}{o}\PYG{+w}{ }\PYG{o}{*}\PYG{+w}{ }\PYG{n+nx}{materijalnaTocka}\PYG{p}{.}\PYG{n+nx}{v}\PYG{p}{.}\PYG{n+nx}{x}\PYG{p}{,}
+\PYG{+w}{      }\PYG{o}{\PYGZhy{}}\PYG{k}{this}\PYG{p}{.}\PYG{n+nx}{o}\PYG{+w}{ }\PYG{o}{*}\PYG{+w}{ }\PYG{n+nx}{materijalnaTocka}\PYG{p}{.}\PYG{n+nx}{v}\PYG{p}{.}\PYG{n+nx}{y}
+\PYG{+w}{    }\PYG{p}{);}
+\PYG{+w}{  }\PYG{p}{\PYGZcb{}}
+\PYG{p}{\PYGZcb{}}
+\end{Verbatim}

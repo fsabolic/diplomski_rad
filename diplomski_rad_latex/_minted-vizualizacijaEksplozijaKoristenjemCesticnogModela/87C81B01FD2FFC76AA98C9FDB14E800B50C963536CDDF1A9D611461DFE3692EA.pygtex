@@ -1,0 +1,13 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k}{fn}\PYG{+w}{ }\PYG{n}{normaliziraj}\PYG{p}{(}\PYG{n}{vrijednost}\PYG{p}{:}\PYG{n+nb}{f32}\PYG{p}{)\PYGZhy{}\PYGZgt{}}\PYG{+w}{ }\PYG{n+nb}{f32}\PYG{p}{\PYGZob{}}
+\PYG{+w}{	}\PYG{k+kd}{var}\PYG{+w}{ }\PYG{n}{vrijednost\PYGZus{}slozena}\PYG{p}{:}\PYG{n+nb}{f32}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{vrijednost}\PYG{p}{;}
+\PYG{+w}{	}\PYG{k+kd}{let}\PYG{+w}{ }\PYG{n}{rmin}\PYG{p}{:}\PYG{n+nb}{f32}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{6}\PYG{p}{;}
+\PYG{+w}{	}\PYG{k+kd}{let}\PYG{+w}{ }\PYG{n}{rmax}\PYG{p}{:}\PYG{n+nb}{f32}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{l+m+mi}{6}\PYG{p}{;}
+\PYG{+w}{	}\PYG{k+kd}{let}\PYG{+w}{ }\PYG{n}{tmin}\PYG{p}{:}\PYG{n+nb}{f32}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{1}\PYG{p}{;}
+\PYG{+w}{	}\PYG{k+kd}{let}\PYG{+w}{ }\PYG{n}{tmax}\PYG{p}{:}\PYG{n+nb}{f32}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{l+m+mi}{1}\PYG{p}{;}
+\PYG{+w}{	}\PYG{k+kd}{var}\PYG{+w}{ }\PYG{n}{norm}\PYG{p}{:}\PYG{n+nb}{f32}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{p}{(((}\PYG{n}{vrijednost\PYGZus{}slozena}\PYG{o}{\PYGZhy{}}\PYG{n}{rmin}\PYG{p}{)}\PYG{o}{/}\PYG{p}{(}\PYG{n}{rmax}\PYG{o}{\PYGZhy{}}\PYG{n}{rmin}\PYG{p}{))}\PYG{o}{*}\PYG{p}{(}\PYG{n}{tmax}\PYG{o}{\PYGZhy{}}\PYG{n}{tmin}\PYG{p}{))}\PYG{o}{+}\PYG{n}{tmin}\PYG{p}{;}
+\PYG{+w}{	}\PYG{k}{if}\PYG{p}{(}\PYG{n}{norm}\PYG{o}{\PYGZgt{}}\PYG{n}{tmax}\PYG{p}{)\PYGZob{}}\PYG{+w}{ }\PYG{k}{return}\PYG{+w}{ }\PYG{n}{tmax}\PYG{p}{;\PYGZcb{}}
+\PYG{+w}{	}\PYG{k}{else}\PYG{+w}{ }\PYG{k}{if}\PYG{p}{(}\PYG{n}{norm}\PYG{o}{\PYGZlt{}}\PYG{n}{tmin}\PYG{p}{)\PYGZob{}}\PYG{+w}{ }\PYG{k}{return}\PYG{+w}{ }\PYG{n}{tmin}\PYG{p}{;\PYGZcb{}}
+\PYG{+w}{	}\PYG{k}{return}\PYG{+w}{ }\PYG{n}{norm}\PYG{p}{;}
+\PYG{p}{\PYGZcb{}}
+\end{Verbatim}

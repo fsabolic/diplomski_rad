@@ -1,0 +1,20 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k+kd}{function}\PYG{+w}{ }\PYG{n+nx}{izvrsiPRNGComputeShader}\PYG{p}{()}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{	}\PYG{c+c1}{//Izrada PRNG compute komandi za GPU}
+\PYG{+w}{	}
+\PYG{+w}{	}\PYG{k+kd}{const}\PYG{+w}{ }\PYG{n+nx}{prngComputeEncoder}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n+nx}{device}\PYG{p}{.}\PYG{n+nx}{createCommandEncoder}\PYG{p}{(\PYGZob{}}
+\PYG{+w}{		}\PYG{n+nx}{label}\PYG{o}{:}\PYG{+w}{ }\PYG{l+s+s2}{\PYGZdq{}PRNG Encoder\PYGZdq{}}\PYG{p}{,}
+\PYG{+w}{	}\PYG{p}{\PYGZcb{});}
+\PYG{+w}{	}\PYG{k+kd}{const}\PYG{+w}{ }\PYG{n+nx}{prngComputePass}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n+nx}{prngComputeEncoder}\PYG{p}{.}\PYG{n+nx}{beginComputePass}\PYG{p}{(\PYGZob{}}
+\PYG{+w}{		}\PYG{n+nx}{label}\PYG{o}{:}\PYG{+w}{ }\PYG{l+s+s2}{\PYGZdq{}PRNG Compute Pass\PYGZdq{}}\PYG{p}{,}
+\PYG{+w}{	}\PYG{p}{\PYGZcb{});}
+\PYG{+w}{	}
+\PYG{+w}{	}\PYG{n+nx}{prngComputePass}\PYG{p}{.}\PYG{n+nx}{setPipeline}\PYG{p}{(}\PYG{n+nx}{prngComputePipeline}\PYG{p}{);}
+\PYG{+w}{	}\PYG{n+nx}{prngComputePass}\PYG{p}{.}\PYG{n+nx}{setBindGroup}\PYG{p}{(}\PYG{l+m+mf}{0}\PYG{p}{,}\PYG{+w}{ }\PYG{n+nx}{prngComputeBindGroup}\PYG{p}{);}
+\PYG{+w}{	}\PYG{n+nx}{prngComputePass}\PYG{p}{.}\PYG{n+nx}{dispatchWorkgroups}\PYG{p}{(}\PYG{n+nx}{odrediWorkgroupBroj}\PYG{p}{());}
+\PYG{+w}{	}\PYG{n+nx}{prngComputePass}\PYG{p}{.}\PYG{n+nx}{end}\PYG{p}{();}
+\PYG{+w}{	}
+\PYG{+w}{	}\PYG{k+kd}{const}\PYG{+w}{ }\PYG{n+nx}{prngCommandBuffer}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n+nx}{prngComputeEncoder}\PYG{p}{.}\PYG{n+nx}{finish}\PYG{p}{();}
+\PYG{+w}{	}\PYG{n+nx}{device}\PYG{p}{.}\PYG{n+nx}{queue}\PYG{p}{.}\PYG{n+nx}{submit}\PYG{p}{([}\PYG{n+nx}{prngCommandBuffer}\PYG{p}{]);}
+\PYG{p}{\PYGZcb{}}
+\end{Verbatim}

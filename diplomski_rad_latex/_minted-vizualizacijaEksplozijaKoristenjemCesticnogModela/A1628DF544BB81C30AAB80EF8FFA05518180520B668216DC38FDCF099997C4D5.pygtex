@@ -1,0 +1,66 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k+kd}{function}\PYG{+w}{ }\PYG{n+nx}{main}\PYG{p}{(}\PYG{n+nx}{parametri}\PYG{p}{)}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{  }\PYG{n+nx}{Konzola}\PYG{p}{.}\PYG{n+nx}{initKonzola}\PYG{p}{(}\PYG{n+nx}{parametri}\PYG{p}{);}
+\PYG{+w}{  }\PYG{k+kd}{let}\PYG{+w}{ }\PYG{n+nx}{potencijali}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n+nx}{Konzola}\PYG{p}{.}\PYG{n+nx}{potencijalSave}\PYG{p}{;}
+\PYG{+w}{  }\PYG{k+kd}{let}\PYG{+w}{ }\PYG{n+nx}{cestice}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n+nx}{Konzola}\PYG{p}{.}\PYG{n+nx}{cesticeSave}\PYG{p}{;}
+\PYG{+w}{  }\PYG{k+kd}{let}\PYG{+w}{ }\PYG{n+nx}{dt}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{l+m+mf}{1.0}\PYG{+w}{ }\PYG{o}{/}\PYG{+w}{ }\PYG{l+m+mf}{60}\PYG{p}{;}
+\PYG{+w}{  }\PYG{k+kd}{let}\PYG{+w}{ }\PYG{n+nx}{iframe}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{l+m+mf}{0}\PYG{p}{;}
+\PYG{+w}{  }\PYG{k+kd}{let}\PYG{+w}{ }\PYG{n+nx}{starttime}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n+nb}{Date}\PYG{p}{.}\PYG{n+nx}{now}\PYG{p}{()}\PYG{+w}{ }\PYG{o}{/}\PYG{+w}{ }\PYG{l+m+mf}{1000}\PYG{p}{;}
+
+\PYG{+w}{  }\PYG{n+nx}{iscrtaj}\PYG{p}{();}
+
+\PYG{+w}{  }\PYG{k+kd}{function}\PYG{+w}{ }\PYG{n+nx}{iscrtaj}\PYG{p}{()}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{k}{if}\PYG{+w}{ }\PYG{p}{(}\PYG{o}{!}\PYG{n+nx}{Konzola}\PYG{p}{.}\PYG{n+nx}{paused}\PYG{p}{)}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{      }\PYG{k+kd}{let}\PYG{+w}{ }\PYG{n+nx}{brCestica}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n+nx}{cestice}\PYG{p}{.}\PYG{n+nx}{length}\PYG{p}{;}
+\PYG{+w}{      }\PYG{k+kd}{let}\PYG{+w}{ }\PYG{n+nx}{vremenskiPomak}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{l+m+mf}{0}\PYG{p}{;}
+\PYG{+w}{      }\PYG{k}{for}\PYG{+w}{ }\PYG{p}{(}\PYG{k+kd}{let}\PYG{+w}{ }\PYG{n+nx}{j}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{l+m+mf}{0}\PYG{p}{;}\PYG{+w}{ }\PYG{n+nx}{j}\PYG{+w}{ }\PYG{o}{\PYGZlt{}}\PYG{+w}{ }\PYG{n+nx}{Konzola}\PYG{p}{.}\PYG{n+nx}{preciznostSimulacije}\PYG{p}{;}\PYG{+w}{ }\PYG{n+nx}{j}\PYG{o}{++}\PYG{p}{)}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{        }\PYG{k}{for}\PYG{+w}{ }\PYG{p}{(}\PYG{k+kd}{let}\PYG{+w}{ }\PYG{n+nx}{i}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{l+m+mf}{0}\PYG{p}{;}\PYG{+w}{ }\PYG{n+nx}{i}\PYG{+w}{ }\PYG{o}{\PYGZlt{}}\PYG{+w}{ }\PYG{n+nx}{brCestica}\PYG{p}{;}\PYG{+w}{ }\PYG{n+nx}{i}\PYG{o}{++}\PYG{p}{)}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{          }\PYG{n+nx}{vremenskiPomak}\PYG{+w}{ }\PYG{o}{=}
+\PYG{+w}{            }\PYG{n+nx}{dt}\PYG{+w}{ }\PYG{o}{/}
+\PYG{+w}{            }\PYG{n+nx}{Konzola}\PYG{p}{.}\PYG{n+nx}{preciznostSimulacije}\PYG{+w}{ }\PYG{o}{/}
+\PYG{+w}{            }\PYG{n+nx}{Konzola}\PYG{p}{.}\PYG{n+nx}{skalirajBrzinuSlidera}\PYG{p}{(}\PYG{n+nx}{Konzola}\PYG{p}{.}\PYG{n+nx}{brzina}\PYG{p}{);}
+\PYG{+w}{          }\PYG{k+kd}{let}\PYG{+w}{ }\PYG{n+nx}{rezultantnaSilaPotencijala}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n+nx}{potencijali}\PYG{p}{.}\PYG{n+nx}{reduce}\PYG{p}{((}\PYG{n+nx}{zbroj}\PYG{p}{,}\PYG{+w}{ }\PYG{n+nx}{p}\PYG{p}{)}\PYG{+w}{ }\PYG{p}{=\PYGZgt{}}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{            }\PYG{k}{return}\PYG{+w}{ }\PYG{n+nx}{zbroj}\PYG{p}{.}\PYG{n+nx}{zbroji}\PYG{p}{(}\PYG{n+nx}{p}\PYG{p}{.}\PYG{n+nx}{F}\PYG{p}{(}\PYG{n+nx}{cestice}\PYG{p}{[}\PYG{n+nx}{i}\PYG{p}{].}\PYG{n+nx}{materijalnaTocka}\PYG{p}{));}
+\PYG{+w}{          }\PYG{p}{\PYGZcb{},}\PYG{+w}{ }\PYG{o+ow}{new}\PYG{+w}{ }\PYG{n+nx}{Vektor2D}\PYG{p}{(}\PYG{l+m+mf}{0}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mf}{0}\PYG{p}{));}
+\PYG{+w}{          }\PYG{n+nx}{cestice}\PYG{p}{[}\PYG{n+nx}{i}\PYG{p}{].}\PYG{n+nx}{materijalnaTocka}\PYG{p}{.}\PYG{n+nx}{pomakni}\PYG{p}{(}
+\PYG{+w}{            }\PYG{n+nx}{vremenskiPomak}\PYG{p}{,}
+\PYG{+w}{            }\PYG{n+nx}{Konzola}\PYG{p}{.}\PYG{n+nx}{gravitacija}
+\PYG{+w}{              }\PYG{p}{.}\PYG{n+nx}{F}\PYG{p}{(}\PYG{n+nx}{cestice}\PYG{p}{[}\PYG{n+nx}{i}\PYG{p}{].}\PYG{n+nx}{materijalnaTocka}\PYG{p}{)}
+\PYG{+w}{              }\PYG{p}{.}\PYG{n+nx}{zbroji}\PYG{p}{(}\PYG{n+nx}{Konzola}\PYG{p}{.}\PYG{n+nx}{otpor}\PYG{p}{.}\PYG{n+nx}{F}\PYG{p}{(}\PYG{n+nx}{cestice}\PYG{p}{[}\PYG{n+nx}{i}\PYG{p}{].}\PYG{n+nx}{materijalnaTocka}\PYG{p}{))}
+\PYG{+w}{              }\PYG{p}{.}\PYG{n+nx}{zbroji}\PYG{p}{(}\PYG{n+nx}{rezultantnaSilaPotencijala}\PYG{p}{)}
+\PYG{+w}{          }\PYG{p}{);}
+\PYG{+w}{          }\PYG{n+nx}{cestice}\PYG{p}{[}\PYG{n+nx}{i}\PYG{p}{].}\PYG{n+nx}{zarobi}\PYG{p}{(}
+\PYG{+w}{            }\PYG{n+nx}{Konzola}\PYG{p}{.}\PYG{n+nx}{gks}\PYG{p}{,}
+\PYG{+w}{            }\PYG{n+nx}{Konzola}\PYG{p}{.}\PYG{n+nx}{topGranica}\PYG{p}{,}
+\PYG{+w}{            }\PYG{n+nx}{Konzola}\PYG{p}{.}\PYG{n+nx}{rightGranica}\PYG{p}{,}
+\PYG{+w}{            }\PYG{n+nx}{Konzola}\PYG{p}{.}\PYG{n+nx}{bottomGranica}\PYG{p}{,}
+\PYG{+w}{            }\PYG{n+nx}{Konzola}\PYG{p}{.}\PYG{n+nx}{leftGranica}
+\PYG{+w}{          }\PYG{p}{);}
+\PYG{+w}{        }\PYG{p}{\PYGZcb{}}
+\PYG{+w}{      }\PYG{p}{\PYGZcb{}}
+
+\PYG{+w}{      }\PYG{n+nx}{Konzola}\PYG{p}{.}\PYG{n+nx}{gks}\PYG{p}{.}\PYG{n+nx}{ocisti}\PYG{p}{();}
+\PYG{+w}{      }\PYG{k}{for}\PYG{+w}{ }\PYG{p}{(}\PYG{k+kd}{let}\PYG{+w}{ }\PYG{n+nx}{i}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{l+m+mf}{0}\PYG{p}{;}\PYG{+w}{ }\PYG{n+nx}{i}\PYG{+w}{ }\PYG{o}{\PYGZlt{}}\PYG{+w}{ }\PYG{n+nx}{brCestica}\PYG{p}{;}\PYG{+w}{ }\PYG{n+nx}{i}\PYG{o}{++}\PYG{p}{)}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{        }\PYG{n+nx}{cestice}\PYG{p}{[}\PYG{n+nx}{i}\PYG{p}{].}\PYG{n+nx}{iscrtaj}\PYG{p}{(}\PYG{n+nx}{Konzola}\PYG{p}{.}\PYG{n+nx}{gks}\PYG{p}{);}
+\PYG{+w}{      }\PYG{p}{\PYGZcb{}}
+\PYG{+w}{      }\PYG{k}{for}\PYG{+w}{ }\PYG{p}{(}\PYG{k+kd}{let}\PYG{+w}{ }\PYG{n+nx}{i}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{l+m+mf}{0}\PYG{p}{;}\PYG{+w}{ }\PYG{n+nx}{i}\PYG{+w}{ }\PYG{o}{\PYGZlt{}}\PYG{+w}{ }\PYG{n+nx}{Konzola}\PYG{p}{.}\PYG{n+nx}{potencijalSave}\PYG{p}{.}\PYG{n+nx}{length}\PYG{p}{;}\PYG{+w}{ }\PYG{n+nx}{i}\PYG{o}{++}\PYG{p}{)}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{        }\PYG{n+nx}{potencijali}\PYG{p}{[}\PYG{n+nx}{i}\PYG{p}{].}\PYG{n+nx}{iscrtaj}\PYG{p}{(}\PYG{n+nx}{Konzola}\PYG{p}{.}\PYG{n+nx}{gks}\PYG{p}{);}
+\PYG{+w}{        }\PYG{n+nx}{potencijali}\PYG{p}{[}\PYG{n+nx}{i}\PYG{p}{].}\PYG{n+nx}{pomakni}\PYG{p}{(}\PYG{n+nx}{vremenskiPomak}\PYG{+w}{ }\PYG{o}{*}\PYG{+w}{ }\PYG{n+nx}{Konzola}\PYG{p}{.}\PYG{n+nx}{preciznostSimulacije}\PYG{p}{);}
+\PYG{+w}{      }\PYG{p}{\PYGZcb{}}
+\PYG{+w}{      }\PYG{k+kd}{let}\PYG{+w}{ }\PYG{n+nx}{framerate}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{p}{(}\PYG{n+nx}{iframe}\PYG{o}{++}\PYG{+w}{ }\PYG{l+s+sr}{/ (Date.now() /}\PYG{+w}{ }\PYG{l+m+mf}{1000}\PYG{+w}{ }\PYG{o}{\PYGZhy{}}\PYG{+w}{ }\PYG{n+nx}{starttime}\PYG{p}{)).}\PYG{n+nx}{toFixed}\PYG{p}{(}\PYG{l+m+mf}{6}\PYG{p}{);}
+\PYG{+w}{      }\PYG{n+nx}{Konzola}\PYG{p}{.}\PYG{n+nx}{gks}\PYG{p}{.}\PYG{n+nx}{tekst}\PYG{p}{(}
+\PYG{+w}{        }\PYG{l+s+s2}{\PYGZdq{}FPS: \PYGZdq{}}\PYG{+w}{ }\PYG{o}{+}\PYG{+w}{ }\PYG{n+nx}{framerate}\PYG{p}{,}
+\PYG{+w}{        }\PYG{n+nx}{Konzola}\PYG{p}{.}\PYG{n+nx}{gks}\PYG{p}{.}\PYG{n+nx}{xmin}\PYG{+w}{ }\PYG{o}{+}\PYG{+w}{ }\PYG{l+m+mf}{0.025}\PYG{+w}{ }\PYG{o}{*}\PYG{+w}{ }\PYG{n+nx}{Konzola}\PYG{p}{.}\PYG{n+nx}{gks}\PYG{p}{.}\PYG{n+nx}{xmax}\PYG{p}{,}
+\PYG{+w}{        }\PYG{n+nx}{Konzola}\PYG{p}{.}\PYG{n+nx}{gks}\PYG{p}{.}\PYG{n+nx}{ymax}\PYG{+w}{ }\PYG{o}{\PYGZhy{}}\PYG{+w}{ }\PYG{l+m+mf}{0.05}\PYG{+w}{ }\PYG{o}{*}\PYG{+w}{ }\PYG{n+nx}{Konzola}\PYG{p}{.}\PYG{n+nx}{gks}\PYG{p}{.}\PYG{n+nx}{ymax}
+\PYG{+w}{      }\PYG{p}{);}
+
+\PYG{+w}{      }\PYG{k}{if}\PYG{+w}{ }\PYG{p}{(}\PYG{n+nx}{Konzola}\PYG{p}{.}\PYG{n+nx}{prviFrame}\PYG{p}{)}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{        }\PYG{n+nx}{Konzola}\PYG{p}{.}\PYG{n+nx}{prviFrame}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{k+kc}{false}\PYG{p}{;}
+\PYG{+w}{        }\PYG{n+nx}{Konzola}\PYG{p}{.}\PYG{n+nx}{paused}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{k+kc}{true}\PYG{p}{;}
+\PYG{+w}{      }\PYG{p}{\PYGZcb{}}
+\PYG{+w}{    }\PYG{p}{\PYGZcb{}}
+\PYG{+w}{    }\PYG{n+nx}{requestAnimationFrame}\PYG{p}{(}\PYG{n+nx}{iscrtaj}\PYG{p}{);}
+\PYG{+w}{  }\PYG{p}{\PYGZcb{}}
+\PYG{p}{\PYGZcb{}}
+
+\end{Verbatim}

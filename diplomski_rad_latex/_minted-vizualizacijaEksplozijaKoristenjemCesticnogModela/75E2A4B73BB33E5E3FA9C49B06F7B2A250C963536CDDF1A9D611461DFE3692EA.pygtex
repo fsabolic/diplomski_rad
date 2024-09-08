@@ -1,0 +1,5 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{n+nd}{@vertex}\PYG{+w}{ }\PYG{k}{fn}\PYG{+w}{ }\PYG{n}{vsCestice}\PYG{p}{(}
+\PYG{+w}{	}\PYG{n+nd}{@builtin}\PYG{p}{(}\PYG{n+nb}{vertex\PYGZus{}index}\PYG{p}{)}\PYG{+w}{ }\PYG{n}{i\PYGZus{}vertex}\PYG{p}{:}\PYG{n+nb}{u32}\PYG{p}{,}
+\PYG{+w}{	}\PYG{n+nd}{@builtin}\PYG{p}{(}\PYG{n+nb}{instance\PYGZus{}index}\PYG{p}{)}\PYG{+w}{ }\PYG{n}{i\PYGZus{}instance}\PYG{p}{:}\PYG{n+nb}{u32}\PYG{p}{)}\PYG{+w}{ }\PYG{p}{\PYGZhy{}\PYGZgt{}}\PYG{+w}{ }\PYG{n}{VSOutput}\PYG{p}{...}
+\end{Verbatim}

@@ -1,0 +1,443 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.3 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{none/global//global/global/global}
+    \entry{FasterCapital2024}{misc}{}{}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{2024. [Na internetu].\newline Dostupno: \url{https://bit.ly/4fMoSGz} [pristupano 07.08.2024.].}
+      \field{title}{Computer Graphics: CSCE's Artistry: Exploring Computer Graphics}
+    \endentry
+    \entry{MozzilaDevCanvasAPI}{misc}{}{}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{bez dat. [Na internetu].\newline Dostupno: \url{https://mzl.la/3ASBeNB} [pristupano 07.08.2024.].}
+      \field{title}{Computer Graphics: CSCE's Artistry: Exploring Computer Graphics}
+    \endentry
+    \entry{MediumCoords2023}{misc}{}{}
+      \name{author}{1}{}{%
+        {{hash=d6a7ca45ac820f00d580a52df1975f1a}{%
+           family={Varaksin},
+           familyi={V\bibinitperiod},
+           given={Oleg},
+           giveni={O\bibinitperiod}}}%
+      }
+      \strng{namehash}{d6a7ca45ac820f00d580a52df1975f1a}
+      \strng{fullhash}{d6a7ca45ac820f00d580a52df1975f1a}
+      \strng{fullhashraw}{d6a7ca45ac820f00d580a52df1975f1a}
+      \strng{bibnamehash}{d6a7ca45ac820f00d580a52df1975f1a}
+      \strng{authorbibnamehash}{d6a7ca45ac820f00d580a52df1975f1a}
+      \strng{authornamehash}{d6a7ca45ac820f00d580a52df1975f1a}
+      \strng{authorfullhash}{d6a7ca45ac820f00d580a52df1975f1a}
+      \strng{authorfullhashraw}{d6a7ca45ac820f00d580a52df1975f1a}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{24.4.2023. [Na internetu].\newline Dostupno: \url{https://bit.ly/47kTFq0} [pristupano 09.08.2024.].}
+      \field{title}{Convert world to screen coordinates and vice versa in WebGL}
+    \endentry
+    \entry{HipHorvatUvod}{misc}{}{}
+      \name{author}{2}{}{%
+        {{hash=9e7c3e329adcee8a2f6b4ea49f7bc9de}{%
+           family={Hip},
+           familyi={H\bibinitperiod},
+           given={Ivan},
+           giveni={I\bibinitperiod}}}%
+        {{hash=1934e3fb509d82b46d8dd3d9c79138d7}{%
+           family={Horvat},
+           familyi={H\bibinitperiod},
+           given={Damir},
+           giveni={D\bibinitperiod}}}%
+      }
+      \strng{namehash}{0c4a6428289133cd6a1cad28a360a677}
+      \strng{fullhash}{0c4a6428289133cd6a1cad28a360a677}
+      \strng{fullhashraw}{0c4a6428289133cd6a1cad28a360a677}
+      \strng{bibnamehash}{0c4a6428289133cd6a1cad28a360a677}
+      \strng{authorbibnamehash}{0c4a6428289133cd6a1cad28a360a677}
+      \strng{authornamehash}{0c4a6428289133cd6a1cad28a360a677}
+      \strng{authorfullhash}{0c4a6428289133cd6a1cad28a360a677}
+      \strng{authorfullhashraw}{0c4a6428289133cd6a1cad28a360a677}
+      \field{extraname}{1}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{2023. [Moodle].\newline Dostupno: \url{https://bit.ly/4eewyjh} [pristupano 09.08.2024.].}
+      \field{title}{Uvod u računalnu grafiku - Osnovni pojmovi}
+    \endentry
+    \entry{EulersMethod2013}{misc}{}{}
+      \name{author}{1}{}{%
+        {{hash=52041981c6fcf91861021f0d60ba295b}{%
+           family={Howell},
+           familyi={H\bibinitperiod},
+           given={Kenneth},
+           giveni={K\bibinitperiod}}}%
+      }
+      \strng{namehash}{52041981c6fcf91861021f0d60ba295b}
+      \strng{fullhash}{52041981c6fcf91861021f0d60ba295b}
+      \strng{fullhashraw}{52041981c6fcf91861021f0d60ba295b}
+      \strng{bibnamehash}{52041981c6fcf91861021f0d60ba295b}
+      \strng{authorbibnamehash}{52041981c6fcf91861021f0d60ba295b}
+      \strng{authornamehash}{52041981c6fcf91861021f0d60ba295b}
+      \strng{authorfullhash}{52041981c6fcf91861021f0d60ba295b}
+      \strng{authorfullhashraw}{52041981c6fcf91861021f0d60ba295b}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{2013. [Na internetu].\newline Dostupno: \url{https://bit.ly/3ThuxLa} [pristupano 10.08.2024.].}
+      \field{title}{The Text for MA 238 (Applied Differential Equations)}
+    \endentry
+    \entry{HjorthJensen2021}{misc}{}{}
+      \name{author}{1}{}{%
+        {{hash=f1f1ee5e424a0bb746b54acd9e6851cf}{%
+           family={Hjorth-Jensen},
+           familyi={H\bibinithyphendelim J\bibinitperiod},
+           given={Morten},
+           giveni={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{f1f1ee5e424a0bb746b54acd9e6851cf}
+      \strng{fullhash}{f1f1ee5e424a0bb746b54acd9e6851cf}
+      \strng{fullhashraw}{f1f1ee5e424a0bb746b54acd9e6851cf}
+      \strng{bibnamehash}{f1f1ee5e424a0bb746b54acd9e6851cf}
+      \strng{authorbibnamehash}{f1f1ee5e424a0bb746b54acd9e6851cf}
+      \strng{authornamehash}{f1f1ee5e424a0bb746b54acd9e6851cf}
+      \strng{authorfullhash}{f1f1ee5e424a0bb746b54acd9e6851cf}
+      \strng{authorfullhashraw}{f1f1ee5e424a0bb746b54acd9e6851cf}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{3.2.2021. [Na internetu].\newline Dostupno: \url{https://bit.ly/3Xxajj9} [pristupano 10.08.2022.].}
+      \field{title}{PHY321: Motion examples, Forces, Newton’s Laws and Motion Example}
+    \endentry
+    \entry{HipHorvatFizika}{misc}{}{}
+      \name{author}{2}{}{%
+        {{hash=9e7c3e329adcee8a2f6b4ea49f7bc9de}{%
+           family={Hip},
+           familyi={H\bibinitperiod},
+           given={Ivan},
+           giveni={I\bibinitperiod}}}%
+        {{hash=1934e3fb509d82b46d8dd3d9c79138d7}{%
+           family={Horvat},
+           familyi={H\bibinitperiod},
+           given={Damir},
+           giveni={D\bibinitperiod}}}%
+      }
+      \strng{namehash}{0c4a6428289133cd6a1cad28a360a677}
+      \strng{fullhash}{0c4a6428289133cd6a1cad28a360a677}
+      \strng{fullhashraw}{0c4a6428289133cd6a1cad28a360a677}
+      \strng{bibnamehash}{0c4a6428289133cd6a1cad28a360a677}
+      \strng{authorbibnamehash}{0c4a6428289133cd6a1cad28a360a677}
+      \strng{authornamehash}{0c4a6428289133cd6a1cad28a360a677}
+      \strng{authorfullhash}{0c4a6428289133cd6a1cad28a360a677}
+      \strng{authorfullhashraw}{0c4a6428289133cd6a1cad28a360a677}
+      \field{extraname}{2}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{2023. [Moodle].\newline Dostupno: \url{https://bit.ly/3XANQBR} [pristupano 11.08.2024.].}
+      \field{title}{Simulacija fizike}
+    \endentry
+    \entry{UTKLabPhys135}{misc}{}{}
+      \field{sortinit}{8}
+      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{bez dat. [Na internetu].\newline Dostupno: \url{https://bit.ly/3TmXvcB} [pristupano 15.08.2024.].}
+      \field{title}{Phys 135 Core: Physics 135 Laboratory - University of Tennessee, Knoxville}
+    \endentry
+    \entry{NASAWeightMass}{misc}{}{}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{bez dat. [Na internetu].\newline Dostupno: \url{https://go.nasa.gov/4dTHSlg} [pristupano 15.08.2024.].}
+      \field{title}{Weight and Mass - NASA Glenn Research Center}
+    \endentry
+    \entry{RequestAnimationFrame}{misc}{}{}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{bez dat. [Na internetu].\newline Dostupno: \url{https://mzl.la/3z6E9BJ} [pristupano 15.08.2024.].}
+      \field{title}{Window: requestAnimationFrame() method}
+    \endentry
+    \entry{LibreTextsUniform2024}{misc}{}{}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{2024. [Na internetu].\newline Dostupno: \url{https://bit.ly/3XkIw3Y} [pristupano 16.08.2024.].}
+      \field{title}{The Uniform Distribution}
+    \endentry
+    \entry{DeepAIGaussian2024}{misc}{}{}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{bez dat. [Na internetu].\newline Dostupno: \url{https://bit.ly/3AWBpY2} [pristupano 18.08.2024.].}
+      \field{title}{Gaussian Distribution - Machine Learning Glossary}
+    \endentry
+    \entry{BoxMullerBezDat}{misc}{}{}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{bez dat. [Na internetu].\newline Dostupno: \url{https://bit.ly/4dZxCYQ} [pristupano 18.08.2024.]}
+      \field{title}{Box Muller Transform: Simple Definition}
+    \endentry
+    \entry{ByjusCoulombsLaw}{misc}{}{}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{bez dat. [Na internetu].\newline Dostupno: \url{https://bit.ly/4dWrNew} [pristupano 19.08.2024.].}
+      \field{title}{Coulomb's Law: Definition, Formula, and Applications}
+    \endentry
+    \entry{PromiseFirefox}{misc}{}{}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{bez dat. [Na internetu].\newline Dostupno: \url{https://mzl.la/3Zm07eN} [pristupano 19.08.2024.].}
+      \field{title}{Promise}
+    \endentry
+    \entry{MushroomCloudBezDat}{misc}{}{}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{bez dat. [Na internetu].\newline Dostupno: \url{https://bit.ly/4dQsXrS} [pristupano 20.08.2024.].}
+      \field{title}{The Mushroom Cloud}
+    \endentry
+    \entry{2DTransform}{misc}{}{}
+      \name{author}{1}{}{%
+        {{hash=dc0457556453f5f926c662107f9d0f8b}{%
+           family={McBride},
+           familyi={M\bibinitperiod},
+           given={Martin},
+           giveni={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{dc0457556453f5f926c662107f9d0f8b}
+      \strng{fullhash}{dc0457556453f5f926c662107f9d0f8b}
+      \strng{fullhashraw}{dc0457556453f5f926c662107f9d0f8b}
+      \strng{bibnamehash}{dc0457556453f5f926c662107f9d0f8b}
+      \strng{authorbibnamehash}{dc0457556453f5f926c662107f9d0f8b}
+      \strng{authornamehash}{dc0457556453f5f926c662107f9d0f8b}
+      \strng{authorfullhash}{dc0457556453f5f926c662107f9d0f8b}
+      \strng{authorfullhashraw}{dc0457556453f5f926c662107f9d0f8b}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{7.1.2024. [Na internetu].\newline Dostupno: \url{https://bit.ly/47fafaZ} [pristupano 21.08.2024.].}
+      \field{title}{2D transformation matrices}
+    \endentry
+    \entry{TransformationMatricesBezDat}{misc}{}{}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{bez dat. [Na internetu].\newline Dostupno: \url{https://bit.ly/4dROEaZ} [pristupano 21.08.2024.].}
+      \field{title}{6.5 - Transformation Matrices}
+    \endentry
+    \entry{Prostori3DBezDat}{misc}{}{}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{bez dat. [Na internetu].\newline Dostupno: \url{https://bit.ly/3ZfjuG0} [pristupano 21.08.2024.].}
+      \field{title}{Coordinate Systems}
+    \endentry
+    \entry{Orto3DBezDat}{misc}{}{}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{bez dat. [Na internetu].\newline Dostupno: \url{https://bit.ly/47hyfu0} [pristupano 22.08.2024.].}
+      \field{title}{8.2 - Orthographic Projections}
+    \endentry
+    \entry{Perspective3DBezDat}{misc}{}{}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{bez dat. [Na internetu].\newline Dostupno: \url{https://bit.ly/47kscF3} [pristupano 23.08.2024.].}
+      \field{title}{8.3 - Perspective Projections}
+    \endentry
+    \entry{WebGPUFundamentalsPerspective}{misc}{}{}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{bez dat. [Na internetu].\newline Dostupno: \url{https://bit.ly/47mHSI6} [pristupano 23.08.2024.].}
+      \field{title}{WebGPU Perspective Projection}
+    \endentry
+    \entry{KameraBezDat}{misc}{}{}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{bez dat. [Na internetu].\newline Dostupno: \url{https://bit.ly/3Xfmi3n} [pristupano 24.08.2024.].}
+      \field{title}{Camera}
+    \endentry
+    \entry{DocWebGPU}{misc}{}{}
+      \name{author}{1}{}{%
+        {{hash=2aba0f90eb9a484bae1147483f65e166}{%
+           family={Treybig},
+           familyi={T\bibinitperiod},
+           given={Davis},
+           giveni={D\bibinitperiod}}}%
+      }
+      \strng{namehash}{2aba0f90eb9a484bae1147483f65e166}
+      \strng{fullhash}{2aba0f90eb9a484bae1147483f65e166}
+      \strng{fullhashraw}{2aba0f90eb9a484bae1147483f65e166}
+      \strng{bibnamehash}{2aba0f90eb9a484bae1147483f65e166}
+      \strng{authorbibnamehash}{2aba0f90eb9a484bae1147483f65e166}
+      \strng{authornamehash}{2aba0f90eb9a484bae1147483f65e166}
+      \strng{authorfullhash}{2aba0f90eb9a484bae1147483f65e166}
+      \strng{authorfullhashraw}{2aba0f90eb9a484bae1147483f65e166}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{bez dat. [Na internetu].\newline Dostupno: \url{https://bit.ly/3Xghafq} [pristupano 25.08.2024.].}
+      \field{title}{WebGPU - What is it and why does it matter?}
+    \endentry
+    \entry{WebGPUFundamentalsFundamentals}{misc}{}{}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{bez dat. [Na internetu].\newline Dostupno: \url{https://bit.ly/3XiRdff} [pristupano 26.08.2024.].}
+      \field{title}{WebGPU Fundamentals}
+    \endentry
+    \entry{TourOfWGSL}{misc}{}{}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{bez dat. [Na internetu].\newline Dostupno: \url{https://bit.ly/3MBTkpG} [pristupano 26.08.2024.].}
+      \field{title}{Tour of WGSL}
+    \endentry
+    \entry{BufferTypes}{misc}{}{}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{bez dat. [Na internetu].\newline Dostupno: \url{https://bit.ly/3zajRXU} [pristupano 29.08.2024.].}
+      \field{title}{WebGPU Buffer Uploads}
+    \endentry
+    \entry{WebGPUFundamentalsMemoryLayout}{misc}{}{}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{bez dat. [Na internetu].\newline Dostupno: \url{https://bit.ly/4geCw5A} [pristupano 29.08.2024.].}
+      \field{title}{WebGPU Data Memory Layout}
+    \endentry
+    \entry{WebGPUFundamentalsOptionalLimits}{misc}{}{}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{bez dat. [Na internetu].\newline Dostupno: \url{https://bit.ly/3z1f1MK} [pristupano 30.08.2024.].}
+      \field{title}{WebGPU Optional Features and Limits}
+    \endentry
+    \entry{W3CWebGPU2024}{misc}{}{}
+      \name{author}{3}{}{%
+        {{hash=54b3ea105346ec408180e260bec7c4d5}{%
+           family={Ninomiya},
+           familyi={N\bibinitperiod},
+           given={Kai},
+           giveni={K\bibinitperiod}}}%
+        {{hash=3eb8a512a324ad27522d8b12d6ef323d}{%
+           family={Jones},
+           familyi={J\bibinitperiod},
+           given={Brandon},
+           giveni={B\bibinitperiod}}}%
+        {{hash=4c2735d99dcb131380d728cad8ba30d2}{%
+           family={Blandy},
+           familyi={B\bibinitperiod},
+           given={Jim},
+           giveni={J\bibinitperiod}}}%
+      }
+      \strng{namehash}{2fe949292c2b27696e64c51d2142fa02}
+      \strng{fullhash}{c0128bc98fe71167ec52ebe04783f7d1}
+      \strng{fullhashraw}{c0128bc98fe71167ec52ebe04783f7d1}
+      \strng{bibnamehash}{c0128bc98fe71167ec52ebe04783f7d1}
+      \strng{authorbibnamehash}{c0128bc98fe71167ec52ebe04783f7d1}
+      \strng{authornamehash}{2fe949292c2b27696e64c51d2142fa02}
+      \strng{authorfullhash}{c0128bc98fe71167ec52ebe04783f7d1}
+      \strng{authorfullhashraw}{c0128bc98fe71167ec52ebe04783f7d1}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{W3C Working Draft, 30 August 2024. \newline Dostupno: \url{https://bit.ly/3XlfT6O} [pristupano 31.08.2024.].}
+      \field{title}{WebGPU}
+    \endentry
+    \entry{WebGPUFundamentalsCameras}{misc}{}{}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{bez dat. [Na internetu].\newline Dostupno: \url{https://bit.ly/3Zn7Gl4} [pristupano 02.09.2024.].}
+      \field{title}{WebGPU Cameras}
+    \endentry
+    \entry{NvidiaPRNG}{misc}{}{}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{bez dat. [Na internetu].\newline Dostupno: \url{https://bit.ly/3MCud5W} [pristupano 02.09.2024.].}
+      \field{title}{Chapter 37. Efficient Random Number Generation and Application Using CUDA}
+    \endentry
+    \entry{NormalizacijaPodataka}{misc}{}{}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{bez dat. [Na internetu].\newline Dostupno: \url{https://bit.ly/3Zaoj3A} [pristupano 02.09.2024.].}
+      \field{title}{How to Normalize Data Between 0 and 100}
+    \endentry
+    \entry{WebGPUFundamentalsCopyData}{misc}{}{}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{bez dat. [Na internetu].\newline Dostupno: \url{https://bit.ly/3z1fgr8} [pristupano 03.09.2024.].}
+      \field{title}{WebGPU Copying Data}
+    \endentry
+    \entry{DepthStencilWebGPU}{misc}{}{}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{bez dat. [Na internetu].\newline Dostupno: \url{https://bit.ly/4ddFRPP} [pristupano 03.09.2024.].}
+      \field{title}{Depth buffer}
+    \endentry
+    \entry{ItCGWebGPU3D}{misc}{}{}
+      \name{author}{1}{}{%
+        {{hash=2e2496e30e2896659de72ff0bd7058e1}{%
+           family={Eck},
+           familyi={E\bibinitperiod},
+           given={David\bibnamedelima J.},
+           giveni={D\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+      }
+      \strng{namehash}{2e2496e30e2896659de72ff0bd7058e1}
+      \strng{fullhash}{2e2496e30e2896659de72ff0bd7058e1}
+      \strng{fullhashraw}{2e2496e30e2896659de72ff0bd7058e1}
+      \strng{bibnamehash}{2e2496e30e2896659de72ff0bd7058e1}
+      \strng{authorbibnamehash}{2e2496e30e2896659de72ff0bd7058e1}
+      \strng{authornamehash}{2e2496e30e2896659de72ff0bd7058e1}
+      \strng{authorfullhash}{2e2496e30e2896659de72ff0bd7058e1}
+      \strng{authorfullhashraw}{2e2496e30e2896659de72ff0bd7058e1}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{2023. [Na internetu].\newline Dostupno: \url{https://bit.ly/3Zg6xMr} [pristupano 04.09.2024.].}
+      \field{title}{3D Graphics With WebGPU}
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+
