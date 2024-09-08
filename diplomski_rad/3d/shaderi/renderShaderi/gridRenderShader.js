@@ -8,7 +8,7 @@ function kreirajGridRenderShader() {
 
   //Izrada grid pipelinea
   gridRenderPipeline = device.createRenderPipeline({
-    label: "Grid 2 attributes",
+    label: "Grid Render Shaders",
     layout: "auto",
     vertex: {
       module: gridRenderModule,

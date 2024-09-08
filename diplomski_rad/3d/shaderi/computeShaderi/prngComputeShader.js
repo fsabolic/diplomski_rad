@@ -17,6 +17,7 @@ function kreirajPRNGComputeShader() {
     },
     layout: "auto",
   };
+
   prngComputePipeline = device.createComputePipeline(
     prngComputePipelineDescriptor
   );

@@ -141,12 +141,12 @@
         await postaviWebGPU();
         postaviPostavke();
         kreirajBuffere();
-        kreirajCesticeRenderShader();
-        kreirajGridRenderShader();
         kreirajPRNGComputeShader();
+        kreirajCesticeRenderShader();
+        kreirajSileComputeShader();
+        kreirajGridRenderShader();
         postaviParametre();
         izvrsiPRNGComputeShader();
-        kreirajSileComputeShader();
         postavke.reset = false;
         postaviPostavkeLocalStorage();
         dodajEventListenere();

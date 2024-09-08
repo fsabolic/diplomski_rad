@@ -32,7 +32,7 @@ const pi: f32 = 3.1415926535897932384626433832795;
 
     var u: array<f32, 4> = array<f32, 4>(0.0, 0.0, 0.0, 0.0);
 
-    for (var i = 0; i < 25; i++) { //Zagrijavanje generatora
+    for (var i = 0; i <= 15; i++) { //Zagrijavanje generatora
         z1 = tausStep(z1, 13u, 19u, 12u, 4294967294u);
         z2 = tausStep(z2, 2u, 25u, 4u, 4294967288u);
         z3 = tausStep(z3, 3u, 11u, 17u, 4294967280u);
