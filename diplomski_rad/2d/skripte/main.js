@@ -1,5 +1,5 @@
-function main(defaultVrijednosti, parametri) {
-  Konzola.initKonzola(defaultVrijednosti, parametri);
+function main(parametri) {
+  Konzola.initKonzola(parametri);
   let potencijali = Konzola.potencijalSave;
   let cestice = Konzola.cesticeSave;
   let dt = 1.0 / 60;
@@ -19,7 +19,7 @@ function main(defaultVrijednosti, parametri) {
             Konzola.preciznostSimulacije /
             Konzola.skalirajBrzinuSlidera(Konzola.brzina);
           let rezultantnaSilaPotencijala = potencijali.reduce((zbroj, p) => {
-            return zbroj.zbroji(p.F(cestice[i].materijalnaTocka, 0.5, 0.2));
+            return zbroj.zbroji(p.F(cestice[i].materijalnaTocka));
           }, new Vektor2D(0, 0));
           cestice[i].materijalnaTocka.pomakni(
             vremenskiPomak,

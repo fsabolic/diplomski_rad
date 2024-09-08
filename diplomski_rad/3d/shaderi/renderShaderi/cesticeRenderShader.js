@@ -8,7 +8,7 @@ function kreirajCesticeRenderShader() {
 
   //Izrada Cestice pipelinea
   cesticeRenderPipeline = device.createRenderPipeline({
-    label: "2 attributes",
+    label: "Cestice Render Shaders",
     layout: "auto",
     vertex: {
       module: cesticeRenderModule,
@@ -21,6 +21,7 @@ function kreirajCesticeRenderShader() {
     },
     primitive: {
       cullMode: "back",
+      topology: "triangle-list",
     },
     depthStencil: {
       depthWriteEnabled: true,

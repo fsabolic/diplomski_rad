@@ -71,11 +71,11 @@ struct VrhCestice{
   vsOut.boja = vrhovi_cestice[i_vertex].boja;
 
   //Računanje udaljenosti između kamere i vrha čestice koji se trenutno gleda
-  var pozicija_kamere: vec3f = vec3f(parametri.pozicija_eksplozije.x,
+  var srediste_eksplozije: vec3f = vec3f(parametri.pozicija_eksplozije.x,
                                     parametri.pozicija_eksplozije.y,
                                     parametri.pozicija_eksplozije.z);
   var pozicija_cestice: vec3f = vektor_pomaka.xyz;
-  vsOut.udaljenost = distance(pozicija_cestice, pozicija_kamere);
+  vsOut.udaljenost = distance(pozicija_cestice, srediste_eksplozije);
 
   return vsOut;
 }
@@ -84,7 +84,6 @@ struct VrhCestice{
 @fragment fn fsCestice(vsOut: VSOutput) -> @location(0) vec4f {
   //Izračun faktora udaljenosti koji "smanjuje/povećava" svjetlinu čestice
   let faktor_udaljenosti = 8 / (3 + vsOut.udaljenost * 0.001);
-
 
   let prilagodena_boja = vsOut.boja * faktor_udaljenosti;
   return prilagodena_boja;

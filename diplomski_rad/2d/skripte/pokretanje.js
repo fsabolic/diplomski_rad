@@ -105,11 +105,11 @@ function dohvatiHtmlKomponentu(predputanja) {
           <input class="number-input-setter-value" id="particle-number-setter-value" type="text" value="" onfocusout="Konzola.brojEksplozijeInputFocusoutEventHandler(event)" />
         </div>
         <div class="gravity-setter number-input">
-          <p class="number-input-setter-text" id="gravity-setter-text">Gravitacija:</p>
+          <p class="number-input-setter-text" id="gravity-setter-text">Sila teža:</p>
           <input class="number-input-setter-value" id="gravity-setter-value" type="text" value="" onfocusout="Konzola.gravitacijaInputFocusoutEventHandler(event)" />
         </div>
         <div class="resistance-setter number-input">
-          <p class="number-input-setter-text" id="resistance-setter-text">Otpor:</p>
+          <p class="number-input-setter-text" id="resistance-setter-text">Otpor sredstva:</p>
           <input class="number-input-setter-value" id="resistance-setter-value" type="text" value="" onfocusout="Konzola.otporInputFocusoutEventHandler(event)" />
         </div>
       </div>

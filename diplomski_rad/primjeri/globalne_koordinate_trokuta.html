@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Globalne koordinate</title>
+    <script>
+      class Tocka {
+        constructor(x, y) {
+          this.x = x;
+          this.y = y;
+        }
+      }
+
+      class Trokut {
+        constructor() {
+          this.tockaA = new Tocka(0, 0);
+          this.tockaB = new Tocka(150, 0);
+          this.tockaC = new Tocka(75, 150);
+        }
+      }
+
+      class Translator {
+        static pomakniTrokut(trokut, x, y) {
+          trokut.tockaA.x += x;
+          trokut.tockaA.y += y;
+          trokut.tockaB.x += x;
+          trokut.tockaB.y += y;
+          trokut.tockaC.x += x;
+          trokut.tockaC.y += y;
+        }
+      }
+
+      function main() {
+        let canvas = document.getElementById("canvas");
+        let context = canvas.getContext("2d");
+
+        //Tri trokuta s lokalnim koordinatama
+        let trokuti = [new Trokut(), new Trokut(), new Trokut()];
+        let pomaci = [
+          new Tocka(200, 0),
+          new Tocka(-75, 200),
+          new Tocka(-75, -150),
+        ];
+        for (let i = 0; i < trokuti.length; i++) {
+          //Transformacija kooridnata pojedinog troktuta u globalne koordinate
+          Translator.pomakniTrokut(trokuti[i], pomaci[i].x, pomaci[i].y);
+
+          context.strokeStyle = "green";
+          context.beginPath();
+          context.moveTo(trokuti[i].tockaA.x, trokuti[i].tockaA.y);
+          context.lineTo(trokuti[i].tockaB.x, trokuti[i].tockaB.y);
+          context.lineTo(trokuti[i].tockaC.x, trokuti[i].tockaC.y);
+          context.lineTo(trokuti[i].tockaA.x, trokuti[i].tockaA.y);
+          context.stroke();
+        }
+      }
+
+      window.onload = main;
+    </script>
+  </head>
+  <body>
+    <canvas
+      id="canvas"
+      width="500"
+      height="500"
+      style="border: 1px solid black"
+    ></canvas>
+  </body>
+</html>
