@@ -22,7 +22,7 @@ class GlobalniKoordinatniSustav {
   ocisti() {
     let max = this.h;
     if (this.w > this.h) max = this.w;
-    this.g.clearRect(0, 0, max, max);
+    this.g.clearRect(0, 0, this.w, this.h);
   }
 
   puniKrug(x, y, R, boja) {
