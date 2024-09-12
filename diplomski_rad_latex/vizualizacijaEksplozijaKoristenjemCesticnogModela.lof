@@ -40,7 +40,7 @@
 \contentsline {figure}{\numberline {35}{\ignorespaces Frustum perspektivne projekcije}}{80}{figure.caption.36}%
 \contentsline {figure}{\numberline {36}{\ignorespaces Kocke dobivene korištenjem ortogonalne projekcije}}{81}{figure.caption.37}%
 \contentsline {figure}{\numberline {37}{\ignorespaces Kocke dobivene korištenjem perspektivne projekcije}}{83}{figure.caption.38}%
-\contentsline {figure}{\numberline {38}{\ignorespaces Prikaz \textit {shadera} unutar protočnih sustava}}{86}{figure.caption.39}%
+\contentsline {figure}{\numberline {38}{\ignorespaces Prikaz sjenčara unutar protočnih sustava}}{86}{figure.caption.39}%
 \contentsline {figure}{\numberline {39}{\ignorespaces Prikaz procesa unutar GPU-a}}{89}{figure.caption.40}%
 \contentsline {figure}{\numberline {40}{\ignorespaces Animacija sinusoide napravljena koristeći WebGPU, JavaScript i WGSL}}{90}{figure.caption.41}%
 \addvspace {10\p@ }

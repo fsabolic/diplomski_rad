@@ -17,10 +17,10 @@
 \contentsline {subsection}{\numberline {4.2.1}Kamera}{83}{subsection.4.2.1}%
 \contentsline {section}{\numberline {4.3}WebGPU}{84}{section.4.3}%
 \contentsline {chapter}{\numberline {5}3D vizualizacija}{97}{chapter.5}%
-\contentsline {section}{\numberline {5.1}Shaderi}{100}{section.5.1}%
-\contentsline {subsection}{\numberline {5.1.1}Compute shaderi}{100}{subsection.5.1.1}%
-\contentsline {subsection}{\numberline {5.1.2}Vertex i fragment shaderi}{106}{subsection.5.1.2}%
-\contentsline {subsection}{\numberline {5.1.3}Izvođenje vizualizacije}{110}{subsection.5.1.3}%
+\contentsline {section}{\numberline {5.1}Sjenčari}{100}{section.5.1}%
+\contentsline {subsection}{\numberline {5.1.1}Sjenčari izračuna}{100}{subsection.5.1.1}%
+\contentsline {subsection}{\numberline {5.1.2}Sjenčari vrhova i sjenčari fragmenata}{106}{subsection.5.1.2}%
+\contentsline {subsection}{\numberline {5.1.3}Izvođenje vizualizacije}{111}{subsection.5.1.3}%
 \contentsline {chapter}{\numberline {6}Zaključak}{128}{chapter.6}%
 \contentsline {chapter}{Popis literature}{131}{chapter*.46}%
 \contentsline {chapter}{Popis slika}{133}{chapter*.47}%

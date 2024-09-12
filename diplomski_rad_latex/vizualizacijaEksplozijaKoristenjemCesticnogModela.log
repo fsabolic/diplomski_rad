@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.8.25)  11 SEP 2024 23:04
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.8.25)  12 SEP 2024 01:15
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -1197,7 +1197,7 @@ Overfull \hbox (1.29184pt too wide) detected at line 22
 
 
 Overfull \hbox (1.29184pt too wide) detected at line 23
- []\T1/phv/m/n/10.95 110
+ []\T1/phv/m/n/10.95 111
  []
 
 
@@ -1232,9 +1232,8 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.46 R
-      ad je podijeljen na dva velika dijela. Prvi dio se bavi dvodimenzional...
-[1
+l.45 
+      [1
 
 ]
 LaTeX Font Info:    Trying to load font information for T1+fvm on input line 46
@@ -1270,7 +1269,7 @@ LaTeX Font Info:    Font shape `T1/fvm/b/n' will be
 
 (./_minted-vizualizacijaEksplozijaKoristenjemCesticnogModela/F6F142153ED03CA846
 BF54C0506100F2CD662BC72B5D9979E39935CD9DF421D8.pygtex)
-<slike/1_OsnovniCanvasTrokut.png, id=181, 503.8825pt x 503.8825pt>
+<slike/1_OsnovniCanvasTrokut.png, id=187, 503.8825pt x 503.8825pt>
 File: slike/1_OsnovniCanvasTrokut.png Graphic file (type png)
 <use slike/1_OsnovniCanvasTrokut.png>
 Package pdftex.def Info: slike/1_OsnovniCanvasTrokut.png  used on input line 11
@@ -1286,7 +1285,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 108--116
 [4]
 
 [5 <./slike/1_OsnovniCanvasTrokut.png>]
-<slike/2_LokalneKoordinateTrokut.png, id=199, 349.305pt x 284.56313pt>
+<slike/2_LokalneKoordinateTrokut.png, id=205, 349.305pt x 284.56313pt>
 File: slike/2_LokalneKoordinateTrokut.png Graphic file (type png)
 <use slike/2_LokalneKoordinateTrokut.png>
 Package pdftex.def Info: slike/2_LokalneKoordinateTrokut.png  used on input lin
@@ -1297,7 +1296,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 124--132
 
  []
 
-<slike/3_GlobalneKoordinateTrokuti.png, id=201, 709.2315pt x 690.1785pt>
+<slike/3_GlobalneKoordinateTrokuti.png, id=207, 709.2315pt x 690.1785pt>
 File: slike/3_GlobalneKoordinateTrokuti.png Graphic file (type png)
 <use slike/3_GlobalneKoordinateTrokuti.png>
 Package pdftex.def Info: slike/3_GlobalneKoordinateTrokuti.png  used on input l
@@ -1311,7 +1310,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 134--142
 
 
 [6 <./slike/2_LokalneKoordinateTrokut.png>]
-<slike/4_ZaslonskeKoordinateCanvas.png, id=211, 503.8825pt x 503.8825pt>
+<slike/4_ZaslonskeKoordinateCanvas.png, id=217, 503.8825pt x 503.8825pt>
 File: slike/4_ZaslonskeKoordinateCanvas.png Graphic file (type png)
 <use slike/4_ZaslonskeKoordinateCanvas.png>
 Package pdftex.def Info: slike/4_ZaslonskeKoordinateCanvas.png  used on input l
@@ -1322,13 +1321,13 @@ ine 147.
 [7 <./slike/3_GlobalneKoordinateTrokuti.png>]
 
 [8 <./slike/4_ZaslonskeKoordinateCanvas.png>]
-<slike/5_GlobalniTrokutiUnutarZaslona.png, id=232, 606.76688pt x 595.47469pt>
+<slike/5_GlobalniTrokutiUnutarZaslona.png, id=238, 606.76688pt x 595.47469pt>
 File: slike/5_GlobalniTrokutiUnutarZaslona.png Graphic file (type png)
 <use slike/5_GlobalniTrokutiUnutarZaslona.png>
 Package pdftex.def Info: slike/5_GlobalniTrokutiUnutarZaslona.png  used on inpu
 t line 189.
 (pdftex.def)             Requested size: 455.24411pt x 446.77754pt.
-<slike/6_SkaliraniGlobalniTrokutiUnutarZaslona.png, id=233, 593.96906pt x 510.4
+<slike/6_SkaliraniGlobalniTrokutiUnutarZaslona.png, id=239, 593.96906pt x 510.4
 0688pt>
 File: slike/6_SkaliraniGlobalniTrokutiUnutarZaslona.png Graphic file (type png)
 
@@ -1341,7 +1340,7 @@ d on input line 196.
 [9]
 
 [10 <./slike/5_GlobalniTrokutiUnutarZaslona.png>]
-<slike/7_TransformiraneGlobalneUZaslonske.png, id=253, 649.67719pt x 485.56406p
+<slike/7_TransformiraneGlobalneUZaslonske.png, id=259, 649.67719pt x 485.56406p
 t>
 File: slike/7_TransformiraneGlobalneUZaslonske.png Graphic file (type png)
 <use slike/7_TransformiraneGlobalneUZaslonske.png>
@@ -1351,7 +1350,7 @@ input line 207.
 
 
 [11 <./slike/6_SkaliraniGlobalniTrokutiUnutarZaslona.png>]
-<slike/8_TransformiraniTrokutiCanvas.png, id=264, 503.8825pt x 503.8825pt>
+<slike/8_TransformiraniTrokutiCanvas.png, id=270, 503.8825pt x 503.8825pt>
 File: slike/8_TransformiraniTrokutiCanvas.png Graphic file (type png)
 <use slike/8_TransformiraniTrokutiCanvas.png>
 Package pdftex.def Info: slike/8_TransformiraniTrokutiCanvas.png  used on input
@@ -1394,7 +1393,7 @@ Poglavlje 3.
 
 (./_minted-vizualizacijaEksplozijaKoristenjemCesticnogModela/DB03527A6F58BCF7F8
 DF02954E079D978180520B668216DC38FDCF099997C4D5.pygtex)
-<slike/9_CesticaNaPlatnu.png, id=301, 604.2575pt x 604.2575pt>
+<slike/9_CesticaNaPlatnu.png, id=307, 604.2575pt x 604.2575pt>
 File: slike/9_CesticaNaPlatnu.png Graphic file (type png)
 <use slike/9_CesticaNaPlatnu.png>
 Package pdftex.def Info: slike/9_CesticaNaPlatnu.png  used on input line 362.
@@ -1409,7 +1408,7 @@ Package pdftex.def Info: slike/9_CesticaNaPlatnu.png  used on input line 362.
 72453A30A73EBE8180520B668216DC38FDCF099997C4D5.pygtex
 
 [19 <./slike/9_CesticaNaPlatnu.png>])
-<slike/10_PutanjaCestice.png, id=315, 604.2575pt x 604.2575pt>
+<slike/10_PutanjaCestice.png, id=321, 604.2575pt x 604.2575pt>
 File: slike/10_PutanjaCestice.png Graphic file (type png)
 <use slike/10_PutanjaCestice.png>
 Package pdftex.def Info: slike/10_PutanjaCestice.png  used on input line 392.
@@ -1417,9 +1416,9 @@ Package pdftex.def Info: slike/10_PutanjaCestice.png  used on input line 392.
 
 
 [20 <./slike/10_PutanjaCestice.png>]
-Overfull \hbox (14.5825pt too wide) in paragraph at lines 401--403
-\T1/phv/m/n/10.95 je samo kons-truk-tor ko-jemu se pro-s-lje-žuje ko-efi-ci-jen
-t ot-pora sred-stva i me-toda \T1/phv/m/sl/10.95 F(materijalnaTocka)
+Overfull \hbox (35.16826pt too wide) in paragraph at lines 401--403
+\T1/phv/m/n/10.95 ban je samo kons-truk-tor ko-jemu se pro-s-lje-žuje ko-efi-ci
+-jent ot-pora sred-stva i me-toda \T1/phv/m/sl/10.95 F(materijalnaTocka)
  []
 
 \openout5 = `vizualizacijaEksplozijaKoristenjemCesticnogModela.pyg'.
@@ -1432,7 +1431,7 @@ t ot-pora sred-stva i me-toda \T1/phv/m/sl/10.95 F(materijalnaTocka)
 
 (./_minted-vizualizacijaEksplozijaKoristenjemCesticnogModela/399D171177D4E5CDA3
 6A8E18E9D77F778180520B668216DC38FDCF099997C4D5.pygtex)
-<slike/11_PutanjaCesticeSOtporom.png, id=325, 604.2575pt x 604.2575pt>
+<slike/11_PutanjaCesticeSOtporom.png, id=331, 604.2575pt x 604.2575pt>
 File: slike/11_PutanjaCesticeSOtporom.png Graphic file (type png)
 <use slike/11_PutanjaCesticeSOtporom.png>
 Package pdftex.def Info: slike/11_PutanjaCesticeSOtporom.png  used on input lin
@@ -1453,7 +1452,7 @@ e 433.
 
 (./_minted-vizualizacijaEksplozijaKoristenjemCesticnogModela/91D88B31B4BB110B48
 95969BA43CCCE98180520B668216DC38FDCF099997C4D5.pygtex)
-<slike/12_PutanjaCesticeSilaTeza.png, id=340, 604.2575pt x 604.2575pt>
+<slike/12_PutanjaCesticeSilaTeza.png, id=346, 604.2575pt x 604.2575pt>
 File: slike/12_PutanjaCesticeSilaTeza.png Graphic file (type png)
 <use slike/12_PutanjaCesticeSilaTeza.png>
 Package pdftex.def Info: slike/12_PutanjaCesticeSilaTeza.png  used on input lin
@@ -1469,7 +1468,7 @@ e 474.
 15B861219E50878180520B668216DC38FDCF099997C4D5.pygtex
 
 [24 <./slike/12_PutanjaCesticeSilaTeza.png>])
-<slike/13_PutanjaCesticeOtporSilaTeza.png, id=353, 604.2575pt x 604.2575pt>
+<slike/13_PutanjaCesticeOtporSilaTeza.png, id=359, 604.2575pt x 604.2575pt>
 File: slike/13_PutanjaCesticeOtporSilaTeza.png Graphic file (type png)
 <use slike/13_PutanjaCesticeOtporSilaTeza.png>
 Package pdftex.def Info: slike/13_PutanjaCesticeOtporSilaTeza.png  used on inpu
@@ -1487,7 +1486,7 @@ AB70AE9F945F588180520B668216DC38FDCF099997C4D5.pygtex
 
 (./_minted-vizualizacijaEksplozijaKoristenjemCesticnogModela/9055DB5C336CA85B25
 87738FFD59261F8180520B668216DC38FDCF099997C4D5.pygtex)
-<slike/14_AnimacijaPutanjaCestice.png, id=361, 1189.44376pt x 1790.69pt>
+<slike/14_AnimacijaPutanjaCestice.png, id=367, 1189.44376pt x 1790.69pt>
 File: slike/14_AnimacijaPutanjaCestice.png Graphic file (type png)
 <use slike/14_AnimacijaPutanjaCestice.png>
 Package pdftex.def Info: slike/14_AnimacijaPutanjaCestice.png  used on input li
@@ -1498,7 +1497,7 @@ ne 551.
 [26]
 
 [27 <./slike/14_AnimacijaPutanjaCestice.png>]
-<slike/15_PravilnoCrtnjeEksplozije.png, id=375, 1616.0375pt x 3195.94pt>
+<slike/15_PravilnoCrtnjeEksplozije.png, id=381, 1616.0375pt x 3195.94pt>
 File: slike/15_PravilnoCrtnjeEksplozije.png Graphic file (type png)
 <use slike/15_PravilnoCrtnjeEksplozije.png>
 Package pdftex.def Info: slike/15_PravilnoCrtnjeEksplozije.png  used on input l
@@ -1528,7 +1527,7 @@ B337458FAD7B018180520B668216DC38FDCF099997C4D5.pygtex)
 03F61FFFFD6A3B8180520B668216DC38FDCF099997C4D5.pygtex
 
 [31])
-<slike/16_PravilnaEksplozija.png, id=395, 604.2575pt x 1814.78pt>
+<slike/16_PravilnaEksplozija.png, id=401, 604.2575pt x 1814.78pt>
 File: slike/16_PravilnaEksplozija.png Graphic file (type png)
 <use slike/16_PravilnaEksplozija.png>
 Package pdftex.def Info: slike/16_PravilnaEksplozija.png  used on input line 65
@@ -1551,7 +1550,7 @@ Overfull \hbox (10.20215pt too wide) in paragraph at lines 702--703
 i£-nim br-zi-nama. Kako me-toda \T1/phv/m/sl/10.95 Math.random()
  []
 
-<slike/17_UniformnaEksplozija.png, id=412, 604.2575pt x 1814.78pt>
+<slike/17_UniformnaEksplozija.png, id=418, 604.2575pt x 1814.78pt>
 File: slike/17_UniformnaEksplozija.png Graphic file (type png)
 <use slike/17_UniformnaEksplozija.png>
 Package pdftex.def Info: slike/17_UniformnaEksplozija.png  used on input line 7
@@ -1585,7 +1584,7 @@ Package pdftex.def Info: slike/17_UniformnaEksplozija.png  used on input line 7
 C08949A789C0828180520B668216DC38FDCF099997C4D5.pygtex
 
 [40])
-<slike/18_GaussEksplozija.png, id=447, 604.2575pt x 1814.78pt>
+<slike/18_GaussEksplozija.png, id=453, 604.2575pt x 1814.78pt>
 File: slike/18_GaussEksplozija.png Graphic file (type png)
 <use slike/18_GaussEksplozija.png>
 Package pdftex.def Info: slike/18_GaussEksplozija.png  used on input line 852.
@@ -1632,7 +1631,7 @@ DC54245E640EB88180520B668216DC38FDCF099997C4D5.pygtex
 E0B4908CC4923A8180520B668216DC38FDCF099997C4D5.pygtex
 
 [48])
-<slike/19_CoulombEksplozija.png, id=488, 604.2575pt x 1814.78pt>
+<slike/19_CoulombEksplozija.png, id=494, 604.2575pt x 1814.78pt>
 File: slike/19_CoulombEksplozija.png Graphic file (type png)
 <use slike/19_CoulombEksplozija.png>
 Package pdftex.def Info: slike/19_CoulombEksplozija.png  used on input line 107
@@ -1659,7 +1658,7 @@ Package pdftex.def Info: slike/19_CoulombEksplozija.png  used on input line 107
 6CFDA9F3BEF8208180520B668216DC38FDCF099997C4D5.pygtex)
 
 [53]
-<slike/20_VisestrukiCoulombEksplozija.png, id=513, 604.2575pt x 1814.78pt>
+<slike/20_VisestrukiCoulombEksplozija.png, id=519, 604.2575pt x 1814.78pt>
 File: slike/20_VisestrukiCoulombEksplozija.png Graphic file (type png)
 <use slike/20_VisestrukiCoulombEksplozija.png>
 Package pdftex.def Info: slike/20_VisestrukiCoulombEksplozija.png  used on inpu
@@ -1679,7 +1678,7 @@ AB80EF8FFA05518180520B668216DC38FDCF099997C4D5.pygtex
 [56]
 
 [57])
-<slike/21_Simulator.png, id=535, 1013.7875pt x 899.36pt>
+<slike/21_Simulator.png, id=541, 1013.7875pt x 899.36pt>
 File: slike/21_Simulator.png Graphic file (type png)
 <use slike/21_Simulator.png>
 Package pdftex.def Info: slike/21_Simulator.png  used on input line 1289.
@@ -1687,12 +1686,12 @@ Package pdftex.def Info: slike/21_Simulator.png  used on input line 1289.
 
 
 [58 <./slike/21_Simulator.png>]
-<slike/22_PESimulator.png, id=546, 1035.87pt x 899.36pt>
+<slike/22_PESimulator.png, id=552, 1035.87pt x 899.36pt>
 File: slike/22_PESimulator.png Graphic file (type png)
 <use slike/22_PESimulator.png>
 Package pdftex.def Info: slike/22_PESimulator.png  used on input line 1300.
 (pdftex.def)             Requested size: 409.71692pt x 355.73047pt.
-<slike/23_GESimulator.png, id=547, 1035.87pt x 899.36pt>
+<slike/23_GESimulator.png, id=553, 1035.87pt x 899.36pt>
 File: slike/23_GESimulator.png Graphic file (type png)
 <use slike/23_GESimulator.png>
 Package pdftex.def Info: slike/23_GESimulator.png  used on input line 1308.
@@ -1700,7 +1699,7 @@ Package pdftex.def Info: slike/23_GESimulator.png  used on input line 1308.
 
 
 [59 <./slike/22_PESimulator.png>]
-<slike/24_CESimulator.png, id=557, 1035.87pt x 899.36pt>
+<slike/24_CESimulator.png, id=563, 1035.87pt x 899.36pt>
 File: slike/24_CESimulator.png Graphic file (type png)
 <use slike/24_CESimulator.png>
 Package pdftex.def Info: slike/24_CESimulator.png  used on input line 1316.
@@ -1708,7 +1707,7 @@ Package pdftex.def Info: slike/24_CESimulator.png  used on input line 1316.
 
 
 [60 <./slike/23_GESimulator.png>]
-<slike/25_VCESimulator.png, id=563, 1035.87pt x 899.36pt>
+<slike/25_VCESimulator.png, id=569, 1035.87pt x 899.36pt>
 File: slike/25_VCESimulator.png Graphic file (type png)
 <use slike/25_VCESimulator.png>
 Package pdftex.def Info: slike/25_VCESimulator.png  used on input line 1324.
@@ -1716,7 +1715,7 @@ Package pdftex.def Info: slike/25_VCESimulator.png  used on input line 1324.
 
 
 [61 <./slike/24_CESimulator.png>]
-<slike/26_NepokretniPotencijal.png, id=571, 1066.98625pt x 2720.1625pt>
+<slike/26_NepokretniPotencijal.png, id=577, 1066.98625pt x 2720.1625pt>
 File: slike/26_NepokretniPotencijal.png Graphic file (type png)
 <use slike/26_NepokretniPotencijal.png>
 Package pdftex.def Info: slike/26_NepokretniPotencijal.png  used on input line 
@@ -1727,7 +1726,7 @@ Package pdftex.def Info: slike/26_NepokretniPotencijal.png  used on input line
 [62 <./slike/25_VCESimulator.png>]
 
 [63 <./slike/26_NepokretniPotencijal.png>]
-<slike/27_PokretniPotencijal.png, id=587, 1066.98625pt x 2720.1625pt>
+<slike/27_PokretniPotencijal.png, id=593, 1066.98625pt x 2720.1625pt>
 File: slike/27_PokretniPotencijal.png Graphic file (type png)
 <use slike/27_PokretniPotencijal.png>
 Package pdftex.def Info: slike/27_PokretniPotencijal.png  used on input line 13
@@ -1738,7 +1737,7 @@ Package pdftex.def Info: slike/27_PokretniPotencijal.png  used on input line 13
 [64]
 
 [65 <./slike/27_PokretniPotencijal.png>]
-<slike/28_VisePotencijala1.png, id=599, 1066.98625pt x 2720.1625pt>
+<slike/28_VisePotencijala1.png, id=605, 1066.98625pt x 2720.1625pt>
 File: slike/28_VisePotencijala1.png Graphic file (type png)
 <use slike/28_VisePotencijala1.png>
 Package pdftex.def Info: slike/28_VisePotencijala1.png  used on input line 1356
@@ -1749,7 +1748,7 @@ Package pdftex.def Info: slike/28_VisePotencijala1.png  used on input line 1356
 [66]
 
 [67 <./slike/28_VisePotencijala1.png>]
-<slike/29_VisePotencijala2.png, id=611, 1066.98625pt x 2720.1625pt>
+<slike/29_VisePotencijala2.png, id=618, 1066.98625pt x 2720.1625pt>
 File: slike/29_VisePotencijala2.png Graphic file (type png)
 <use slike/29_VisePotencijala2.png>
 Package pdftex.def Info: slike/29_VisePotencijala2.png  used on input line 1367
@@ -1763,7 +1762,7 @@ Package pdftex.def Info: slike/29_VisePotencijala2.png  used on input line 1367
 
 [70]
 Poglavlje 4.
-<slike/30_Translacija.png, id=629, 280.47865pt x 135.00372pt>
+<slike/30_Translacija.png, id=635, 280.47865pt x 135.00372pt>
 File: slike/30_Translacija.png Graphic file (type png)
 <use slike/30_Translacija.png>
 Package pdftex.def Info: slike/30_Translacija.png  used on input line 1402.
@@ -1773,7 +1772,7 @@ Package pdftex.def Info: slike/30_Translacija.png  used on input line 1402.
 [71
 
 ]
-<slike/31_Skaliranje.png, id=637, 518.6842pt x 249.66pt>
+<slike/31_Skaliranje.png, id=643, 518.6842pt x 249.66pt>
 File: slike/31_Skaliranje.png Graphic file (type png)
 <use slike/31_Skaliranje.png>
 Package pdftex.def Info: slike/31_Skaliranje.png  used on input line 1428.
@@ -1781,7 +1780,7 @@ Package pdftex.def Info: slike/31_Skaliranje.png  used on input line 1428.
 
 
 [72 <./slike/30_Translacija.png>]
-<slike/32_Rotiranje.png, id=648, 391.35379pt x 188.37163pt>
+<slike/32_Rotiranje.png, id=654, 391.35379pt x 188.37163pt>
 File: slike/32_Rotiranje.png Graphic file (type png)
 <use slike/32_Rotiranje.png>
 Package pdftex.def Info: slike/32_Rotiranje.png  used on input line 1464.
@@ -1789,7 +1788,7 @@ Package pdftex.def Info: slike/32_Rotiranje.png  used on input line 1464.
 
 
 [73 <./slike/31_Skaliranje.png>]
-<slike/33_TransSkalRot.png, id=663, 643.14839pt x 643.33043pt>
+<slike/33_TransSkalRot.png, id=669, 643.14839pt x 643.33043pt>
 File: slike/33_TransSkalRot.png Graphic file (type png)
 <use slike/33_TransSkalRot.png>
 Package pdftex.def Info: slike/33_TransSkalRot.png  used on input line 1475.
@@ -1797,7 +1796,7 @@ Package pdftex.def Info: slike/33_TransSkalRot.png  used on input line 1475.
 
 
 [74 <./slike/32_Rotiranje.png>]
-<slike/34_TransSkalRotKRAJ.png, id=673, 546.12091pt x 318.75256pt>
+<slike/34_TransSkalRotKRAJ.png, id=679, 546.12091pt x 318.75256pt>
 File: slike/34_TransSkalRotKRAJ.png Graphic file (type png)
 <use slike/34_TransSkalRotKRAJ.png>
 Package pdftex.def Info: slike/34_TransSkalRotKRAJ.png  used on input line 1482
@@ -1812,7 +1811,7 @@ Package pdftex.def Info: slike/34_TransSkalRotKRAJ.png  used on input line 1482
 [77]
 
 [78]
-<slike/35_FrustumPerspektivneProjekcije.png, id=695, 1526.70375pt x 893.3375pt>
+<slike/35_FrustumPerspektivneProjekcije.png, id=701, 1526.70375pt x 893.3375pt>
 
 File: slike/35_FrustumPerspektivneProjekcije.png Graphic file (type png)
 <use slike/35_FrustumPerspektivneProjekcije.png>
@@ -1824,7 +1823,7 @@ put line 1615.
 [79]
 
 [80 <./slike/35_FrustumPerspektivneProjekcije.png>]
-<slike/36_OrtogonalnaProjekcijaKuba.png, id=713, 1854.93pt x 893.3375pt>
+<slike/36_OrtogonalnaProjekcijaKuba.png, id=719, 1854.93pt x 893.3375pt>
 File: slike/36_OrtogonalnaProjekcijaKuba.png Graphic file (type png)
 <use slike/36_OrtogonalnaProjekcijaKuba.png>
 Package pdftex.def Info: slike/36_OrtogonalnaProjekcijaKuba.png  used on input 
@@ -1835,7 +1834,7 @@ line 1628.
 [81 <./slike/36_OrtogonalnaProjekcijaKuba.png>]
 
 [82]
-<slike/37_PerspektivnaProjekcijaKuba.png, id=735, 1854.93pt x 893.3375pt>
+<slike/37_PerspektivnaProjekcijaKuba.png, id=741, 1854.93pt x 893.3375pt>
 File: slike/37_PerspektivnaProjekcijaKuba.png Graphic file (type png)
 <use slike/37_PerspektivnaProjekcijaKuba.png>
 Package pdftex.def Info: slike/37_PerspektivnaProjekcijaKuba.png  used on input
@@ -1846,7 +1845,7 @@ Package pdftex.def Info: slike/37_PerspektivnaProjekcijaKuba.png  used on input
 [83 <./slike/37_PerspektivnaProjekcijaKuba.png>]
 
 [84]
-<slike/38_Pipelines.png, id=753, 1573.88pt x 1181.41376pt>
+<slike/38_Pipelines.png, id=759, 1573.88pt x 1181.41376pt>
 File: slike/38_Pipelines.png Graphic file (type png)
 <use slike/38_Pipelines.png>
 Package pdftex.def Info: slike/38_Pipelines.png  used on input line 1688.
@@ -1865,7 +1864,7 @@ File: ts1phv.fd 2020/03/25 scalable font definitions for TS1/phv.
 )
 
 [87]
-<slike/39_Buffers.png, id=779, 2934.965pt x 3245.12375pt>
+<slike/39_Buffers.png, id=785, 2934.965pt x 3245.12375pt>
 File: slike/39_Buffers.png Graphic file (type png)
 <use slike/39_Buffers.png>
 Package pdftex.def Info: slike/39_Buffers.png  used on input line 1724.
@@ -1875,7 +1874,7 @@ Package pdftex.def Info: slike/39_Buffers.png  used on input line 1724.
 [88]
 
 [89 <./slike/39_Buffers.png>]
-<slike/40_WebGPUSinusoida.png, id=793, 452.4403pt x 451.6875pt>
+<slike/40_WebGPUSinusoida.png, id=799, 452.4403pt x 451.6875pt>
 File: slike/40_WebGPUSinusoida.png Graphic file (type png)
 <use slike/40_WebGPUSinusoida.png>
 Package pdftex.def Info: slike/40_WebGPUSinusoida.png  used on input line 1737.
@@ -1975,7 +1974,7 @@ Poglavlje 5.
 ]
 
 [98])
-<slike/41_Cestica.png, id=839, 98.0463pt x 79.0152pt>
+<slike/41_Cestica.png, id=845, 98.0463pt x 79.0152pt>
 File: slike/41_Cestica.png Graphic file (type png)
 <use slike/41_Cestica.png>
 Package pdftex.def Info: slike/41_Cestica.png  used on input line 2045.
@@ -2135,7 +2134,7 @@ D159420BEDF2C88180520B668216DC38FDCF099997C4D5.pygtex
 [119]
 
 [120])
-<slike/42_3DEskplozija25.png, id=948, 462.528pt x 701.2599pt>
+<slike/42_3DEskplozija25.png, id=954, 462.528pt x 701.2599pt>
 File: slike/42_3DEskplozija25.png Graphic file (type png)
 <use slike/42_3DEskplozija25.png>
 Package pdftex.def Info: slike/42_3DEskplozija25.png  used on input line 2767.
@@ -2153,7 +2152,7 @@ Overfull \vbox (11.06444pt too high) has occurred while \output is active []
 
 
 [122 <./slike/42_3DEskplozija25.png>]
-<slike/43_3DEskplozija3907.png, id=961, 462.528pt x 701.2599pt>
+<slike/43_3DEskplozija3907.png, id=967, 462.528pt x 701.2599pt>
 File: slike/43_3DEskplozija3907.png Graphic file (type png)
 <use slike/43_3DEskplozija3907.png>
 Package pdftex.def Info: slike/43_3DEskplozija3907.png  used on input line 2777
@@ -2172,7 +2171,7 @@ Overfull \vbox (11.06444pt too high) has occurred while \output is active []
 
 
 [124 <./slike/43_3DEskplozija3907.png>]
-<slike/44_3DEskplozija20000.png, id=973, 462.528pt x 701.2599pt>
+<slike/44_3DEskplozija20000.png, id=979, 462.528pt x 701.2599pt>
 File: slike/44_3DEskplozija20000.png Graphic file (type png)
 <use slike/44_3DEskplozija20000.png>
 Package pdftex.def Info: slike/44_3DEskplozija20000.png  used on input line 278
@@ -2243,7 +2242,7 @@ L3 programming layer <2024-07-20>
  ***********
 Package rerunfilecheck Info: File `vizualizacijaEksplozijaKoristenjemCesticnogM
 odela.out' has not changed.
-(rerunfilecheck)             Checksum: D18EB5AD827A61D288B3604F649F4F5C;4587.
+(rerunfilecheck)             Checksum: 554B27BD4C698510BAF7E369FD50B1EE;4680.
 runsystem(del vizualizacijaEksplozijaKoristenjemCesticnogModela.pyg)...executed
 .
 
@@ -2253,11 +2252,11 @@ ticnogModela.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 28652 strings out of 473578
- 568981 string characters out of 5718661
+ 28689 strings out of 473578
+ 569718 string characters out of 5718661
  1947960 words of memory out of 5000000
- 50725 multiletter control sequences out of 15000+600000
- 602732 words of font info for 89 fonts, out of 8000000 for 9000
+ 50748 multiletter control sequences out of 15000+600000
+ 618760 words of font info for 106 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  81i,12n,95p,3613b,2203s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <d:/Aplikacije/TexLive/install/texlive/2024/texmf-dist/fonts/type1/public/ams
@@ -2279,10 +2278,10 @@ mf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb><d:/Aplikacije/TexLive/install/texl
 ive/2024/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb><d:/Aplikacije/TexLive/
 install/texlive/2024/texmf-dist/fonts/type1/urw/helvetic/uhvro8a.pfb>
 Output written on vizualizacijaEksplozijaKoristenjemCesticnogModela.pdf (138 pa
-ges, 8589031 bytes).
+ges, 8589844 bytes).
 PDF statistics:
- 1218 PDF objects out of 1440 (max. 8388607)
- 946 compressed objects within 10 object streams
- 249 named destinations out of 1000 (max. 500000)
+ 1225 PDF objects out of 1440 (max. 8388607)
+ 953 compressed objects within 10 object streams
+ 252 named destinations out of 1000 (max. 500000)
  451 words of extra memory for PDF output out of 10000 (max. 10000000)
 

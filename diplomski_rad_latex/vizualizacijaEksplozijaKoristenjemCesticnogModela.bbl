@@ -26,9 +26,98 @@
       \field{howpublished}{2024. [Na internetu].\newline Dostupno: \url{https://bit.ly/4fMoSGz} [pristupano 07.08.2024.].}
       \field{title}{Computer Graphics: CSCE's Artistry: Exploring Computer Graphics}
     \endentry
-    \entry{MozzilaDevCanvasAPI}{misc}{}{}
+    \entry{InteraktivnaRacunarnaGrafika2021}{misc}{}{}
+      \name{author}{2}{}{%
+        {{hash=857cf4056216a8db1d59612969213ef4}{%
+           family={Čupić},
+           familyi={Č\bibinitperiod},
+           given={Marko},
+           giveni={M\bibinitperiod}}}%
+        {{hash=26d23cf60c2070cbbd80429b99038cd1}{%
+           family={Mihajlović},
+           familyi={M\bibinitperiod},
+           given={Željka},
+           giveni={Ž\bibinitperiod}}}%
+      }
+      \strng{namehash}{e085e13ee517e3c0f2cb87b0ad97e465}
+      \strng{fullhash}{e085e13ee517e3c0f2cb87b0ad97e465}
+      \strng{fullhashraw}{e085e13ee517e3c0f2cb87b0ad97e465}
+      \strng{bibnamehash}{e085e13ee517e3c0f2cb87b0ad97e465}
+      \strng{authorbibnamehash}{e085e13ee517e3c0f2cb87b0ad97e465}
+      \strng{authornamehash}{e085e13ee517e3c0f2cb87b0ad97e465}
+      \strng{authorfullhash}{e085e13ee517e3c0f2cb87b0ad97e465}
+      \strng{authorfullhashraw}{e085e13ee517e3c0f2cb87b0ad97e465}
       \field{sortinit}{2}
       \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{2021. [Na internetu].\newline Dostupno: \url{https://www.zemris.fer.hr/predmeti/irg/knjiga.pdf} [pristupano 11.09.2024.].}
+      \field{title}{Interaktivna računalna grafika kroz primjere u OpenGL-u}
+    \endentry
+    \entry{VirtualnaOkruzenja2011}{book}{}{}
+      \name{author}{7}{}{%
+        {{hash=76d56baf1c4ef7fe123a26208520fb30}{%
+           family={Šegvić},
+           familyi={Š\bibinitperiod},
+           given={Siniša},
+           giveni={S\bibinitperiod}}}%
+        {{hash=09f3df9d3c5aef30bbd4c9feb31ea5a5}{%
+           family={Pandžić},
+           familyi={P\bibinitperiod},
+           given={Igor},
+           giveni={I\bibinitperiod}}}%
+        {{hash=0cd8732051ef712e2fd1a7c75c1de912}{%
+           family={Čereković},
+           familyi={Č\bibinitperiod},
+           given={Andrej},
+           giveni={A\bibinitperiod}}}%
+        {{hash=0cd1eba8924a716eabed9c4a6237130d}{%
+           family={Matijašević},
+           familyi={M\bibinitperiod},
+           given={Siniša},
+           giveni={S\bibinitperiod}}}%
+        {{hash=27ddc4c40a74981ce04fe95ee170d813}{%
+           family={Matković},
+           familyi={M\bibinitperiod},
+           given={Kristijan},
+           giveni={K\bibinitperiod}}}%
+        {{hash=2c511d23516d76038744bfd9895fd71d}{%
+           family={Benko},
+           familyi={B\bibinitperiod},
+           given={Hrvoje},
+           giveni={H\bibinitperiod}}}%
+        {{hash=3562bf3268ba583bbad389787818918e}{%
+           family={Pejša},
+           familyi={P\bibinitperiod},
+           given={Leonard},
+           giveni={L\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Zagreb}%
+      }
+      \list{publisher}{1}{%
+        {Element}%
+      }
+      \strng{namehash}{8adec545d3e70862193f70157d9c4361}
+      \strng{fullhash}{b4b334dd211654946b0be3dc41775a5a}
+      \strng{fullhashraw}{b4b334dd211654946b0be3dc41775a5a}
+      \strng{bibnamehash}{8adec545d3e70862193f70157d9c4361}
+      \strng{authorbibnamehash}{8adec545d3e70862193f70157d9c4361}
+      \strng{authornamehash}{8adec545d3e70862193f70157d9c4361}
+      \strng{authorfullhash}{b4b334dd211654946b0be3dc41775a5a}
+      \strng{authorfullhashraw}{b4b334dd211654946b0be3dc41775a5a}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{edition}{1}
+      \field{isbn}{978-953-197-606-0}
+      \field{title}{Virtualna okruženja 2}
+      \field{year}{2011}
+    \endentry
+    \entry{MozzilaDevCanvasAPI}{misc}{}{}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
       \field{labeltitlesource}{title}
       \field{howpublished}{bez dat. [Na internetu].\newline Dostupno: \url{https://mzl.la/3ASBeNB} [pristupano 07.08.2024.].}
       \field{title}{Computer Graphics: CSCE's Artistry: Exploring Computer Graphics}
@@ -49,8 +138,8 @@
       \strng{authornamehash}{d6a7ca45ac820f00d580a52df1975f1a}
       \strng{authorfullhash}{d6a7ca45ac820f00d580a52df1975f1a}
       \strng{authorfullhashraw}{d6a7ca45ac820f00d580a52df1975f1a}
-      \field{sortinit}{3}
-      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{howpublished}{24.4.2023. [Na internetu].\newline Dostupno: \url{https://bit.ly/47kTFq0} [pristupano 09.08.2024.].}
@@ -78,8 +167,8 @@
       \strng{authorfullhash}{0c4a6428289133cd6a1cad28a360a677}
       \strng{authorfullhashraw}{0c4a6428289133cd6a1cad28a360a677}
       \field{extraname}{1}
-      \field{sortinit}{4}
-      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{howpublished}{2023. [Moodle].\newline Dostupno: \url{https://bit.ly/4eewyjh} [pristupano 09.08.2024.].}
@@ -101,8 +190,8 @@
       \strng{authornamehash}{52041981c6fcf91861021f0d60ba295b}
       \strng{authorfullhash}{52041981c6fcf91861021f0d60ba295b}
       \strng{authorfullhashraw}{52041981c6fcf91861021f0d60ba295b}
-      \field{sortinit}{5}
-      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{howpublished}{2013. [Na internetu].\newline Dostupno: \url{https://bit.ly/3ThuxLa} [pristupano 10.08.2024.].}
@@ -124,8 +213,8 @@
       \strng{authornamehash}{f1f1ee5e424a0bb746b54acd9e6851cf}
       \strng{authorfullhash}{f1f1ee5e424a0bb746b54acd9e6851cf}
       \strng{authorfullhashraw}{f1f1ee5e424a0bb746b54acd9e6851cf}
-      \field{sortinit}{6}
-      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{sortinit}{8}
+      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{howpublished}{3.2.2021. [Na internetu].\newline Dostupno: \url{https://bit.ly/3Xxajj9} [pristupano 10.08.2022.].}
@@ -153,23 +242,23 @@
       \strng{authorfullhash}{0c4a6428289133cd6a1cad28a360a677}
       \strng{authorfullhashraw}{0c4a6428289133cd6a1cad28a360a677}
       \field{extraname}{2}
-      \field{sortinit}{7}
-      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{howpublished}{2023. [Moodle].\newline Dostupno: \url{https://bit.ly/3XANQBR} [pristupano 11.08.2024.].}
       \field{title}{Simulacija fizike}
     \endentry
     \entry{UTKLabPhys135}{misc}{}{}
-      \field{sortinit}{8}
-      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labeltitlesource}{title}
       \field{howpublished}{bez dat. [Na internetu].\newline Dostupno: \url{https://bit.ly/3TmXvcB} [pristupano 15.08.2024.].}
       \field{title}{Phys 135 Core: Physics 135 Laboratory - University of Tennessee, Knoxville}
     \endentry
     \entry{NASAWeightMass}{misc}{}{}
-      \field{sortinit}{9}
-      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labeltitlesource}{title}
       \field{howpublished}{bez dat. [Na internetu].\newline Dostupno: \url{https://go.nasa.gov/4dTHSlg} [pristupano 15.08.2024.].}
       \field{title}{Weight and Mass - NASA Glenn Research Center}
@@ -247,15 +336,15 @@
       \field{title}{2D transformation matrices}
     \endentry
     \entry{TransformationMatricesBezDat}{misc}{}{}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labeltitlesource}{title}
       \field{howpublished}{bez dat. [Na internetu].\newline Dostupno: \url{https://bit.ly/4dROEaZ} [pristupano 21.08.2024.].}
       \field{title}{6.5 - Transformation Matrices}
     \endentry
     \entry{Prostori3DBezDat}{misc}{}{}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labeltitlesource}{title}
       \field{howpublished}{bez dat. [Na internetu].\newline Dostupno: \url{https://bit.ly/3ZfjuG0} [pristupano 21.08.2024.].}
       \field{title}{Coordinate Systems}
@@ -333,8 +422,8 @@
       \field{title}{WebGPU Buffer Uploads}
     \endentry
     \entry{WebGPUFundamentalsMemoryLayout}{misc}{}{}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
       \field{labeltitlesource}{title}
       \field{howpublished}{bez dat. [Na internetu].\newline Dostupno: \url{https://bit.ly/4geCw5A} [pristupano 29.08.2024.].}
       \field{title}{WebGPU Data Memory Layout}
@@ -430,8 +519,8 @@
       \strng{authornamehash}{2e2496e30e2896659de72ff0bd7058e1}
       \strng{authorfullhash}{2e2496e30e2896659de72ff0bd7058e1}
       \strng{authorfullhashraw}{2e2496e30e2896659de72ff0bd7058e1}
-      \field{sortinit}{3}
-      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{howpublished}{2023. [Na internetu].\newline Dostupno: \url{https://bit.ly/3Zg6xMr} [pristupano 04.09.2024.].}
