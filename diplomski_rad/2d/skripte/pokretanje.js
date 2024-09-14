@@ -101,7 +101,7 @@ function dohvatiHtmlKomponentu(predputanja) {
           <p class="number-input-setter-value" id="particle-counter-value">0</p>
         </div>
         <div class="particle-number-setter number-input">
-          <p class="number-input-setter-text" id="particle-number-setter-text">Br. eksplozije:</p>
+          <p class="number-input-setter-text" id="particle-number-setter-text">Br. čestica:</p>
           <input class="number-input-setter-value" id="particle-number-setter-value" type="text" value="" onfocusout="Konzola.brojEksplozijeInputFocusoutEventHandler(event)" />
         </div>
         <div class="gravity-setter number-input">

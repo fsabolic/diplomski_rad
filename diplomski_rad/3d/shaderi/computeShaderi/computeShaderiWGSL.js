@@ -11,7 +11,7 @@ struct Parametri{
     radijus_cestica:f32,
   }
   
-const pi: f32 = 3.1415926535897932384626433832795;
+const pi: f32 = 3.1415927;
 @group(0) @binding(0) var<uniform> seeds: vec4<u32>;
 @group(0) @binding(1) var<uniform> parametri: Parametri;
 @group(0) @binding(2) var<storage, read_write> x_koordinate: array<f32>;

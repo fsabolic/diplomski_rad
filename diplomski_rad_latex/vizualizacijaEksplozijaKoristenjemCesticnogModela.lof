@@ -16,12 +16,12 @@
 \contentsline {figure}{\numberline {12}{\ignorespaces Prikaz putanje čestice na koju djeluje sila teža}}{24}{figure.caption.13}%
 \contentsline {figure}{\numberline {13}{\ignorespaces Prikaz putanje čestice s djelovanjem otpora i sile teže}}{25}{figure.caption.14}%
 \contentsline {figure}{\numberline {14}{\ignorespaces Prikaz dijelova animacije kretanja čestice}}{27}{figure.caption.15}%
-\contentsline {figure}{\numberline {15}{\ignorespaces Generiranje brzina čestica u obliku kružnice}}{29}{figure.caption.16}%
+\contentsline {figure}{\numberline {15}{\ignorespaces Generiranje brzina čestica kod pravilne eksplozije}}{29}{figure.caption.16}%
 \contentsline {figure}{\numberline {16}{\ignorespaces Pravilna eksplozija}}{33}{figure.caption.17}%
 \contentsline {figure}{\numberline {17}{\ignorespaces Uniformna eksplozija}}{36}{figure.caption.18}%
 \contentsline {figure}{\numberline {18}{\ignorespaces Gaussova eksplozija}}{42}{figure.caption.19}%
 \contentsline {figure}{\numberline {19}{\ignorespaces Coulombova eksplozija}}{50}{figure.caption.20}%
-\contentsline {figure}{\numberline {20}{\ignorespaces Višestruki Coulombova eksplozija}}{54}{figure.caption.21}%
+\contentsline {figure}{\numberline {20}{\ignorespaces Višestruka Coulombova eksplozija}}{54}{figure.caption.21}%
 \contentsline {figure}{\numberline {21}{\ignorespaces Višestruka Coulombova eksplozija}}{58}{figure.caption.22}%
 \contentsline {figure}{\numberline {22}{\ignorespaces Pravilna eksplozija na simulatoru}}{59}{figure.caption.23}%
 \contentsline {figure}{\numberline {23}{\ignorespaces Gaussova eksplozija na simulatoru}}{60}{figure.caption.24}%
@@ -35,9 +35,9 @@
 \contentsline {figure}{\numberline {30}{\ignorespaces Translacija točke $A$ u točku $A'$}}{72}{figure.caption.31}%
 \contentsline {figure}{\numberline {31}{\ignorespaces Skaliranje dužine $\overline {AB}$}}{73}{figure.caption.32}%
 \contentsline {figure}{\numberline {32}{\ignorespaces Rotiranje dužine $\overline {AB}$}}{74}{figure.caption.33}%
-\contentsline {figure}{\numberline {33}{\ignorespaces Rotiranje dužine $\overline {AB}$}}{75}{figure.caption.34}%
-\contentsline {figure}{\numberline {34}{\ignorespaces Rotiranje dužine $\overline {AB}$}}{76}{figure.caption.35}%
-\contentsline {figure}{\numberline {35}{\ignorespaces Frustum perspektivne projekcije}}{80}{figure.caption.36}%
+\contentsline {figure}{\numberline {33}{\ignorespaces Skaliranje i rotiranje dužine $\overline {AB}$}}{75}{figure.caption.34}%
+\contentsline {figure}{\numberline {34}{\ignorespaces Skaliranje i rotiranje dužine $\overline {AB}$}}{76}{figure.caption.35}%
+\contentsline {figure}{\numberline {35}{\ignorespaces Volumen pogleda perspektivne projekcije}}{80}{figure.caption.36}%
 \contentsline {figure}{\numberline {36}{\ignorespaces Kocke dobivene korištenjem ortogonalne projekcije}}{81}{figure.caption.37}%
 \contentsline {figure}{\numberline {37}{\ignorespaces Kocke dobivene korištenjem perspektivne projekcije}}{83}{figure.caption.38}%
 \contentsline {figure}{\numberline {38}{\ignorespaces Prikaz sjenčara unutar protočnih sustava}}{86}{figure.caption.39}%

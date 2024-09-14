@@ -1,35 +1,36 @@
 [0] Config.pm:308> INFO - This is Biber 2.20
 [0] Config.pm:311> INFO - Logfile is 'vizualizacijaEksplozijaKoristenjemCesticnogModela.blg'
-[121] biber-MSWIN64:340> INFO - === 
-[161] Biber.pm:420> INFO - Reading 'vizualizacijaEksplozijaKoristenjemCesticnogModela.bcf'
-[297] Biber.pm:994> INFO - Found 38 citekeys in bib section 0
-[314] Biber.pm:4463> INFO - Processing section 0
+[123] biber-MSWIN64:340> INFO - === 
+[163] Biber.pm:420> INFO - Reading 'vizualizacijaEksplozijaKoristenjemCesticnogModela.bcf'
+[296] Biber.pm:994> INFO - Found 38 citekeys in bib section 0
+[315] Biber.pm:4463> INFO - Processing section 0
 [327] Biber.pm:4654> INFO - Looking for bibtex file 'lib.bib' for section 0
-[398] bibtex.pm:1713> INFO - LaTeX decoding ...
-[428] bibtex.pm:1519> INFO - Found BibTeX data source 'lib.bib'
-[568] UCollate.pm:68> INFO - Overriding locale 'hr-HR' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[568] UCollate.pm:68> INFO - Overriding locale 'hr-HR' defaults 'variable = shifted' with 'variable = non-ignorable'
-[568] Biber.pm:4283> INFO - Sorting list 'none/global//global/global/global' of type 'entry' with template 'none' and locale 'hr-HR'
-[590] bbl.pm:676> INFO - Writing 'vizualizacijaEksplozijaKoristenjemCesticnogModela.bbl' with encoding 'UTF-8'
-[601] bbl.pm:779> INFO - Output to vizualizacijaEksplozijaKoristenjemCesticnogModela.bbl
-[602] Biber.pm:131> WARN - BibTeX subsystem: C:\Users\frans\AppData\Local\Temp\biber_tmp_2Nvu\0e04ca0c8092d95de8fa9a92148e45c0_4556.utf8, line 6, warning: 1 characters of junk seen at toplevel
-[602] Biber.pm:131> WARN - BibTeX subsystem: C:\Users\frans\AppData\Local\Temp\biber_tmp_2Nvu\0e04ca0c8092d95de8fa9a92148e45c0_4556.utf8, line 12, warning: 1 characters of junk seen at toplevel
-[602] Biber.pm:131> WARN - BibTeX subsystem: C:\Users\frans\AppData\Local\Temp\biber_tmp_2Nvu\0e04ca0c8092d95de8fa9a92148e45c0_4556.utf8, line 21, warning: 1 characters of junk seen at toplevel
-[602] Biber.pm:131> WARN - BibTeX subsystem: C:\Users\frans\AppData\Local\Temp\biber_tmp_2Nvu\0e04ca0c8092d95de8fa9a92148e45c0_4556.utf8, line 26, warning: 1 characters of junk seen at toplevel
-[602] Biber.pm:131> WARN - BibTeX subsystem: C:\Users\frans\AppData\Local\Temp\biber_tmp_2Nvu\0e04ca0c8092d95de8fa9a92148e45c0_4556.utf8, line 32, warning: 1 characters of junk seen at toplevel
-[602] Biber.pm:131> WARN - BibTeX subsystem: C:\Users\frans\AppData\Local\Temp\biber_tmp_2Nvu\0e04ca0c8092d95de8fa9a92148e45c0_4556.utf8, line 38, warning: 1 characters of junk seen at toplevel
-[602] Biber.pm:131> WARN - BibTeX subsystem: C:\Users\frans\AppData\Local\Temp\biber_tmp_2Nvu\0e04ca0c8092d95de8fa9a92148e45c0_4556.utf8, line 44, warning: 1 characters of junk seen at toplevel
-[602] Biber.pm:131> WARN - BibTeX subsystem: C:\Users\frans\AppData\Local\Temp\biber_tmp_2Nvu\0e04ca0c8092d95de8fa9a92148e45c0_4556.utf8, line 50, warning: 1 characters of junk seen at toplevel
-[602] Biber.pm:131> WARN - BibTeX subsystem: C:\Users\frans\AppData\Local\Temp\biber_tmp_2Nvu\0e04ca0c8092d95de8fa9a92148e45c0_4556.utf8, line 56, warning: 1 characters of junk seen at toplevel
-[602] Biber.pm:131> WARN - BibTeX subsystem: C:\Users\frans\AppData\Local\Temp\biber_tmp_2Nvu\0e04ca0c8092d95de8fa9a92148e45c0_4556.utf8, line 61, warning: 1 characters of junk seen at toplevel
-[602] Biber.pm:131> WARN - BibTeX subsystem: C:\Users\frans\AppData\Local\Temp\biber_tmp_2Nvu\0e04ca0c8092d95de8fa9a92148e45c0_4556.utf8, line 66, warning: 1 characters of junk seen at toplevel
-[602] Biber.pm:131> WARN - BibTeX subsystem: C:\Users\frans\AppData\Local\Temp\biber_tmp_2Nvu\0e04ca0c8092d95de8fa9a92148e45c0_4556.utf8, line 72, warning: 1 characters of junk seen at toplevel
-[602] Biber.pm:131> WARN - BibTeX subsystem: C:\Users\frans\AppData\Local\Temp\biber_tmp_2Nvu\0e04ca0c8092d95de8fa9a92148e45c0_4556.utf8, line 77, warning: 1 characters of junk seen at toplevel
-[603] Biber.pm:131> WARN - BibTeX subsystem: C:\Users\frans\AppData\Local\Temp\biber_tmp_2Nvu\0e04ca0c8092d95de8fa9a92148e45c0_4556.utf8, line 82, warning: 1 characters of junk seen at toplevel
-[603] Biber.pm:131> WARN - BibTeX subsystem: C:\Users\frans\AppData\Local\Temp\biber_tmp_2Nvu\0e04ca0c8092d95de8fa9a92148e45c0_4556.utf8, line 85, warning: 1 characters of junk seen at toplevel
-[603] Biber.pm:131> WARN - BibTeX subsystem: C:\Users\frans\AppData\Local\Temp\biber_tmp_2Nvu\0e04ca0c8092d95de8fa9a92148e45c0_4556.utf8, line 90, warning: 1 characters of junk seen at toplevel
-[603] Biber.pm:131> WARN - BibTeX subsystem: C:\Users\frans\AppData\Local\Temp\biber_tmp_2Nvu\0e04ca0c8092d95de8fa9a92148e45c0_4556.utf8, line 95, warning: 1 characters of junk seen at toplevel
-[603] Biber.pm:131> WARN - BibTeX subsystem: C:\Users\frans\AppData\Local\Temp\biber_tmp_2Nvu\0e04ca0c8092d95de8fa9a92148e45c0_4556.utf8, line 99, warning: 1 characters of junk seen at toplevel
-[603] Biber.pm:131> WARN - BibTeX subsystem: C:\Users\frans\AppData\Local\Temp\biber_tmp_2Nvu\0e04ca0c8092d95de8fa9a92148e45c0_4556.utf8, line 105, warning: 1 characters of junk seen at toplevel
-[603] Biber.pm:131> WARN - BibTeX subsystem: C:\Users\frans\AppData\Local\Temp\biber_tmp_2Nvu\0e04ca0c8092d95de8fa9a92148e45c0_4556.utf8, line 192, warning: 1 characters of junk seen at toplevel
-[603] Biber.pm:133> INFO - WARNINGS: 20
+[387] bibtex.pm:1713> INFO - LaTeX decoding ...
+[417] bibtex.pm:1519> INFO - Found BibTeX data source 'lib.bib'
+[548] UCollate.pm:68> INFO - Overriding locale 'hr-HR' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[548] UCollate.pm:68> INFO - Overriding locale 'hr-HR' defaults 'variable = shifted' with 'variable = non-ignorable'
+[548] Biber.pm:4283> INFO - Sorting list 'none/global//global/global/global' of type 'entry' with template 'none' and locale 'hr-HR'
+[571] bbl.pm:676> INFO - Writing 'vizualizacijaEksplozijaKoristenjemCesticnogModela.bbl' with encoding 'UTF-8'
+[582] bbl.pm:779> INFO - Output to vizualizacijaEksplozijaKoristenjemCesticnogModela.bbl
+[583] Biber.pm:131> WARN - BibTeX subsystem: C:\Users\frans\AppData\Local\Temp\biber_tmp_gJNk\0e04ca0c8092d95de8fa9a92148e45c0_8084.utf8, line 6, warning: 1 characters of junk seen at toplevel
+[583] Biber.pm:131> WARN - BibTeX subsystem: C:\Users\frans\AppData\Local\Temp\biber_tmp_gJNk\0e04ca0c8092d95de8fa9a92148e45c0_8084.utf8, line 12, warning: 1 characters of junk seen at toplevel
+[583] Biber.pm:131> WARN - BibTeX subsystem: C:\Users\frans\AppData\Local\Temp\biber_tmp_gJNk\0e04ca0c8092d95de8fa9a92148e45c0_8084.utf8, line 21, warning: 1 characters of junk seen at toplevel
+[583] Biber.pm:131> WARN - BibTeX subsystem: C:\Users\frans\AppData\Local\Temp\biber_tmp_gJNk\0e04ca0c8092d95de8fa9a92148e45c0_8084.utf8, line 26, warning: 1 characters of junk seen at toplevel
+[583] Biber.pm:131> WARN - BibTeX subsystem: C:\Users\frans\AppData\Local\Temp\biber_tmp_gJNk\0e04ca0c8092d95de8fa9a92148e45c0_8084.utf8, line 32, warning: 1 characters of junk seen at toplevel
+[583] Biber.pm:131> WARN - BibTeX subsystem: C:\Users\frans\AppData\Local\Temp\biber_tmp_gJNk\0e04ca0c8092d95de8fa9a92148e45c0_8084.utf8, line 38, warning: 1 characters of junk seen at toplevel
+[583] Biber.pm:131> WARN - BibTeX subsystem: C:\Users\frans\AppData\Local\Temp\biber_tmp_gJNk\0e04ca0c8092d95de8fa9a92148e45c0_8084.utf8, line 44, warning: 1 characters of junk seen at toplevel
+[583] Biber.pm:131> WARN - BibTeX subsystem: C:\Users\frans\AppData\Local\Temp\biber_tmp_gJNk\0e04ca0c8092d95de8fa9a92148e45c0_8084.utf8, line 50, warning: 1 characters of junk seen at toplevel
+[583] Biber.pm:131> WARN - BibTeX subsystem: C:\Users\frans\AppData\Local\Temp\biber_tmp_gJNk\0e04ca0c8092d95de8fa9a92148e45c0_8084.utf8, line 56, warning: 1 characters of junk seen at toplevel
+[583] Biber.pm:131> WARN - BibTeX subsystem: C:\Users\frans\AppData\Local\Temp\biber_tmp_gJNk\0e04ca0c8092d95de8fa9a92148e45c0_8084.utf8, line 61, warning: 1 characters of junk seen at toplevel
+[583] Biber.pm:131> WARN - BibTeX subsystem: C:\Users\frans\AppData\Local\Temp\biber_tmp_gJNk\0e04ca0c8092d95de8fa9a92148e45c0_8084.utf8, line 66, warning: 1 characters of junk seen at toplevel
+[583] Biber.pm:131> WARN - BibTeX subsystem: C:\Users\frans\AppData\Local\Temp\biber_tmp_gJNk\0e04ca0c8092d95de8fa9a92148e45c0_8084.utf8, line 72, warning: 1 characters of junk seen at toplevel
+[583] Biber.pm:131> WARN - BibTeX subsystem: C:\Users\frans\AppData\Local\Temp\biber_tmp_gJNk\0e04ca0c8092d95de8fa9a92148e45c0_8084.utf8, line 77, warning: 1 characters of junk seen at toplevel
+[583] Biber.pm:131> WARN - BibTeX subsystem: C:\Users\frans\AppData\Local\Temp\biber_tmp_gJNk\0e04ca0c8092d95de8fa9a92148e45c0_8084.utf8, line 82, warning: 1 characters of junk seen at toplevel
+[583] Biber.pm:131> WARN - BibTeX subsystem: C:\Users\frans\AppData\Local\Temp\biber_tmp_gJNk\0e04ca0c8092d95de8fa9a92148e45c0_8084.utf8, line 85, warning: 1 characters of junk seen at toplevel
+[583] Biber.pm:131> WARN - BibTeX subsystem: C:\Users\frans\AppData\Local\Temp\biber_tmp_gJNk\0e04ca0c8092d95de8fa9a92148e45c0_8084.utf8, line 90, warning: 1 characters of junk seen at toplevel
+[584] Biber.pm:131> WARN - BibTeX subsystem: C:\Users\frans\AppData\Local\Temp\biber_tmp_gJNk\0e04ca0c8092d95de8fa9a92148e45c0_8084.utf8, line 95, warning: 1 characters of junk seen at toplevel
+[584] Biber.pm:131> WARN - BibTeX subsystem: C:\Users\frans\AppData\Local\Temp\biber_tmp_gJNk\0e04ca0c8092d95de8fa9a92148e45c0_8084.utf8, line 99, warning: 1 characters of junk seen at toplevel
+[584] Biber.pm:131> WARN - BibTeX subsystem: C:\Users\frans\AppData\Local\Temp\biber_tmp_gJNk\0e04ca0c8092d95de8fa9a92148e45c0_8084.utf8, line 105, warning: 1 characters of junk seen at toplevel
+[584] Biber.pm:131> WARN - BibTeX subsystem: C:\Users\frans\AppData\Local\Temp\biber_tmp_gJNk\0e04ca0c8092d95de8fa9a92148e45c0_8084.utf8, line 182, warning: 1 characters of junk seen at toplevel
+[584] Biber.pm:131> WARN - BibTeX subsystem: C:\Users\frans\AppData\Local\Temp\biber_tmp_gJNk\0e04ca0c8092d95de8fa9a92148e45c0_8084.utf8, line 198, warning: 1 characters of junk seen at toplevel
+[584] Biber.pm:133> INFO - WARNINGS: 21
