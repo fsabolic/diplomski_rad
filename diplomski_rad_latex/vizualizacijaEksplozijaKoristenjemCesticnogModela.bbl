@@ -49,16 +49,16 @@
     \endentry
     \entry{VirtualnaOkruzenja2011}{book}{}{}
       \name{author}{7}{}{%
-        {{hash=76d56baf1c4ef7fe123a26208520fb30}{%
-           family={Šegvić},
-           familyi={Š\bibinitperiod},
-           given={Siniša},
-           giveni={S\bibinitperiod}}}%
         {{hash=09f3df9d3c5aef30bbd4c9feb31ea5a5}{%
            family={Pandžić},
            familyi={P\bibinitperiod},
            given={Igor},
            giveni={I\bibinitperiod}}}%
+        {{hash=76d56baf1c4ef7fe123a26208520fb30}{%
+           family={Šegvić},
+           familyi={Š\bibinitperiod},
+           given={Siniša},
+           giveni={S\bibinitperiod}}}%
         {{hash=0cd8732051ef712e2fd1a7c75c1de912}{%
            family={Čereković},
            familyi={Č\bibinitperiod},
@@ -91,14 +91,14 @@
       \list{publisher}{1}{%
         {Element}%
       }
-      \strng{namehash}{8adec545d3e70862193f70157d9c4361}
-      \strng{fullhash}{b4b334dd211654946b0be3dc41775a5a}
-      \strng{fullhashraw}{b4b334dd211654946b0be3dc41775a5a}
-      \strng{bibnamehash}{8adec545d3e70862193f70157d9c4361}
-      \strng{authorbibnamehash}{8adec545d3e70862193f70157d9c4361}
-      \strng{authornamehash}{8adec545d3e70862193f70157d9c4361}
-      \strng{authorfullhash}{b4b334dd211654946b0be3dc41775a5a}
-      \strng{authorfullhashraw}{b4b334dd211654946b0be3dc41775a5a}
+      \strng{namehash}{1191fe8585e862f57c29e87ce7efa0fc}
+      \strng{fullhash}{b2e3e4383fa5bb26e2f0c29291404011}
+      \strng{fullhashraw}{b2e3e4383fa5bb26e2f0c29291404011}
+      \strng{bibnamehash}{1191fe8585e862f57c29e87ce7efa0fc}
+      \strng{authorbibnamehash}{1191fe8585e862f57c29e87ce7efa0fc}
+      \strng{authornamehash}{1191fe8585e862f57c29e87ce7efa0fc}
+      \strng{authorfullhash}{b2e3e4383fa5bb26e2f0c29291404011}
+      \strng{authorfullhashraw}{b2e3e4383fa5bb26e2f0c29291404011}
       \field{sortinit}{2}
       \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
