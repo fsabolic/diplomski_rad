@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.8.25)  15 SEP 2024 20:16
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.8.25)  15 SEP 2024 21:04
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -2236,18 +2236,9 @@ Overfull \hbox (1.29184pt too wide) detected at line 50
 LaTeX2e <2024-06-01> patch level 2
 L3 programming layer <2024-07-20>
  ***********
-
-
-LaTeX Warning: There were undefined references.
-
 Package rerunfilecheck Info: File `vizualizacijaEksplozijaKoristenjemCesticnogM
 odela.out' has not changed.
 (rerunfilecheck)             Checksum: BEA7698F42D89327D597C2456DCAD63A;4698.
-
-Package biblatex Warning: Please (re)run Biber on the file:
-(biblatex)                vizualizacijaEksplozijaKoristenjemCesticnogModela
-(biblatex)                and rerun LaTeX afterwards.
-
 runsystem(del vizualizacijaEksplozijaKoristenjemCesticnogModela.pyg)...executed
 .
 
@@ -2283,7 +2274,7 @@ mf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb><d:/Aplikacije/TexLive/install/texl
 ive/2024/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb><d:/Aplikacije/TexLive/
 install/texlive/2024/texmf-dist/fonts/type1/urw/helvetic/uhvro8a.pfb>
 Output written on vizualizacijaEksplozijaKoristenjemCesticnogModela.pdf (137 pa
-ges, 8590470 bytes).
+ges, 8590494 bytes).
 PDF statistics:
  1221 PDF objects out of 1440 (max. 8388607)
  950 compressed objects within 10 object streams
